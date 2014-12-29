@@ -1,0 +1,122 @@
+﻿using UnityEngine;
+using System.Collections;
+
+namespace VRUserInterface
+{
+	/// <summary>
+	/// The main ui class. The information controller deals with the logic of receiving a callback from the selection and
+	/// opening info displays.
+	/// </summary>
+	public class InformationController : MonoBehaviour {
+
+		public static InformationController instance;
+
+		void Start(){
+			//Check the config for parameter overwrites
+			if (Config.instance.displayType != "" && Config.instance.displayType != null)
+			{
+				//Search for the game object
+				GameObject displayObj = GameObject.Find (Config.instance.displayType);
+				if (!displayObj)
+				{
+					Debug.LogError("The display type defined in the config could not be found");
+				}
+				else
+				{
+					InformationDisplay displayScript = displayObj.GetComponent<InformationDisplay>();
+					if (!displayScript)
+					{
+						Debug.LogError("The display type defined in the config has a game object without the correct script attached.");
+					}
+					else
+					{
+						infoDisplay = displayScript;
+					}
+				}
+			}
+
+			if (!instance){
+				instance = this;
+			}
+			else {
+				Debug.LogError("You may only have one instance of information controller in your scene.");
+			}
+		}
+		public InformationDisplay infoDisplay;
+		public ViewSelection viewSelection;
+
+	    public bool debugKeys = true;
+
+		void Update(){
+			ActiveObject = viewSelection.GetSelectedObject();
+	        if (debugKeys)
+	        {
+	            //Enable / Disable Looking Glass Effect
+	            if (Input.GetKey(KeyCode.Q))
+	            {
+	                infoDisplay.GetComponent<TableDisplay>().textGenerator.GetComponent<TextBox>().lookingGlassSettings.useLookingGlassEffect = false;
+	            }
+	            if (Input.GetKey(KeyCode.W))
+	            {
+	                infoDisplay.GetComponent<TableDisplay>().textGenerator.GetComponent<TextBox>().lookingGlassSettings.useLookingGlassEffect = true;
+	            }
+	            if (Input.GetKeyDown(KeyCode.E))
+	            {
+	                infoI--;
+	                infoDisplay = allInfoDisplays[(infoI + allInfoDisplays.Length) % allInfoDisplays.Length];
+	                Debug.Log(infoDisplay.name);
+	            }
+	            if (Input.GetKeyDown(KeyCode.R))
+	            {
+	                infoI++;
+	                infoDisplay = allInfoDisplays[infoI % allInfoDisplays.Length];
+	                Debug.Log(infoDisplay.name);
+	            }
+	        }
+		}
+
+	    int infoI = 0;
+
+	    public InformationDisplay[] allInfoDisplays;
+
+		GameObject activeObject;
+
+		//If the active object is not selected anymore, but no other information object is selected neither, should nothing be shown or should the last active object be shown?
+		public bool showLastActiveObjectIfNothingSelected = true;
+		
+		public GameObject ActiveObject {
+			set {
+				//Test if the value differs from the current value
+				if (value != activeObject){
+					//If the active object is set null, discard the active object (except if the last active object should be kept
+					if (value == null){
+						if (showLastActiveObjectIfNothingSelected && !customViewClose){
+							//Do nothing
+						}
+						else {
+							infoDisplay.DiscardActiveObject();
+							activeObject = null;
+	                        customViewClose = false;
+						}
+					}
+					//otherwise update the active object
+					else if (value != activeObject && value.GetComponent<InformationObject>()){
+						activeObject = value;
+						infoDisplay.SetActiveObject(activeObject);
+					}
+				}
+			}
+		}
+
+	    bool customViewClose = false;
+
+	    /// <summary>
+	    /// Sometimes the player can manually close a menu. This function deals with that.
+	    /// </summary>
+	    public void ViewClosed()
+	    {
+	        customViewClose = true;
+	        ActiveObject = null;
+	    }
+	}
+}

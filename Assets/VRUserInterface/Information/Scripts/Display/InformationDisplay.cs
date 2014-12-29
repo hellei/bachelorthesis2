@@ -1,0 +1,14 @@
+﻿using UnityEngine;
+using System.Collections;
+
+namespace VRUserInterface
+{
+	public abstract class InformationDisplay : MonoBehaviour {
+	    /// <summary>
+	    /// The main function. Creates the info depending on the currently selected object.
+	    /// </summary>
+	    /// <param name="obj"></param>
+		public abstract void SetActiveObject(GameObject obj);
+		public abstract void DiscardActiveObject();
+	}
+}

@@ -1,0 +1,144 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &100000
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400000}
+  - 114: {fileID: 11400000}
+  m_Layer: 0
+  m_Name: CardTypes
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &400000
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: .151785672, y: .234617114, z: .59855175}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26ff8ebafd72b4e799600fa03ab33032, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cards:
+  - name: Baleful Eidolon
+    sprite: {fileID: 21300000, guid: ed06a8e6d8d730f4fb10576c29a74603, type: 3}
+    cost:
+    - {fileID: 21300002, guid: 9da234ecee2394ad3b5189b41b9dd25f, type: 3}
+    - {fileID: 21300052, guid: 9da234ecee2394ad3b5189b41b9dd25f, type: 3}
+    infoText:
+    - text: Baleful Eidolon
+      textStyle: 0
+    - text: Enchantment Creature // Sprint
+      textStyle: 1
+    - text: Bestow (If you cast this card for its//bestow cost, it's an Aura spell
+        with enchant //creature. It becomes a creature again if it's not// attached
+        to a creature.)
+      textStyle: 2
+    - text: Deathtouch (Any amount of damage this//deals to a creature is enough to
+        destroy it.)
+      textStyle: 2
+    - text: Enchanted creature gets +1/+1 and has deathtouch.
+      textStyle: 2
+  - name: Arena Athlete
+    sprite: {fileID: 21300000, guid: 04bb7659cea908440acb4447fb282d4b, type: 3}
+    cost: []
+    infoText:
+    - text: Arena Athlete
+      textStyle: 0
+    - text: Creature - Human
+      textStyle: 1
+    - text: Whenever you cast a spell // that targets Arena Athlete, target // creature
+        an opponent controls can't // block this turn.
+      textStyle: 0
+  - name: Akroan Hoplite
+    sprite: {fileID: 21300000, guid: dcf0801a4ed750c49aae4298e406cfe4, type: 3}
+    cost: []
+    infoText: []
+  - name: Blood Troll Harpy
+    sprite: {fileID: 21300000, guid: d0d0df66bf42a9a4a9cf8f71bad99779, type: 3}
+    cost: []
+    infoText: []
+  - name: Boon Of Erebos
+    sprite: {fileID: 21300000, guid: 552b10b7a069b2a48b6a1a3c75de0942, type: 3}
+    cost: []
+    infoText: []
+  - name: Borderland Minotaur
+    sprite: {fileID: 21300000, guid: c61b6a6dc5f9595449857b006d831cca, type: 3}
+    cost: []
+    infoText: []
+  - name: Fanatic of Mogus
+    sprite: {fileID: 21300000, guid: fc808a058dc1641ef841d8a88f54a6de, type: 3}
+    cost: []
+    infoText: []
+  - name: Island 1
+    sprite: {fileID: 21300000, guid: 8ed63e0a12be544009f7356290a4cd94, type: 3}
+    cost: []
+    infoText: []
+  - name: Island 2
+    sprite: {fileID: 21300000, guid: 26135cae1319e41c8876c8e102c169e7, type: 3}
+    cost: []
+    infoText: []
+  - name: Mountain 1
+    sprite: {fileID: 21300000, guid: 4250e6d3beb75450096adb93561e1b03, type: 3}
+    cost: []
+    infoText: []
+  - name: Mountain 2
+    sprite: {fileID: 21300000, guid: 201fe3ea9181949cda37cf0dd5029f30, type: 3}
+    cost: []
+    infoText: []
+  - name: Plains 1
+    sprite: {fileID: 21300000, guid: e3a9ae320ec544e07bbcd9a608297bab, type: 3}
+    cost: []
+    infoText: []
+  - name: Plains 2
+    sprite: {fileID: 21300000, guid: 21f5565c047ce4eef846bca6186f756f, type: 3}
+    cost: []
+    infoText: []
+  - name: Plains 3
+    sprite: {fileID: 21300000, guid: 5ccf5bab061b144ae849c6286394733c, type: 3}
+    cost: []
+    infoText: []
+  - name: Polis Crusher
+    sprite: {fileID: 21300000, guid: 44291f3f732fb42e089ddc67fe028d44, type: 3}
+    cost: []
+    infoText: []
+  - name: Scholar of Athreos
+    sprite: {fileID: 21300000, guid: 17175a2728f334f9ea7d8fdcf10bd84a, type: 3}
+    cost: []
+    infoText: []
+  - name: Swamp 1
+    sprite: {fileID: 21300000, guid: 5d831586e251a45cab6185fd1fc1c79d, type: 3}
+    cost: []
+    infoText: []
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 100000}
+  m_IsPrefabParent: 1
+  m_IsExploded: 1

@@ -1,0 +1,740 @@
+fileFormatVersion: 2
+guid: 9da234ecee2394ad3b5189b41b9dd25f
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: magic_icons_0
+    21300002: magic_icons_1
+    21300004: magic_icons_2
+    21300006: magic_icons_3
+    21300008: magic_icons_4
+    21300010: magic_icons_5
+    21300012: magic_icons_6
+    21300014: magic_icons_7
+    21300016: magic_icons_8
+    21300018: magic_icons_9
+    21300020: magic_icons_10
+    21300022: magic_icons_11
+    21300024: magic_icons_12
+    21300026: magic_icons_13
+    21300028: magic_icons_14
+    21300030: magic_icons_15
+    21300032: magic_icons_16
+    21300034: magic_icons_17
+    21300036: magic_icons_18
+    21300038: magic_icons_19
+    21300040: magic_icons_20
+    21300042: magic_icons_21
+    21300044: magic_icons_22
+    21300046: magic_icons_23
+    21300048: magic_icons_24
+    21300050: magic_icons_25
+    21300052: magic_icons_26
+    21300054: magic_icons_28
+    21300056: magic_icons_29
+    21300058: magic_icons_30
+    21300060: magic_icons_31
+    21300062: magic_icons_32
+    21300064: magic_icons_33
+    21300066: magic_icons_34
+    21300068: magic_icons_35
+    21300070: magic_icons_36
+    21300072: magic_icons_37
+    21300074: magic_icons_38
+    21300076: magic_icons_39
+    21300078: magic_icons_40
+    21300080: magic_icons_41
+    21300082: magic_icons_42
+    21300084: magic_icons_43
+    21300086: magic_icons_44
+    21300088: magic_icons_45
+    21300090: magic_icons_46
+    21300092: magic_icons_47
+    21300094: magic_icons_48
+    21300096: magic_icons_49
+    21300098: magic_icons_50
+    21300100: magic_icons_51
+    21300102: magic_icons_52
+    21300104: magic_icons_53
+    21300106: magic_icons_54
+    21300108: magic_icons_55
+    21300110: magic_icons_56
+    21300112: magic_icons_57
+    21300114: magic_icons_58
+    21300116: magic_icons_59
+    21300118: magic_icons_60
+    21300120: magic_icons_61
+    21300122: magic_icons_61
+    21300124: magic_icons_62
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: magic_icons_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 631
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: magic_icons_1
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 631
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: magic_icons_2
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 631
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: magic_icons_3
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 631
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: magic_icons_4
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 631
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: magic_icons_5
+      rect:
+        serializedVersion: 2
+        x: 525
+        y: 631
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: magic_icons_6
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 631
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: magic_icons_7
+      rect:
+        serializedVersion: 2
+        x: 735
+        y: 631
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: magic_icons_8
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 631
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: magic_icons_9
+      rect:
+        serializedVersion: 2
+        x: 945
+        y: 631
+        width: 101
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: magic_icons_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 526
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: magic_icons_11
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 526
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: magic_icons_12
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 526
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: magic_icons_13
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 526
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: magic_icons_14
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 526
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: magic_icons_15
+      rect:
+        serializedVersion: 2
+        x: 525
+        y: 526
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: magic_icons_16
+      rect:
+        serializedVersion: 2
+        x: 629
+        y: 526
+        width: 102
+        height: 100
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: magic_icons_17
+      rect:
+        serializedVersion: 2
+        x: 735
+        y: 526
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: magic_icons_18
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 526
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: magic_icons_19
+      rect:
+        serializedVersion: 2
+        x: 944
+        y: 526
+        width: 101
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: magic_icons_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 421
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: magic_icons_21
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 421
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: magic_icons_22
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 421
+        width: 101
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: magic_icons_23
+      rect:
+        serializedVersion: 2
+        x: 314
+        y: 420
+        width: 101
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: magic_icons_24
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 420
+        width: 100
+        height: 104
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: magic_icons_25
+      rect:
+        serializedVersion: 2
+        x: 523
+        y: 420
+        width: 102
+        height: 104
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: magic_icons_26
+      rect:
+        serializedVersion: 2
+        x: 629
+        y: 420
+        width: 102
+        height: 104
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: magic_icons_28
+      rect:
+        serializedVersion: 2
+        x: 944
+        y: 421
+        width: 102
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: magic_icons_29
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 316
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: magic_icons_30
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 314
+        width: 101
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: magic_icons_31
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 314
+        width: 101
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: magic_icons_32
+      rect:
+        serializedVersion: 2
+        x: 314
+        y: 314
+        width: 103
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: magic_icons_33
+      rect:
+        serializedVersion: 2
+        x: 419
+        y: 314
+        width: 104
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: magic_icons_34
+      rect:
+        serializedVersion: 2
+        x: 523
+        y: 314
+        width: 103
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: magic_icons_35
+      rect:
+        serializedVersion: 2
+        x: 629
+        y: 316
+        width: 101
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: magic_icons_36
+      rect:
+        serializedVersion: 2
+        x: 734
+        y: 314
+        width: 104
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: magic_icons_37
+      rect:
+        serializedVersion: 2
+        x: 839
+        y: 314
+        width: 101
+        height: 103
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: magic_icons_38
+      rect:
+        serializedVersion: 2
+        x: 944
+        y: 316
+        width: 101
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: magic_icons_39
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 211
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: magic_icons_40
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 211
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: magic_icons_41
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 210
+        width: 101
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: magic_icons_42
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 208
+        width: 101
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: magic_icons_43
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 210
+        width: 205
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: magic_icons_44
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 211
+        width: 102
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: magic_icons_45
+      rect:
+        serializedVersion: 2
+        x: 734
+        y: 210
+        width: 102
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: magic_icons_46
+      rect:
+        serializedVersion: 2
+        x: 839
+        y: 208
+        width: 102
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: magic_icons_47
+      rect:
+        serializedVersion: 2
+        x: 944
+        y: 210
+        width: 102
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: magic_icons_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 106
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: magic_icons_49
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 105
+        width: 102
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: magic_icons_50
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 106
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: magic_icons_51
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 106
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: magic_icons_52
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 106
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: magic_icons_53
+      rect:
+        serializedVersion: 2
+        x: 525
+        y: 106
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: magic_icons_54
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 106
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: magic_icons_55
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 508
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: magic_icons_56
+      rect:
+        serializedVersion: 2
+        x: 513
+        y: 0
+        width: 188
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: magic_icons_57
+      rect:
+        serializedVersion: 2
+        x: 705
+        y: 0
+        width: 122
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: magic_icons_58
+      rect:
+        serializedVersion: 2
+        x: 830
+        y: 2
+        width: 51
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: magic_icons_59
+      rect:
+        serializedVersion: 2
+        x: 885
+        y: 0
+        width: 52
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: magic_icons_60
+      rect:
+        serializedVersion: 2
+        x: 940
+        y: 0
+        width: 41
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: magic_icons_61
+      rect:
+        serializedVersion: 2
+        x: 983
+        y: 2
+        width: 58
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: magic_icons_61
+      rect:
+        serializedVersion: 2
+        x: 734
+        y: 420
+        width: 102
+        height: 104
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: magic_icons_62
+      rect:
+        serializedVersion: 2
+        x: 842
+        y: 420
+        width: 100
+        height: 104
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 

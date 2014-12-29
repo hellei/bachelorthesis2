@@ -1,0 +1,1420 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &100000
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400000}
+  - 114: {fileID: 11400000}
+  m_Layer: 0
+  m_Name: TableSurfaceTextGenerator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &100002
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400002}
+  - 114: {fileID: 11400004}
+  - 114: {fileID: 11400010}
+  m_Layer: 0
+  m_Name: InformationController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &100004
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400004}
+  - 114: {fileID: 11400002}
+  m_Layer: 0
+  m_Name: StandardViewSelection
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &100006
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400006}
+  - 114: {fileID: 11400006}
+  m_Layer: 0
+  m_Name: SurfaceDisplay
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &100008
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400008}
+  - 114: {fileID: 11400008}
+  m_Layer: 0
+  m_Name: DynamicDisplay
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &100010
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400010}
+  m_Layer: 0
+  m_Name: Displays
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &100012
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400012}
+  - 114: {fileID: 11400012}
+  m_Layer: 0
+  m_Name: TableDisplay
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &100014
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400014}
+  - 114: {fileID: 11400014}
+  m_Layer: 0
+  m_Name: TextGeneratorWithoutLookingGlassEffect
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &100016
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400016}
+  - 114: {fileID: 11400018}
+  m_Layer: 0
+  m_Name: SimpleFrontCardDisplay
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &100020
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400020}
+  - 114: {fileID: 11400020}
+  m_Layer: 0
+  m_Name: FrontCardDisplay1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &100022
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400022}
+  - 114: {fileID: 11400022}
+  m_Layer: 0
+  m_Name: FrontCardDisplay3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &100024
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400024}
+  - 114: {fileID: 11400024}
+  m_Layer: 0
+  m_Name: TextGenerator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &100026
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400026}
+  - 114: {fileID: 11400026}
+  m_Layer: 0
+  m_Name: FrontCardDisplay2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &100028
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400028}
+  - 114: {fileID: 11400028}
+  m_Layer: 0
+  m_Name: FrontCardDisplay4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &100030
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400030}
+  - 114: {fileID: 11400030}
+  m_Layer: 0
+  m_Name: FrontCardDisplay5
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &100032
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400032}
+  - 114: {fileID: 11400032}
+  m_Layer: 0
+  m_Name: FrontCardDisplay6
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &131256
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 431256}
+  - 114: {fileID: 11431256}
+  m_Layer: 0
+  m_Name: SimpleCardDisplayApproved
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &141598
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 441598}
+  - 114: {fileID: 11441598}
+  m_Layer: 0
+  m_Name: FrontCardDisplayWithCardCenteredInMiddle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &156418
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 456418}
+  - 114: {fileID: 11456418}
+  m_Layer: 0
+  m_Name: FrontCardDisplay7
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &190742
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 490742}
+  - 114: {fileID: 11490742}
+  m_Layer: 0
+  m_Name: FrontCardDisplayWithCard
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &400000
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.76031685, y: 7.78731346, z: -18.1243706}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 400006}
+  m_RootOrder: 0
+--- !u!4 &400002
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100002}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: .21678561, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 400024}
+  - {fileID: 400004}
+  - {fileID: 400010}
+  - {fileID: 400014}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+--- !u!4 &400004
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100004}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: .166719258, y: .489153683, z: -.169975773}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 400002}
+  m_RootOrder: 1
+--- !u!4 &400006
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100006}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -8.20688248, y: 8.14179897, z: 6.10141754}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 400000}
+  m_Father: {fileID: 400010}
+  m_RootOrder: 2
+--- !u!4 &400008
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100008}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -8.20688248, y: 8.14179897, z: 6.10141754}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 400010}
+  m_RootOrder: 0
+--- !u!4 &400010
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100010}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 5.44656563, y: -15.9291124, z: 12.022953}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 400008}
+  - {fileID: 400012}
+  - {fileID: 400006}
+  - {fileID: 431256}
+  - {fileID: 400020}
+  - {fileID: 400026}
+  - {fileID: 400022}
+  - {fileID: 400028}
+  - {fileID: 400030}
+  - {fileID: 400032}
+  - {fileID: 456418}
+  - {fileID: 490742}
+  - {fileID: 441598}
+  - {fileID: 400016}
+  m_Father: {fileID: 400002}
+  m_RootOrder: 2
+--- !u!4 &400012
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100012}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -8.20688248, y: 8.14179897, z: 6.10141754}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 400010}
+  m_RootOrder: 1
+--- !u!4 &400014
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100014}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 400002}
+  m_RootOrder: 3
+--- !u!4 &400016
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100016}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -8.20688248, y: 8.14179897, z: 6.10141754}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 400010}
+  m_RootOrder: 13
+--- !u!4 &400020
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100020}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -8.20688248, y: 8.14179897, z: 6.10141754}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 400010}
+  m_RootOrder: 4
+--- !u!4 &400022
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100022}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -8.20688248, y: 8.14179897, z: 6.10141754}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 400010}
+  m_RootOrder: 6
+--- !u!4 &400024
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100024}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 400002}
+  m_RootOrder: 0
+--- !u!4 &400026
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100026}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -8.20688248, y: 8.14179897, z: 6.10141754}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 400010}
+  m_RootOrder: 5
+--- !u!4 &400028
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100028}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -8.20688248, y: 8.14179897, z: 6.10141754}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 400010}
+  m_RootOrder: 7
+--- !u!4 &400030
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100030}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -8.20688248, y: 8.14179897, z: 6.10141754}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 400010}
+  m_RootOrder: 8
+--- !u!4 &400032
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100032}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -8.20688248, y: 8.14179897, z: 6.10141754}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 400010}
+  m_RootOrder: 9
+--- !u!4 &431256
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 131256}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -8.20688248, y: 8.14179897, z: 6.10141754}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 400010}
+  m_RootOrder: 3
+--- !u!4 &441598
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 141598}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -8.20688248, y: 8.14179897, z: 6.10141754}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 400010}
+  m_RootOrder: 12
+--- !u!4 &456418
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 156418}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -8.20688248, y: 8.14179897, z: 6.10141754}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 400010}
+  m_RootOrder: 10
+--- !u!4 &490742
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 190742}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -8.20688248, y: 8.14179897, z: 6.10141754}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 400010}
+  m_RootOrder: 11
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ad9c6e9622f5894096a7789aeda19c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textAssets:
+  - prefab: {fileID: 100000, guid: 10ba1a3a3de26934492c6904785f9891, type: 2}
+    textStyle: 0
+    textColor: {r: 0, g: 0, b: 0, a: 1}
+    backgroundColor: {r: 1, g: 1, b: 1, a: 1}
+  - prefab: {fileID: 100000, guid: 1c4de57f6fe7a244e8cba95134d8a3ed, type: 2}
+    textStyle: 1
+    textColor: {r: 1, g: 1, b: 1, a: 1}
+    backgroundColor: {r: 0, g: 0, b: 0, a: 1}
+  - prefab: {fileID: 100000, guid: cc4b68d4370196e4b8140acd62362055, type: 2}
+    textStyle: 2
+    textColor: {r: 1, g: 1, b: 1, a: 1}
+    backgroundColor: {r: 0, g: 0, b: 0, a: 1}
+  background: {fileID: 100000, guid: 8f47c1dc61d6ba24392140759670640b, type: 2}
+  borderLeft: .0500000007
+  borderTop: .0500000007
+  lookingGlassSettings:
+    useLookingGlassEffect: 1
+    lookingGlassCurve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    magnifyingFactor: 1.20000005
+    moveForwardValue: .00999999978
+    popupDuration: .400000006
+    minimizeSpeedMultiplication: 2
+--- !u!114 &11400002
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22f5701b122db18439a04a9c1fc1af6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &11400004
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed8c85454a132fc4fb14fa14c0185808, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  infoDisplay: {fileID: 11400018}
+  viewSelection: {fileID: 11400002}
+  debugKeys: 1
+  allInfoDisplays:
+  - {fileID: 11400032}
+  - {fileID: 11400018}
+  - {fileID: 11490742}
+  - {fileID: 11441598}
+  - {fileID: 11400008}
+  - {fileID: 11400012}
+  showLastActiveObjectIfNothingSelected: 1
+--- !u!114 &11400006
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ef14d6a1e570da41b9d23a8301e140a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  displayPosition: {x: .25, y: 0, z: -.0199999996}
+  textGenerator: {fileID: 11400000}
+  backButton: {fileID: 11400000, guid: 9d9e74b5096274652a0c0cbac437329c, type: 2}
+  scrollUpButton: {fileID: 11400000, guid: 9788af509fdbc48fdbaa66c7b27eebd2, type: 2}
+  scrollDownButton: {fileID: 11400000, guid: 98e763011136f473086fb9000d3a29da, type: 2}
+  textItemMargin: .0199999996
+  horizontalMargin: .0399999991
+  maxHeight: .400000006
+  maxWidth: .5
+  showDisplayPrefab: 0
+  showInfoText: 1
+  objectLookingGlassSettings:
+    useLookingGlassEffect: 1
+    lookingGlassCurve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    magnifyingFactor: 1.5
+    moveForwardValue: .100000001
+    popupDuration: .400000006
+    minimizeSpeedMultiplication: 2
+  centerAtText: 0
+  showBackButton: 1
+  closeWhenLookingAway: 1
+  lookAwayThreshold: {x: 40, y: 30}
+  connectionPrefab: {fileID: 0}
+  numberOfInfoBoxes: 2
+--- !u!114 &11400008
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 363ac87aebd3d423ca880170361e272b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  displayPosition: {x: 0, y: 1, z: 0}
+  textGenerator: {fileID: 11400024}
+  backButton: {fileID: 11400000, guid: 9d9e74b5096274652a0c0cbac437329c, type: 2}
+  scrollUpButton: {fileID: 11400000, guid: 9788af509fdbc48fdbaa66c7b27eebd2, type: 2}
+  scrollDownButton: {fileID: 11400000, guid: 98e763011136f473086fb9000d3a29da, type: 2}
+  textItemMargin: .0199999996
+  horizontalMargin: .0399999991
+  maxHeight: .5
+  maxWidth: .899999976
+  showDisplayPrefab: 0
+  showInfoText: 1
+  objectLookingGlassSettings:
+    useLookingGlassEffect: 1
+    lookingGlassCurve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    magnifyingFactor: 1.5
+    moveForwardValue: .100000001
+    popupDuration: .400000006
+    minimizeSpeedMultiplication: 2
+  centerAtText: 0
+  showBackButton: 1
+  closeWhenLookingAway: 1
+  lookAwayThreshold: {x: 40, y: 30}
+  connectionPrefab: {fileID: 0}
+  numberOfInfoBoxes: 2
+  globalDisplayOffset: {x: 0, y: .129999995, z: 0}
+  localDisplayOffset: {x: .400000006, y: .200000003, z: -.300000012}
+  lookAtOffset: {x: .100000001, y: .100000001, z: 0}
+  alwaysFacePlayer: 1
+--- !u!114 &11400010
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cadf8077468474c16afa5e07de051c01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttons:
+    timer: {fileID: 11400000, guid: 97e8093939a094a158747a91b3590935, type: 2}
+    threeDots: {fileID: 11400000, guid: c6b90c9eaa57ef24a84d6a9198686232, type: 2}
+    progressBar: {fileID: 11441334, guid: 09d0745e5be5b40f483af67e1abf1783, type: 2}
+    arrows: {fileID: 11480118, guid: c96dbd9a3c24e4733be8f80394d42943, type: 2}
+--- !u!114 &11400012
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c159f4d0c7e37b4f880225fdc2b346e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  displayPosition: {x: .300000012, y: .300000012, z: .300000012}
+  textGenerator: {fileID: 11400024}
+  backButton: {fileID: 11400000, guid: 9d9e74b5096274652a0c0cbac437329c, type: 2}
+  scrollUpButton: {fileID: 11400000, guid: 9788af509fdbc48fdbaa66c7b27eebd2, type: 2}
+  scrollDownButton: {fileID: 11400000, guid: 98e763011136f473086fb9000d3a29da, type: 2}
+  textItemMargin: .0199999996
+  horizontalMargin: .0399999991
+  maxHeight: .699999988
+  maxWidth: 1
+  showDisplayPrefab: 1
+  showInfoText: 1
+  objectLookingGlassSettings:
+    useLookingGlassEffect: 1
+    lookingGlassCurve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    magnifyingFactor: 1.5
+    moveForwardValue: .100000001
+    popupDuration: .400000006
+    minimizeSpeedMultiplication: 2
+  centerAtText: 0
+  showBackButton: 1
+  closeWhenLookingAway: 1
+  lookAwayThreshold: {x: 40, y: 30}
+  connectionPrefab: {fileID: 11400000, guid: 501f313e504fa8548808af2cbe19f9c9, type: 2}
+  numberOfInfoBoxes: 3
+--- !u!114 &11400014
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ad9c6e9622f5894096a7789aeda19c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textAssets:
+  - prefab: {fileID: 100004, guid: 5653693c98c8d489f814c02fb6be1256, type: 2}
+    textStyle: 0
+    textColor: {r: 0, g: 0, b: 0, a: 1}
+    backgroundColor: {r: 1, g: 1, b: 1, a: 1}
+  - prefab: {fileID: 100004, guid: f4337196b9cce4e1694d55161bce892f, type: 2}
+    textStyle: 1
+    textColor: {r: 1, g: 1, b: 1, a: 1}
+    backgroundColor: {r: 0, g: 0, b: 0, a: 1}
+  - prefab: {fileID: 100004, guid: e7092cf1301e64015a3e3d6eba2e2172, type: 2}
+    textStyle: 2
+    textColor: {r: 1, g: 1, b: 1, a: 1}
+    backgroundColor: {r: 0, g: 0, b: 0, a: 1}
+  background: {fileID: 100000, guid: 8f47c1dc61d6ba24392140759670640b, type: 2}
+  borderLeft: .0500000007
+  borderTop: .0500000007
+  lookingGlassSettings:
+    useLookingGlassEffect: 0
+    lookingGlassCurve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    magnifyingFactor: 1.5
+    moveForwardValue: .100000001
+    popupDuration: .400000006
+    minimizeSpeedMultiplication: 2
+--- !u!114 &11400018
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 627ebf435cb2e4a419321b96da4daf08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  displayPosition: {x: 0, y: 1, z: 0}
+  textGenerator: {fileID: 11400024}
+  backButton: {fileID: 11400000, guid: 9d9e74b5096274652a0c0cbac437329c, type: 2}
+  scrollUpButton: {fileID: 11400000, guid: 9788af509fdbc48fdbaa66c7b27eebd2, type: 2}
+  scrollDownButton: {fileID: 11400000, guid: 98e763011136f473086fb9000d3a29da, type: 2}
+  textItemMargin: .00999999978
+  horizontalMargin: .0399999991
+  maxHeight: .300000012
+  maxWidth: .400000006
+  showDisplayPrefab: 1
+  showInfoText: 0
+  objectLookingGlassSettings:
+    useLookingGlassEffect: 1
+    lookingGlassCurve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    magnifyingFactor: 1.20000005
+    moveForwardValue: .0199999996
+    popupDuration: .400000006
+    minimizeSpeedMultiplication: 2
+  centerAtText: 0
+  showBackButton: 0
+  closeWhenLookingAway: 1
+  lookAwayThreshold: {x: 30, y: 30}
+  connectionPrefab: {fileID: 0}
+  numberOfInfoBoxes: 5
+  localOffset: {x: 0, y: 0, z: .330000013}
+  globalOffset: {x: 0, y: 0, z: 0}
+  alwaysFacePlayer: 0
+--- !u!114 &11400020
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100020}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 627ebf435cb2e4a419321b96da4daf08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  displayPosition: {x: 0, y: 1, z: 0}
+  textGenerator: {fileID: 11400024}
+  backButton: {fileID: 11400000, guid: 9d9e74b5096274652a0c0cbac437329c, type: 2}
+  scrollUpButton: {fileID: 11400000, guid: 9788af509fdbc48fdbaa66c7b27eebd2, type: 2}
+  scrollDownButton: {fileID: 11400000, guid: 98e763011136f473086fb9000d3a29da, type: 2}
+  textItemMargin: .00999999978
+  horizontalMargin: .0399999991
+  maxHeight: .100000001
+  maxWidth: .200000003
+  showDisplayPrefab: 0
+  showInfoText: 1
+  objectLookingGlassSettings:
+    useLookingGlassEffect: 1
+    lookingGlassCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    magnifyingFactor: 1.5
+    moveForwardValue: .100000001
+    popupDuration: .699999988
+    minimizeSpeedMultiplication: 2
+  centerAtText: 0
+  showBackButton: 1
+  closeWhenLookingAway: 1
+  lookAwayThreshold: {x: 40, y: 30}
+  connectionPrefab: {fileID: 0}
+  numberOfInfoBoxes: 3
+  localOffset: {x: 0, y: 0, z: .200000003}
+  globalOffset: {x: 0, y: -.100000001, z: 0}
+  alwaysFacePlayer: 0
+--- !u!114 &11400022
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 627ebf435cb2e4a419321b96da4daf08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  displayPosition: {x: 0, y: 1, z: 0}
+  textGenerator: {fileID: 11400014}
+  backButton: {fileID: 11400000, guid: 9d9e74b5096274652a0c0cbac437329c, type: 2}
+  scrollUpButton: {fileID: 11400000, guid: 9788af509fdbc48fdbaa66c7b27eebd2, type: 2}
+  scrollDownButton: {fileID: 11400000, guid: 98e763011136f473086fb9000d3a29da, type: 2}
+  textItemMargin: .00999999978
+  horizontalMargin: .0399999991
+  maxHeight: .200000003
+  maxWidth: .400000006
+  showDisplayPrefab: 0
+  showInfoText: 1
+  objectLookingGlassSettings:
+    useLookingGlassEffect: 1
+    lookingGlassCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    magnifyingFactor: 1.5
+    moveForwardValue: .100000001
+    popupDuration: .699999988
+    minimizeSpeedMultiplication: 2
+  centerAtText: 0
+  showBackButton: 1
+  closeWhenLookingAway: 1
+  lookAwayThreshold: {x: 40, y: 30}
+  connectionPrefab: {fileID: 0}
+  numberOfInfoBoxes: 3
+  localOffset: {x: 0, y: 0, z: .200000003}
+  globalOffset: {x: 0, y: -.150000006, z: 0}
+  alwaysFacePlayer: 0
+--- !u!114 &11400024
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ad9c6e9622f5894096a7789aeda19c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textAssets:
+  - prefab: {fileID: 100000, guid: 10ba1a3a3de26934492c6904785f9891, type: 2}
+    textStyle: 0
+    textColor: {r: 0, g: 0, b: 0, a: 1}
+    backgroundColor: {r: 1, g: 1, b: 1, a: 1}
+  - prefab: {fileID: 100000, guid: 1c4de57f6fe7a244e8cba95134d8a3ed, type: 2}
+    textStyle: 1
+    textColor: {r: 1, g: 1, b: 1, a: 1}
+    backgroundColor: {r: 0, g: 0, b: 0, a: 1}
+  - prefab: {fileID: 100000, guid: cc4b68d4370196e4b8140acd62362055, type: 2}
+    textStyle: 2
+    textColor: {r: 1, g: 1, b: 1, a: 1}
+    backgroundColor: {r: 0, g: 0, b: 0, a: 1}
+  background: {fileID: 100000, guid: 8f47c1dc61d6ba24392140759670640b, type: 2}
+  borderLeft: .0500000007
+  borderTop: .0500000007
+  lookingGlassSettings:
+    useLookingGlassEffect: 1
+    lookingGlassCurve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    magnifyingFactor: 1.5
+    moveForwardValue: .100000001
+    popupDuration: .400000006
+    minimizeSpeedMultiplication: 2
+--- !u!114 &11400026
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 627ebf435cb2e4a419321b96da4daf08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  displayPosition: {x: 0, y: 1, z: 0}
+  textGenerator: {fileID: 11400014}
+  backButton: {fileID: 11400000, guid: 9d9e74b5096274652a0c0cbac437329c, type: 2}
+  scrollUpButton: {fileID: 11400000, guid: 9788af509fdbc48fdbaa66c7b27eebd2, type: 2}
+  scrollDownButton: {fileID: 11400000, guid: 98e763011136f473086fb9000d3a29da, type: 2}
+  textItemMargin: .00999999978
+  horizontalMargin: .0399999991
+  maxHeight: .100000001
+  maxWidth: .200000003
+  showDisplayPrefab: 0
+  showInfoText: 1
+  objectLookingGlassSettings:
+    useLookingGlassEffect: 1
+    lookingGlassCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    magnifyingFactor: 1.5
+    moveForwardValue: .100000001
+    popupDuration: .699999988
+    minimizeSpeedMultiplication: 2
+  centerAtText: 0
+  showBackButton: 1
+  closeWhenLookingAway: 1
+  lookAwayThreshold: {x: 40, y: 30}
+  connectionPrefab: {fileID: 0}
+  numberOfInfoBoxes: 3
+  localOffset: {x: 0, y: 0, z: .200000003}
+  globalOffset: {x: 0, y: 0, z: 0}
+  alwaysFacePlayer: 0
+--- !u!114 &11400028
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 627ebf435cb2e4a419321b96da4daf08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  displayPosition: {x: 0, y: 1, z: 0}
+  textGenerator: {fileID: 11400014}
+  backButton: {fileID: 11400000, guid: 9d9e74b5096274652a0c0cbac437329c, type: 2}
+  scrollUpButton: {fileID: 11400000, guid: 9788af509fdbc48fdbaa66c7b27eebd2, type: 2}
+  scrollDownButton: {fileID: 11400000, guid: 98e763011136f473086fb9000d3a29da, type: 2}
+  textItemMargin: .00999999978
+  horizontalMargin: .0399999991
+  maxHeight: .200000003
+  maxWidth: .400000006
+  showDisplayPrefab: 0
+  showInfoText: 1
+  objectLookingGlassSettings:
+    useLookingGlassEffect: 1
+    lookingGlassCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    magnifyingFactor: 1.5
+    moveForwardValue: .100000001
+    popupDuration: .699999988
+    minimizeSpeedMultiplication: 2
+  centerAtText: 0
+  showBackButton: 1
+  closeWhenLookingAway: 1
+  lookAwayThreshold: {x: 40, y: 30}
+  connectionPrefab: {fileID: 0}
+  numberOfInfoBoxes: 3
+  localOffset: {x: 0, y: 0, z: .200000003}
+  globalOffset: {x: 0, y: 0, z: 0}
+  alwaysFacePlayer: 1
+--- !u!114 &11400030
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 627ebf435cb2e4a419321b96da4daf08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  displayPosition: {x: 0, y: 1, z: 0}
+  textGenerator: {fileID: 11400014}
+  backButton: {fileID: 11400000, guid: 9d9e74b5096274652a0c0cbac437329c, type: 2}
+  scrollUpButton: {fileID: 11400000, guid: 9788af509fdbc48fdbaa66c7b27eebd2, type: 2}
+  scrollDownButton: {fileID: 11400000, guid: 98e763011136f473086fb9000d3a29da, type: 2}
+  textItemMargin: .00999999978
+  horizontalMargin: .0399999991
+  maxHeight: .200000003
+  maxWidth: .400000006
+  showDisplayPrefab: 0
+  showInfoText: 1
+  objectLookingGlassSettings:
+    useLookingGlassEffect: 1
+    lookingGlassCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    magnifyingFactor: 1.5
+    moveForwardValue: .100000001
+    popupDuration: .699999988
+    minimizeSpeedMultiplication: 2
+  centerAtText: 0
+  showBackButton: 1
+  closeWhenLookingAway: 1
+  lookAwayThreshold: {x: 30, y: 30}
+  connectionPrefab: {fileID: 0}
+  numberOfInfoBoxes: 3
+  localOffset: {x: 0, y: 0, z: .200000003}
+  globalOffset: {x: 0, y: -.100000001, z: 0}
+  alwaysFacePlayer: 1
+--- !u!114 &11400032
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100032}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 627ebf435cb2e4a419321b96da4daf08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  displayPosition: {x: 0, y: 1, z: 0}
+  textGenerator: {fileID: 11400024}
+  backButton: {fileID: 11400000, guid: 9d9e74b5096274652a0c0cbac437329c, type: 2}
+  scrollUpButton: {fileID: 11400000, guid: 9788af509fdbc48fdbaa66c7b27eebd2, type: 2}
+  scrollDownButton: {fileID: 11400000, guid: 98e763011136f473086fb9000d3a29da, type: 2}
+  textItemMargin: .00999999978
+  horizontalMargin: .0399999991
+  maxHeight: .200000003
+  maxWidth: .5
+  showDisplayPrefab: 0
+  showInfoText: 1
+  objectLookingGlassSettings:
+    useLookingGlassEffect: 1
+    lookingGlassCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    magnifyingFactor: 1.5
+    moveForwardValue: .100000001
+    popupDuration: .699999988
+    minimizeSpeedMultiplication: 2
+  centerAtText: 0
+  showBackButton: 1
+  closeWhenLookingAway: 1
+  lookAwayThreshold: {x: 30, y: 30}
+  connectionPrefab: {fileID: 0}
+  numberOfInfoBoxes: 5
+  localOffset: {x: 0, y: 0, z: .330000013}
+  globalOffset: {x: 0, y: -.100000001, z: 0}
+  alwaysFacePlayer: 0
+--- !u!114 &11431256
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 131256}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 363ac87aebd3d423ca880170361e272b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  displayPosition: {x: 0, y: 1, z: 0}
+  textGenerator: {fileID: 0}
+  backButton: {fileID: 11400000, guid: 9d9e74b5096274652a0c0cbac437329c, type: 2}
+  scrollUpButton: {fileID: 11400000, guid: 9788af509fdbc48fdbaa66c7b27eebd2, type: 2}
+  scrollDownButton: {fileID: 11400000, guid: 98e763011136f473086fb9000d3a29da, type: 2}
+  textItemMargin: .0199999996
+  horizontalMargin: .0399999991
+  maxHeight: .5
+  maxWidth: 1.20000005
+  showDisplayPrefab: 1
+  showInfoText: 1
+  objectLookingGlassSettings:
+    useLookingGlassEffect: 1
+    lookingGlassCurve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    magnifyingFactor: 1.5
+    moveForwardValue: .100000001
+    popupDuration: .400000006
+    minimizeSpeedMultiplication: 2
+  centerAtText: 0
+  showBackButton: 1
+  closeWhenLookingAway: 1
+  lookAwayThreshold: {x: 40, y: 30}
+  connectionPrefab: {fileID: 0}
+  numberOfInfoBoxes: 2
+  globalDisplayOffset: {x: 0, y: .129999995, z: 0}
+  localDisplayOffset: {x: 0, y: .400000006, z: -.400000006}
+  lookAtOffset: {x: 0, y: 0, z: 0}
+  alwaysFacePlayer: 1
+--- !u!114 &11441598
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 141598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 627ebf435cb2e4a419321b96da4daf08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  displayPosition: {x: 0, y: 1, z: 0}
+  textGenerator: {fileID: 11400024}
+  backButton: {fileID: 11400000, guid: 9d9e74b5096274652a0c0cbac437329c, type: 2}
+  scrollUpButton: {fileID: 11400000, guid: 9788af509fdbc48fdbaa66c7b27eebd2, type: 2}
+  scrollDownButton: {fileID: 11400000, guid: 98e763011136f473086fb9000d3a29da, type: 2}
+  textItemMargin: .00999999978
+  horizontalMargin: .0399999991
+  maxHeight: .200000003
+  maxWidth: .400000006
+  showDisplayPrefab: 1
+  showInfoText: 1
+  objectLookingGlassSettings:
+    useLookingGlassEffect: 1
+    lookingGlassCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    magnifyingFactor: 1.5
+    moveForwardValue: .100000001
+    popupDuration: .699999988
+    minimizeSpeedMultiplication: 2
+  centerAtText: 1
+  showBackButton: 1
+  closeWhenLookingAway: 1
+  lookAwayThreshold: {x: 30, y: 30}
+  connectionPrefab: {fileID: 0}
+  numberOfInfoBoxes: 5
+  localOffset: {x: 0, y: 0, z: .330000013}
+  globalOffset: {x: 0, y: 0, z: 0}
+  alwaysFacePlayer: 0
+--- !u!114 &11456418
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 156418}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 627ebf435cb2e4a419321b96da4daf08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  displayPosition: {x: 0, y: 1, z: 0}
+  textGenerator: {fileID: 11400024}
+  backButton: {fileID: 11400000, guid: 9d9e74b5096274652a0c0cbac437329c, type: 2}
+  scrollUpButton: {fileID: 11400000, guid: 9788af509fdbc48fdbaa66c7b27eebd2, type: 2}
+  scrollDownButton: {fileID: 11400000, guid: 98e763011136f473086fb9000d3a29da, type: 2}
+  textItemMargin: .00999999978
+  horizontalMargin: .0399999991
+  maxHeight: .200000003
+  maxWidth: .200000003
+  showDisplayPrefab: 0
+  showInfoText: 1
+  objectLookingGlassSettings:
+    useLookingGlassEffect: 1
+    lookingGlassCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    magnifyingFactor: 1.5
+    moveForwardValue: .100000001
+    popupDuration: .699999988
+    minimizeSpeedMultiplication: 2
+  centerAtText: 0
+  showBackButton: 1
+  closeWhenLookingAway: 1
+  lookAwayThreshold: {x: 30, y: 30}
+  connectionPrefab: {fileID: 0}
+  numberOfInfoBoxes: 5
+  localOffset: {x: 0, y: 0, z: .270000011}
+  globalOffset: {x: 0, y: 0, z: 0}
+  alwaysFacePlayer: 0
+--- !u!114 &11490742
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 190742}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 627ebf435cb2e4a419321b96da4daf08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  displayPosition: {x: 0, y: 1, z: 0}
+  textGenerator: {fileID: 11400024}
+  backButton: {fileID: 11400000, guid: 9d9e74b5096274652a0c0cbac437329c, type: 2}
+  scrollUpButton: {fileID: 11400000, guid: 9788af509fdbc48fdbaa66c7b27eebd2, type: 2}
+  scrollDownButton: {fileID: 11400000, guid: 98e763011136f473086fb9000d3a29da, type: 2}
+  textItemMargin: .00999999978
+  horizontalMargin: .0399999991
+  maxHeight: .200000003
+  maxWidth: .400000006
+  showDisplayPrefab: 1
+  showInfoText: 1
+  objectLookingGlassSettings:
+    useLookingGlassEffect: 1
+    lookingGlassCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    magnifyingFactor: 1.5
+    moveForwardValue: .100000001
+    popupDuration: .699999988
+    minimizeSpeedMultiplication: 2
+  centerAtText: 1
+  showBackButton: 1
+  closeWhenLookingAway: 1
+  lookAwayThreshold: {x: 30, y: 30}
+  connectionPrefab: {fileID: 0}
+  numberOfInfoBoxes: 5
+  localOffset: {x: 0, y: 0, z: .330000013}
+  globalOffset: {x: 0, y: 0, z: 0}
+  alwaysFacePlayer: 0
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 100002}
+  m_IsPrefabParent: 1
+  m_IsExploded: 1

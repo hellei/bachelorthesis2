@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SavedDeck xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <cards>
+    <string>Island 1</string>
+    <string>Island 2</string>
+    <string>Mountain 1</string>
+    <string>Mountain 2</string>
+    <string>Plains 1</string>
+    <string>Swamp 1</string>
+    <string>Polis Crusher</string>
+    <string>Scholar of Athreos</string>
+    <string>Baleful Eidolon</string>
+    <string>Arena Athlete</string>
+    <string>Akroan Hoplite</string>
+    <string>Blood Troll Harpy</string>
+    <string>Borderland Minotaur</string>
+  </cards>
+</SavedDeck> 

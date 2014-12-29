@@ -1,0 +1,378 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1343\cocoasubrtf140
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 HelveticaNeue;}
+{\colortbl;\red255\green255\blue255;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww19100\viewh14920\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+
+\f0\b\fs28 \cf0 Introduction\
+	Overview of the project\
+	History of VR\
+		
+\b0\fs24 -Definition of VR\
+		-Beginnings in 1990\
+		-new hype starting with the oculus rift\
+	
+\b\fs28 Existing similar projects\
+	Overview of the used devices//Oculus Rift (and Leap motion?)\
+
+\b0\fs24 		-low resolution\
+		-chromatic abberation\
+		-inaccuracies in hand detection\
+		-small movement range (not so important for card games)\
+	(
+\b\fs28 Goals of the project)
+\b0\fs24 \
+	\
+
+\b\fs28 Project\
+	Outline of the main subtasks\
+		Calibrating the environment\
+			
+\b0\fs24 Picture of the setup\
+			Describing the basic idea\
+			Problems: Leap distance detection not always accurate
+\b\fs28 \
+\
+		Interactions in VR\
+			
+\b0\fs24 Problems: Player cannot use mouse or keyboard well. Joysticks are slightly better but not applicable in our case
+\b\fs28 \
+
+\b0\fs24 			Head rotation as player input (Timer button, three dots button, progress bar button)\
+
+\b\fs28 \
+		Visualizing text\
+			
+\b0\fs24 Resolution too low to read text\
+			=>Necessity to abstract the card info\
+			A general approach to displaying text information in VR: \
+				Problems (Users are not used to VR UIs, no general rule. Example: Every player accepts fixed text boxes in 2d space in 				games, but a 3d text box appearing in VR might seem strange to the user; fixed screen space UIs do not work well 				(player looks at cards when reading and does not want to schielen),\
+				chromatic abberation: Gr\'fcner Text auf schwarzem Hintergrund am Besten lesbar, aber leider ungewohnt und h\'e4sslich),\
+				Chances (3d UIs, a lot of space as player can rotate head and has a much wider field of view).\
+			Programming: Table Display -> Dynamic Display -> Front Display.\
+			Dealing with the specific problems in Magic: The Gathering (Showing the icons, extracting them from the card?)\
+
+\b\fs28 \
+		Visualizing the person\
+			
+\b0\fs24 Showing a suitable body\
+			Use floating hands or the hands of the player?\
+			Uncanny valley: Is it better to not display a player at all than to display a person that does not perfectly align with the player\
+			Immersion by playing a character of your favourite card game?\
+
+\b\fs28 \
+		Visualizing the environment\
+			
+\b0\fs24 Immersion by playing in the suitable environment?\
+			Show effects when player plays special card\
+			Play in a beautiful environment (Enjoy the virtual sun during the skandinavian winter :) )\
+			lighting issues\
+			Show objects standing out (limit table interaction, immersion)\
+			Show something in every gaze direction\
+			http://archvirtual.com/2013/10/07/11-quick-oculus-rift-development-tips-for-architectural-visualization/#.VJmUqBAA\
+\
+
+\b\fs28 		Providing a basic menu structure\
+			
+\b0\fs24 Avoid forcing the user to put on and off HMD\
+			Provide simple menu for basic tasks\
+\
+		Sounds?\
+
+\b\fs28 Implementation\
+	
+\b0\fs24 Detailled description of the implementation; Information about problems we ran into / things we had to deal with.
+\b\fs28 \
+	Software\
+	Integrating Unity, Rift and Leap Motion\
+		
+\b0\fs24 Short description of integration: Downloading package, dragging leap object onto Rift etc.\
+		Easy setup, but: Leap Motion scale needs to be adapted. Maybe better to position it on the camera center object?\
+		Leap Motion and Rift still quite unstable. Direct HMD access not possible, setup rift as secondary screen (switch to primary because of 60Hz - 75Hz issues, set to 		Querformat (gedreht); On some PCs: Insert both Rift USB cables into pc; on others: camera to rift + charger). Leap motion sometimes not recognized, custom .exe --run start necessary. 
+\b\fs28 \
+	UI package\
+		Text visualization: Defining an info display\
+
+\b0\fs24 			One of the strengths of Unity: Easy customization\
+			Different types of positions\
+			UI in Unity rather bad. Z-Order in transparency. During bachelor thesis: 4.6 with new UI System released (too late to switch, furthermore still some bugs (z-order 			kept even if different z-value).\
+			Image of the information controller structure. Explanation of the abstract classes.\
+		
+\b\fs28 Creating the person\
+			
+\b0\fs24 Animated model from asset: Rotate bones for sitting gesture (Unfortunately no suitable idle sitting gesture for small movements)\
+			Rotate towards camera; include neck offset\
+			\
+			
+\b\fs28 \
+		\
+\
+	Evaluating the User Experience\
+	\
+\
+Conclusions\
+	Advantages and Disadvantages of a VR Card Game\
+		+
+\b0\fs24 Being able to play via Network\
+		+No need to buy cards (Updates made available a lot easier)\
+		+Limit action possibilities / provide help to the player (e.g. tutorial)\
+		+Awake actors shown on card to life (e.g. if you play an attack card, show an effect; Alternatively: Show video on magic card)\
+		-no haptic feedback\
+		-bad resolution / bad text and image display
+\b\fs28 \
+	Outlook\
+
+\b0\fs24 		-VR Technology improving rapidly (Crescent bay)\
+		-General technology improving: Leap Motion tracking better in the future? Possibility to film the player's face?
+\b\fs28 \
+		-
+\b0\fs24 Card games on the rise again\
+		 (Vr Technology very useful: Imagine Online Poker in VR with face tracking)\
+		-Will not become standard in the near future. Other fields better applicable for VR\
+		-Great possibilities with the tablet: Imagine a VR Spacegame: You control the game via the touch panel which is displayed on the tablet 		(problem with correct alignment still has to be solved, though)
+\b\fs28 \
+	\
+\
+\
+Fragen:\
+Ist der \'dcbergang der Handpositionen meine Aufgabe oder Max' Aufgabe?\
+Inwiefern bezieht sich alles auf das Kartenspiel\
+Gibt es bereits andere Projekte, die ebenfalls Tablets benutzen?\
+\
+
+\b0\fs24 -Card game in a virtual environment. We provide a generic approach to playing card games in VR, but our example project will use Magic: The gathering. To achieve a high factor of credibility and natural form of interaction, use a multi-device environment consisting of a VR HMD, the leap motion (track hands) and a tablet (haptic feedback + higher accuracy in detection of gestures) (show image)\
+-You will be positioned infront of a vr table that aligns with the real world table (or more accurate, the tablet on the real world table). \
+-Leap Motion attached to the Oculus Rift (tracks your hands). If you move your left hand infront of the sensor, your hand will be shown with the cards you hold in your hand. With the right hand you can take cards out of your hand, reorder or place it onto the table (recognized by the tablet touch). With the tablet: Move cards, rotate them or pick up a card.\
+Card game is single player at the moment.
+\b\fs28 \
+\
+\
+Introduction\
+\
+Overview of the project
+\b0\fs24 \
+\
+The basic idea of the project described in this bachelor thesis is to recreate the experience of playing a card game in the virtual world. To achieve a high factor a credibility and provide a natural form of interaction, we use a multi-device environment consisting of a head-mounted display (HMD) to show the virtual world, an infrared sensor to track the hand positions, and a tablet to give haptic feedback and detect finger gestures. This is a joint project with Max Wandinger who focusses on the interaction whereas I concentrate on the visualization parts of the program.\
+\
+My tasks can be split into four main subtasks:\
+	1. Interactions in the VR environment\
+	2. The visualization of relevant information to the user\
+	3. The representation of the player in the virtual space\
+	4. The presentation of the virtual environment\
+\
+The target of this project is...\
+\
+
+\b\fs28 History of VR\
+
+\b0\fs24 -give a short overview of the history of VR\
+-what is VR? In which term does it differ from a standard monitor screen\
+\
+
+\b\fs28 Existing similar projects\
+
+\b0\fs24 \
+Card games in VR only as idea, no working prototype found in the internet\
+Duel of the planeswalkers (https://www.youtube.com/watch?v=Aw-aURDpv9w)\
+http://www.roadtovr.com/sightline-dev-creates-incredible-holographic-user-interface-powered-oculus-rift-leap-motion/\
+https://forums.oculus.com/viewtopic.php?f=38&t=13625\
+Tablet for haptic feedback: Nichts gefunden, Betreuer fragen.\
+Haptic feedback: Yacines link einbauen\
+\
+
+\b\fs28 Overview of the devices\
+\
+
+\b0\fs24 Todo: Introduction of the devices\
+\
+The last introductory chapter provides a short overview of the devices used in this project.\
+\
+Oculus Rift:\
+	-VR HMD. Samsung display: Two lenses => good 3d impression, deep immersion\
+	-Combination of Accelerometer, Gyroscope, Magnetometer\
+	-Wide field of view 90* horizontal\
+	-One of the most successful Kickstarter projects\
+	-started the VR Hype\
+	-"..."However, still a developer version, several limitations...\
+	\
+current limitations they will appear more often in the detailled explanation of the project.\
+The head-mounted display Oculus Rift DK2 used in this project is one the best HMDs currently available to the public. However, it is still a developer version and not release-ready. Currently, the main limitation of this device is its resolution of 1920x1080. Although this resolution is enough for most monitors, it is not nearly enough for an HMD. As half of the display is only shown to the left eye and the other half to the right eye, the actual resolution drops to 960x1080. Together with the wide field of view of 100\'b0 (https://www.oculus.com/dk2/) this leads to a pixelated image on which you can see each pixel in the pixel grid.\
+Another problem of the Oculus Rift is the chromatic abberation due to the strong lenses used in the device. As different light tones are refracted differently, borders often have blue, red and green outlines. Although the drivers try to correct this on the software side, this phenomenon especially leads to problems when displaying text.\
+\
+Leap Motion:\
+	Hand tracking device\
+	two monochromatic IR cameras, three infrared LEDs\
+	mounted onto Oculus Rift (special product :) )\
+	innacuracies in the hand detection - especially the correct detection of gestures - lead to problems that are difficult to solve.\
+	bad recognition near tables => tablet\
+\
+Tablet:\
+	standard tablet; we use Windows, but theoretically Android and iOS devices supported as well. Windows tablets good because very large.\
+	finger gesture detection\
+	limitation: position has to be calibrated\
+\
+
+\b\fs28 Project\
+
+\b0\fs24 \
+-UI in VR differs from UI on monitor.\
+-Common ui guidelines on monitor, years of experience, UI in VR less explored\
+-Perception of depth: How far away from the player is the interface positioned (show image; on monitor no difference in distance, in VR yes)\
+\
+
+\b\fs28 Calibrating the environment
+\b0\fs24 \
+\
+Picture of the setup\
+Describing the basic idea\
+Problems: Leap distance detection not always accurate
+\b\fs28 \
+
+\b0\fs24 \
+\
+
+\b\fs28 Interactions in the VR Environment\
+
+\b0\fs24 \
+Requirements to interaction in the virtual environment differs a lot from established interaction methods at computers. The use of keyboard or mouse should be avoided as you cannot see the devices well and it feels rather unnatural in VR. The card game presented in this thesis avoids keyboard or mouse input completely and focusses on the use of new interaction methods only possible with an HMD. The most important and basic possibility to interact is by rotating your head and gazing towards objects. This is completely natural and therefore used as main interaction method in most VR projects. Furthermore, an option to imitate a mouse click is to tap the HMD with your hand. This approach is not used in this project as it still feels slightly unnatural and it is difficult to avoid false positives. In the VR Card game further interaction options are provided by the hand tracking of the Leap motion and the tablet which recognizes touch inputs.\
+This chapter focusses mainly on the design of buttons as there is currently no best practice in VR (as opposed to buttons on a monitor which usually always features mouse hover and click events). An overview of the button types tested and evaluated in the project is provided below:\
+1. Simple click button\
+This simple button does not really differ from a common button on the monitor. It is placed on an object and triggered as soon as you look at it. It is not really applicable for VR purposes, though, as there is no difference between hover and click and you therefore cannot look at the button without selecting it.\
+2. Timer Button\
+The timer button is probably the most intuitive button type applicable in VR. As soon as you look at it a progress bar fills up and after a certain amount of time the button is selected. Thus, you have a differentiation between the hover and selection event. This button is easy to use and understand and does not require a lot of head movement. However, by auto-selecting the button after some time without requiring a specific action that you do on purpose many false positives appear. In the card game, a lot of false selections of the info buttons on the cards appear if there are many cards placed on the table.\
+Furthermore, it is difficult to tweak the timer threshold (the time you have to look at a button before it gets selected). If you set this value too low, many false positives appear and the interaction become very hectic. Contrary, a high threshold results in long waiting time that slows down the interaction speed and might bore and annoy the player. It is not possible to get a single best value as different players require different thresholds - an experienced VR user probably expects a much lower threshold than a person new to this field.\
+Concluding, this button type is perfect if there are few buttons in a game which are not placed in the center of the view but rather at the peripherals and therefore are only looked at on purpose. For example, close buttons work very well with this concept as they are usually positioned at the borders of an element.\
+2. Three dots button\
+The three dots button is not useful for desktop applications, in fact I do not know any program using this button type. However, it has several advantages in VR and has been in use in e.g. Cineveo. The button consists of three empty squares, placed in a row. As soon as you look at the first square, it gets filled out and the second square is unlocked. By looking at the three squares one after another all the squares are filled and the button is selected.\
+The main advantage of this button type is that there are almost no false positives as it requires a very special action. However, this type is not intuitive and usually has to be explained the first time (as done in Cineveo). Furthermore, the selection process is rather slow and requires concentration to accurately focus on the squares, especially if the button is very small. It also takes a lot of space and the borders between the dots are quite annoying. But it is a promising approach that can be used in many variations. In the VR Card game several optimizations of this button type are provided which focus on fastening up the process, intuitively guiding the player and reducing space by removing the borders.\
+The first \
+\
+-Common devices like mouse, keyboard or gamepad not available (should be avoided; Player cannot see it)\
+-New interaction methods: Gaze direction, tap at the VR HMD, Hands detected by the Leap Controller, Tablet finger touch\
+-different approaches to Buttons. The following are used and evaluated in my project:\
+	1. Simple click button\
+		-As soon as you look at it, it gets selected\
+		+closest to original button idea, but not applicable in VR - no difference between hover and click => not possible to look at button\
+	1. Timer Button\
+		-most intuitive form of a button\
+		-look at it => progress bar fills up\
+		+easy to use and understand\
+		+not many head movements needed\
+		-many false positives, as no specific action needed; look at object behind button; look at button icon => woosh, selected\
+		-tweak timer: Low selection time => many false positives, hectic <=> high selection time: long wait duration, slow, annoying\
+		=>Timer buttons very useful for buttons positioned somewhere the player does not usually look towards; but: e.g. not very accurate for cards on table\
+	2. Three-Dots Button\
+		-three dots in a row; select left dot, then middle dot, then right dot (inspired by the dot system in Cineveo)\
+		
+\f1 \expnd0\expndtw0\kerning0
++no false inputs\
+		-slow\
+		-unintuitive; people usually understand when explained once (problem: no fixed ui design in vr yet)\
+		-borders between dots\
+		-takes a lot of space\
+	=> Improvements:\
+			Progress bar:\
+				-unlock one progress bar rect after the others\
+				+no borders => faster, easier to look at\
+				+well-known progress bar idea, but:\
+				-look direction left to right not really indicated\
+				-more space needed\
+			Arrows:\
+				-list of arrows in a row that act like a progress bar\
+				+gaze direction clearly indicated\
+			Circle infront of direction vectors:\
+				+more intuitive as the player pushes the circle, feels natural like rolling a ball\
+
+\f0 \kerning1\expnd0\expndtw0 \
+\
+
+\b\fs28 Visualizing text\
+\
+
+\b0\fs24 Visualizing the text properly one of the main tasks in card game. Not possible to read text on card in VR =>Necessity to abstract the card info.\
+A general approach to displaying text information in VR: \
+	Problems (Users are not used to VR UIs, no general rule. Example: Every player accepts fixed text boxes in 2d space in 	games, but a 3d text box appearing in VR might seem strange to the user; fixed screen space UIs do not work well 	(player looks at cards when reading and does not want to schielen),\
+	chromatic abberation: Gr\'fcner Text auf schwarzem Hintergrund am Besten lesbar, aber leider ungewohnt und h\'e4sslich),\
+	Chances (3d UIs, a lot of space as player can rotate head and has a much wider field of view).\
+	Programming: Table Display -> Dynamic Display -> Front Display.\
+	Dealing with the specific problems in Magic: The Gathering (Showing the icons, extracting them from the card?)\
+\
+
+\b\fs28 Visualizing the person\
+\
+
+\b0\fs24 http://www.mitpressjournals.org/doi/abs/10.1162/pres.18.4.294#.VJycfBAA\
+\
+One important aspect to create an immersive feeling in VR is the visualization of your body / your avatar. As soon as you look downwards you except to see your legs, belly and arms. Whilst it is already annoying in first-person games on a monitor if no avatar is shown, it is a crucial part in VR as you can easily get feelings of nausea if your body is missing. Unfortunately, as the Oculus Rift can only track your head rotation and position, there is currently no easy way to track the whole body. Some approaches try to implement the tracking of the body with the Kinect - a device that can track the motions of a human - but you cannot expect every user to own such a device and it has a lot of problems as well (find work). A lot of VR Games therefore show a virtual person that sits still on a chair (e.g. Sightline). Although this might feel more natural than being a disembodied ghost, it is still a very strange feeling if you raise your arms, lean sidewards or rotate around and the virtual character does not imitate your movements. And often you find yourself placed besides your character and can watch it from the side instead of being placed above it. A possibility to reposition the character is therefore essential and also provided in the VR card game.\
+In this context you can also take about the phenomenon called "uncanny valley" which states that improved realism and user acceptance are not completely linearly dependent but user acceptance drops significantly if something gets close to perfection (show image). It is argued that the Kinect suffers from this phenomenon - it tracks your complete body but limits action like actually moving around in the virtual world.\
+The Oculus Rift faces this problem to some extent as well. As you are completely sucked into the virtual environment and feel present in that world it is a disturbing feeling to see a false body instead of your own. The program Cineveo shows a virtual body whose arms are sometimes moving slightly which leads to startled reaction by some audience. So, is it better not to show a body at all then showing one that does not completely align with the real-world pendant?\
+In the VR Card game we decided to show a character but provide the option to turn it off. We use a person sitting on a chair without motion. It uses the first tracked head position as reference and places the avatar below. The real-world chair position is assumed to be fixed. The character does not sit completely still, but tries to calculate your movement to a certain extent, given the chair position and your head position and rotation. Given the offset between the rift camera position and the neck of the avatar, you can get the neck position. The body - having the fixed pivot point at the hip center - now always tilts towards the neck position. The rotation around the y axis is fixed as you cannot estimate this rotation. By this, you can see your body lean sidewards or forwards if you move your head around. Although this provides a more natural feeling, of course it cannot be completely accurate and as soon as you move your chair it does not work anymore. Furthermore, the actual user's tallness is not taken into account.\
+Besides the technical question there are many options and possibilities when displaying your avatar. In the case of our card game setting it can improve the immersive effect if you play one of your favourite characters or a person suitable for the card types you are playing. As the game shows an environment suitable for the white deck, the character looks like a cleric. In a swamp environment you could be a skeleton. You could also be a huge creature - three meters tall - to provide a feeling of power.\
+\
+One advantage of this project is the use of the Leap Motion which at least \
+\
+TODO:\
+Option 1: Do not show a body at all. Show hands floating in the hair.\
+Option 2: Show body with hidden arms. Floating hands.\
+Option 3: Show body. Calculate the probable elbow position. (Does this feel very unnatural?)\
+\
+
+\b\fs28 Visualizing the environment\
+
+\b0\fs24 \
+\
+Immersion by playing in the suitable environment?\
+Show effects when player plays special card\
+Play in a beautiful environment (Enjoy the virtual sun during the skandinavian winter :) )\
+lighting issues\
+Show objects standing out (limit table interaction, immersion)\
+Show something in every gaze direction: Basically the first thing you do when you get an Oculus Rift set up: Look into all directions (impressed that you can look 360 degrees around) => provide something!\
+http://archvirtual.com/2013/10/07/11-quick-oculus-rift-development-tips-for-architectural-visualization/#.VJmUqBAA\
+\
+
+\b\fs28 Providing a basic menu structure\
+\
+
+\b0\fs24 game needs some menu items\
+provide simple menu system for basic functionality (avoid having to use config all the time)\
+open menu: Not possible via key, but via Icon. Place icon in the environment, if you look at it, open menu.\
+I chose a gear as it is the common symbol for settings.\
+menu (icons, rows), submenus, callbacks. conditions\
+\
+
+\b\fs28 Implementation\
+
+\b0\fs24 \
+Framework: Unity3D (offers package for rift support and package for leap motion support (leap motion supports rift).\
+Programming language: C# (most commonly used language in Unity3D, more powerful, better structure than Unityscript).\
+github used for version control\
+Oculus SDK and Leap Motion SDK can be downloaded for free. The project was only tested on Windows. Theoretically mac support (Unity).\
+\
+Detailled description of the implementation; Information about problems we ran into / things we had to deal with.
+\b\fs28 \
+Software\
+Integrating Unity, Rift and Leap Motion\
+	
+\b0\fs24 Short description of integration: Downloading package, dragging leap object onto Rift etc.\
+	Easy setup, but: Leap Motion scale needs to be adapted. Maybe better to position it on the camera center object?\
+	Leap Motion and Rift still quite unstable. Direct HMD access not possible, setup rift as secondary screen (switch to primary because of 60Hz - 75Hz issues, set to 	Querformat (gedreht); On some PCs: Insert both Rift USB cables into pc; on others: camera to rift + charger). Leap motion sometimes not recognized, custom .exe --run start necessary. 
+\b\fs28 \
+UI package\
+Text visualization: Defining an info display\
+
+\b0\fs24 	One of the strengths of Unity: Easy customization\
+	Different types of positions\
+	UI in Unity rather bad. Z-Order in transparency. During bachelor thesis: 4.6 with new UI System released (too late to switch, furthermore still some bugs (z-order 	kept even if different z-value).\
+	Image of the information controller structure. Explanation of the abstract classes.\
+
+\b\fs28 Creating the person\
+	
+\b0\fs24 Animated model from asset: Rotate bones for sitting gesture (Unfortunately no suitable idle sitting gesture for small movements)\
+	Rotate towards camera; include neck offset\
+\
+\
+\
+\
+\
+TODO:\
+Describe: "immersive effect"}
