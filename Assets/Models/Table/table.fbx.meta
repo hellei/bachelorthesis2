@@ -7,13 +7,52 @@ ModelImporter:
     100002: Cube
     100004: Lamp
     100006: //RootNode
+    100008: Cube.001
+    100010: Cube.002
+    100012: Cube.003
+    100014: Cube.004
+    100016: Cube.005
+    100018: Cylinder.000
+    100020: Cylinder.001
+    100022: Cylinder.002
+    100024: Cylinder.003
     400000: Camera
     400002: Cube
     400004: Lamp
     400006: //RootNode
+    400008: Cube.001
+    400010: Cube.002
+    400012: Cube.003
+    400014: Cube.004
+    400016: Cube.005
+    400018: Cylinder.000
+    400020: Cylinder.001
+    400022: Cylinder.002
+    400024: Cylinder.003
     2300000: Cube
+    2300002: Cube.001
+    2300004: Cube.002
+    2300006: Cube.003
+    2300008: Cube.004
+    2300010: Cube.005
+    2300012: Cylinder.000
+    2300014: Cylinder.001
+    2300016: Cylinder.002
+    2300018: Cylinder.003
     3300000: Cube
+    3300002: Cube.001
+    3300004: Cube.002
+    3300006: Cube.003
+    3300008: Cube.004
+    3300010: Cube.005
+    3300012: Cylinder.000
+    3300014: Cylinder.001
+    3300016: Cylinder.002
+    3300018: Cylinder.003
     4300000: Cube
+    4300002: Cube.005
+    4300004: Cylinder.003
+    4300006: Cube.001
     7400000: Default Take
     9500000: //RootNode
   materials:
