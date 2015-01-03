@@ -8,6 +8,14 @@ namespace VRUserInterface
 
 	    GameObject cursor = null;
 
+		public Vector3 CursorPosition
+		{
+			get
+			{
+				return cursor.transform.position;
+			}
+		}
+
 	    public float cursorDistance = 2f;
 
 		public static VRCursor instance;

@@ -3,7 +3,7 @@ using System.Collections;
 
 namespace VRUserInterface
 {
-	public enum ButtonType {Timer, ThreeDots, ProgressBar, Arrows}
+	public enum ButtonType {Timer, ThreeDots, ProgressBar, Arrows, DragCircle}
 
 	/// <summary>
 	/// Generates a button with the specificied parameters
@@ -27,6 +27,9 @@ namespace VRUserInterface
 				break;
 			case ButtonType.Arrows:
 				buttonPrefab = Prefabs.instance.buttons.arrows;
+				break;
+			case ButtonType.DragCircle:
+				buttonPrefab = Prefabs.instance.buttons.dragCircle;
 				break;
 			}
 			if (buttonPrefab != null)

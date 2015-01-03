@@ -778,6 +778,7 @@ MonoBehaviour:
     threeDots: {fileID: 11400000, guid: c6b90c9eaa57ef24a84d6a9198686232, type: 2}
     progressBar: {fileID: 11441334, guid: 09d0745e5be5b40f483af67e1abf1783, type: 2}
     arrows: {fileID: 11480118, guid: c96dbd9a3c24e4733be8f80394d42943, type: 2}
+    dragCircle: {fileID: 11457524, guid: 4fa50588943682f44ae1ba458ffaab5a, type: 2}
 --- !u!114 &11400012
 MonoBehaviour:
   m_ObjectHideFlags: 1

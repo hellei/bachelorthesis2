@@ -22,6 +22,7 @@ namespace VRUserInterface
 			public Button threeDots;
 			public Button progressBar;
 			public Button arrows;
+			public Button dragCircle;
 		}
 
 		public Buttons buttons;

@@ -252,7 +252,7 @@ MonoBehaviour:
   buttonOffset: {x: 0, y: 0, z: .0500000007}
   offsetOnHand: {fileID: 104380}
   offsetOnTable: {fileID: 104382}
-  buttonSize: .300000012
+  buttonSize: .600000024
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1

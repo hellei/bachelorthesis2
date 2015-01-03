@@ -142,7 +142,6 @@ public class EnvironmentPositioner : MenuCallback {
 		//Place the chair underneath the camera
         //The seat position is the neck position of the player minus the height of him sitting
 		Vector3 seatPosition = VRCameraEnable.instance.GetCameraCenterObject().transform.TransformPoint(playerModel.neckOffset) - new Vector3(0,Config.instance.personSitHeight,0);
-		Debug.Log (VRCameraEnable.instance.GetCameraCenterObject ().transform.position);
 		chair.transform.position = seatPosition;
 	}
 }
