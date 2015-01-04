@@ -68,21 +68,29 @@ public class EnvironmentPositioner : MenuCallback {
     float zFightingOffset = 0.003f;
 
     void PositionEnvironment()
-    {        
+    {
+		/*The following lines might seem a little bit strange. The problem is that the Unity Global Space is defined
+		 * by the initial Oculus Rift rotation. However, for this project we need the rift positional tracker to define the
+		 * global space. As I found no way, to do this, I have to add a rotation offset to the Oculus Rift HMD rotation */
+		Quaternion targetRot = Quaternion.Inverse (riftPositionTracker.transform.rotation);
+		riftPositionTracker.transform.parent = VRCameraEnable.instance.vrCam.transform;
+		VRCameraEnable.instance.vrCam.transform.rotation = targetRot;
+		riftPositionTracker.transform.parent = null;
+
         //Place the table
-        Vector3 tabletPosition = riftPositionTracker.transform.position + Config.instance.relativeTabletPosition;
-		Debug.Log (riftPositionTracker.transform.position);
+		Vector3 tabletPosition = riftPositionTracker.transform.TransformPoint(Config.instance.relativeTabletPosition + new Vector3(Config.instance.tabletSize.x / 2, /*-Config.instance.tabletSize.y / 2 + */zFightingOffset, Config.instance.tabletSize.z / 2));
         //Set the offset
-        tablet.transform.position = tabletPosition + new Vector3(Config.instance.tabletSize.x / 2, /*-Config.instance.tabletSize.y / 2 + */zFightingOffset, Config.instance.tabletSize.z / 2);
+        tablet.transform.position = tabletPosition;
         tablet.transform.localScale = Config.instance.tabletSize;
         //The table position is the tablet position minus half the height of the tablet position (It is the table surface)
-        Vector3 tablePosition = tabletPosition;
+		Vector3 tablePosition = riftPositionTracker.transform.TransformPoint(Config.instance.relativeTabletPosition);;
         table.transform.position = tablePosition;
 
         //Place the floor
         Vector3 floorPosition = tablePosition - new Vector3(0, Config.instance.tableSurfaceHeight, 0);
         room.transform.position = floorPosition;
 
+		VRCameraEnable.instance.UpdateEditorCamera ();
 		VRCameraEnable.instance.UpdateCenterObject ();
 		SetChairPosition ();
 

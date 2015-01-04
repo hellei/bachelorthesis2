@@ -68,7 +68,6 @@ namespace VRUserInterface
 		{
 			ResetButton();
 			//Disable the button once the event is triggered
-			gameObject.SetActive (false);
 			CallEvent();
 		}
 

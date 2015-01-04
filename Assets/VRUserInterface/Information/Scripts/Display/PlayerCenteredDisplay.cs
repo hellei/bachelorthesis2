@@ -24,7 +24,6 @@ namespace VRUserInterface
 
 		private void PositionMenu(GameObject obj)
 		{
-
 			if (obj)
 			{
 				//Position object ath the reference position to get the right orientation

@@ -46,6 +46,10 @@ namespace VRUserInterface
 		public ViewSelection viewSelection;
 
 	    public bool debugKeys = true;
+		/// <summary>
+		/// Link to the info button prefab, only used for debug purposes.
+		/// </summary>
+		public ButtonGenerator infoButton;
 
 		void Update(){
 			ActiveObject = viewSelection.GetSelectedObject();
@@ -72,6 +76,18 @@ namespace VRUserInterface
 	                infoDisplay = allInfoDisplays[infoI % allInfoDisplays.Length];
 	                Debug.Log(infoDisplay.name);
 	            }
+				if (Input.GetKeyDown(KeyCode.T))
+				{
+					infoButton.buttonType = (ButtonType)Mathf.Max(0, (int)infoButton.buttonType - 1);
+					Debug.Log(infoButton.buttonType);
+					InformationObject.recreateButtons = true;
+				}
+				if (Input.GetKeyDown(KeyCode.Z))
+				{
+					infoButton.buttonType = (ButtonType)Mathf.Min(System.Enum.GetNames(typeof(ButtonType)).Length - 1, (int)infoButton.buttonType + 1);
+					Debug.Log(infoButton.buttonType);
+					InformationObject.recreateButtons = true;
+				}
 	        }
 		}
 

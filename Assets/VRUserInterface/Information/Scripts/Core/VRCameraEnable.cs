@@ -72,7 +72,7 @@ namespace VRUserInterface
 		/// <summary>
 		/// Only used for debug purposes.
 		/// </summary>
-		void UpdateEditorCamera()
+		public void UpdateEditorCamera()
 		{
 			if (unityCam && unityCam.activeSelf && EnvironmentPositioner.instance)
 			{
@@ -97,7 +97,6 @@ namespace VRUserInterface
 
 		public void UpdateCenterObject()
 		{
-			UpdateEditorCamera ();
 			Vector3 pos = Vector3.zero;
 			Quaternion rot = Quaternion.identity;
 			if (unityCam.activeSelf)

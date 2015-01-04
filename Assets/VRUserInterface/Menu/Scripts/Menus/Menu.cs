@@ -152,7 +152,6 @@ namespace VRUserInterface
 
 		public ButtonGenerator buttonGenerator;
 
-
 	    GameObject CreateIcon(Icon icon, Vector2 pos, float scale)
 	    {
 			GameObject quad = buttonGenerator.Instantiate ();//GameObject.CreatePrimitive(PrimitiveType.Quad);
@@ -189,7 +188,6 @@ namespace VRUserInterface
 			mi.condition = icon.condition;
 			mi.zOffset = icon.zOffset;
 			mi.parentMenu = this;
-
 			if (icon.useSecondState)
 			{
 				GameObject subIcon = CreateIcon(icon.secondState, pos, scale);

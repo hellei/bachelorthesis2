@@ -51,7 +51,7 @@ public class OVRViewCone : MonoBehaviour {
 		IRCameraPos.z *= -1;
 
         transform.localPosition = IRCameraPos + camController.transform.position;
-		transform.rotation = IRCameraRot;
+		transform.rotation = Quaternion.Inverse(IRCameraRot);
 		
 		//float horizontalScale = Mathf.Tan (cameraHFov / 2f);
 		//float verticalScale = Mathf.Tan (cameraVFov / 2f);
@@ -67,7 +67,10 @@ public class OVRViewCone : MonoBehaviour {
 						ref float cameraFarZ)
 	{
 		if (OVRManager.capiHmd == null)
+		{
+			Debug.LogError("Capi HMD not existing");
 			return false;
+		}
 		
 		TrackingState ss =  OVRManager.capiHmd.GetTrackingState();
 		
@@ -86,7 +89,8 @@ public class OVRViewCone : MonoBehaviour {
 		cameraVFov = desc.CameraFrustumVFovInRadians;
 		cameraNearZ = desc.CameraFrustumNearZInMeters;
 		cameraFarZ = desc.CameraFrustumFarZInMeters;
-		
+
+
 		//OVRDevice.OrientSensor (ref rotation);
 		
 		return true;

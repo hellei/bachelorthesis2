@@ -1,0 +1,277 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &161772
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 461772}
+  m_Layer: 0
+  m_Name: Menus
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &161774
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 461774}
+  - 114: {fileID: 11461772}
+  m_Layer: 0
+  m_Name: Menu
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &461772
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 161772}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: .52807045, y: .443823695, z: -.0728533864}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 461774}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+--- !u!4 &461774
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 161774}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 461772}
+  m_RootOrder: 0
+--- !u!114 &11461772
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 161774}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da103f4e3359d454d8be89d47b1971f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rows:
+  - icons:
+    - sprite: {fileID: 21300000, guid: 5e6ba8b60b82541b08e24f325f2acb14, type: 3}
+      subMenuPrefab: {fileID: 0}
+      isBackButton: 0
+      isCloseButton: 1
+      zOffset: 0
+      callback:
+        component: {fileID: 0}
+        info:
+        - ResetChair
+      condition:
+        component: {fileID: 0}
+        info: []
+      name: 
+      tooltip: []
+      useSecondState: 0
+      secondState:
+        sprite: {fileID: 0}
+        subMenuPrefab: {fileID: 0}
+        isBackButton: 0
+        isCloseButton: 0
+        zOffset: 0
+        callback:
+          component: {fileID: 0}
+          info: []
+        condition:
+          component: {fileID: 0}
+          info: []
+        name: 
+        tooltip: []
+        useSecondState: 0
+        secondState:
+          sprite: {fileID: 0}
+          subMenuPrefab: {fileID: 0}
+          isBackButton: 0
+          isCloseButton: 0
+          zOffset: 0
+          callback:
+            component: {fileID: 0}
+            info: []
+          condition:
+            component: {fileID: 0}
+            info: []
+          name: 
+          tooltip: []
+          useSecondState: 0
+          secondState:
+            sprite: {fileID: 0}
+            subMenuPrefab: {fileID: 0}
+            isBackButton: 0
+            isCloseButton: 0
+            zOffset: 0
+            callback:
+              component: {fileID: 0}
+              info: []
+            condition:
+              component: {fileID: 0}
+              info: []
+            name: 
+            tooltip: []
+            useSecondState: 0
+            secondState:
+              sprite: {fileID: 0}
+              subMenuPrefab: {fileID: 0}
+              isBackButton: 0
+              isCloseButton: 0
+              zOffset: 0
+              callback:
+                component: {fileID: 0}
+                info: []
+              condition:
+                component: {fileID: 0}
+                info: []
+              name: 
+              tooltip: []
+              useSecondState: 0
+              secondState:
+                sprite: {fileID: 0}
+                subMenuPrefab: {fileID: 0}
+                isBackButton: 0
+                isCloseButton: 0
+                zOffset: 0
+                name: 
+                tooltip: []
+                useSecondState: 0
+                secondState:
+                  isBackButton: 0
+                  isCloseButton: 0
+                  zOffset: 0
+                  name: 
+                  useSecondState: 0
+    - sprite: {fileID: 21300000, guid: 5e6ba8b60b82541b08e24f325f2acb14, type: 3}
+      subMenuPrefab: {fileID: 0}
+      isBackButton: 0
+      isCloseButton: 0
+      zOffset: 0
+      callback:
+        component: {fileID: 0}
+        info:
+        - Hide
+      condition:
+        component: {fileID: 0}
+        info: []
+      name: 
+      tooltip: []
+      useSecondState: 1
+      secondState:
+        sprite: {fileID: 0}
+        subMenuPrefab: {fileID: 0}
+        isBackButton: 0
+        isCloseButton: 0
+        zOffset: 0
+        callback:
+          component: {fileID: 0}
+          info:
+          - Show
+        condition:
+          component: {fileID: 0}
+          info: []
+        name: 
+        tooltip: []
+        useSecondState: 0
+        secondState:
+          sprite: {fileID: 0}
+          subMenuPrefab: {fileID: 0}
+          isBackButton: 0
+          isCloseButton: 0
+          zOffset: 0
+          callback:
+            component: {fileID: 0}
+            info: []
+          condition:
+            component: {fileID: 0}
+            info: []
+          name: 
+          tooltip: []
+          useSecondState: 0
+          secondState:
+            sprite: {fileID: 0}
+            subMenuPrefab: {fileID: 0}
+            isBackButton: 0
+            isCloseButton: 0
+            zOffset: 0
+            callback:
+              component: {fileID: 0}
+              info: []
+            condition:
+              component: {fileID: 0}
+              info: []
+            name: 
+            tooltip: []
+            useSecondState: 0
+            secondState:
+              sprite: {fileID: 0}
+              subMenuPrefab: {fileID: 0}
+              isBackButton: 0
+              isCloseButton: 0
+              zOffset: 0
+              callback:
+                component: {fileID: 0}
+                info: []
+              condition:
+                component: {fileID: 0}
+                info: []
+              name: 
+              tooltip: []
+              useSecondState: 0
+              secondState:
+                sprite: {fileID: 0}
+                subMenuPrefab: {fileID: 0}
+                isBackButton: 0
+                isCloseButton: 0
+                zOffset: 0
+                name: 
+                tooltip: []
+                useSecondState: 0
+                secondState:
+                  isBackButton: 0
+                  isCloseButton: 0
+                  zOffset: 0
+                  name: 
+                  useSecondState: 0
+  distance: .300000012
+  iconRotation: 20
+  iconSize: .150000006
+  iconMargin: .0500000007
+  menuOffset: {x: 0, y: -.300000012, z: 0}
+  menuLayout: 1
+  soundEffects:
+    useSound: 1
+    hover: {fileID: 0}
+    select: {fileID: 0}
+  backSprite: {fileID: 21300000, guid: 01867e92e918f4ae9928a2971932f5c8, type: 3}
+  closeSprite: {fileID: 21300000, guid: 65546800a4b3948889df6245faf1d387, type: 3}
+  buttonGenerator: {fileID: 11464290, guid: 59add8ad57aa7493b8d30b90bf041c9c, type: 2}
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 161772}
+  m_IsPrefabParent: 1
+  m_IsExploded: 1

@@ -110,7 +110,24 @@ namespace VRUserInterface
 					}
 				}
 	        }
+			if (recreateButtons)
+			{
+				Destroy(selectionButton.gameObject);
+				selectionButton = null;
+			}
 	    }
+
+		void LateUpdate()
+		{
+			recreateButtons = false;
+
+		}
+
+
+		/// <summary>
+		/// Set to true to recreate all buttons of the info objects.
+		/// </summary>
+		public static bool recreateButtons;
 
 		public void DisableButton()
 		{

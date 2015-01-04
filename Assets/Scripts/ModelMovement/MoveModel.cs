@@ -145,6 +145,7 @@ public class MoveModel : MenuCallback {
         //Project point onto a plane
         Vector3 planePosA = a.ProjectPointOnPlane(origin, p, out sign);
 
+
         //Project point onto a and b plane
         Vector3 planePosAB = b.ProjectPointOnPlane(origin, planePosA, out sign);
 

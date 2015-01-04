@@ -652,6 +652,7 @@ MonoBehaviour:
   infoDisplay: {fileID: 11400018}
   viewSelection: {fileID: 11400002}
   debugKeys: 1
+  infoButton: {fileID: 11400000, guid: 6d82e974550a049ae9ea9a5c6cba8c48, type: 2}
   allInfoDisplays:
   - {fileID: 11400032}
   - {fileID: 11400018}
@@ -894,8 +895,8 @@ MonoBehaviour:
   scrollDownButton: {fileID: 11400000, guid: 98e763011136f473086fb9000d3a29da, type: 2}
   textItemMargin: .00999999978
   horizontalMargin: .0399999991
-  maxHeight: .300000012
-  maxWidth: .400000006
+  maxHeight: .25
+  maxWidth: .300000012
   showDisplayPrefab: 1
   showInfoText: 0
   objectLookingGlassSettings:
@@ -925,7 +926,7 @@ MonoBehaviour:
   lookAwayThreshold: {x: 30, y: 30}
   connectionPrefab: {fileID: 0}
   numberOfInfoBoxes: 5
-  localOffset: {x: 0, y: 0, z: .330000013}
+  localOffset: {x: 0, y: 0, z: .400000006}
   globalOffset: {x: 0, y: 0, z: 0}
   alwaysFacePlayer: 0
 --- !u!114 &11400020
