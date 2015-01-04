@@ -100,9 +100,10 @@ public class MoveModel : MenuCallback {
 
     void CreatePlayerPlanes()
     {
-        planeX = new Plane(new Vector3(0, 0, 1), upperBody.transform.position);
+		planeX = new Plane(new Vector3(1, 0, 0), upperBody.transform.position);
         planeY = new Plane(new Vector3(0,1,0), upperBody.transform.position);
-        planeZ = new Plane(new Vector3(-1, 0, 0), upperBody.transform.position);
+		planeZ = new Plane(new Vector3(0, 0, 1), upperBody.transform.position);
+        
     }
     GameObject test;
 
@@ -124,10 +125,12 @@ public class MoveModel : MenuCallback {
 		}
         Vector3 cameraPos = cameraCenterObject.transform.TransformPoint(neckOffset);
 
-        float pitch = GetDirectionAngle(upperBody.transform.position, cameraPos, planeX, planeY, planeZ);
-        float roll = GetDirectionAngle(upperBody.transform.position, cameraPos, planeZ, planeY, planeX);
-        //Debug.Log(dY + " / " + distance +": "+pitch);
-        upperBody.transform.localRotation = Quaternion.Euler(new Vector3(0, pitch, -roll));
+		//Calculate the lean angle sidewards
+        float pitch = GetDirectionAngle(upperBody.transform.position, cameraPos, planeZ, planeY, planeX);
+
+		//Calculate the lean angle forwards and backwards
+        float roll = GetDirectionAngle(upperBody.transform.position, cameraPos, planeX, planeY, planeZ);
+        upperBody.transform.localRotation = Quaternion.Euler(new Vector3(0, -pitch, -roll));
     }
 	
 
@@ -143,20 +146,19 @@ public class MoveModel : MenuCallback {
     {
         float sign;
         //Project point onto a plane
-        Vector3 planePosA = a.ProjectPointOnPlane(origin, p, out sign);
-
+		Vector3 planePosA = a.ProjectPointOnPlane(origin, p, out sign);
 
         //Project point onto a and b plane
         Vector3 planePosAB = b.ProjectPointOnPlane(origin, planePosA, out sign);
 
         //Project point onto a and b plane
-        //Vector3 planePosABC = c.ProjectPointOnPlane(origin, planePosAB, out sign);
+        Vector3 planePosABC = c.ProjectPointOnPlane(origin, planePosAB, out sign);
 
         //Get hypotenuse
         Vector3 direction = (planePosA - origin);
         //get adjacent leg
         Vector3 directionX = (planePosAB - origin);
-        float distance = direction.magnitude;
-        return Mathf.Asin(directionX.magnitude / distance) * sign * Mathf.Rad2Deg;
+
+		return Mathf.Asin(directionX.magnitude / direction.magnitude) * sign * Mathf.Rad2Deg;
     }
 }
