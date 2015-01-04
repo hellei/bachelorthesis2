@@ -96,7 +96,12 @@ public class EnvironmentPositioner : MenuCallback {
 
 		//If there is a saved deck, create a stack on the table
 		if (ConfigLoader.savedDeck != null) CreateStack();
+
+		//Mark the terrain static after positioning the environment
+		terrain.isStatic = true;
     }
+
+	public GameObject terrain;
 
 	public Card cardPrefab;
 

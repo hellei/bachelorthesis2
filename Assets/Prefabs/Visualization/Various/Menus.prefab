@@ -1,5 +1,21 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &145258
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 445258}
+  - 114: {fileID: 11445258}
+  m_Layer: 0
+  m_Name: ApplicationQuit
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &161772
 GameObject:
   m_ObjectHideFlags: 0
@@ -31,6 +47,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!4 &445258
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 145258}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -.569157898, y: .641966939, z: 4.1835947}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 461772}
+  m_RootOrder: 1
 --- !u!4 &461772
 Transform:
   m_ObjectHideFlags: 1
@@ -42,6 +70,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 461774}
+  - {fileID: 445258}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!4 &461774
@@ -56,6 +85,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 461772}
   m_RootOrder: 0
+--- !u!114 &11445258
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 145258}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2fdf97754dbc4d46a14cc076de19e83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waitTimeUntilQuit: 4
+  environment: {fileID: 0}
+  quitPrefab: {fileID: 166496, guid: 9b60385be480843ba9582766ea52e2d3, type: 2}
 --- !u!114 &11461772
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -159,7 +202,7 @@ MonoBehaviour:
                   zOffset: 0
                   name: 
                   useSecondState: 0
-    - sprite: {fileID: 21300000, guid: 5e6ba8b60b82541b08e24f325f2acb14, type: 3}
+    - sprite: {fileID: 21300000, guid: 9036013beb1f199429452fbf8bf0ad2a, type: 3}
       subMenuPrefab: {fileID: 0}
       isBackButton: 0
       isCloseButton: 0
@@ -171,11 +214,11 @@ MonoBehaviour:
       condition:
         component: {fileID: 0}
         info: []
-      name: 
+      name: hidebody
       tooltip: []
       useSecondState: 1
       secondState:
-        sprite: {fileID: 0}
+        sprite: {fileID: 21300000, guid: c7172ca777c39624e897552239de7c3f, type: 3}
         subMenuPrefab: {fileID: 0}
         isBackButton: 0
         isCloseButton: 0
@@ -187,7 +230,98 @@ MonoBehaviour:
         condition:
           component: {fileID: 0}
           info: []
-        name: 
+        name: showbody
+        tooltip: []
+        useSecondState: 0
+        secondState:
+          sprite: {fileID: 0}
+          subMenuPrefab: {fileID: 0}
+          isBackButton: 0
+          isCloseButton: 0
+          zOffset: 0
+          callback:
+            component: {fileID: 0}
+            info: []
+          condition:
+            component: {fileID: 0}
+            info: []
+          name: 
+          tooltip: []
+          useSecondState: 0
+          secondState:
+            sprite: {fileID: 0}
+            subMenuPrefab: {fileID: 0}
+            isBackButton: 0
+            isCloseButton: 0
+            zOffset: 0
+            callback:
+              component: {fileID: 0}
+              info: []
+            condition:
+              component: {fileID: 0}
+              info: []
+            name: 
+            tooltip: []
+            useSecondState: 0
+            secondState:
+              sprite: {fileID: 0}
+              subMenuPrefab: {fileID: 0}
+              isBackButton: 0
+              isCloseButton: 0
+              zOffset: 0
+              callback:
+                component: {fileID: 0}
+                info: []
+              condition:
+                component: {fileID: 0}
+                info: []
+              name: 
+              tooltip: []
+              useSecondState: 0
+              secondState:
+                sprite: {fileID: 0}
+                subMenuPrefab: {fileID: 0}
+                isBackButton: 0
+                isCloseButton: 0
+                zOffset: 0
+                name: 
+                tooltip: []
+                useSecondState: 0
+                secondState:
+                  isBackButton: 0
+                  isCloseButton: 0
+                  zOffset: 0
+                  name: 
+                  useSecondState: 0
+    - sprite: {fileID: 21300000, guid: 47b9d473878cdf7418103b0ecbbccf32, type: 3}
+      subMenuPrefab: {fileID: 0}
+      isBackButton: 0
+      isCloseButton: 1
+      zOffset: 0
+      callback:
+        component: {fileID: 11445258}
+        info:
+        - Hide
+      condition:
+        component: {fileID: 0}
+        info: []
+      name: quit
+      tooltip: []
+      useSecondState: 0
+      secondState:
+        sprite: {fileID: 21300000, guid: c926aff02625f42b3b2b4b6391db3c48, type: 3}
+        subMenuPrefab: {fileID: 0}
+        isBackButton: 0
+        isCloseButton: 0
+        zOffset: 0
+        callback:
+          component: {fileID: 0}
+          info:
+          - Show
+        condition:
+          component: {fileID: 0}
+          info: []
+        name: showbody
         tooltip: []
         useSecondState: 0
         secondState:
@@ -251,10 +385,10 @@ MonoBehaviour:
                   name: 
                   useSecondState: 0
   distance: .300000012
-  iconRotation: 20
-  iconSize: .150000006
+  iconRotation: 15
+  iconSize: .180000007
   iconMargin: .0500000007
-  menuOffset: {x: 0, y: -.300000012, z: 0}
+  menuOffset: {x: 0, y: -.5, z: 0}
   menuLayout: 1
   soundEffects:
     useSound: 1
