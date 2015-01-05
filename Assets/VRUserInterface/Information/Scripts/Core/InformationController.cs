@@ -67,12 +67,14 @@ namespace VRUserInterface
 	            if (Input.GetKeyDown(KeyCode.E))
 	            {
 	                infoI--;
+					infoI = Mathf.Max(infoI, 0);
 	                infoDisplay = allInfoDisplays[(infoI + allInfoDisplays.Length) % allInfoDisplays.Length];
 	                Debug.Log(infoDisplay.name);
 	            }
 	            if (Input.GetKeyDown(KeyCode.R))
 	            {
 	                infoI++;
+					infoI = Mathf.Min(infoI, allInfoDisplays.Length-1);
 	                infoDisplay = allInfoDisplays[infoI % allInfoDisplays.Length];
 	                Debug.Log(infoDisplay.name);
 	            }

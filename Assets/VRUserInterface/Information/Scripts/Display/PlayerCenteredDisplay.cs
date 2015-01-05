@@ -20,7 +20,11 @@ namespace VRUserInterface
 			PositionMenu(result);
 			return result;
 		}
-		
+
+		/// <summary>
+		/// If this flag is set, the user's pitch is not considered
+		/// </summary>
+		public bool onlyConsiderCameraYRotation = true;
 
 		private void PositionMenu(GameObject obj)
 		{
@@ -28,7 +32,12 @@ namespace VRUserInterface
 			{
 				//Position object ath the reference position to get the right orientation
 				obj.transform.position = Reference.transform.position;
-				obj.transform.LookAtAndRotate180Degrees(VRCameraEnable.instance.GetCameraCenter());
+				Vector3 target = VRCameraEnable.instance.GetCameraCenter();
+				if (onlyConsiderCameraYRotation)
+				{
+					target = new Vector3(target.x, obj.transform.position.y, target.z);
+				}
+				obj.transform.LookAtAndRotate180Degrees(target);
 	            obj.transform.position = VRCameraEnable.instance.GetCameraCenter();
 	            obj.transform.Translate(localOffset);
 				obj.transform.position += globalOffset;

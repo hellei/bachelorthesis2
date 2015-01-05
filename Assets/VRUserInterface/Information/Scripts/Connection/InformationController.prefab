@@ -138,7 +138,7 @@ GameObject:
   - 4: {fileID: 400016}
   - 114: {fileID: 11400018}
   m_Layer: 0
-  m_Name: SimpleFrontCardDisplay
+  m_Name: SimpleFrontCardDisplay3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -256,6 +256,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &130490
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 430490}
+  - 114: {fileID: 11430490}
+  m_Layer: 0
+  m_Name: SimpleFrontCardDisplay2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &131256
 GameObject:
   m_ObjectHideFlags: 1
@@ -299,6 +315,22 @@ GameObject:
   - 114: {fileID: 11456418}
   m_Layer: 0
   m_Name: FrontCardDisplay7
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &185580
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 485580}
+  - 114: {fileID: 11485580}
+  m_Layer: 0
+  m_Name: SimpleFrontCardDisplay
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -408,6 +440,8 @@ Transform:
   - {fileID: 456418}
   - {fileID: 490742}
   - {fileID: 441598}
+  - {fileID: 485580}
+  - {fileID: 430490}
   - {fileID: 400016}
   m_Father: {fileID: 400002}
   m_RootOrder: 2
@@ -446,7 +480,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400010}
-  m_RootOrder: 13
+  m_RootOrder: 15
 --- !u!4 &400020
 Transform:
   m_ObjectHideFlags: 1
@@ -531,6 +565,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 400010}
   m_RootOrder: 9
+--- !u!4 &430490
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 130490}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -8.20688248, y: 8.14179897, z: 6.10141754}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 400010}
+  m_RootOrder: 14
 --- !u!4 &431256
 Transform:
   m_ObjectHideFlags: 1
@@ -567,6 +613,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 400010}
   m_RootOrder: 10
+--- !u!4 &485580
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 185580}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -8.20688248, y: 8.14179897, z: 6.10141754}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 400010}
+  m_RootOrder: 13
 --- !u!4 &490742
 Transform:
   m_ObjectHideFlags: 1
@@ -649,17 +707,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed8c85454a132fc4fb14fa14c0185808, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  infoDisplay: {fileID: 11400018}
+  infoDisplay: {fileID: 11485580}
   viewSelection: {fileID: 11400002}
   debugKeys: 1
   infoButton: {fileID: 11400000, guid: 6d82e974550a049ae9ea9a5c6cba8c48, type: 2}
   allInfoDisplays:
-  - {fileID: 11400032}
+  - {fileID: 11485580}
+  - {fileID: 11430490}
   - {fileID: 11400018}
-  - {fileID: 11490742}
-  - {fileID: 11441598}
-  - {fileID: 11400008}
-  - {fileID: 11400012}
   showLastActiveObjectIfNothingSelected: 1
 --- !u!114 &11400006
 MonoBehaviour:
@@ -775,6 +830,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttons:
+    simple: {fileID: 11467602, guid: a1dee49652ab2ab41afedb63ae288e8c, type: 2}
     timer: {fileID: 11400000, guid: 97e8093939a094a158747a91b3590935, type: 2}
     threeDots: {fileID: 11400000, guid: c6b90c9eaa57ef24a84d6a9198686232, type: 2}
     progressBar: {fileID: 11441334, guid: 09d0745e5be5b40f483af67e1abf1783, type: 2}
@@ -895,8 +951,8 @@ MonoBehaviour:
   scrollDownButton: {fileID: 11400000, guid: 98e763011136f473086fb9000d3a29da, type: 2}
   textItemMargin: .00999999978
   horizontalMargin: .0399999991
-  maxHeight: .25
-  maxWidth: .300000012
+  maxHeight: .150000006
+  maxWidth: .200000003
   showDisplayPrefab: 1
   showInfoText: 0
   objectLookingGlassSettings:
@@ -916,8 +972,8 @@ MonoBehaviour:
         tangentMode: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
-    magnifyingFactor: 1.20000005
-    moveForwardValue: .0199999996
+    magnifyingFactor: 1.39999998
+    moveForwardValue: .00100000005
     popupDuration: .400000006
     minimizeSpeedMultiplication: 2
   centerAtText: 0
@@ -926,8 +982,9 @@ MonoBehaviour:
   lookAwayThreshold: {x: 30, y: 30}
   connectionPrefab: {fileID: 0}
   numberOfInfoBoxes: 5
-  localOffset: {x: 0, y: 0, z: .400000006}
+  localOffset: {x: 0, y: -.349999994, z: .349999994}
   globalOffset: {x: 0, y: 0, z: 0}
+  onlyConsiderCameraYRotation: 1
   alwaysFacePlayer: 0
 --- !u!114 &11400020
 MonoBehaviour:
@@ -970,6 +1027,7 @@ MonoBehaviour:
   numberOfInfoBoxes: 3
   localOffset: {x: 0, y: 0, z: .200000003}
   globalOffset: {x: 0, y: -.100000001, z: 0}
+  onlyConsiderCameraYRotation: 1
   alwaysFacePlayer: 0
 --- !u!114 &11400022
 MonoBehaviour:
@@ -1012,6 +1070,7 @@ MonoBehaviour:
   numberOfInfoBoxes: 3
   localOffset: {x: 0, y: 0, z: .200000003}
   globalOffset: {x: 0, y: -.150000006, z: 0}
+  onlyConsiderCameraYRotation: 1
   alwaysFacePlayer: 0
 --- !u!114 &11400024
 MonoBehaviour:
@@ -1102,6 +1161,7 @@ MonoBehaviour:
   numberOfInfoBoxes: 3
   localOffset: {x: 0, y: 0, z: .200000003}
   globalOffset: {x: 0, y: 0, z: 0}
+  onlyConsiderCameraYRotation: 1
   alwaysFacePlayer: 0
 --- !u!114 &11400028
 MonoBehaviour:
@@ -1144,6 +1204,7 @@ MonoBehaviour:
   numberOfInfoBoxes: 3
   localOffset: {x: 0, y: 0, z: .200000003}
   globalOffset: {x: 0, y: 0, z: 0}
+  onlyConsiderCameraYRotation: 1
   alwaysFacePlayer: 1
 --- !u!114 &11400030
 MonoBehaviour:
@@ -1186,6 +1247,7 @@ MonoBehaviour:
   numberOfInfoBoxes: 3
   localOffset: {x: 0, y: 0, z: .200000003}
   globalOffset: {x: 0, y: -.100000001, z: 0}
+  onlyConsiderCameraYRotation: 1
   alwaysFacePlayer: 1
 --- !u!114 &11400032
 MonoBehaviour:
@@ -1228,6 +1290,60 @@ MonoBehaviour:
   numberOfInfoBoxes: 5
   localOffset: {x: 0, y: 0, z: .330000013}
   globalOffset: {x: 0, y: -.100000001, z: 0}
+  onlyConsiderCameraYRotation: 1
+  alwaysFacePlayer: 0
+--- !u!114 &11430490
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 130490}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 627ebf435cb2e4a419321b96da4daf08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  displayPosition: {x: 0, y: 1, z: 0}
+  textGenerator: {fileID: 11400024}
+  backButton: {fileID: 11400000, guid: 9d9e74b5096274652a0c0cbac437329c, type: 2}
+  scrollUpButton: {fileID: 11400000, guid: 9788af509fdbc48fdbaa66c7b27eebd2, type: 2}
+  scrollDownButton: {fileID: 11400000, guid: 98e763011136f473086fb9000d3a29da, type: 2}
+  textItemMargin: .00999999978
+  horizontalMargin: .0399999991
+  maxHeight: .150000006
+  maxWidth: .200000003
+  showDisplayPrefab: 1
+  showInfoText: 0
+  objectLookingGlassSettings:
+    useLookingGlassEffect: 1
+    lookingGlassCurve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    magnifyingFactor: 1.39999998
+    moveForwardValue: .00100000005
+    popupDuration: .400000006
+    minimizeSpeedMultiplication: 2
+  centerAtText: 0
+  showBackButton: 0
+  closeWhenLookingAway: 1
+  lookAwayThreshold: {x: 30, y: 30}
+  connectionPrefab: {fileID: 0}
+  numberOfInfoBoxes: 5
+  localOffset: {x: 0, y: -.129999995, z: .349999994}
+  globalOffset: {x: 0, y: -.0799999982, z: 0}
+  onlyConsiderCameraYRotation: 0
   alwaysFacePlayer: 0
 --- !u!114 &11431256
 MonoBehaviour:
@@ -1323,6 +1439,7 @@ MonoBehaviour:
   numberOfInfoBoxes: 5
   localOffset: {x: 0, y: 0, z: .330000013}
   globalOffset: {x: 0, y: 0, z: 0}
+  onlyConsiderCameraYRotation: 1
   alwaysFacePlayer: 0
 --- !u!114 &11456418
 MonoBehaviour:
@@ -1365,6 +1482,60 @@ MonoBehaviour:
   numberOfInfoBoxes: 5
   localOffset: {x: 0, y: 0, z: .270000011}
   globalOffset: {x: 0, y: 0, z: 0}
+  onlyConsiderCameraYRotation: 1
+  alwaysFacePlayer: 0
+--- !u!114 &11485580
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 185580}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 627ebf435cb2e4a419321b96da4daf08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  displayPosition: {x: 0, y: 1, z: 0}
+  textGenerator: {fileID: 11400024}
+  backButton: {fileID: 11400000, guid: 9d9e74b5096274652a0c0cbac437329c, type: 2}
+  scrollUpButton: {fileID: 11400000, guid: 9788af509fdbc48fdbaa66c7b27eebd2, type: 2}
+  scrollDownButton: {fileID: 11400000, guid: 98e763011136f473086fb9000d3a29da, type: 2}
+  textItemMargin: .00999999978
+  horizontalMargin: .0399999991
+  maxHeight: .25
+  maxWidth: .300000012
+  showDisplayPrefab: 1
+  showInfoText: 0
+  objectLookingGlassSettings:
+    useLookingGlassEffect: 1
+    lookingGlassCurve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    magnifyingFactor: 1.29999995
+    moveForwardValue: .00100000005
+    popupDuration: .400000006
+    minimizeSpeedMultiplication: 2
+  centerAtText: 0
+  showBackButton: 0
+  closeWhenLookingAway: 1
+  lookAwayThreshold: {x: 30, y: 30}
+  connectionPrefab: {fileID: 0}
+  numberOfInfoBoxes: 5
+  localOffset: {x: 0, y: 0, z: .400000006}
+  globalOffset: {x: 0, y: 0, z: 0}
+  onlyConsiderCameraYRotation: 0
   alwaysFacePlayer: 0
 --- !u!114 &11490742
 MonoBehaviour:
@@ -1407,6 +1578,7 @@ MonoBehaviour:
   numberOfInfoBoxes: 5
   localOffset: {x: 0, y: 0, z: .330000013}
   globalOffset: {x: 0, y: 0, z: 0}
+  onlyConsiderCameraYRotation: 1
   alwaysFacePlayer: 0
 --- !u!1001 &100100000
 Prefab:

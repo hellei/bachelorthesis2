@@ -18,6 +18,7 @@ namespace VRUserInterface
 		[System.Serializable]
 		public class Buttons
 		{
+			public Button simple;
 			public Button timer;
 			public Button threeDots;
 			public Button progressBar;
