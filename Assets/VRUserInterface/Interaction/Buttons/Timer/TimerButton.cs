@@ -49,7 +49,7 @@ namespace VRUserInterface
 
 	    public new void Update()
 	    {
-			GameObject sel = Selection.instance.GetWatchedSelectableObject ();
+			GameObject sel = Selection.instance.WatchedObject;
 			if (sel == gameObject && objectSelectable)
 	        {
 	            if (timeSelected >= selectTimer)

@@ -15,19 +15,17 @@ namespace VRUserInterface
 	        instance = this;
 	    }
 
-		/// <summary>
-		/// Returns the currently selected object. Returns null if no object is selected.
-		/// </summary>
-		/// <returns>The selected object.</returns>
-		public abstract GameObject GetSelectedObject();
+		protected void Update ()
+		{
+			SetWatchedObject(GetWatchedObject ());
+		}
 
 	    /// <summary>
 	    /// Returns the currently watched object. Returns null if no object is selected. Should be kept independent of tags which are handled in the information controller
 	    /// An object that is watched is not necessarily selected. Only information objects can be selected.
 	    /// </summary>
 	    /// <returns>The selected object.</returns>
-	    public abstract GameObject GetWatchedSelectableObject();
-
+	    protected abstract GameObject GetWatchedObject();
 
 		/// <summary>
 		/// Returns the currently watched object, independent of whether it is an information object or not.
@@ -37,18 +35,15 @@ namespace VRUserInterface
 		{
 			get;
 			private set;
-		}
-
-	    protected InformationObject currentlyWatchedInformationObject;//The current information object
+		}	    
 
 	    /// <summary>
 	    /// Informs the information object script that this object is watched
 	    /// </summary>
 	    /// <param name="obj"></param>
 	    /// <returns></returns>
-	    protected void SetWatchedObject(GameObject obj)
+	    private void SetWatchedObject(GameObject obj)
 	    {
-
 			WatchedObject = obj;
 			if (!obj)
 			{
@@ -57,8 +52,7 @@ namespace VRUserInterface
 	        InformationObject io = obj.GetComponent<InformationObject>();
 	        if (io)
 	        {
-	            InformationObject.watchedObj = io;
-	            currentlyWatchedInformationObject = io;
+	        	InformationObject.watchedObj = io;
 	        }
 	    }
 	}

@@ -47,7 +47,7 @@ namespace VRUserInterface
 
 		// Update is called once per frame
 		new void Update () {
-			GameObject sel = Selection.instance.GetWatchedSelectableObject();
+			GameObject sel = Selection.instance.WatchedObject;
 	        //Test if all dots have been selected
 	        if (dotsSelected >= dots.Length)
 	        {

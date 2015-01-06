@@ -38,7 +38,7 @@ namespace VRUserInterface
 
 		// Update is called once per frame
 		new void Update () {
-			GameObject sel = Selection.instance.GetWatchedSelectableObject();
+			GameObject sel = Selection.instance.WatchedObject;
 			//The player has to directly look at the circle to start dragging it
 			if (sel == dragCircle)
 			{

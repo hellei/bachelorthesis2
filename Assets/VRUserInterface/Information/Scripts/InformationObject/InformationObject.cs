@@ -137,6 +137,7 @@ namespace VRUserInterface
 
 	    protected void OnButtonSelection()
 	    {
+			selectionButton.gameObject.SetActive (false);
 	        selectedObj = this;
 	    }
 
@@ -152,7 +153,8 @@ namespace VRUserInterface
 	        selectionButton = obj.GetComponent<Button>();
 	        selectionButton.OnButtonPressed += OnButtonSelection;
 	        selectionButton.text = "Info";
-	        selectionButton.condition = Tablet.instance;
+			//TODO: Put to magic information object
+			//selectionButton.condition = Tablet.instance;
 		}
 
 	    void CreateSelectionButton()
@@ -161,5 +163,25 @@ namespace VRUserInterface
 			obj.GetComponent<Button> ().creator = this;
 	        PositionInfoButton(obj);
 	    }
+
+		/// <summary>
+		/// This function is called when the table display creates the info box.
+		/// </summary>
+		/// <param name="display">Display.</param>
+		public virtual void OnDisplayPrefabInstantiated(GameObject display)
+		{
+			//Change shader if set to unlit
+			if (ignoreLightConditionsOnDisplayPrefab)
+			{
+				display.renderer.SetShaderToUnlit();
+			}
+			
+			//Delete the information script
+			if (display.GetComponent<InformationObject>()) Destroy(display.GetComponent<InformationObject>());
+
+			//Rotate and scale the display correctly
+			display.transform.Rotate(displayPrefabRotation);
+			display.transform.localScale *= displayPrefabScale;
+		}
 	}
 }
