@@ -10,8 +10,8 @@ namespace VRUserInterface
 	/// setting an info icon that is shown on the button and defining a callback when the button is selected.
 	/// </summary>
 	public abstract class Button : MonoBehaviour {
-		public delegate void Back();
-	    public event Back OnButtonPressed;
+		public delegate void PressEvent();
+	    public event PressEvent OnButtonPressed;
 	    public string text;
 
 	    protected void CallEvent()

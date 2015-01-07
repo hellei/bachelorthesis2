@@ -69,7 +69,16 @@ namespace VRUserInterface
 
 		public GameObject cursorPrefab;
 
-
+		/// <summary>
+		/// Only used for debug purposes.
+		/// </summary>
+		public void UpdateEditorCamera()
+		{
+			if (unityCam && unityCam.activeSelf && EnvironmentPositioner.instance)
+			{
+				unityCam.transform.position = EnvironmentPositioner.instance.riftPositionTracker.transform.position - new Vector3(0,0, 0.7f);
+			}
+		}
 
 
 		/// <summary>
@@ -83,6 +92,7 @@ namespace VRUserInterface
 			//Add the cursor to the center object
 			VRCursor cursor = cameraCenter.AddComponent<VRCursor> ();
 			cursor.cursorPrefab = cursorPrefab;
+
 		}
 
 		public void UpdateCenterObject()

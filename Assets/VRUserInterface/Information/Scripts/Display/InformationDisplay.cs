@@ -8,7 +8,7 @@ namespace VRUserInterface
 	    /// The main function. Creates the info depending on the currently selected object.
 	    /// </summary>
 	    /// <param name="obj"></param>
-		public abstract void SetActiveObject(GameObject obj);
+		public abstract void SetActiveObject(InformationObject obj);
 		public abstract void DiscardActiveObject();
 	}
 }

@@ -8,7 +8,6 @@ public class Config : XMLSaveAndLoad<Config> {
     /// The position of the tablet in relation to the rift position tracker. (The referenced position of the tablet is: x = Left table(t) edge, y = surface of tablet, z = lower table(t) edge).
     /// </summary>
     public Vector3 relativeTabletPosition = Vector3.zero;
-    //public Vector3 relativeTabletEulerRotation = Vector3.zero;
     public Vector3 tabletSize = Vector3.zero;
 
     /// <summary>

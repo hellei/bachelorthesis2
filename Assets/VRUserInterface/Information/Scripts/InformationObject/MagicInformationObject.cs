@@ -66,5 +66,18 @@ namespace VRUserInterface
 		{
 			card.ShowShortInfo (value);
 		}
+
+		/*public override void OnDisplayPrefabInstantiated(GameObject display)
+		{
+			base.OnDisplayPrefabInstantiated (display);
+			//Delete all buttons in the children of the object
+			foreach (Transform t in display.transform)
+			{
+				if (t.GetComponent<Button>())
+				{
+					Destroy (t.gameObject);
+				}
+			}
+		}*/
 	}
 }

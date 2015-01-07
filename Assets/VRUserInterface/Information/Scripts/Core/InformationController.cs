@@ -43,12 +43,27 @@ namespace VRUserInterface
 			}
 		}
 		public InformationDisplay infoDisplay;
-		public ViewSelection viewSelection;
+
+		/// <summary>
+		/// T
+		/// </summary>
+		public Selection selection;
 
 	    public bool debugKeys = true;
+		/// <summary>
+		/// Link to the info button prefab, only used for debug purposes.
+		/// </summary>
+		public ButtonGenerator infoButton;
 
 		void Update(){
-			ActiveObject = viewSelection.GetSelectedObject();
+			GameObject selectedObject = null;
+			if (InformationObject.selectedObj)
+			{
+				selectedObject = InformationObject.selectedObj.gameObject;
+			}
+			SetActiveObject(selectedObject);
+
+			#region DEBUG
 	        if (debugKeys)
 	        {
 	            //Enable / Disable Looking Glass Effect
@@ -63,16 +78,31 @@ namespace VRUserInterface
 	            if (Input.GetKeyDown(KeyCode.E))
 	            {
 	                infoI--;
+					infoI = Mathf.Max(infoI, 0);
 	                infoDisplay = allInfoDisplays[(infoI + allInfoDisplays.Length) % allInfoDisplays.Length];
 	                Debug.Log(infoDisplay.name);
 	            }
 	            if (Input.GetKeyDown(KeyCode.R))
 	            {
 	                infoI++;
+					infoI = Mathf.Min(infoI, allInfoDisplays.Length-1);
 	                infoDisplay = allInfoDisplays[infoI % allInfoDisplays.Length];
 	                Debug.Log(infoDisplay.name);
 	            }
+				if (Input.GetKeyDown(KeyCode.T))
+				{
+					infoButton.buttonType = (ButtonType)Mathf.Max(0, (int)infoButton.buttonType - 1);
+					Debug.Log(infoButton.buttonType);
+					InformationObject.recreateButtons = true;
+				}
+				if (Input.GetKeyDown(KeyCode.Z))
+				{
+					infoButton.buttonType = (ButtonType)Mathf.Min(System.Enum.GetNames(typeof(ButtonType)).Length - 1, (int)infoButton.buttonType + 1);
+					Debug.Log(infoButton.buttonType);
+					InformationObject.recreateButtons = true;
+				}
 	        }
+			#endregion
 		}
 
 	    int infoI = 0;
@@ -83,27 +113,29 @@ namespace VRUserInterface
 
 		//If the active object is not selected anymore, but no other information object is selected neither, should nothing be shown or should the last active object be shown?
 		public bool showLastActiveObjectIfNothingSelected = true;
-		
-		public GameObject ActiveObject {
-			set {
-				//Test if the value differs from the current value
-				if (value != activeObject){
-					//If the active object is set null, discard the active object (except if the last active object should be kept
-					if (value == null){
-						if (showLastActiveObjectIfNothingSelected && !customViewClose){
-							//Do nothing
-						}
-						else {
-							infoDisplay.DiscardActiveObject();
-							activeObject = null;
-	                        customViewClose = false;
-						}
+
+		/// <summary>
+		/// The currently selected object
+		/// </summary>
+		/// <value>The active object.</value>
+		void SetActiveObject(GameObject value) {
+			//Test if the value differs from the current value
+			if (value != activeObject){
+				//If the active object is set null, discard the active object (except if the last active object should be kept
+				if (value == null){
+					if (showLastActiveObjectIfNothingSelected && !customViewClose){
+						//Do nothing
 					}
-					//otherwise update the active object
-					else if (value != activeObject && value.GetComponent<InformationObject>()){
-						activeObject = value;
-						infoDisplay.SetActiveObject(activeObject);
+					else {
+						infoDisplay.DiscardActiveObject();
+						activeObject = null;
+                        customViewClose = false;
 					}
+				}
+				//otherwise update the active object
+				else if (value != activeObject && value.GetComponent<InformationObject>()){
+					activeObject = value;
+					infoDisplay.SetActiveObject(activeObject.GetComponent<InformationObject>());
 				}
 			}
 		}
@@ -116,7 +148,7 @@ namespace VRUserInterface
 	    public void ViewClosed()
 	    {
 	        customViewClose = true;
-	        ActiveObject = null;
+	        SetActiveObject(null);
 	    }
 	}
 }

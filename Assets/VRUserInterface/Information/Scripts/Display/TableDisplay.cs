@@ -11,7 +11,7 @@ namespace VRUserInterface
 
 		public Vector3 displayPosition = new Vector3(0,1,0);
 		public TextGenerator textGenerator;
-		public ButtonGenerator backButton, scrollUpButton, scrollDownButton;
+		public ButtonGenerator closeButton, scrollUpButton, scrollDownButton;
 	    public float textItemMargin = 0.02f;
 	    public float horizontalMargin = 0.04f;
 
@@ -32,7 +32,7 @@ namespace VRUserInterface
 	    /// The main function. Creates the info depending on the currently selected object.
 	    /// </summary>
 	    /// <param name="obj"></param>
-		public override void SetActiveObject(GameObject obj){
+		public override void SetActiveObject(InformationObject obj){
 			if (activeObject) DiscardActiveObject();
 			//Create a new instantiation of the active object and show it in larger
 			InformationObject infoObjectScript = obj.GetComponent<InformationObject>();
@@ -80,9 +80,9 @@ namespace VRUserInterface
 		public virtual GameObject CreateObjectFromInfo(InformationObject infoObjectScript){
 			Reference = infoObjectScript.gameObject;
 	        GameObject infoObject = null;
+
 			//Create an empty container for the information
-			GameObject container = new GameObject();
-			container.name = "InformationView";
+			GameObject container = new GameObject("InformationView");
 	        container.transform.parent = EnvironmentPositioner.instance.table.transform;
 			container.transform.localPosition = displayPosition;
 
@@ -101,26 +101,9 @@ namespace VRUserInterface
 	            infoObject.SetMaxWidth(maxWidth);
 				infoObject.AddLookingGlassEffect(objectLookingGlassSettings);
 
-				//Change shader if set to unlit
-				if (infoObjectScript.ignoreLightConditionsOnDisplayPrefab)
-				{
-					infoObject.renderer.SetShaderToUnlit();
-				}
+				//Hook to the information object to allow last-minute changes
+				infoObjectScript.OnDisplayPrefabInstantiated(infoObject);
 
-	            //Delete the information script if the user left it in there
-	            if (infoObject.GetComponent<InformationObject>()) Destroy(infoObject.GetComponent<InformationObject>());
-
-				//Delete all buttons in the children of the object
-				foreach (Transform t in infoObject.transform)
-				{
-					if (t.GetComponent<Button>())
-					{
-						Destroy (t.gameObject);
-					}
-				}
-
-	            infoObject.transform.Rotate(infoObjectScript.displayPrefabRotation);
-	            infoObject.transform.localScale *= infoObjectScript.displayPrefabScale;
 				objects.Add (infoObject);
 			}
 			//If there is a text to display, show it. The way it is shown depends on the text generator used
@@ -179,9 +162,9 @@ namespace VRUserInterface
 
 
 	        //Add back button
-	        if (backButton && showBackButton)
+	        if (closeButton && showCloseButton)
 	        {
-				GameObject ba = backButton.Instantiate();
+				GameObject ba = closeButton.Instantiate();
 	            ba.transform.localScale *= buttonScale;
 
 				//Get button height
@@ -189,7 +172,7 @@ namespace VRUserInterface
 				ba.GetBounds(ref min, ref max);
 				float buttonHeight = -min.y;
 
-				SetButtonParentAndPosition(ba, container, new Vector3(containerWidth, containerHeight + buttonHeight), BackButtonPressed);
+				SetButtonParentAndPosition(ba, container, new Vector3(containerWidth, containerHeight + buttonHeight), CloseButtonPressed);
 	        }
 
 			//Add scroll button
@@ -222,8 +205,8 @@ namespace VRUserInterface
 			//Add a back button on the display prefab if wanted
 			if (infoObjectScript.showCloseButtonOnDisplayPrefab)
 			{
-				GameObject dba = backButton.Instantiate();
-				SetButtonParentAndPosition(dba, infoObject, infoObjectScript.displayCloseButton.transform.localPosition, BackButtonPressed);
+				GameObject dba = closeButton.Instantiate();
+				SetButtonParentAndPosition(dba, infoObject, infoObjectScript.displayCloseButton.transform.localPosition, CloseButtonPressed);
 				dba.transform.Rotate(new Vector3(180,0,0));
 				dba.transform.localScale = dba.transform.localScale.ComponentProduct(infoObjectScript.displayCloseButton.transform.localScale);
 			}
@@ -242,7 +225,7 @@ namespace VRUserInterface
 			if (closeWhenLookingAway)
 			{
 				LookAwayCallback lac = container.AddComponent<LookAwayCallback>();
-				lac.callback = BackButtonPressed;
+				lac.callback = CloseButtonPressed;
 				lac.lookAwayThreshold = lookAwayThreshold;
 			}
 			return container;
@@ -251,7 +234,7 @@ namespace VRUserInterface
 		/// <summary>
 		/// If this flag is set, a back button is shown. Otherwise, you still have the possibility to close the display when you look away.
 		/// </summary>
-		public bool showBackButton = true;
+		public bool showCloseButton = true;
 
 		/// <summary>
 		/// If this flag is set, the info display closes as soon as you look away
@@ -306,7 +289,7 @@ namespace VRUserInterface
 		/// <summary>
 		/// Sets a button to a specific local position and attaches it to a parent object
 		/// </summary>
-		void SetButtonParentAndPosition(GameObject obj, GameObject parent, Vector3 pos, Button.Back callback)
+		void SetButtonParentAndPosition(GameObject obj, GameObject parent, Vector3 pos, Button.PressEvent callback)
 		{
 			obj.transform.parent = parent.transform;
 			
@@ -388,7 +371,7 @@ namespace VRUserInterface
 
 		}
 
-	    void BackButtonPressed()
+	    void CloseButtonPressed()
 	    {
 	        InformationController.instance.ViewClosed();
 	        //Deselect the information objects

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <relativeTabletPosition>
-    <x>0</x>
-    <y>0.8</y>
-    <z>-0.4</z>
+    <x>-0.33</x>
+    <y>-0.455</y>
+    <z>-0.535</z>
   </relativeTabletPosition>
   <relativeTabletEulerRotation>
     <x>0</x>
@@ -11,15 +11,9 @@
     <z>0</z>
   </relativeTabletEulerRotation>
   <tabletSize>
-    <x>0.45</x>
-    <y>0.01</y>
-    <z>0.3</z>
+    <x>0.2</x>
+    <y>0.025</y>
+    <z>0.2</z>
   </tabletSize>
-  <relativeSeatPosition>
-    <x>0</x>
-    <y>-0.95</y>
-    <z>0</z>
-  </relativeSeatPosition>
-  <tableSurfaceHeight>0.8</tableSurfaceHeight>
-  <displayType></displayType>
+  <tableSurfaceHeight>0.815</tableSurfaceHeight>
 </Config>

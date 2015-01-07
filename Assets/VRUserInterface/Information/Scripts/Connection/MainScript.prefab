@@ -42,11 +42,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   unityCam: {fileID: 0}
   vrCam: {fileID: 0}
-  testRiftInEditor: 0
   leftVrCam: {fileID: 0}
   rightVrCam: {fileID: 0}
+  testRiftInEditor: 0
   cursorPrefab: {fileID: 100000, guid: 16ba23e778e642a43abd963e6afd6be9, type: 2}
-  neckOffset: {x: 0, y: -.25, z: -.0500000007}
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
