@@ -7,7 +7,8 @@ public class Hand_CardCollection : MonoBehaviour {
 
     public Card card;
     public Card card1;
-    public Card card2;   
+    public Card card2;
+    public Card card3;
 
     // Tracking attributes
     private GameObject CardBucket;
@@ -33,6 +34,7 @@ public class Hand_CardCollection : MonoBehaviour {
         AddCardToHand(card);
         AddCardToHand(card1);
         AddCardToHand(card2);
+        AddCardToHand(card3);
         //card.gameObject.SetActive(false); 
 	}
 
@@ -63,12 +65,12 @@ public class Hand_CardCollection : MonoBehaviour {
         return handRegistered;
     }
 
-    public int FindIndexOfNearestCard(Vector3 middledPositionOfFingers)
+    public int FindIndexOfNearestCard(Vector3 position)
     {
         int index = 0;
         for (int i = 0; i < cardsOnHand.Count; i++)
         {
-            if ((cardsOnHand[i].gameObject.transform.position - middledPositionOfFingers).sqrMagnitude < (cardsOnHand[index].gameObject.transform.position - middledPositionOfFingers).sqrMagnitude)
+            if ((cardsOnHand[i].gameObject.transform.position - position).sqrMagnitude < (cardsOnHand[index].gameObject.transform.position - position).sqrMagnitude)
             {
                 index = i;
             }
@@ -84,8 +86,38 @@ public class Hand_CardCollection : MonoBehaviour {
     public void AddCardToHand(Card card)
     {
         //Add new
+        int indexOfNearestCard = FindIndexOfNearestCard(card.transform.position);
         card.transform.parent = null;
-        cardsOnHand.Add(card);
+
+        // Insert at nearest position
+        if (cardsOnHand.Count > 0)
+        {
+            // Right
+            if (card.transform.position.x > cardsOnHand[indexOfNearestCard].transform.position.x)
+            {
+                //At end of list
+                if (indexOfNearestCard + 1 == cardsOnHand.Count)
+                {
+                    cardsOnHand.Add(card);
+                }
+                else
+                {
+                    cardsOnHand.Insert(indexOfNearestCard++, card);
+                }
+            }
+            // Left
+            else
+            {
+                cardsOnHand.Insert(indexOfNearestCard, card);
+            }
+        }
+        else
+        // First card on hand
+        {
+            cardsOnHand.Add(card);
+        }
+        
+        //cardsOnHand.Add(card);
         card.gameObject.layer = (int)InteractionLayer.HandCollision;
         numberOfCardsOnHand++;
 
@@ -151,6 +183,13 @@ public class Hand_CardCollection : MonoBehaviour {
             card.transform.parent = null;
             card.transform.localPosition = Vector3.zero;
             card.transform.localRotation = Quaternion.Euler(Vector3.zero);
+
+            //Reset cards
+            if (handRegistered)
+            {
+                HideCardsOnHand();
+                DisplayCardsOnHand();
+            }
 
             return card;
         }

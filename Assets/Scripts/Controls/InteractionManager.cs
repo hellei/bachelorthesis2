@@ -115,7 +115,7 @@ public class InteractionManager : MonoBehaviour {
         {
             Debug.Log("handInteraction");
             //Interaction only with nearest card
-            int i = Hand_CardCollection.instance.FindIndexOfNearestCard(Hand_Selecting.instance.GetGrabPosition());
+            //int i = Hand_CardCollection.instance.FindIndexOfNearestCard(Hand_Selecting.instance.GetGrabPosition());
             //if (Hand_CardCollection.instance.GetDistanceToCard(i, Hand_Selecting.instance.GetGrabPosition()) < grabDistance)
             {
                 //Check if actions are on cooldown
