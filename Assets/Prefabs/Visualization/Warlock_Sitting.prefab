@@ -2068,10 +2068,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   upperBody: {fileID: 100046}
-  leftHandModel: {fileID: 100130}
-  rightHandModel: {fileID: 100118}
-  leftHand: {fileID: 0}
-  rightHand: {fileID: 0}
+  leftForetwistModel: {fileID: 100112}
+  rightForetwistModel: {fileID: 100082}
+  leftShoulderModel: {fileID: 100004}
+  rightShoulderModel: {fileID: 100048}
+  leftHandModel: {fileID: 100072}
+  rightHandModel: {fileID: 100068}
+  armLength: {x: 0, y: .25, z: 0}
   neckOffset: {x: 0, y: -.25, z: -.0500000007}
 --- !u!137 &13700000
 SkinnedMeshRenderer:

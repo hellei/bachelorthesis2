@@ -35,7 +35,9 @@ public class RiggedHand : HandModel {
     }
 
     if (foreArm != null)
+	{
       foreArm.rotation = GetArmRotation();
+	}
 
     for (int i = 0; i < fingers.Length; ++i) {
       if (fingers[i] != null && hand_.IsLeft && fingers[i].fingerType == Finger.FingerType.TYPE_THUMB)

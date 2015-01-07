@@ -9,6 +9,7 @@ public class Config : XMLSaveAndLoad<Config> {
     /// </summary>
     public Vector3 relativeTabletPosition = Vector3.zero;
     public Vector3 tabletSize = Vector3.zero;
+	
 
     /// <summary>
     /// The position of the seat of the chair, relative to the neck.
@@ -40,4 +41,9 @@ public class Config : XMLSaveAndLoad<Config> {
     }
 
 	public string displayType = "";
+
+	/// <summary>
+	/// If this flag is set, the game runs at low graphics settings.
+	/// </summary>
+	public bool lowGraphics = false;
 }

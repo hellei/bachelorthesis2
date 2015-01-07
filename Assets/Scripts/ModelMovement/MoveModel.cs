@@ -59,12 +59,18 @@ public class MoveModel : MenuCallback {
 	/// <summary>
 	/// The left hand model, this is the actual model hand.
 	/// </summary>
-	public GameObject leftHandModel, rightHandModel;
+	public GameObject leftForetwistModel, rightForetwistModel;
 
+	public GameObject leftShoulderModel, rightShoulderModel;
+
+
+
+	public GameObject leftHandModel, rightHandModel;
 	/// <summary>
 	/// The leap hand.
 	/// </summary>
-	public GameObject leftHand, rightHand;
+	GameObject leftHand, rightHand;
+	GameObject leftElbow, rightElbow;
 
 	//Quaternion initialHeadRotation = Quaternion.identity;
 
@@ -75,15 +81,42 @@ public class MoveModel : MenuCallback {
 
 	void UpdateHands()
 	{
-		UpdateHand (leftHandModel, leftHand);
-		UpdateHand (rightHandModel, rightHand);
+		leftHand = GameObject.Find ("L_Wrist");
+		rightHand = GameObject.Find ("R_Wrist");
+		leftElbow = GameObject.Find ("ForetwistLeft");
+		rightElbow = GameObject.Find ("ForetwistRight");
+		UpdateHand (leftForetwistModel, leftShoulderModel, leftHandModel, leftHand, leftElbow);
+		UpdateHand (rightForetwistModel, rightShoulderModel, rightHandModel, rightHand, rightElbow);
 	}
 
-	void UpdateHand (GameObject model, GameObject target)
+	bool initialRotationSet = false;
+
+	Vector3 initialTwist1Offset;
+
+	Quaternion initialLeftShoulderRotation, initialRightShoulderRotation;
+
+	void UpdateHand (GameObject model, GameObject shoulder, GameObject hand, GameObject handTarget, GameObject target)
 	{
 		if (!target) return;
+
+		shoulder.transform.right = -(target.transform.position - shoulder.transform.position).normalized;
+
+
+		model.transform.right = -target.transform.up;
+		//model.transform.rotation = target.transform.rotation;
+
 		model.transform.position = target.transform.position;
+
+		hand.transform.position = handTarget.transform.position;
+		hand.transform.rotation = handTarget.transform.rotation;
+
+		hand.transform.Rotate (new Vector3 (0, 90, 0));
+		hand.transform.Rotate (new Vector3 (180, 0, 0));
+		//hand.transform.right = handTarget.transform.forward;
+		//hand.transform.Rotate (new Vector3 (0, 0, 0));
 	}
+
+	public Vector3 armLength = new Vector3(0,0.25f,0);
 
 	void RotateHead()
 	{
@@ -100,9 +133,10 @@ public class MoveModel : MenuCallback {
 
     void CreatePlayerPlanes()
     {
-		planeX = new Plane(new Vector3(1, 0, 0), upperBody.transform.position);
-        planeY = new Plane(new Vector3(0,1,0), upperBody.transform.position);
-		planeZ = new Plane(new Vector3(0, 0, 1), upperBody.transform.position);
+		//TODO: Implement in local space of player
+		planeX = new Plane(transform.right, upperBody.transform.position);// new Vector3(1, 0, 0)
+		planeY = new Plane(transform.up, upperBody.transform.position);//new Vector3(0,1,0)
+		planeZ = new Plane(transform.forward, upperBody.transform.position);//new Vector3(0, 0, 1)
         
     }
     GameObject test;
@@ -126,11 +160,11 @@ public class MoveModel : MenuCallback {
         Vector3 cameraPos = cameraCenterObject.transform.TransformPoint(neckOffset);
 
 		//Calculate the lean angle sidewards
-        float pitch = GetDirectionAngle(upperBody.transform.position, cameraPos, planeZ, planeY, planeX);
+        float roll = GetDirectionAngle(upperBody.transform.position, cameraPos, planeZ, planeY, planeX);
 
 		//Calculate the lean angle forwards and backwards
-        float roll = GetDirectionAngle(upperBody.transform.position, cameraPos, planeX, planeY, planeZ);
-        upperBody.transform.localRotation = Quaternion.Euler(new Vector3(0, -pitch, -roll));
+        float pitch = GetDirectionAngle(upperBody.transform.position, cameraPos, planeX, planeY, planeZ);
+        upperBody.transform.localRotation = Quaternion.Euler(new Vector3(0, -roll, -pitch));
     }
 	
 
