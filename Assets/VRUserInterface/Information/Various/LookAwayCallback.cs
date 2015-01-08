@@ -17,14 +17,29 @@ namespace VRUserInterface
 		/// How far do you have to look away from the container center to close the view? (x = horizontal angle, y = vertical angle)
 		/// For the moment, I only use the x value though
 		/// </summary>
-		public Vector2 lookAwayThreshold = new Vector2(40,30);
+		public float lookAwayThreshold = 30;
 
+		/// <summary>
+		/// Sometimes the initial angle on creation of the object with the look away callback is larger than the threshold itself.
+		/// If this flag is set, on startup the threshold will be set to the maximum of the defined threshold and the initial angle.
+		/// </summary>
+		public bool maxToInitialThreshold = false;
+
+		void Start()
+		{
+			if (maxToInitialThreshold)
+			{
+				float initialAngle = Vector3.Angle (VRCameraEnable.instance.GetCameraCenterObject ().transform.forward, (transform.position - VRCameraEnable.instance.GetCameraCenter()).normalized);
+				lookAwayThreshold = Mathf.Max (lookAwayThreshold, initialAngle + 5);
+				Debug.Log("Threshold: "+lookAwayThreshold);
+			}
+		}
 
 		// Update is called once per frame
 		void Update () {
 			//If you look away from the button, reset it
 			float angle = Vector3.Angle (VRCameraEnable.instance.GetCameraCenterObject ().transform.forward, (transform.position - VRCameraEnable.instance.GetCameraCenter()).normalized);
-			if (Mathf.Abs(angle)>lookAwayThreshold.x) callback();
+			if (Mathf.Abs(angle)>lookAwayThreshold) callback();
 		}
 	}
 }

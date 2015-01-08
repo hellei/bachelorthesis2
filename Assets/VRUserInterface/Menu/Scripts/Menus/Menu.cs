@@ -157,6 +157,7 @@ namespace VRUserInterface
 			GameObject quad = buttonGenerator.Instantiate ();//GameObject.CreatePrimitive(PrimitiveType.Quad);
 			Button b = quad.GetComponent<Button> ();
 			b.SetIcon (icon.sprite);
+			b.LookAtPlayer = false;
 	        quad.transform.parent = transform;
 	        quad.transform.localPosition = menuOffset;
 			quad.name = icon.name;

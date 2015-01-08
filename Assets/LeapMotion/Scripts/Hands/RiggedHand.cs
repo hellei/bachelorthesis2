@@ -30,7 +30,8 @@ public class RiggedHand : HandModel {
         else
         {
             palm.position = Vector3.Lerp(palm.position, GetPalmPosition(), Time.deltaTime * 20);
-            if (Vector3.Dot(GetPalmNormal(), Vector3.up) < 0)
+				Vector3 up = (new Vector3(1,1,0)).normalized;//Vector3.up;
+            if (Vector3.Dot(GetPalmNormal(), up) < 0)
             {
                 palm.rotation = Quaternion.Slerp(palm.rotation, GetPalmRotation(), Time.deltaTime * 20);
             }
@@ -38,7 +39,9 @@ public class RiggedHand : HandModel {
     }
 
     if (foreArm != null)
+	{
       foreArm.rotation = GetArmRotation();
+	}
 
     for (int i = 0; i < fingers.Length; ++i) {
       if (fingers[i] != null && hand_.IsLeft && fingers[i].fingerType == Finger.FingerType.TYPE_THUMB)

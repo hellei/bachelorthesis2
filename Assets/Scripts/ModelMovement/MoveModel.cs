@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 using VRUserInterface;
 
 /// <summary>
@@ -42,6 +43,7 @@ public class MoveModel : MenuCallback {
 	void Start () {
         CreatePlayerPlanes();
 		SetInitialHeadRotation ();
+		SetInitialRotations ();
 	}
 	
 	// Update is called once per frame
@@ -59,12 +61,18 @@ public class MoveModel : MenuCallback {
 	/// <summary>
 	/// The left hand model, this is the actual model hand.
 	/// </summary>
-	public GameObject leftHandModel, rightHandModel;
+	public GameObject leftForetwistModel, rightForetwistModel;
 
+	public GameObject leftShoulderModel, rightShoulderModel;
+
+
+
+	public GameObject leftHandModel, rightHandModel;
 	/// <summary>
 	/// The leap hand.
 	/// </summary>
-	public GameObject leftHand, rightHand;
+	GameObject leftHand, rightHand;
+	GameObject leftElbow, rightElbow;
 
 	//Quaternion initialHeadRotation = Quaternion.identity;
 
@@ -73,17 +81,69 @@ public class MoveModel : MenuCallback {
 		//initialHeadRotation = neck.transform.localRotation;
 	}
 
-	void UpdateHands()
+	SavedTransform stLeft, stRight;
+
+	void SetInitialRotations()
 	{
-		UpdateHand (leftHandModel, leftHand);
-		UpdateHand (rightHandModel, rightHand);
+		stLeft = leftShoulderModel.SavePositionAndRotation ();
+		stRight = rightShoulderModel.SavePositionAndRotation ();
 	}
 
-	void UpdateHand (GameObject model, GameObject target)
+	void UpdateHands()
 	{
-		if (!target) return;
-		model.transform.position = target.transform.position;
+		leftHand = GameObject.Find ("L_Wrist");
+		rightHand = GameObject.Find ("R_Wrist");
+		if (!leftHand)
+		{
+			leftShoulderModel.LoadPositionAndRotation(stLeft);
+		}
+		if (!rightHand)
+		{
+			rightShoulderModel.LoadPositionAndRotation(stLeft);
+		}
+		leftElbow = GameObject.Find ("ForetwistLeft");
+		rightElbow = GameObject.Find ("ForetwistRight");
+		UpdateHand (leftForetwistModel, leftShoulderModel, leftHandModel, leftHand, leftElbow);
+		UpdateHand (rightForetwistModel, rightShoulderModel, rightHandModel, rightHand, rightElbow);
 	}
+
+
+	bool initialRotationSet = false;
+
+	Vector3 initialTwist1Offset;
+
+	Quaternion initialLeftShoulderRotation, initialRightShoulderRotation;
+
+	void UpdateHand (GameObject model, GameObject shoulder, GameObject hand, GameObject handTarget, GameObject target)
+	{
+		if (!target){
+			return;
+		}
+
+		Vector3 relPos = (target.transform.position - shoulder.transform.position).normalized;
+
+		//shoulder.transform.right = -relPos;
+		shoulder.transform.rotation = Quaternion.LookRotation (relPos, Vector3.up);
+		shoulder.transform.Rotate (new Vector3 (0, 90, 0));
+
+		//model.transform.right = -target.transform.up;
+		model.transform.rotation = Quaternion.LookRotation (target.transform.up, Vector3.up);
+		model.transform.Rotate (new Vector3 (0, 90, 0));
+		model.transform.Rotate (new Vector3 (-90, 0, 0));
+		//model.transform.rotation = target.transform.rotation;
+
+		model.transform.position = target.transform.position;
+
+		hand.transform.position = handTarget.transform.position;
+		hand.transform.rotation = handTarget.transform.rotation;
+
+		hand.transform.Rotate (new Vector3 (0, 90, 0));
+		hand.transform.Rotate (new Vector3 (180, 0, 0));
+		//hand.transform.right = handTarget.transform.forward;
+		//hand.transform.Rotate (new Vector3 (0, 0, 0));
+	}
+
+	public Vector3 armLength = new Vector3(0,0.25f,0);
 
 	void RotateHead()
 	{
@@ -100,9 +160,10 @@ public class MoveModel : MenuCallback {
 
     void CreatePlayerPlanes()
     {
-		planeX = new Plane(new Vector3(1, 0, 0), upperBody.transform.position);
-        planeY = new Plane(new Vector3(0,1,0), upperBody.transform.position);
-		planeZ = new Plane(new Vector3(0, 0, 1), upperBody.transform.position);
+		//TODO: Implement in local space of player
+		planeX = new Plane(transform.right, upperBody.transform.position);// new Vector3(1, 0, 0)
+		planeY = new Plane(transform.up, upperBody.transform.position);//new Vector3(0,1,0)
+		planeZ = new Plane(transform.forward, upperBody.transform.position);//new Vector3(0, 0, 1)
         
     }
     GameObject test;
@@ -126,11 +187,11 @@ public class MoveModel : MenuCallback {
         Vector3 cameraPos = cameraCenterObject.transform.TransformPoint(neckOffset);
 
 		//Calculate the lean angle sidewards
-        float pitch = GetDirectionAngle(upperBody.transform.position, cameraPos, planeZ, planeY, planeX);
+        float roll = GetDirectionAngle(upperBody.transform.position, cameraPos, planeZ, planeY, planeX);
 
 		//Calculate the lean angle forwards and backwards
-        float roll = GetDirectionAngle(upperBody.transform.position, cameraPos, planeX, planeY, planeZ);
-        upperBody.transform.localRotation = Quaternion.Euler(new Vector3(0, -pitch, -roll));
+        float pitch = GetDirectionAngle(upperBody.transform.position, cameraPos, planeX, planeY, planeZ);
+        upperBody.transform.localRotation = Quaternion.Euler(new Vector3(0, -roll, -pitch));
     }
 	
 
@@ -162,3 +223,4 @@ public class MoveModel : MenuCallback {
 		return Mathf.Asin(directionX.magnitude / direction.magnitude) * sign * Mathf.Rad2Deg;
     }
 }
+

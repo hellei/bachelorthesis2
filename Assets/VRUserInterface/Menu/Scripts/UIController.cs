@@ -81,7 +81,6 @@ namespace VRUserInterface
 	            menu = menuStack[menuStack.Count - 1];
 				menuStack.RemoveAt(menuStack.Count - 1);
 	            menu.SetActive(true);
-	            MenuIcon.selectedItem = null;
 	        }
 	    }
 

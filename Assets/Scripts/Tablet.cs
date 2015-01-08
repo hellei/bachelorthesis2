@@ -45,7 +45,8 @@ public class Tablet : MonoBehaviour, IButtonCondition {
     }
 
     public void AddCardToTable(Card card, Vector2 touchPosition)
-    {    
+    {
+		card.cardState = CardState.OnTable;
         card.transform.parent = null;
         card.transform.position = TabletToWorldSpace(new Vector2(touchPosition.x, touchPosition.y));
         card.transform.rotation = Quaternion.Euler(new Vector3(-90, 0, 0));
@@ -62,7 +63,8 @@ public class Tablet : MonoBehaviour, IButtonCondition {
         //cardsOnTable.RemoveAt(i);  
         Card tcard = card;
         tcard.transform.parent = null;
-        Debug.Log("Romeved card from tablet" + card.transform.parent);
+		card.cardState = CardState.OnHand;
+        Debug.Log("Removed card from tablet" + card.transform.parent);
         return tcard;
     }
 

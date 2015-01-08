@@ -89,8 +89,8 @@ namespace VRUserInterface
 			Vector3 min;
 			Vector3 max;
 
-	        //Create a list of objects that have to be shown.
-			List<GameObject> objects = new List<GameObject>();
+	        //Create a list of UI elements that have to be shown.
+			List<GameObject> uiElements = new List<GameObject>();
 			
 	        //If there is an info object to be shown, show it.
 			if (infoObjectScript.displayPrefab && showDisplayPrefab){
@@ -104,50 +104,41 @@ namespace VRUserInterface
 				//Hook to the information object to allow last-minute changes
 				infoObjectScript.OnDisplayPrefabInstantiated(infoObject);
 
-				objects.Add (infoObject);
+				uiElements.Add (infoObject);
 			}
 			//If there is a text to display, show it. The way it is shown depends on the text generator used
 			//If no text generator is defined, do not show the text
 			if (infoObjectScript.infoText != null && textGenerator != null && showInfoText){
-	            textContainer = new GameObject();
-	            textContainer.name = "textContainer";
+				textContainer = new GameObject("textContainer");
 	            textContainer.transform.parent = container.transform;
 	            //Create all text items
 	            CreateTextItems(textContainer, infoObjectScript);
 				ScaleAndPositionTextContainer(maxHeight, maxWidth);
 	            //Add the text item container to the list of objects shown
-	            objects.Add(textContainer);
+	            uiElements.Add(textContainer);
 			}
-
 
 			//Go over all objects and position them
 	        float offset = 0;
-			for (int i = 0; i < objects.Count; i++){
+			for (int i = 0; i < uiElements.Count; i++){
 	            min = max = GameObjectExtensions.initializationVector;
-	            objects[i].GetBounds(ref min, ref max);
+	            uiElements[i].GetBounds(ref min, ref max);
 	            offset -= min.x;
-				objects[i].transform.localPosition = new Vector3(offset, 0, 0);
+				uiElements[i].transform.localPosition = new Vector3(offset, 0, 0);
 	            offset += (max.x + horizontalMargin);
 			}
-
 
 			//Center the objects
 			container.CenterWeight();
 
 			if (centerAtText)
 			{
-				Vector3 distanceToCenter = objects[objects.Count-1].transform.localPosition;
+				Vector3 distanceToCenter = uiElements[uiElements.Count-1].transform.localPosition;
 				foreach (Transform t in container.transform)
 				{
 					t.position -= distanceToCenter;
 				}
 			}
-
-			//Debug cube
-			/*GameObject cube = GameObject.CreatePrimitive (PrimitiveType.Cube);
-			cube.transform.rotation = container.transform.rotation;
-			cube.transform.position = container.transform.position;
-			cube.transform.localScale = container.GetBoundsSize ();*/
 
 			container.SetMaxHeight(maxHeight);
 			container.SetMaxWidth(maxWidth);
@@ -227,6 +218,7 @@ namespace VRUserInterface
 				LookAwayCallback lac = container.AddComponent<LookAwayCallback>();
 				lac.callback = CloseButtonPressed;
 				lac.lookAwayThreshold = lookAwayThreshold;
+				lac.maxToInitialThreshold = true;
 			}
 			return container;
 		}
@@ -243,7 +235,7 @@ namespace VRUserInterface
 		/// <summary>
 		/// How far do you have to look away from the container center to close the view? (x = horizontal angle, y = vertical angle)
 		/// </summary>
-		public Vector2 lookAwayThreshold = new Vector2(40,30);
+		public float lookAwayThreshold = 30;
 
 		/// <summary>
 		/// The game object that contains all the labels with text in it.
