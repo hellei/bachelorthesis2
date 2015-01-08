@@ -69,7 +69,9 @@ namespace VRUserInterface
 			transform.localPosition = initialLocalPosition + new Vector3 (0, moveUpwardFactor, -moveForwardFactor);
 		}
 
-		Vector3 initialLocalScale, initialLocalPosition;
+		Vector3 initialLocalScale;
+		[HideInInspector]
+		public Vector3 initialLocalPosition;
 
 		/// <summary>
 		/// Sets up all values needed for the effect.
