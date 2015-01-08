@@ -96,7 +96,7 @@ namespace VRUserInterface
 					buttonActive = Selection.instance.WatchedObject == gameObject && selectedObj != this;
 				}
 				bool lastButtonActive = selectionButton.gameObject.activeSelf;
-	            selectionButton.gameObject.SetActive(buttonActive);
+	            selectionButton.gameObject.SetActive(buttonActive && !selectedObj == this);
 				//If the button has just been set active, disable all other buttons
 				if (!lastButtonActive && buttonActive)
 				{
@@ -110,17 +110,16 @@ namespace VRUserInterface
 					}
 				}
 	        }
+
+	    }
+
+		void LateUpdate()
+		{
 			if (recreateButtons)
 			{
 				Destroy(selectionButton.gameObject);
 				selectionButton = null;
 			}
-	    }
-
-		void LateUpdate()
-		{
-			recreateButtons = false;
-
 		}
 
 

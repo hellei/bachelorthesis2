@@ -25,8 +25,10 @@ namespace VRUserInterface
 			Destroy (obj.GetComponent<Collider> ());
 			obj.renderer.enabled = false;
 
-			obj.transform.parent = transform;
 			obj.transform.localScale = max - min;
+			obj.transform.parent = transform;
+			obj.transform.localRotation = Quaternion.identity;
+
 			obj.transform.localPosition = (min + max) * 0.5f;
 			cube = obj;
 		}
