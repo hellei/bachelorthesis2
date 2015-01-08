@@ -123,6 +123,7 @@ namespace VRUserInterface
 
 		public void RecreateButton()
 		{
+			if (!selectionButton) return;
 			Destroy(selectionButton.gameObject);
 			selectionButton = null;
 		}
