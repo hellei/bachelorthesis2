@@ -18,7 +18,7 @@ GameObject:
   - 114: {fileID: 11493494}
   m_Layer: 10
   m_Name: Card
-  m_TagString: Untagged
+  m_TagString: Card
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -266,6 +266,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardState: 1
+  stack: {fileID: 0}
   modelHeight: .000600000028
   card: Arena Athlete
   costInfoTarget: {fileID: 165402}

@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 public enum TabletGesture
 {
-    Tap, Move, Pickup, Release, Lift
+    Tap, Move, Pickup, Release, Lift, PlaceOnStack
 }
 
 public enum InteractionLayer
@@ -68,8 +68,20 @@ public class InteractionManager : MonoBehaviour {
             {
                 interactionTime = Time.time;
 
-                Card grabbedCard = Tablet.instance.TakeCardFromTable(card);
-                Hand_Selecting.instance.AddCardToHand(grabbedCard);
+                //Pickup from Table
+                if (card.stack == null)
+                {
+                    Tablet.instance.TakeCardFromTable(card);
+                    Hand_Selecting.instance.AddCardToHand(card);
+                }
+
+                //Pickup from Stack
+                else
+                {
+                    Stack stack = card.stack;
+                    stack.TakeUpperCardFromStack();
+                    Hand_Selecting.instance.AddCardToHand(card);
+                }
             }
         }
 
@@ -101,9 +113,28 @@ public class InteractionManager : MonoBehaviour {
             {
                 interactionTime = Time.time;
 
-                Card grabbedCard = Tablet.instance.TakeCardFromTable(card);
-                Hand_Selecting.instance.AddCardToHand(grabbedCard);
+                //Pickup from Table
+                if (card.stack == null)
+                {
+                    Tablet.instance.TakeCardFromTable(card);
+                    Hand_Selecting.instance.AddCardToHand(card);
+                }
+
+                //Pickup from Stack
+                else
+                {
+                    Stack stack = card.stack;
+                    stack.TakeUpperCardFromStack();
+                    Hand_Selecting.instance.AddCardToHand(card);
+                }
             }
+        }
+
+        // Place card on stack
+        if (gesture == TabletGesture.PlaceOnStack)
+        {
+            Hand_Selecting.instance.TakeCardFromHand();
+            card.stack.AddCard(card);
         }
     }
 

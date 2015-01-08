@@ -26,6 +26,8 @@ public class Card : MonoBehaviour {
 		}
 	}
 
+    public Stack stack;
+
 	public float modelHeight = 0.013f;
 
 	public string card;
