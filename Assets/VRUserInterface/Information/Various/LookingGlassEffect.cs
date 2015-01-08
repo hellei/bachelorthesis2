@@ -15,6 +15,8 @@ namespace VRUserInterface
 		/// Defines how far the object moves forward on select
 		/// </summary>
 		public float moveForwardValue = 0.1f;
+
+		public float moveUpwardValue = 0;
 		/// <summary>
 		/// How long does the popup effect take
 		/// </summary>
@@ -24,6 +26,8 @@ namespace VRUserInterface
 		/// This can be achieved by setting this multiplication factor.
 		/// </summary>
 		public float minimizeSpeedMultiplication = 2;
+
+		public Vector3 scalePivot = Vector3.zero;
 
 
 		// Update is called once per frame
@@ -61,7 +65,8 @@ namespace VRUserInterface
 			float factor = sizeCurve.Evaluate (progress);
 			transform.localScale = initialLocalScale * Mathf.Lerp(1.0f, magnifyingFactor, factor);
 			float moveForwardFactor = Mathf.Lerp (0, moveForwardValue, factor);
-			transform.localPosition = initialLocalPosition + new Vector3 (0, 0, -moveForwardFactor);
+			float moveUpwardFactor = Mathf.Lerp (0, moveUpwardValue, factor);
+			transform.localPosition = initialLocalPosition + new Vector3 (0, moveUpwardFactor, -moveForwardFactor);
 		}
 
 		Vector3 initialLocalScale, initialLocalPosition;

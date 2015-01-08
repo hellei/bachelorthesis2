@@ -3,7 +3,7 @@ using System.Collections;
 using VRUserInterface;
 
 public enum CardState {
-    OnHand, OnTable, OnStack, Selected
+    OnHand, OnTable
 }
 
 
@@ -13,7 +13,7 @@ public enum CardState {
 /// </summary>
 public class Card : MonoBehaviour {
 
-	private CardState cardState;
+	private CardState cardState = CardState.OnTable;
 
     public CardState CardState
 	{
@@ -22,6 +22,7 @@ public class Card : MonoBehaviour {
 		}
 		set {
 			cardState = value;
+			GetComponent<LookingGlassEffect>().enabled = (cardState == CardState.OnHand);
 			io.RecreateButton();
 		}
 	}

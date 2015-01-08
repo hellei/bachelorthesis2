@@ -982,7 +982,7 @@ MonoBehaviour:
   lookAwayThreshold: 30
   connectionPrefab: {fileID: 0}
   numberOfInfoBoxes: 5
-  localOffset: {x: 0, y: -.349999994, z: .349999994}
+  localOffset: {x: 0, y: -.25, z: .25}
   globalOffset: {x: 0, y: 0, z: 0}
   onlyConsiderCameraYRotation: 1
   alwaysFacePlayer: 0
