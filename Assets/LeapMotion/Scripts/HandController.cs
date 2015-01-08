@@ -120,7 +120,18 @@ public class HandController : MonoBehaviour {
     for (int h = 0; h < num_hands; ++h) {
       Hand leap_hand = leap_hands[h];
       
-      HandModel model = (mirrorZAxis != leap_hand.IsLeft) ? left_model : right_model;
+      HandModel model; // = (mirrorZAxis != leap_hand.IsLeft) ? left_model : right_model;
+      bool left;
+      if (mirrorZAxis != leap_hand.IsLeft)
+      {
+          model = left_model;
+          left = true;
+      }
+      else
+      {
+          model = right_model;
+          left = false;
+      }
 
 
       // If we've mirrored since this hand was updated, destroy it.
@@ -135,7 +146,7 @@ public class HandController : MonoBehaviour {
         ids_to_check.Remove(leap_hand.Id);
 
         // Create the hand and initialized it if it doesn't exist yet.
-        if (!all_hands.ContainsKey(leap_hand.Id)) {
+        if (!all_hands.ContainsKey(leap_hand.Id) && ((left && !Hand_CardCollection.instance.IsHandRegistered()) || (!left && !Hand_Selecting.instance.IsHandRegistered()))) {
           HandModel new_hand = CreateHand(model);
           new_hand.SetLeapHand(leap_hand);
           new_hand.MirrorZAxis(mirrorZAxis);

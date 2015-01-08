@@ -1053,7 +1053,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12daf97a97af9ee41a2fe1581501f4fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cardState: 1
   stack: {fileID: 0}
   modelHeight: .000600000028
   card: Mountain 1
@@ -1956,7 +1955,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12daf97a97af9ee41a2fe1581501f4fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cardState: 0
   stack: {fileID: 0}
   modelHeight: .000600000028
   card: Plains 2
@@ -3241,7 +3239,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12daf97a97af9ee41a2fe1581501f4fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cardState: 1
   stack: {fileID: 0}
   modelHeight: .000600000028
   card: Blood Troll Harpy
@@ -3879,7 +3876,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12daf97a97af9ee41a2fe1581501f4fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cardState: 0
   stack: {fileID: 0}
   modelHeight: .000600000028
   card: Arena Athlete
@@ -4183,7 +4179,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12daf97a97af9ee41a2fe1581501f4fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cardState: 1
   stack: {fileID: 0}
   modelHeight: .000600000028
   card: Swamp 1
@@ -4341,7 +4336,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12daf97a97af9ee41a2fe1581501f4fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cardState: 0
   stack: {fileID: 0}
   modelHeight: .000600000028
   card: Plains 1
@@ -9588,7 +9582,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12daf97a97af9ee41a2fe1581501f4fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cardState: 1
   stack: {fileID: 0}
   modelHeight: .000600000028
   card: Polis Crusher
@@ -11654,7 +11647,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12daf97a97af9ee41a2fe1581501f4fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cardState: 1
   stack: {fileID: 0}
   modelHeight: .000600000028
   card: Arena Athlete
@@ -12362,7 +12354,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12daf97a97af9ee41a2fe1581501f4fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cardState: 1
   stack: {fileID: 0}
   modelHeight: .000600000028
   card: Scholar of Athreos
@@ -13812,7 +13803,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12daf97a97af9ee41a2fe1581501f4fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cardState: 1
   stack: {fileID: 0}
   modelHeight: .000600000028
   card: Island 1
@@ -18090,7 +18080,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12daf97a97af9ee41a2fe1581501f4fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cardState: 1
   stack: {fileID: 0}
   modelHeight: .000600000028
   card: Arena Athlete
