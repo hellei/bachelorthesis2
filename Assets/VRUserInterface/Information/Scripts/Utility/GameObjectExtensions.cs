@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 namespace VRUserInterface
 {
@@ -240,5 +241,42 @@ namespace VRUserInterface
 				}
 			}
 		}
+
+		public static SavedTransform SavePositionAndRotation(this GameObject obj)
+		{
+			SavedTransform st = new SavedTransform();
+			st.obj = obj;
+			st.localPosition = obj.transform.localPosition;
+			st.localRotation = obj.transform.localRotation;
+			
+			//Save the initial position of all child objects
+			foreach (Transform t in obj.transform)
+			{
+				SavedTransform cst = t.gameObject.SavePositionAndRotation();
+				st.children.Add(cst);
+			}
+			return st;
+		}
+
+		public static void LoadPositionAndRotation(this GameObject obj, SavedTransform st)
+		{
+			obj.transform.localPosition = st.localPosition;
+			obj.transform.localRotation = st.localRotation;
+			
+			//Save the initial position of all child objects
+			foreach (SavedTransform cst in st.children)
+			{
+				cst.obj.LoadPositionAndRotation(cst);
+			}
+		}
 	}
+
+	public class SavedTransform
+	{
+		public GameObject obj;
+		public Vector3 localPosition;
+		public Quaternion localRotation;
+		public List<SavedTransform> children = new List<SavedTransform>();
+	}
+
 }

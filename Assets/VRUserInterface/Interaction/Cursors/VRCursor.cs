@@ -65,9 +65,7 @@ namespace VRUserInterface
 		// Update is called once per frame
 		void Update () {
 	        if (!cursor) CreateCursor();
-	        PositionCursor();
-	        CheckCollision();
-		
+	        PositionCursor();		
 	    }
 
 	    /// <summary>
@@ -112,59 +110,5 @@ namespace VRUserInterface
 		{
 			cursor.renderer.enabled = value;
 		}
-
-		float selectionTimer = 0;
-
-		SelectableObject lastSelectedSo = null;
-
-	    void CheckCollision()
-	    {
-			ShowCursor (true);
-	        RaycastHit hitInfo;
-	        MenuIcon.selectedItem = null;
-	        if (Physics.Raycast(transform.position, cursor.transform.position - transform.position, out hitInfo)){
-				if (hitInfo.collider.gameObject.tag == "Screen"){
-					ShowCursor(false);
-				}
-	            //Test if the collided object is selectable
-	            SelectableObject so = hitInfo.collider.gameObject.GetComponent<SelectableObject>();
-				if (so == null && lastSelectedSo != null && lastSelectedSo.progressBar)
-				{
-					lastSelectedSo.progressBar.SetActive(false);
-				}
-
-	            if (so && !UIController.Instance.menu)
-	            {
-					selectionTimer += Time.deltaTime;
-					if (so.selectionTime != 0)
-					{
-						so.SetProgress(selectionTimer / so.selectionTime);
-					}
-					if (selectionTimer >= so.selectionTime)
-					{
-						so.SelectionEvent();
-						if (so.selectionTime != 0 && so.progressBar) so.progressBar.SetActive(false);
-	                	//Inform the ui controller that a menu has been selected
-	                	UIController.Instance.SetMenu(so.menuPrefab.gameObject);
-					}
-	            }
-	            //If it is not a selectable object, test if it is a menu icon
-	            else
-	            {
-					selectionTimer = 0;
-	                MenuIcon mi = hitInfo.collider.gameObject.GetComponent<MenuIcon>();
-	                if (mi)
-	                {
-	                    MenuIcon.selectedItem = mi;
-	                }
-	            }
-				lastSelectedSo = so;
-	        }
-			else if (lastSelectedSo)
-			{
-				selectionTimer = 0;
-				if (lastSelectedSo.progressBar) lastSelectedSo.progressBar.SetActive(false);
-			}
-	    }
 	}
 }

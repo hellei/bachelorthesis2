@@ -85,6 +85,12 @@ public class Hand_CardCollection : MonoBehaviour {
 
     public void AddCardToHand(Card card)
     {
+		if (!card)
+		{
+			Debug.LogWarning("Cannot add null card to hand!");
+			return;
+		}
+		card.cardState = CardState.OnHand;
         //Add new
         int indexOfNearestCard = FindIndexOfNearestCard(card.transform.position);
         card.transform.parent = null;

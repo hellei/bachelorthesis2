@@ -16,7 +16,6 @@ namespace VRUserInterface
 
 
 
-	    public static MenuIcon selectedItem;
 
 		public Menu.Icon.Callback callback;
 

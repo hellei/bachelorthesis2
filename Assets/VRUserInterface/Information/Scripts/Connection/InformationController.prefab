@@ -729,7 +729,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   displayPosition: {x: .25, y: 0, z: -.0199999996}
   textGenerator: {fileID: 11400000}
-  backButton: {fileID: 11400000, guid: 9d9e74b5096274652a0c0cbac437329c, type: 2}
+  closeButton: {fileID: 0}
   scrollUpButton: {fileID: 11400000, guid: 9788af509fdbc48fdbaa66c7b27eebd2, type: 2}
   scrollDownButton: {fileID: 11400000, guid: 98e763011136f473086fb9000d3a29da, type: 2}
   textItemMargin: .0199999996
@@ -760,9 +760,9 @@ MonoBehaviour:
     popupDuration: .400000006
     minimizeSpeedMultiplication: 2
   centerAtText: 0
-  showBackButton: 1
+  showCloseButton: 1
   closeWhenLookingAway: 1
-  lookAwayThreshold: {x: 40, y: 30}
+  lookAwayThreshold: 0
   connectionPrefab: {fileID: 0}
   numberOfInfoBoxes: 2
 --- !u!114 &11400008
@@ -778,7 +778,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   displayPosition: {x: 0, y: 1, z: 0}
   textGenerator: {fileID: 11400024}
-  backButton: {fileID: 11400000, guid: 9d9e74b5096274652a0c0cbac437329c, type: 2}
+  closeButton: {fileID: 0}
   scrollUpButton: {fileID: 11400000, guid: 9788af509fdbc48fdbaa66c7b27eebd2, type: 2}
   scrollDownButton: {fileID: 11400000, guid: 98e763011136f473086fb9000d3a29da, type: 2}
   textItemMargin: .0199999996
@@ -809,9 +809,9 @@ MonoBehaviour:
     popupDuration: .400000006
     minimizeSpeedMultiplication: 2
   centerAtText: 0
-  showBackButton: 1
+  showCloseButton: 1
   closeWhenLookingAway: 1
-  lookAwayThreshold: {x: 40, y: 30}
+  lookAwayThreshold: 0
   connectionPrefab: {fileID: 0}
   numberOfInfoBoxes: 2
   globalDisplayOffset: {x: 0, y: .129999995, z: 0}
@@ -849,7 +849,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   displayPosition: {x: .300000012, y: .300000012, z: .300000012}
   textGenerator: {fileID: 11400024}
-  backButton: {fileID: 11400000, guid: 9d9e74b5096274652a0c0cbac437329c, type: 2}
+  closeButton: {fileID: 11400000, guid: 9d9e74b5096274652a0c0cbac437329c, type: 2}
   scrollUpButton: {fileID: 11400000, guid: 9788af509fdbc48fdbaa66c7b27eebd2, type: 2}
   scrollDownButton: {fileID: 11400000, guid: 98e763011136f473086fb9000d3a29da, type: 2}
   textItemMargin: .0199999996
@@ -880,9 +880,9 @@ MonoBehaviour:
     popupDuration: .400000006
     minimizeSpeedMultiplication: 2
   centerAtText: 0
-  showBackButton: 1
+  showCloseButton: 1
   closeWhenLookingAway: 1
-  lookAwayThreshold: {x: 40, y: 30}
+  lookAwayThreshold: 0
   connectionPrefab: {fileID: 11400000, guid: 501f313e504fa8548808af2cbe19f9c9, type: 2}
   numberOfInfoBoxes: 3
 --- !u!114 &11400014
@@ -946,7 +946,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   displayPosition: {x: 0, y: 1, z: 0}
   textGenerator: {fileID: 11400024}
-  backButton: {fileID: 11400000, guid: 9d9e74b5096274652a0c0cbac437329c, type: 2}
+  closeButton: {fileID: 11400000, guid: 9d9e74b5096274652a0c0cbac437329c, type: 2}
   scrollUpButton: {fileID: 11400000, guid: 9788af509fdbc48fdbaa66c7b27eebd2, type: 2}
   scrollDownButton: {fileID: 11400000, guid: 98e763011136f473086fb9000d3a29da, type: 2}
   textItemMargin: .00999999978
@@ -977,9 +977,9 @@ MonoBehaviour:
     popupDuration: .400000006
     minimizeSpeedMultiplication: 2
   centerAtText: 0
-  showBackButton: 0
+  showCloseButton: 1
   closeWhenLookingAway: 1
-  lookAwayThreshold: {x: 30, y: 30}
+  lookAwayThreshold: 30
   connectionPrefab: {fileID: 0}
   numberOfInfoBoxes: 5
   localOffset: {x: 0, y: -.349999994, z: .349999994}
@@ -999,7 +999,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   displayPosition: {x: 0, y: 1, z: 0}
   textGenerator: {fileID: 11400024}
-  backButton: {fileID: 11400000, guid: 9d9e74b5096274652a0c0cbac437329c, type: 2}
+  closeButton: {fileID: 11400000, guid: 9d9e74b5096274652a0c0cbac437329c, type: 2}
   scrollUpButton: {fileID: 11400000, guid: 9788af509fdbc48fdbaa66c7b27eebd2, type: 2}
   scrollDownButton: {fileID: 11400000, guid: 98e763011136f473086fb9000d3a29da, type: 2}
   textItemMargin: .00999999978
@@ -1020,9 +1020,9 @@ MonoBehaviour:
     popupDuration: .699999988
     minimizeSpeedMultiplication: 2
   centerAtText: 0
-  showBackButton: 1
+  showCloseButton: 1
   closeWhenLookingAway: 1
-  lookAwayThreshold: {x: 40, y: 30}
+  lookAwayThreshold: 0
   connectionPrefab: {fileID: 0}
   numberOfInfoBoxes: 3
   localOffset: {x: 0, y: 0, z: .200000003}
@@ -1042,7 +1042,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   displayPosition: {x: 0, y: 1, z: 0}
   textGenerator: {fileID: 11400014}
-  backButton: {fileID: 11400000, guid: 9d9e74b5096274652a0c0cbac437329c, type: 2}
+  closeButton: {fileID: 11400000, guid: 9d9e74b5096274652a0c0cbac437329c, type: 2}
   scrollUpButton: {fileID: 11400000, guid: 9788af509fdbc48fdbaa66c7b27eebd2, type: 2}
   scrollDownButton: {fileID: 11400000, guid: 98e763011136f473086fb9000d3a29da, type: 2}
   textItemMargin: .00999999978
@@ -1063,9 +1063,9 @@ MonoBehaviour:
     popupDuration: .699999988
     minimizeSpeedMultiplication: 2
   centerAtText: 0
-  showBackButton: 1
+  showCloseButton: 1
   closeWhenLookingAway: 1
-  lookAwayThreshold: {x: 40, y: 30}
+  lookAwayThreshold: 0
   connectionPrefab: {fileID: 0}
   numberOfInfoBoxes: 3
   localOffset: {x: 0, y: 0, z: .200000003}
@@ -1133,7 +1133,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   displayPosition: {x: 0, y: 1, z: 0}
   textGenerator: {fileID: 11400014}
-  backButton: {fileID: 11400000, guid: 9d9e74b5096274652a0c0cbac437329c, type: 2}
+  closeButton: {fileID: 11400000, guid: 9d9e74b5096274652a0c0cbac437329c, type: 2}
   scrollUpButton: {fileID: 11400000, guid: 9788af509fdbc48fdbaa66c7b27eebd2, type: 2}
   scrollDownButton: {fileID: 11400000, guid: 98e763011136f473086fb9000d3a29da, type: 2}
   textItemMargin: .00999999978
@@ -1154,9 +1154,9 @@ MonoBehaviour:
     popupDuration: .699999988
     minimizeSpeedMultiplication: 2
   centerAtText: 0
-  showBackButton: 1
+  showCloseButton: 1
   closeWhenLookingAway: 1
-  lookAwayThreshold: {x: 40, y: 30}
+  lookAwayThreshold: 0
   connectionPrefab: {fileID: 0}
   numberOfInfoBoxes: 3
   localOffset: {x: 0, y: 0, z: .200000003}
@@ -1176,7 +1176,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   displayPosition: {x: 0, y: 1, z: 0}
   textGenerator: {fileID: 11400014}
-  backButton: {fileID: 11400000, guid: 9d9e74b5096274652a0c0cbac437329c, type: 2}
+  closeButton: {fileID: 11400000, guid: 9d9e74b5096274652a0c0cbac437329c, type: 2}
   scrollUpButton: {fileID: 11400000, guid: 9788af509fdbc48fdbaa66c7b27eebd2, type: 2}
   scrollDownButton: {fileID: 11400000, guid: 98e763011136f473086fb9000d3a29da, type: 2}
   textItemMargin: .00999999978
@@ -1197,9 +1197,9 @@ MonoBehaviour:
     popupDuration: .699999988
     minimizeSpeedMultiplication: 2
   centerAtText: 0
-  showBackButton: 1
+  showCloseButton: 1
   closeWhenLookingAway: 1
-  lookAwayThreshold: {x: 40, y: 30}
+  lookAwayThreshold: 0
   connectionPrefab: {fileID: 0}
   numberOfInfoBoxes: 3
   localOffset: {x: 0, y: 0, z: .200000003}
@@ -1219,7 +1219,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   displayPosition: {x: 0, y: 1, z: 0}
   textGenerator: {fileID: 11400014}
-  backButton: {fileID: 11400000, guid: 9d9e74b5096274652a0c0cbac437329c, type: 2}
+  closeButton: {fileID: 11400000, guid: 9d9e74b5096274652a0c0cbac437329c, type: 2}
   scrollUpButton: {fileID: 11400000, guid: 9788af509fdbc48fdbaa66c7b27eebd2, type: 2}
   scrollDownButton: {fileID: 11400000, guid: 98e763011136f473086fb9000d3a29da, type: 2}
   textItemMargin: .00999999978
@@ -1240,9 +1240,9 @@ MonoBehaviour:
     popupDuration: .699999988
     minimizeSpeedMultiplication: 2
   centerAtText: 0
-  showBackButton: 1
+  showCloseButton: 1
   closeWhenLookingAway: 1
-  lookAwayThreshold: {x: 30, y: 30}
+  lookAwayThreshold: 0
   connectionPrefab: {fileID: 0}
   numberOfInfoBoxes: 3
   localOffset: {x: 0, y: 0, z: .200000003}
@@ -1262,7 +1262,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   displayPosition: {x: 0, y: 1, z: 0}
   textGenerator: {fileID: 11400024}
-  backButton: {fileID: 11400000, guid: 9d9e74b5096274652a0c0cbac437329c, type: 2}
+  closeButton: {fileID: 11400000, guid: 9d9e74b5096274652a0c0cbac437329c, type: 2}
   scrollUpButton: {fileID: 11400000, guid: 9788af509fdbc48fdbaa66c7b27eebd2, type: 2}
   scrollDownButton: {fileID: 11400000, guid: 98e763011136f473086fb9000d3a29da, type: 2}
   textItemMargin: .00999999978
@@ -1283,9 +1283,9 @@ MonoBehaviour:
     popupDuration: .699999988
     minimizeSpeedMultiplication: 2
   centerAtText: 0
-  showBackButton: 1
+  showCloseButton: 1
   closeWhenLookingAway: 1
-  lookAwayThreshold: {x: 30, y: 30}
+  lookAwayThreshold: 0
   connectionPrefab: {fileID: 0}
   numberOfInfoBoxes: 5
   localOffset: {x: 0, y: 0, z: .330000013}
@@ -1305,7 +1305,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   displayPosition: {x: 0, y: 1, z: 0}
   textGenerator: {fileID: 11400024}
-  backButton: {fileID: 11400000, guid: 9d9e74b5096274652a0c0cbac437329c, type: 2}
+  closeButton: {fileID: 11400000, guid: 9d9e74b5096274652a0c0cbac437329c, type: 2}
   scrollUpButton: {fileID: 11400000, guid: 9788af509fdbc48fdbaa66c7b27eebd2, type: 2}
   scrollDownButton: {fileID: 11400000, guid: 98e763011136f473086fb9000d3a29da, type: 2}
   textItemMargin: .00999999978
@@ -1336,9 +1336,9 @@ MonoBehaviour:
     popupDuration: .400000006
     minimizeSpeedMultiplication: 2
   centerAtText: 0
-  showBackButton: 0
+  showCloseButton: 1
   closeWhenLookingAway: 1
-  lookAwayThreshold: {x: 30, y: 30}
+  lookAwayThreshold: 30
   connectionPrefab: {fileID: 0}
   numberOfInfoBoxes: 5
   localOffset: {x: 0, y: -.129999995, z: .349999994}
@@ -1358,7 +1358,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   displayPosition: {x: 0, y: 1, z: 0}
   textGenerator: {fileID: 0}
-  backButton: {fileID: 11400000, guid: 9d9e74b5096274652a0c0cbac437329c, type: 2}
+  closeButton: {fileID: 0}
   scrollUpButton: {fileID: 11400000, guid: 9788af509fdbc48fdbaa66c7b27eebd2, type: 2}
   scrollDownButton: {fileID: 11400000, guid: 98e763011136f473086fb9000d3a29da, type: 2}
   textItemMargin: .0199999996
@@ -1389,9 +1389,9 @@ MonoBehaviour:
     popupDuration: .400000006
     minimizeSpeedMultiplication: 2
   centerAtText: 0
-  showBackButton: 1
+  showCloseButton: 1
   closeWhenLookingAway: 1
-  lookAwayThreshold: {x: 40, y: 30}
+  lookAwayThreshold: 0
   connectionPrefab: {fileID: 0}
   numberOfInfoBoxes: 2
   globalDisplayOffset: {x: 0, y: .129999995, z: 0}
@@ -1411,7 +1411,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   displayPosition: {x: 0, y: 1, z: 0}
   textGenerator: {fileID: 11400024}
-  backButton: {fileID: 11400000, guid: 9d9e74b5096274652a0c0cbac437329c, type: 2}
+  closeButton: {fileID: 11400000, guid: 9d9e74b5096274652a0c0cbac437329c, type: 2}
   scrollUpButton: {fileID: 11400000, guid: 9788af509fdbc48fdbaa66c7b27eebd2, type: 2}
   scrollDownButton: {fileID: 11400000, guid: 98e763011136f473086fb9000d3a29da, type: 2}
   textItemMargin: .00999999978
@@ -1432,9 +1432,9 @@ MonoBehaviour:
     popupDuration: .699999988
     minimizeSpeedMultiplication: 2
   centerAtText: 1
-  showBackButton: 1
+  showCloseButton: 1
   closeWhenLookingAway: 1
-  lookAwayThreshold: {x: 30, y: 30}
+  lookAwayThreshold: 0
   connectionPrefab: {fileID: 0}
   numberOfInfoBoxes: 5
   localOffset: {x: 0, y: 0, z: .330000013}
@@ -1454,7 +1454,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   displayPosition: {x: 0, y: 1, z: 0}
   textGenerator: {fileID: 11400024}
-  backButton: {fileID: 11400000, guid: 9d9e74b5096274652a0c0cbac437329c, type: 2}
+  closeButton: {fileID: 11400000, guid: 9d9e74b5096274652a0c0cbac437329c, type: 2}
   scrollUpButton: {fileID: 11400000, guid: 9788af509fdbc48fdbaa66c7b27eebd2, type: 2}
   scrollDownButton: {fileID: 11400000, guid: 98e763011136f473086fb9000d3a29da, type: 2}
   textItemMargin: .00999999978
@@ -1475,9 +1475,9 @@ MonoBehaviour:
     popupDuration: .699999988
     minimizeSpeedMultiplication: 2
   centerAtText: 0
-  showBackButton: 1
+  showCloseButton: 1
   closeWhenLookingAway: 1
-  lookAwayThreshold: {x: 30, y: 30}
+  lookAwayThreshold: 0
   connectionPrefab: {fileID: 0}
   numberOfInfoBoxes: 5
   localOffset: {x: 0, y: 0, z: .270000011}
@@ -1497,7 +1497,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   displayPosition: {x: 0, y: 1, z: 0}
   textGenerator: {fileID: 11400024}
-  backButton: {fileID: 11400000, guid: 9d9e74b5096274652a0c0cbac437329c, type: 2}
+  closeButton: {fileID: 11400000, guid: 9d9e74b5096274652a0c0cbac437329c, type: 2}
   scrollUpButton: {fileID: 11400000, guid: 9788af509fdbc48fdbaa66c7b27eebd2, type: 2}
   scrollDownButton: {fileID: 11400000, guid: 98e763011136f473086fb9000d3a29da, type: 2}
   textItemMargin: .00999999978
@@ -1528,9 +1528,9 @@ MonoBehaviour:
     popupDuration: .400000006
     minimizeSpeedMultiplication: 2
   centerAtText: 0
-  showBackButton: 0
+  showCloseButton: 1
   closeWhenLookingAway: 1
-  lookAwayThreshold: {x: 30, y: 30}
+  lookAwayThreshold: 30
   connectionPrefab: {fileID: 0}
   numberOfInfoBoxes: 5
   localOffset: {x: 0, y: 0, z: .400000006}
@@ -1550,7 +1550,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   displayPosition: {x: 0, y: 1, z: 0}
   textGenerator: {fileID: 11400024}
-  backButton: {fileID: 11400000, guid: 9d9e74b5096274652a0c0cbac437329c, type: 2}
+  closeButton: {fileID: 11400000, guid: 9d9e74b5096274652a0c0cbac437329c, type: 2}
   scrollUpButton: {fileID: 11400000, guid: 9788af509fdbc48fdbaa66c7b27eebd2, type: 2}
   scrollDownButton: {fileID: 11400000, guid: 98e763011136f473086fb9000d3a29da, type: 2}
   textItemMargin: .00999999978
@@ -1571,9 +1571,9 @@ MonoBehaviour:
     popupDuration: .699999988
     minimizeSpeedMultiplication: 2
   centerAtText: 1
-  showBackButton: 1
+  showCloseButton: 1
   closeWhenLookingAway: 1
-  lookAwayThreshold: {x: 30, y: 30}
+  lookAwayThreshold: 0
   connectionPrefab: {fileID: 0}
   numberOfInfoBoxes: 5
   localOffset: {x: 0, y: 0, z: .330000013}

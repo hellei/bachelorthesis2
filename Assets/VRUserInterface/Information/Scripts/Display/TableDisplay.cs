@@ -218,6 +218,7 @@ namespace VRUserInterface
 				LookAwayCallback lac = container.AddComponent<LookAwayCallback>();
 				lac.callback = CloseButtonPressed;
 				lac.lookAwayThreshold = lookAwayThreshold;
+				lac.maxToInitialThreshold = true;
 			}
 			return container;
 		}
@@ -234,7 +235,7 @@ namespace VRUserInterface
 		/// <summary>
 		/// How far do you have to look away from the container center to close the view? (x = horizontal angle, y = vertical angle)
 		/// </summary>
-		public Vector2 lookAwayThreshold = new Vector2(40,30);
+		public float lookAwayThreshold = 30;
 
 		/// <summary>
 		/// The game object that contains all the labels with text in it.

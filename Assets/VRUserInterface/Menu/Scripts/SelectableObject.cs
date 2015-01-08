@@ -17,42 +17,39 @@ namespace VRUserInterface
 		/// </summary>
 		public bool menuActiveOnStart;
 
-		public float selectionTime = 0;
+		public ButtonGenerator selectionButton;
 
-		public GameObject progressBar;
+		public GameObject buttonPosition;
+
+		GameObject button;
 
 		void Start()
 		{
-			if (progressBar) progressBar.SetActive(false);
+			if (selectionButton)
+			{
+				button = selectionButton.Instantiate();
+				button.transform.parent = transform;
+				button.transform.localPosition = buttonPosition.transform.localPosition;
+				button.GetComponent<Button>().OnButtonPressed += OpenMenu;
+			}
 			if (menuActiveOnStart)
 			{
-				//Inform the ui controller about the start menu
-				UIController.Instance.SetMenu(menuPrefab.gameObject);
+				OpenMenu();
 			}
 		}
 
-		public void SetProgress(float factor)
+		public void OpenMenu()
 		{
-			if (!progressBar) return;
-			if (!progressBar.activeSelf)
-			{
-				if (menuPrefab.soundEffects.useSound && menuPrefab.soundEffects.hover)
-				{
-					AudioSource.PlayClipAtPoint(menuPrefab.soundEffects.hover, transform.position);
-				}
-			}
-			progressBar.SetActive (true);
-			progressBar.renderer.material.SetFloat ("_PercentageFilled", factor);
+			//Inform the ui controller about the start menu
+			UIController.Instance.SetMenu(menuPrefab.gameObject);
 		}
-		public bool useSound = false;
 
-		public void SelectionEvent()
+		bool isWatched = false;
+
+		void Update()
 		{
-			if (!useSound) return;
-			if (menuPrefab.soundEffects.useSound && menuPrefab.soundEffects.select)
-			{
-				AudioSource.PlayClipAtPoint(menuPrefab.soundEffects.select, transform.position);
-			}
+			if (Selection.instance.WatchedObject.tag != "ButtonComponent") isWatched = (Selection.instance.WatchedObject == gameObject);
+			button.SetActive(isWatched);
 		}
 	}
 }

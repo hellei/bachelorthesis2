@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 using VRUserInterface;
 
 /// <summary>
@@ -42,6 +43,7 @@ public class MoveModel : MenuCallback {
 	void Start () {
         CreatePlayerPlanes();
 		SetInitialHeadRotation ();
+		SetInitialRotations ();
 	}
 	
 	// Update is called once per frame
@@ -79,15 +81,32 @@ public class MoveModel : MenuCallback {
 		//initialHeadRotation = neck.transform.localRotation;
 	}
 
+	SavedTransform stLeft, stRight;
+
+	void SetInitialRotations()
+	{
+		stLeft = leftShoulderModel.SavePositionAndRotation ();
+		stRight = rightShoulderModel.SavePositionAndRotation ();
+	}
+
 	void UpdateHands()
 	{
 		leftHand = GameObject.Find ("L_Wrist");
 		rightHand = GameObject.Find ("R_Wrist");
+		if (!leftHand)
+		{
+			leftShoulderModel.LoadPositionAndRotation(stLeft);
+		}
+		if (!rightHand)
+		{
+			rightShoulderModel.LoadPositionAndRotation(stLeft);
+		}
 		leftElbow = GameObject.Find ("ForetwistLeft");
 		rightElbow = GameObject.Find ("ForetwistRight");
 		UpdateHand (leftForetwistModel, leftShoulderModel, leftHandModel, leftHand, leftElbow);
 		UpdateHand (rightForetwistModel, rightShoulderModel, rightHandModel, rightHand, rightElbow);
 	}
+
 
 	bool initialRotationSet = false;
 
@@ -97,12 +116,20 @@ public class MoveModel : MenuCallback {
 
 	void UpdateHand (GameObject model, GameObject shoulder, GameObject hand, GameObject handTarget, GameObject target)
 	{
-		if (!target) return;
+		if (!target){
+			return;
+		}
 
-		shoulder.transform.right = -(target.transform.position - shoulder.transform.position).normalized;
+		Vector3 relPos = (target.transform.position - shoulder.transform.position).normalized;
 
+		//shoulder.transform.right = -relPos;
+		shoulder.transform.rotation = Quaternion.LookRotation (relPos, Vector3.up);
+		shoulder.transform.Rotate (new Vector3 (0, 90, 0));
 
-		model.transform.right = -target.transform.up;
+		//model.transform.right = -target.transform.up;
+		model.transform.rotation = Quaternion.LookRotation (target.transform.up, Vector3.up);
+		model.transform.Rotate (new Vector3 (0, 90, 0));
+		model.transform.Rotate (new Vector3 (-90, 0, 0));
 		//model.transform.rotation = target.transform.rotation;
 
 		model.transform.position = target.transform.position;
@@ -196,3 +223,4 @@ public class MoveModel : MenuCallback {
 		return Mathf.Asin(directionX.magnitude / direction.magnitude) * sign * Mathf.Rad2Deg;
     }
 }
+
