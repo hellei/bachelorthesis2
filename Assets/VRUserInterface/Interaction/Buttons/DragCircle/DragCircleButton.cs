@@ -6,6 +6,7 @@ namespace VRUserInterface
 {
 	public class DragCircleButton : Button {
 
+
 		void OnEnable()
 		{
 			initialRotation = new Vector3 (0, 180, 0);
@@ -84,9 +85,8 @@ namespace VRUserInterface
 		/// </summary>
 		void DragCircle()
 		{
-			float lastLocalX = dragCircle.transform.localPosition.x;
 			dragCircle.transform.position = VRCursor.instance.CursorPosition;
-			dragCircle.transform.localPosition = new Vector3 (Mathf.Max (dragCircle.transform.localPosition.x, lastLocalX), initialCircleLocalPosition.y, 0);
+			dragCircle.transform.localPosition = new Vector3 (Mathf.Max (dragCircle.transform.localPosition.x, initialCircleLocalPosition.x), initialCircleLocalPosition.y, 0);
 			if (dragCircle.transform.localPosition.x > requiredXOffset)
 			{
 				Select ();

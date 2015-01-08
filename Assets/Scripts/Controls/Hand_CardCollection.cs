@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using VRUserInterface;
 
 
 public class Hand_CardCollection : MonoBehaviour {
@@ -90,7 +91,7 @@ public class Hand_CardCollection : MonoBehaviour {
 			Debug.LogWarning("Cannot add null card to hand!");
 			return;
 		}
-		card.cardState = CardState.OnHand;
+		card.CardState = CardState.OnHand;
         //Add new
         int indexOfNearestCard = FindIndexOfNearestCard(card.transform.position);
         card.transform.parent = null;

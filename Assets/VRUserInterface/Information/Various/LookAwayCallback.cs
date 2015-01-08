@@ -31,7 +31,6 @@ namespace VRUserInterface
 			{
 				float initialAngle = Vector3.Angle (VRCameraEnable.instance.GetCameraCenterObject ().transform.forward, (transform.position - VRCameraEnable.instance.GetCameraCenter()).normalized);
 				lookAwayThreshold = Mathf.Max (lookAwayThreshold, initialAngle + 5);
-				Debug.Log("Threshold: "+lookAwayThreshold);
 			}
 		}
 

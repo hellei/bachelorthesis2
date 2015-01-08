@@ -89,6 +89,7 @@ namespace VRUserInterface
 	                infoDisplay = allInfoDisplays[infoI % allInfoDisplays.Length];
 	                Debug.Log(infoDisplay.name);
 	            }
+				InformationObject.recreateButtons = false;
 				if (Input.GetKeyDown(KeyCode.T))
 				{
 					infoButton.buttonType = (ButtonType)Mathf.Max(0, (int)infoButton.buttonType - 1);

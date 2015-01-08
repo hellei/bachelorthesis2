@@ -13,7 +13,18 @@ public enum CardState {
 /// </summary>
 public class Card : MonoBehaviour {
 
-    public CardState cardState;
+	private CardState cardState;
+
+    public CardState CardState
+	{
+		get {
+			return cardState;
+		}
+		set {
+			cardState = value;
+			io.RecreateButton();
+		}
+	}
 
     public Stack stack;
 
