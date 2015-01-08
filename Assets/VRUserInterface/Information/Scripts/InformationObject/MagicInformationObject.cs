@@ -35,7 +35,7 @@ namespace VRUserInterface
 	    protected override void PositionInfoButton(GameObject obj)
 	    {
 	        GameObject reference = null;
-	        switch (card.cardState)
+	        switch (card.CardState)
 	        {
 	            case CardState.OnHand:
 	                reference = offsetOnHand;
@@ -52,7 +52,7 @@ namespace VRUserInterface
 	        selectionButton.OnButtonPressed += OnButtonSelection;
 	        selectionButton.text = "Info";
 	        selectionButton.condition = Tablet.instance;
-	        if (card.cardState == CardState.OnHand)
+	        if (card.CardState == CardState.OnHand)
 	        {
 	            selectionButton.LookAtPlayer = false;
 	            obj.transform.Rotate(new Vector3(180, 0, 0));

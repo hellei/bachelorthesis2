@@ -117,9 +117,14 @@ namespace VRUserInterface
 		{
 			if (recreateButtons)
 			{
-				Destroy(selectionButton.gameObject);
-				selectionButton = null;
+				RecreateButton();
 			}
+		}
+
+		public void RecreateButton()
+		{
+			Destroy(selectionButton.gameObject);
+			selectionButton = null;
 		}
 
 
