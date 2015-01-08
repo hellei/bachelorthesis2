@@ -152,7 +152,7 @@ public class Hand_CardCollection : MonoBehaviour {
             Transform parent = card.transform.parent;
             cardsOnHand.RemoveAt(index);
             numberOfCardsOnHand--;
-            Destroy(parent.gameObject);
+            
             print("Took card from left hand");
 
             // Enable hand collider if no card on hand
@@ -167,6 +167,7 @@ public class Hand_CardCollection : MonoBehaviour {
             card.transform.localPosition = Vector3.zero;
             card.transform.localRotation = Quaternion.Euler(Vector3.zero);
 
+            Destroy(parent.gameObject);
             return card;
         }
         else return null;
@@ -182,7 +183,7 @@ public class Hand_CardCollection : MonoBehaviour {
             Transform parent = card.transform.parent;
             cardsOnHand.RemoveAt(index);
             numberOfCardsOnHand--;
-            Destroy(parent.gameObject);
+            
 
             print("Took card from left hand");
 
@@ -198,6 +199,7 @@ public class Hand_CardCollection : MonoBehaviour {
                 DisplayCardsOnHand();
             }
 
+            Destroy(parent.gameObject);
             return card;
         }
 
