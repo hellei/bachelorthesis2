@@ -1151,7 +1151,7 @@ GameObject:
   - 114: {fileID: 117490356}
   m_Layer: 10
   m_Name: Card
-  m_TagString: Untagged
+  m_TagString: Card
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1234,6 +1234,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardState: 1
+  stack: {fileID: 0}
   modelHeight: .000600000028
   card: Arena Athlete
   costInfoTarget: {fileID: 1056419317}
@@ -2208,7 +2209,7 @@ GameObject:
   - 114: {fileID: 193081706}
   m_Layer: 10
   m_Name: Card
-  m_TagString: Untagged
+  m_TagString: Card
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2241,6 +2242,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardState: 0
+  stack: {fileID: 0}
   modelHeight: .000600000028
   card: Arena Athlete
   costInfoTarget: {fileID: 1866524675}
@@ -3563,7 +3565,7 @@ GameObject:
   - 114: {fileID: 317539518}
   m_Layer: 10
   m_Name: Card
-  m_TagString: Untagged
+  m_TagString: Card
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3646,6 +3648,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardState: 1
+  stack: {fileID: 0}
   modelHeight: .000600000028
   card: Arena Athlete
   costInfoTarget: {fileID: 1964057233}
@@ -4247,7 +4250,7 @@ GameObject:
   - 114: {fileID: 385428973}
   m_Layer: 10
   m_Name: Card
-  m_TagString: Untagged
+  m_TagString: Card
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4330,6 +4333,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardState: 0
+  stack: {fileID: 0}
   modelHeight: .000600000028
   card: Arena Athlete
   costInfoTarget: {fileID: 1119715693}
@@ -4627,7 +4631,7 @@ GameObject:
   - 114: {fileID: 404712197}
   m_Layer: 10
   m_Name: Card
-  m_TagString: Untagged
+  m_TagString: Card
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4710,6 +4714,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardState: 1
+  stack: {fileID: 0}
   modelHeight: .000600000028
   card: Arena Athlete
   costInfoTarget: {fileID: 784709215}
@@ -4834,7 +4839,7 @@ GameObject:
   - 114: {fileID: 418775568}
   m_Layer: 10
   m_Name: Card
-  m_TagString: Untagged
+  m_TagString: Card
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4867,6 +4872,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardState: 1
+  stack: {fileID: 0}
   modelHeight: .000600000028
   card: Arena Athlete
   costInfoTarget: {fileID: 1815399572}
@@ -10189,7 +10195,7 @@ GameObject:
   - 114: {fileID: 1115641082}
   m_Layer: 10
   m_Name: Card
-  m_TagString: Untagged
+  m_TagString: Card
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10272,6 +10278,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardState: 1
+  stack: {fileID: 0}
   modelHeight: .000600000028
   card: Arena Athlete
   costInfoTarget: {fileID: 1615807525}
@@ -12518,7 +12525,7 @@ GameObject:
   - 114: {fileID: 1395528138}
   m_Layer: 10
   m_Name: Card
-  m_TagString: Untagged
+  m_TagString: Card
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12589,6 +12596,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardState: 1
+  stack: {fileID: 0}
   modelHeight: .000600000028
   card: Arena Athlete
   costInfoTarget: {fileID: 1817929755}
@@ -13292,7 +13300,7 @@ GameObject:
   - 114: {fileID: 1452230148}
   m_Layer: 10
   m_Name: Card
-  m_TagString: Untagged
+  m_TagString: Card
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13375,6 +13383,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardState: 1
+  stack: {fileID: 0}
   modelHeight: .000600000028
   card: Arena Athlete
   costInfoTarget: {fileID: 173070604}
@@ -14806,7 +14815,7 @@ GameObject:
   - 114: {fileID: 1601822046}
   m_Layer: 10
   m_Name: Card
-  m_TagString: Untagged
+  m_TagString: Card
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14877,6 +14886,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardState: 1
+  stack: {fileID: 0}
   modelHeight: .000600000028
   card: Arena Athlete
   costInfoTarget: {fileID: 710239444}
@@ -15677,6 +15687,7 @@ MonoBehaviour:
   card: {fileID: 418775561}
   card1: {fileID: 193081699}
   card2: {fileID: 385428969}
+  card3: {fileID: 0}
   maxCardsAllowed: -1
 --- !u!4 &1681781311
 Transform:
@@ -19321,7 +19332,7 @@ GameObject:
   - 114: {fileID: 2017964920}
   m_Layer: 10
   m_Name: Card
-  m_TagString: Untagged
+  m_TagString: Card
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19404,6 +19415,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardState: 1
+  stack: {fileID: 0}
   modelHeight: .000600000028
   card: Arena Athlete
   costInfoTarget: {fileID: 1117513887}

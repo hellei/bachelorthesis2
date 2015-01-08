@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using VRUserInterface;
 
 public class Stack : MonoBehaviour {
 
@@ -12,6 +13,9 @@ public class Stack : MonoBehaviour {
 		}
 		public Vector3 randomOffset;
 	}
+
+    BoxCollider bCollider;
+
 
 	public void Shuffle()  
 	{  
@@ -37,6 +41,9 @@ public class Stack : MonoBehaviour {
 
 	// Use this for initialization
 	void Awake () {
+
+        bCollider = gameObject.AddComponent<BoxCollider>();
+        bCollider.isTrigger = true;
 		AddAllChildrenToStack();
 		Shuffle ();
 	}
@@ -51,6 +58,21 @@ public class Stack : MonoBehaviour {
 	}
 
 	public float stackAccuracy = 0.005f;//Determines how accurate the cards are placed on top of each other
+
+    public Card TakeUpperCardFromStack()
+    {
+        if (cards.Count > 0)
+        {
+            StackCard sCard = cards[cards.Count - 1];
+            cards.Remove(sCard);
+            sCard.card.collider.enabled = true;
+
+            UpdateStack();
+
+            return sCard.card;
+        }
+        else return null;
+    }
 
 
 	/// <summary>
@@ -68,19 +90,27 @@ public class Stack : MonoBehaviour {
 				break;
 			}
 		}
-		UpdateStack ();
-		DisableColliders ();
+		UpdateStack ();		
 	}
 
 	//Updates the world positions of the cards
 	void UpdateStack(){
 		float height = 0;//The stack height
 		foreach (StackCard stackCard in cards){
+            stackCard.card.stack = this;
 			height += stackCard.card.modelHeight/2.0f;
 			stackCard.card.transform.position = transform.position + new Vector3(stackCard.randomOffset.x, height, stackCard.randomOffset.z);
 			stackCard.card.transform.rotation = Quaternion.Euler (new Vector3(90,0,0));
 			height += stackCard.card.modelHeight/2.0f;
 		}
+        if(cards.Count > 0 ){// && bCollider != null){
+            //Vector3 size = cards[0].card.gameObject.GetBoundsSize().x;
+            Debug.Log("Collidersize: " + cards[0].card.gameObject.GetBoundsSize().x);
+            bCollider.size = new Vector3(0.06f, 0.01f * cards.Count, 0.09f);
+            Debug.Log("Changes size");
+        }
+        
+        DisableColliders();
 	}
 	/// <summary>
 	/// Disable all colliders except the top card
@@ -100,4 +130,14 @@ public class Stack : MonoBehaviour {
 	void Update () {
 		DisableColliders ();
 	}
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Card")
+        {
+            Card card = other.GetComponent<Card>();
+            card.stack = this;
+            InteractionManager.instance.HandleCardOnTabletInteraction(card, null, TabletGesture.PlaceOnStack);
+        }
+    }
 }

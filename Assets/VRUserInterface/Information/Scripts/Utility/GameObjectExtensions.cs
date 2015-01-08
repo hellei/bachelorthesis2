@@ -219,6 +219,7 @@ namespace VRUserInterface
 	        Vector3 max;
 	        min = max = GameObjectExtensions.initializationVector;
 	        obj.GetBounds(ref min, ref max);
+            Debug.Log(min.x + "  " + max.x);
 	        return max - min;
 	    }
 
