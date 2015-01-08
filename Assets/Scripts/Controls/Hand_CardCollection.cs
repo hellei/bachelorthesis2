@@ -143,7 +143,7 @@ public class Hand_CardCollection : MonoBehaviour {
         }
     }
 
-    public Card TakeCardFromHand(int index)
+    /*public Card TakeCardFromHand(int index)
     {
         if (numberOfCardsOnHand > 0 && index < cardsOnHand.Count && index >= 0)
         {
@@ -171,7 +171,7 @@ public class Hand_CardCollection : MonoBehaviour {
             return card;
         }
         else return null;
-    }
+    }*/
 
     public Card TakeCardFromHand(Card card)
     {

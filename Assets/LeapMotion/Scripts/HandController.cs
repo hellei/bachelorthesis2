@@ -146,19 +146,23 @@ public class HandController : MonoBehaviour {
         ids_to_check.Remove(leap_hand.Id);
 
         // Create the hand and initialized it if it doesn't exist yet.
-        if (!all_hands.ContainsKey(leap_hand.Id) && ((left && !Hand_CardCollection.instance.IsHandRegistered()) || (!left && !Hand_Selecting.instance.IsHandRegistered()))) {
-          HandModel new_hand = CreateHand(model);
-          new_hand.SetLeapHand(leap_hand);
-          new_hand.MirrorZAxis(mirrorZAxis);
-          new_hand.SetController(this);
+        if (!all_hands.ContainsKey(leap_hand.Id))
+        {
+            if ((left && !Hand_CardCollection.instance.IsHandRegistered()) || (!left && !Hand_Selecting.instance.IsHandRegistered()))
+            {
+                HandModel new_hand = CreateHand(model);
+                new_hand.SetLeapHand(leap_hand);
+                new_hand.MirrorZAxis(mirrorZAxis);
+                new_hand.SetController(this);
 
-          // Set scaling based on reference hand.
-          float hand_scale = leap_hand.PalmWidth / MODEL_PALM_WIDTH;
-          new_hand.transform.localScale = hand_scale * transform.localScale;
+                // Set scaling based on reference hand.
+                float hand_scale = leap_hand.PalmWidth / MODEL_PALM_WIDTH;
+                new_hand.transform.localScale = hand_scale * transform.localScale;
 
-          new_hand.InitHand();
-          new_hand.UpdateHand();
-          all_hands[leap_hand.Id] = new_hand;
+                new_hand.InitHand();
+                new_hand.UpdateHand();
+                all_hands[leap_hand.Id] = new_hand;
+            }
         }
         else {
 
