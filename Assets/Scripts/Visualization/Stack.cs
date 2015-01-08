@@ -107,7 +107,7 @@ public class Stack : MonoBehaviour {
             //Vector3 size = cards[0].card.gameObject.GetBoundsSize().x;
             Debug.Log("Collidersize: " + cards[0].card.gameObject.GetBoundsSize().x);
             bCollider.size = new Vector3(0.06f, 0.01f * cards.Count, 0.09f);
-            Debug.Log("Changes size");
+            Debug.Log("Changes size: " + bCollider.size);
         }
         
         DisableColliders();

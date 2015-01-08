@@ -295,7 +295,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   min: {x: -.0299999993, y: -.0450000018, z: -.00499999989}
-  max: {x: -.0299999993, y: .0450000018, z: .00499999989}
+  max: {x: .0299999993, y: .0450000018, z: .00499999989}
   boundContainsAllChildObjects: 1
 --- !u!1001 &100100000
 Prefab:

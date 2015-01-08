@@ -1015,7 +1015,7 @@ GameObject:
   - 114: {fileID: 117490356}
   m_Layer: 10
   m_Name: Card
-  m_TagString: Untagged
+  m_TagString: Card
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1098,6 +1098,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardState: 1
+  stack: {fileID: 0}
   modelHeight: .000600000028
   card: Mountain 1
   costInfoTarget: {fileID: 1056419317}
@@ -1162,7 +1163,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   min: {x: -.0299999993, y: -.0450000018, z: -.00499999989}
-  max: {x: -.0299999993, y: .0450000018, z: .00499999989}
+  max: {x: .0299999993, y: .0450000018, z: .00499999989}
   boundContainsAllChildObjects: 1
 --- !u!1 &119886569
 GameObject:
@@ -1967,7 +1968,7 @@ GameObject:
   - 114: {fileID: 193081706}
   m_Layer: 10
   m_Name: Card
-  m_TagString: Untagged
+  m_TagString: Card
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2000,6 +2001,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardState: 0
+  stack: {fileID: 0}
   modelHeight: .000600000028
   card: Plains 2
   costInfoTarget: {fileID: 1866524675}
@@ -2114,7 +2116,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   min: {x: -.0299999993, y: -.0450000018, z: -.00499999989}
-  max: {x: -.0299999993, y: .0450000018, z: .00499999989}
+  max: {x: .0299999993, y: .0450000018, z: .00499999989}
   boundContainsAllChildObjects: 1
 --- !u!1 &194320101
 GameObject:
@@ -3201,7 +3203,7 @@ GameObject:
   - 114: {fileID: 317539518}
   m_Layer: 10
   m_Name: Card
-  m_TagString: Untagged
+  m_TagString: Card
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3284,6 +3286,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardState: 1
+  stack: {fileID: 0}
   modelHeight: .000600000028
   card: Blood Troll Harpy
   costInfoTarget: {fileID: 1964057233}
@@ -3348,7 +3351,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   min: {x: -.0299999993, y: -.0450000018, z: -.00499999989}
-  max: {x: -.0299999993, y: .0450000018, z: .00499999989}
+  max: {x: .0299999993, y: .0450000018, z: .00499999989}
   boundContainsAllChildObjects: 1
 --- !u!1 &328443668
 GameObject:
@@ -3838,7 +3841,7 @@ GameObject:
   - 114: {fileID: 385428973}
   m_Layer: 10
   m_Name: Card
-  m_TagString: Untagged
+  m_TagString: Card
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3921,6 +3924,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardState: 0
+  stack: {fileID: 0}
   modelHeight: .000600000028
   card: Arena Athlete
   costInfoTarget: {fileID: 1119715693}
@@ -3985,7 +3989,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   min: {x: -.0299999993, y: -.0450000018, z: -.00499999989}
-  max: {x: -.0299999993, y: .0450000018, z: .00499999989}
+  max: {x: .0299999993, y: .0450000018, z: .00499999989}
   boundContainsAllChildObjects: 1
 --- !u!1 &388770995
 GameObject:
@@ -4141,7 +4145,7 @@ GameObject:
   - 114: {fileID: 404712197}
   m_Layer: 10
   m_Name: Card
-  m_TagString: Untagged
+  m_TagString: Card
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4224,6 +4228,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardState: 1
+  stack: {fileID: 0}
   modelHeight: .000600000028
   card: Swamp 1
   costInfoTarget: {fileID: 784709215}
@@ -4288,7 +4293,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   min: {x: -.0299999993, y: -.0450000018, z: -.00499999989}
-  max: {x: -.0299999993, y: .0450000018, z: .00499999989}
+  max: {x: .0299999993, y: .0450000018, z: .00499999989}
   boundContainsAllChildObjects: 1
 --- !u!1 &407073007
 GameObject:
@@ -4348,7 +4353,7 @@ GameObject:
   - 114: {fileID: 418775568}
   m_Layer: 10
   m_Name: Card
-  m_TagString: Untagged
+  m_TagString: Card
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4381,6 +4386,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardState: 0
+  stack: {fileID: 0}
   modelHeight: .000600000028
   card: Plains 1
   costInfoTarget: {fileID: 1815399572}
@@ -4495,7 +4501,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   min: {x: -.0299999993, y: -.0450000018, z: -.00499999989}
-  max: {x: -.0299999993, y: .0450000018, z: .00499999989}
+  max: {x: .0299999993, y: .0450000018, z: .00499999989}
   boundContainsAllChildObjects: 1
 --- !u!1 &425478926
 GameObject:
@@ -9500,7 +9506,7 @@ GameObject:
   - 114: {fileID: 1115641082}
   m_Layer: 10
   m_Name: Card
-  m_TagString: Untagged
+  m_TagString: Card
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9583,6 +9589,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardState: 1
+  stack: {fileID: 0}
   modelHeight: .000600000028
   card: Polis Crusher
   costInfoTarget: {fileID: 1615807525}
@@ -9647,7 +9654,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   min: {x: -.0299999993, y: -.0450000018, z: -.00499999989}
-  max: {x: -.0299999993, y: .0450000018, z: .00499999989}
+  max: {x: .0299999993, y: .0450000018, z: .00499999989}
   boundContainsAllChildObjects: 1
 --- !u!1 &1117513887
 GameObject:
@@ -11577,7 +11584,7 @@ GameObject:
   - 114: {fileID: 1395528138}
   m_Layer: 10
   m_Name: Card
-  m_TagString: Untagged
+  m_TagString: Card
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11648,6 +11655,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardState: 1
+  stack: {fileID: 0}
   modelHeight: .000600000028
   card: Arena Athlete
   costInfoTarget: {fileID: 1817929755}
@@ -11724,7 +11732,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   min: {x: -.0299999993, y: -.0450000018, z: -.00499999989}
-  max: {x: -.0299999993, y: .0450000018, z: .00499999989}
+  max: {x: .0299999993, y: .0450000018, z: .00499999989}
   boundContainsAllChildObjects: 1
 --- !u!1 &1404717590
 GameObject:
@@ -12272,7 +12280,7 @@ GameObject:
   - 114: {fileID: 1452230148}
   m_Layer: 10
   m_Name: Card
-  m_TagString: Untagged
+  m_TagString: Card
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12355,6 +12363,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardState: 1
+  stack: {fileID: 0}
   modelHeight: .000600000028
   card: Scholar of Athreos
   costInfoTarget: {fileID: 173070604}
@@ -12419,7 +12428,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   min: {x: -.0299999993, y: -.0450000018, z: -.00499999989}
-  max: {x: -.0299999993, y: .0450000018, z: .00499999989}
+  max: {x: .0299999993, y: .0450000018, z: .00499999989}
   boundContainsAllChildObjects: 1
 --- !u!1 &1456871001
 GameObject:
@@ -13733,7 +13742,7 @@ GameObject:
   - 114: {fileID: 1601822046}
   m_Layer: 10
   m_Name: Card
-  m_TagString: Untagged
+  m_TagString: Card
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13804,6 +13813,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardState: 1
+  stack: {fileID: 0}
   modelHeight: .000600000028
   card: Island 1
   costInfoTarget: {fileID: 710239444}
@@ -13880,7 +13890,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   min: {x: -.0299999993, y: -.0450000018, z: -.00499999989}
-  max: {x: -.0299999993, y: .0450000018, z: .00499999989}
+  max: {x: .0299999993, y: .0450000018, z: .00499999989}
   boundContainsAllChildObjects: 1
 --- !u!1 &1607029338
 GameObject:
@@ -17998,7 +18008,7 @@ GameObject:
   - 114: {fileID: 2017964920}
   m_Layer: 10
   m_Name: Card
-  m_TagString: Untagged
+  m_TagString: Card
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18081,6 +18091,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardState: 1
+  stack: {fileID: 0}
   modelHeight: .000600000028
   card: Arena Athlete
   costInfoTarget: {fileID: 1117513887}
@@ -18145,7 +18156,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   min: {x: -.0299999993, y: -.0450000018, z: -.00499999989}
-  max: {x: -.0299999993, y: .0450000018, z: .00499999989}
+  max: {x: .0299999993, y: .0450000018, z: .00499999989}
   boundContainsAllChildObjects: 1
 --- !u!1 &2026479999
 GameObject:
