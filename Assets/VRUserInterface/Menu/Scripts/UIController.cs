@@ -71,6 +71,7 @@ namespace VRUserInterface
 			menu.SetActive (true);
 	        menu.GetComponent<Menu>().CreateMenu();
 	        menu.transform.position = reference.transform.position;
+			menu.transform.rotation = Quaternion.Euler (new Vector3 (0, reference.transform.rotation.eulerAngles.y, 0));
 	    }
 
 	    public void GoBack()

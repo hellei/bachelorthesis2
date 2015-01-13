@@ -972,7 +972,7 @@ MonoBehaviour:
         tangentMode: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
-    magnifyingFactor: 1.39999998
+    magnifyingFactor: 1.60000002
     moveForwardValue: .00100000005
     popupDuration: .400000006
     minimizeSpeedMultiplication: 2
