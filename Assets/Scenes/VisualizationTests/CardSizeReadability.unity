@@ -2446,6 +2446,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactionCD: 1
   grabDistance: .0500000007
+  touchOnTablet: 0
 --- !u!1 &224741094
 GameObject:
   m_ObjectHideFlags: 0
@@ -7833,7 +7834,7 @@ Transform:
   m_PrefabInternal: {fileID: 479528510}
   m_GameObject: {fileID: 855310219}
   m_LocalRotation: {x: .0901116207, y: -.980676413, z: -.0158891063, w: .172919735}
-  m_LocalPosition: {x: .15571183, y: .201236844, z: -.361091793}
+  m_LocalPosition: {x: .0719999969, y: .114, z: -.186000004}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 950226601}
