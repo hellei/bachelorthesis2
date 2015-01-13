@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using VRUserInterface;
 
 public class Hand_Selecting : MonoBehaviour {
     
@@ -140,6 +141,8 @@ public class Hand_Selecting : MonoBehaviour {
             container.transform.localRotation = Quaternion.Euler(new Vector3(0, 0, 0));
 
             Debug.Log("Display right hand card");
+
+			grabbedCard.GetComponent<LookingGlassEffect>().initialLocalPosition = grabbedCard.transform.localPosition;
         }
     }
 

@@ -196,6 +196,7 @@ public class Hand_CardCollection : MonoBehaviour {
             card.transform.localPosition = Vector3.zero;
             card.transform.localRotation = Quaternion.Euler(Vector3.zero);
 
+
             //Reset cards
             if (handRegistered)
             {
@@ -206,9 +207,7 @@ public class Hand_CardCollection : MonoBehaviour {
             Destroy(parent.gameObject);
             return card;
         }
-
         else return null;
-
     }
 
     private void DisplayCardsOnHand()
@@ -223,6 +222,8 @@ public class Hand_CardCollection : MonoBehaviour {
                 cardsOnHand[i].transform.parent = container.transform;
                 cardsOnHand[i].transform.localPosition = new Vector3(0, 0.1f, i * 0.001f);
                 cardsOnHand[i].transform.localRotation = Quaternion.Euler(new Vector3(0,0,180));
+
+				cardsOnHand[i].GetComponent<LookingGlassEffect>().initialLocalPosition = cardsOnHand[i].transform.localPosition;
 
                 container.transform.parent = CardBucket.transform;
                 container.transform.localPosition = Vector3.zero;
