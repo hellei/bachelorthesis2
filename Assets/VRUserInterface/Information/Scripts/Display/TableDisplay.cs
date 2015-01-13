@@ -194,7 +194,7 @@ namespace VRUserInterface
 			}
 
 			//Add a back button on the display prefab if wanted
-			if (infoObjectScript.showCloseButtonOnDisplayPrefab)
+			if (infoObjectScript.showCloseButtonOnDisplayPrefab && infoObject)
 			{
 				GameObject dba = closeButton.Instantiate();
 				SetButtonParentAndPosition(dba, infoObject, infoObjectScript.displayCloseButton.transform.localPosition, CloseButtonPressed);

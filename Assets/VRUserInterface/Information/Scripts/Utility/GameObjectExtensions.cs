@@ -101,8 +101,11 @@ namespace VRUserInterface
 			min = max = GameObjectExtensions.initializationVector;
 			obj.GetBounds(ref min, ref max);
 			float currentHeight = max.y - min.y;
-			if (currentHeight != height)
+
+			if (currentHeight == 0) Debug.LogWarning(obj.name + " has a height of 0.");
+			if (currentHeight != height && currentHeight != 0)
 			{
+
 				float scaleFactor = height / currentHeight;
 				obj.transform.localScale = obj.transform.localScale * scaleFactor;
 			}

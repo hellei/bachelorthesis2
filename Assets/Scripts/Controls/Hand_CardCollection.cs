@@ -209,6 +209,14 @@ public class Hand_CardCollection : MonoBehaviour {
         }
         else return null;
     }
+	/// <summary>
+	/// The y offset of the palm at which the cards are shown on the an	/// </summary>
+	public float cardHandOffset = 0.05f;
+
+	/// <summary>
+	/// The local position of the card container.
+	/// </summary>
+	public Vector3 cardContainerLocalPosition = new Vector3(-0.0147f,0,0.0069f);
 
     private void DisplayCardsOnHand()
     {
@@ -220,14 +228,16 @@ public class Hand_CardCollection : MonoBehaviour {
                 GameObject container = new GameObject("CardOffsetHelper");
 
                 cardsOnHand[i].transform.parent = container.transform;
-                cardsOnHand[i].transform.localPosition = new Vector3(0, 0.1f, i * 0.001f);
+                cardsOnHand[i].transform.localPosition = new Vector3(0, cardHandOffset, i * 0.001f);
                 cardsOnHand[i].transform.localRotation = Quaternion.Euler(new Vector3(0,0,180));
 
 				cardsOnHand[i].GetComponent<LookingGlassEffect>().initialLocalPosition = cardsOnHand[i].transform.localPosition;
 
                 container.transform.parent = CardBucket.transform;
-                container.transform.localPosition = Vector3.zero;
+				container.transform.localRotation = Quaternion.identity;
+				container.transform.localPosition = cardContainerLocalPosition;
                 container.transform.localRotation = Quaternion.Euler(new Vector3(0, 0, 150 + i * angle));
+
 
                 cardsOnHand[i].gameObject.SetActive(true);                
             }

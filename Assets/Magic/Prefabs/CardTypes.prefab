@@ -121,7 +121,16 @@ MonoBehaviour:
   - name: Polis Crusher
     sprite: {fileID: 21300000, guid: 44291f3f732fb42e089ddc67fe028d44, type: 3}
     cost: []
-    infoText: []
+    infoText:
+    - text: Polis Crusher
+      textStyle: 0
+    - text: Creature - Cyclops
+      textStyle: 1
+    - text: Trample, protection from enchantments.
+      textStyle: 2
+    - text: Whenever Polis Crusher deals combat // damage to a player, if Polis Crusher
+        is //monstruous, destroy target enchantment//that player controls.
+      textStyle: 2
   - name: Scholar of Athreos
     sprite: {fileID: 21300000, guid: 17175a2728f334f9ea7d8fdcf10bd84a, type: 3}
     cost: []

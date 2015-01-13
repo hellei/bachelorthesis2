@@ -9,7 +9,11 @@ public class Config : XMLSaveAndLoad<Config> {
     /// </summary>
     public Vector3 relativeTabletPosition = Vector3.zero;
     public Vector3 tabletSize = Vector3.zero;
-	
+
+	/// <summary>
+	/// The z distance from the left bottom tablet corner to the table border.
+	/// </summary>
+	public float zOffsetToTableBorder = 0.04f;
 
     /// <summary>
     /// The position of the seat of the chair, relative to the neck.
