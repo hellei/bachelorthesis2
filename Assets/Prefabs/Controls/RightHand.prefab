@@ -1295,6 +1295,7 @@ MonoBehaviour:
   middle: {fileID: 100038}
   thumb: {fileID: 100008}
   grabbedCardContainer: {fileID: 100064}
+  meshes: {fileID: 100058}
 --- !u!135 &13527108
 SphereCollider:
   m_ObjectHideFlags: 1

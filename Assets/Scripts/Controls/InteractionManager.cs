@@ -20,6 +20,7 @@ public class InteractionManager : MonoBehaviour {
     public float interactionCD = 2.0f;
     public float grabDistance = 0.05f;
     private float interactionTime;
+    public bool touchOnTablet = false;
     private Dictionary<int, TouchInfo> tabletTouches = new Dictionary<int, TouchInfo>();
 
     public static InteractionManager instance;
@@ -40,20 +41,29 @@ public class InteractionManager : MonoBehaviour {
     void HandleHandTabletInteraction()
     {
         tabletTouches = Tablet.instance.GetTouches();
-        if (tabletTouches.Count > 0 && Hand_Selecting.instance.GetNumCardsInHand() > 0 && Time.time - interactionTime > interactionCD)
+        if (tabletTouches.Count > 0)
         {
-            interactionTime = Time.time;
+            touchOnTablet = true;
 
-            Vector2 pos = Vector2.zero;
-            foreach (TouchInfo tinfo in tabletTouches.Values)
+            if (Hand_Selecting.instance.GetNumCardsInHand() > 0 && Time.time - interactionTime > interactionCD)
             {
-                pos += tinfo.currentPosition;
-            }
-            pos /= tabletTouches.Count;
+                interactionTime = Time.time;
 
-            Card card = Hand_Selecting.instance.TakeCardFromHand();            
-            Tablet.instance.AddCardToTable(card, pos);
-            Debug.Log("put card on tablet");
+                Vector2 pos = Vector2.zero;
+                foreach (TouchInfo tinfo in tabletTouches.Values)
+                {
+                    pos += tinfo.currentPosition;
+                }
+                pos /= tabletTouches.Count;
+
+                Card card = Hand_Selecting.instance.TakeCardFromHand();
+                Tablet.instance.AddCardToTable(card, pos);
+                Debug.Log("put card on tablet");
+            }
+        }
+        else
+        {
+            touchOnTablet = false;
         }
     }
 
