@@ -99,8 +99,12 @@ public class Hand_CardCollection : MonoBehaviour {
         // Insert at nearest position
         if (cardsOnHand.Count > 0)
         {
+            // Transform card's position in space of nearest card
+            Transform nearestCardSpace = cardsOnHand[indexOfNearestCard].transform;
+            Vector3 relativePosToNearestCard = nearestCardSpace.InverseTransformPoint(card.transform.position);
+
             // Right
-            if (card.transform.position.x > cardsOnHand[indexOfNearestCard].transform.position.x)
+            if (relativePosToNearestCard.x > 0)
             {
                 //At end of list
                 if (indexOfNearestCard + 1 == cardsOnHand.Count)
