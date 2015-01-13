@@ -30,6 +30,26 @@ namespace VRUserInterface
 			return false;
 		}
 
+		public static Button GetButtonComponent(this GameObject obj)
+		{
+			Button button = obj.GetComponent<Button> ();
+			if (button)
+			{
+				return button;
+			}
+			else
+			{
+			    if (obj.tag == Tags.buttonComponent){
+					Transform parent = obj.transform.parent;
+					if (parent)
+					{
+						return parent.gameObject.GetButtonComponent();
+					}
+				}
+			}
+			return null;
+		}
+
 		
 		/// <summary>
 		/// Returns the center of the bounding box surrounding the object

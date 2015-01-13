@@ -746,7 +746,7 @@ MonoBehaviour:
   - {fileID: 11400006}
   - {fileID: 11485580}
   - {fileID: 11468874}
-  - {fileID: 11468874}
+  - {fileID: 11400018}
   showLastActiveObjectIfNothingSelected: 1
 --- !u!114 &11400006
 MonoBehaviour:
@@ -985,7 +985,7 @@ MonoBehaviour:
   horizontalMargin: .0399999991
   maxHeight: .200000003
   maxWidth: .25
-  showDisplayPrefab: 1
+  showDisplayPrefab: 0
   showInfoText: 1
   objectLookingGlassSettings:
     useLookingGlassEffect: 1
@@ -1004,17 +1004,17 @@ MonoBehaviour:
         tangentMode: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
-    magnifyingFactor: 2
+    magnifyingFactor: 1.29999995
     moveForwardValue: .00100000005
     popupDuration: .400000006
     minimizeSpeedMultiplication: 1.60000002
   centerAtText: 0
-  showCloseButton: 1
+  showCloseButton: 0
   closeWhenLookingAway: 1
   lookAwayThreshold: 30
   connectionPrefab: {fileID: 0}
   numberOfInfoBoxes: 5
-  localOffset: {x: 0, y: -.25, z: .25}
+  localOffset: {x: 0, y: -.25, z: .349999994}
   globalOffset: {x: 0, y: 0, z: 0}
   onlyConsiderCameraYRotation: 1
   alwaysFacePlayer: 0
@@ -1555,17 +1555,17 @@ MonoBehaviour:
         tangentMode: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
-    magnifyingFactor: 2
+    magnifyingFactor: 1.5
     moveForwardValue: .00100000005
     popupDuration: .400000006
-    minimizeSpeedMultiplication: 1.60000002
+    minimizeSpeedMultiplication: 1.29999995
   centerAtText: 0
-  showCloseButton: 1
+  showCloseButton: 0
   closeWhenLookingAway: 1
   lookAwayThreshold: 30
   connectionPrefab: {fileID: 0}
   numberOfInfoBoxes: 5
-  localOffset: {x: 0, y: -.25, z: .25}
+  localOffset: {x: 0, y: -.25, z: .349999994}
   globalOffset: {x: 0, y: 0, z: 0}
   onlyConsiderCameraYRotation: 1
   alwaysFacePlayer: 0

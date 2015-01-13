@@ -92,7 +92,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &100012
 GameObject:
   m_ObjectHideFlags: 1
@@ -592,7 +592,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &100078
 GameObject:
   m_ObjectHideFlags: 1
@@ -685,7 +685,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &100090
 GameObject:
   m_ObjectHideFlags: 1
@@ -1182,7 +1182,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100022}
-  m_LocalRotation: {x: -.454738528, y: .600652695, z: .524288833, w: .396926403}
+  m_LocalRotation: {x: -.445023656, y: .587819576, z: .538637102, w: .407789469}
   m_LocalPosition: {x: -.0706946328, y: .0100165904, z: .0734656379}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1642,9 +1642,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100092}
-  m_LocalRotation: {x: -.00389583129, y: .70709604, z: .707096159, w: -.00389583013}
-  m_LocalPosition: {x: -.00820000004, y: -.00439999998, z: -.0381999984}
-  m_LocalScale: {x: .0772899464, y: .0772899389, z: .0772899389}
+  m_LocalRotation: {x: 8.42936956e-08, y: -.00550958002, z: 8.23176916e-10, w: -.99998486}
+  m_LocalPosition: {x: .0930000022, y: -.43599999, z: -.0649999976}
+  m_LocalScale: {x: .881753325, y: .88175261, z: .881752789}
   m_Children:
   - {fileID: 400084}
   - {fileID: 400110}
@@ -1815,8 +1815,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100118}
-  m_LocalRotation: {x: -.380314112, y: -5.12815916e-07, z: -8.30653505e-07, w: .924857438}
-  m_LocalPosition: {x: -.127311826, y: 1.93017404e-05, z: -8.95207122e-05}
+  m_LocalRotation: {x: -.714870274, y: 2.07677701e-07, z: -1.22336644e-06, w: .699257195}
+  m_LocalPosition: {x: -.12729983, y: 3.22992164e-05, z: -.000148873951}
   m_LocalScale: {x: 1.00000012, y: 1.00000012, z: 1.00000012}
   m_Children:
   - {fileID: 400068}
@@ -2075,7 +2075,7 @@ MonoBehaviour:
   leftHandModel: {fileID: 100072}
   rightHandModel: {fileID: 100068}
   armLength: {x: 0, y: .25, z: 0}
-  neckOffset: {x: 0, y: -.25, z: -.0500000007}
+  neckOffset: {x: 0, y: -.280000001, z: -.100000001}
 --- !u!137 &13700000
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
