@@ -64,7 +64,7 @@ namespace VRUserInterface
 		/// <summary>
 		/// The display prefab that is shown in large can have a looking glass effect as well
 		/// </summary>
-		public LookingGlassSettings objectLookingGlassSettings;
+		public MagnifyingGlassSettings objectMagnifyingGlassSettings;
 
 		/// <summary>
 		/// If set to true the text is positioned at the center
@@ -99,7 +99,7 @@ namespace VRUserInterface
 	            infoObject.CenterWeight();
 	            infoObject.SetMaxHeight(maxHeight);
 	            infoObject.SetMaxWidth(maxWidth);
-				infoObject.AddLookingGlassEffect(objectLookingGlassSettings);
+				infoObject.AddMagnifyingGlassEffect(objectMagnifyingGlassSettings);
 
 				//Hook to the information object to allow last-minute changes
 				infoObjectScript.OnDisplayPrefabInstantiated(infoObject);
@@ -152,7 +152,7 @@ namespace VRUserInterface
 			float containerWidth = max.x;
 
 
-	        //Add back button
+	        //Add close button
 	        if (closeButton && showCloseButton)
 	        {
 				GameObject ba = closeButton.Instantiate();

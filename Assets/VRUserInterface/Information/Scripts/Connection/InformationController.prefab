@@ -693,26 +693,16 @@ MonoBehaviour:
   background: {fileID: 100000, guid: 8f47c1dc61d6ba24392140759670640b, type: 2}
   borderLeft: .0500000007
   borderTop: .0500000007
-  lookingGlassSettings:
-    useLookingGlassEffect: 1
-    lookingGlassCurve:
+  magnifyingGlassSettings:
+    useMagnifyingGlassEffect: 1
+    magnifyingGlassCurve:
       serializedVersion: 2
-      m_Curve:
-      - time: 0
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-      - time: 1
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
+      m_Curve: []
       m_PreInfinity: 2
       m_PostInfinity: 2
-    magnifyingFactor: 1.20000005
-    moveForwardValue: .00999999978
-    popupDuration: .400000006
+    magnifyingFactor: 1.5
+    moveForwardValue: .100000001
+    popupDuration: .699999988
     minimizeSpeedMultiplication: 2
 --- !u!114 &11400002
 MonoBehaviour:
@@ -770,26 +760,16 @@ MonoBehaviour:
   maxWidth: .5
   showDisplayPrefab: 0
   showInfoText: 1
-  objectLookingGlassSettings:
-    useLookingGlassEffect: 1
-    lookingGlassCurve:
+  objectMagnifyingGlassSettings:
+    useMagnifyingGlassEffect: 1
+    magnifyingGlassCurve:
       serializedVersion: 2
-      m_Curve:
-      - time: 0
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-      - time: 1
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
+      m_Curve: []
       m_PreInfinity: 2
       m_PostInfinity: 2
     magnifyingFactor: 1.5
     moveForwardValue: .100000001
-    popupDuration: .400000006
+    popupDuration: .699999988
     minimizeSpeedMultiplication: 2
   centerAtText: 0
   showCloseButton: 1
@@ -819,9 +799,9 @@ MonoBehaviour:
   maxWidth: .899999976
   showDisplayPrefab: 0
   showInfoText: 1
-  objectLookingGlassSettings:
-    useLookingGlassEffect: 1
-    lookingGlassCurve:
+  objectMagnifyingGlassSettings:
+    useMagnifyingGlassEffect: 1
+    magnifyingGlassCurve:
       serializedVersion: 2
       m_Curve:
       - time: 0
@@ -838,7 +818,7 @@ MonoBehaviour:
       m_PostInfinity: 2
     magnifyingFactor: 1.5
     moveForwardValue: .100000001
-    popupDuration: .400000006
+    popupDuration: .699999988
     minimizeSpeedMultiplication: 2
   centerAtText: 0
   showCloseButton: 1
@@ -890,9 +870,9 @@ MonoBehaviour:
   maxWidth: .899999976
   showDisplayPrefab: 1
   showInfoText: 1
-  objectLookingGlassSettings:
-    useLookingGlassEffect: 1
-    lookingGlassCurve:
+  objectMagnifyingGlassSettings:
+    useMagnifyingGlassEffect: 1
+    magnifyingGlassCurve:
       serializedVersion: 2
       m_Curve:
       - time: 0
@@ -909,7 +889,7 @@ MonoBehaviour:
       m_PostInfinity: 2
     magnifyingFactor: 1.5
     moveForwardValue: .100000001
-    popupDuration: .400000006
+    popupDuration: .699999988
     minimizeSpeedMultiplication: 2
   centerAtText: 0
   showCloseButton: 1
@@ -944,26 +924,16 @@ MonoBehaviour:
   background: {fileID: 100000, guid: 8f47c1dc61d6ba24392140759670640b, type: 2}
   borderLeft: .0500000007
   borderTop: .0500000007
-  lookingGlassSettings:
-    useLookingGlassEffect: 0
-    lookingGlassCurve:
+  magnifyingGlassSettings:
+    useMagnifyingGlassEffect: 1
+    magnifyingGlassCurve:
       serializedVersion: 2
-      m_Curve:
-      - time: 0
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-      - time: 1
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
+      m_Curve: []
       m_PreInfinity: 2
       m_PostInfinity: 2
     magnifyingFactor: 1.5
     moveForwardValue: .100000001
-    popupDuration: .400000006
+    popupDuration: .699999988
     minimizeSpeedMultiplication: 2
 --- !u!114 &11400018
 MonoBehaviour:
@@ -987,9 +957,9 @@ MonoBehaviour:
   maxWidth: .25
   showDisplayPrefab: 0
   showInfoText: 1
-  objectLookingGlassSettings:
-    useLookingGlassEffect: 1
-    lookingGlassCurve:
+  objectMagnifyingGlassSettings:
+    useMagnifyingGlassEffect: 1
+    magnifyingGlassCurve:
       serializedVersion: 2
       m_Curve:
       - time: 0
@@ -1004,10 +974,10 @@ MonoBehaviour:
         tangentMode: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
-    magnifyingFactor: 1.29999995
-    moveForwardValue: .00100000005
-    popupDuration: .400000006
-    minimizeSpeedMultiplication: 1.60000002
+    magnifyingFactor: 1.5
+    moveForwardValue: .100000001
+    popupDuration: .699999988
+    minimizeSpeedMultiplication: 2
   centerAtText: 0
   showCloseButton: 0
   closeWhenLookingAway: 1
@@ -1017,6 +987,7 @@ MonoBehaviour:
   localOffset: {x: 0, y: -.25, z: .349999994}
   globalOffset: {x: 0, y: 0, z: 0}
   onlyConsiderCameraYRotation: 1
+  minimumHeight: {fileID: 0}
   alwaysFacePlayer: 0
 --- !u!114 &11400020
 MonoBehaviour:
@@ -1040,11 +1011,21 @@ MonoBehaviour:
   maxWidth: .200000003
   showDisplayPrefab: 0
   showInfoText: 1
-  objectLookingGlassSettings:
-    useLookingGlassEffect: 1
-    lookingGlassCurve:
+  objectMagnifyingGlassSettings:
+    useMagnifyingGlassEffect: 1
+    magnifyingGlassCurve:
       serializedVersion: 2
-      m_Curve: []
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
     magnifyingFactor: 1.5
@@ -1060,6 +1041,7 @@ MonoBehaviour:
   localOffset: {x: 0, y: 0, z: .200000003}
   globalOffset: {x: 0, y: -.100000001, z: 0}
   onlyConsiderCameraYRotation: 1
+  minimumHeight: {fileID: 0}
   alwaysFacePlayer: 0
 --- !u!114 &11400022
 MonoBehaviour:
@@ -1083,11 +1065,21 @@ MonoBehaviour:
   maxWidth: .400000006
   showDisplayPrefab: 0
   showInfoText: 1
-  objectLookingGlassSettings:
-    useLookingGlassEffect: 1
-    lookingGlassCurve:
+  objectMagnifyingGlassSettings:
+    useMagnifyingGlassEffect: 1
+    magnifyingGlassCurve:
       serializedVersion: 2
-      m_Curve: []
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
     magnifyingFactor: 1.5
@@ -1103,6 +1095,7 @@ MonoBehaviour:
   localOffset: {x: 0, y: 0, z: .200000003}
   globalOffset: {x: 0, y: -.150000006, z: 0}
   onlyConsiderCameraYRotation: 1
+  minimumHeight: {fileID: 0}
   alwaysFacePlayer: 0
 --- !u!114 &11400024
 MonoBehaviour:
@@ -1131,26 +1124,16 @@ MonoBehaviour:
   background: {fileID: 100000, guid: 8f47c1dc61d6ba24392140759670640b, type: 2}
   borderLeft: .0500000007
   borderTop: .0500000007
-  lookingGlassSettings:
-    useLookingGlassEffect: 1
-    lookingGlassCurve:
+  magnifyingGlassSettings:
+    useMagnifyingGlassEffect: 1
+    magnifyingGlassCurve:
       serializedVersion: 2
-      m_Curve:
-      - time: 0
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-      - time: 1
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
+      m_Curve: []
       m_PreInfinity: 2
       m_PostInfinity: 2
-    magnifyingFactor: 1.20000005
+    magnifyingFactor: 1.5
     moveForwardValue: .100000001
-    popupDuration: .400000006
+    popupDuration: .699999988
     minimizeSpeedMultiplication: 2
 --- !u!114 &11400026
 MonoBehaviour:
@@ -1174,11 +1157,21 @@ MonoBehaviour:
   maxWidth: .200000003
   showDisplayPrefab: 0
   showInfoText: 1
-  objectLookingGlassSettings:
-    useLookingGlassEffect: 1
-    lookingGlassCurve:
+  objectMagnifyingGlassSettings:
+    useMagnifyingGlassEffect: 1
+    magnifyingGlassCurve:
       serializedVersion: 2
-      m_Curve: []
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
     magnifyingFactor: 1.5
@@ -1194,6 +1187,7 @@ MonoBehaviour:
   localOffset: {x: 0, y: 0, z: .200000003}
   globalOffset: {x: 0, y: 0, z: 0}
   onlyConsiderCameraYRotation: 1
+  minimumHeight: {fileID: 0}
   alwaysFacePlayer: 0
 --- !u!114 &11400028
 MonoBehaviour:
@@ -1217,11 +1211,21 @@ MonoBehaviour:
   maxWidth: .400000006
   showDisplayPrefab: 0
   showInfoText: 1
-  objectLookingGlassSettings:
-    useLookingGlassEffect: 1
-    lookingGlassCurve:
+  objectMagnifyingGlassSettings:
+    useMagnifyingGlassEffect: 1
+    magnifyingGlassCurve:
       serializedVersion: 2
-      m_Curve: []
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
     magnifyingFactor: 1.5
@@ -1237,6 +1241,7 @@ MonoBehaviour:
   localOffset: {x: 0, y: 0, z: .200000003}
   globalOffset: {x: 0, y: 0, z: 0}
   onlyConsiderCameraYRotation: 1
+  minimumHeight: {fileID: 0}
   alwaysFacePlayer: 1
 --- !u!114 &11400030
 MonoBehaviour:
@@ -1260,11 +1265,21 @@ MonoBehaviour:
   maxWidth: .400000006
   showDisplayPrefab: 0
   showInfoText: 1
-  objectLookingGlassSettings:
-    useLookingGlassEffect: 1
-    lookingGlassCurve:
+  objectMagnifyingGlassSettings:
+    useMagnifyingGlassEffect: 1
+    magnifyingGlassCurve:
       serializedVersion: 2
-      m_Curve: []
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
     magnifyingFactor: 1.5
@@ -1280,6 +1295,7 @@ MonoBehaviour:
   localOffset: {x: 0, y: 0, z: .200000003}
   globalOffset: {x: 0, y: -.100000001, z: 0}
   onlyConsiderCameraYRotation: 1
+  minimumHeight: {fileID: 0}
   alwaysFacePlayer: 1
 --- !u!114 &11400032
 MonoBehaviour:
@@ -1303,11 +1319,21 @@ MonoBehaviour:
   maxWidth: .5
   showDisplayPrefab: 0
   showInfoText: 1
-  objectLookingGlassSettings:
-    useLookingGlassEffect: 1
-    lookingGlassCurve:
+  objectMagnifyingGlassSettings:
+    useMagnifyingGlassEffect: 1
+    magnifyingGlassCurve:
       serializedVersion: 2
-      m_Curve: []
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
     magnifyingFactor: 1.5
@@ -1323,6 +1349,7 @@ MonoBehaviour:
   localOffset: {x: 0, y: 0, z: .330000013}
   globalOffset: {x: 0, y: -.100000001, z: 0}
   onlyConsiderCameraYRotation: 1
+  minimumHeight: {fileID: 0}
   alwaysFacePlayer: 0
 --- !u!114 &11430490
 MonoBehaviour:
@@ -1346,9 +1373,9 @@ MonoBehaviour:
   maxWidth: .200000003
   showDisplayPrefab: 1
   showInfoText: 0
-  objectLookingGlassSettings:
-    useLookingGlassEffect: 1
-    lookingGlassCurve:
+  objectMagnifyingGlassSettings:
+    useMagnifyingGlassEffect: 1
+    magnifyingGlassCurve:
       serializedVersion: 2
       m_Curve:
       - time: 0
@@ -1363,9 +1390,9 @@ MonoBehaviour:
         tangentMode: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
-    magnifyingFactor: 1.39999998
-    moveForwardValue: .00100000005
-    popupDuration: .400000006
+    magnifyingFactor: 1.5
+    moveForwardValue: .100000001
+    popupDuration: .699999988
     minimizeSpeedMultiplication: 2
   centerAtText: 0
   showCloseButton: 1
@@ -1376,6 +1403,7 @@ MonoBehaviour:
   localOffset: {x: 0, y: -.129999995, z: .25}
   globalOffset: {x: 0, y: -.0799999982, z: 0}
   onlyConsiderCameraYRotation: 0
+  minimumHeight: {fileID: 0}
   alwaysFacePlayer: 0
 --- !u!114 &11431256
 MonoBehaviour:
@@ -1399,9 +1427,9 @@ MonoBehaviour:
   maxWidth: 1.20000005
   showDisplayPrefab: 1
   showInfoText: 1
-  objectLookingGlassSettings:
-    useLookingGlassEffect: 1
-    lookingGlassCurve:
+  objectMagnifyingGlassSettings:
+    useMagnifyingGlassEffect: 1
+    magnifyingGlassCurve:
       serializedVersion: 2
       m_Curve:
       - time: 0
@@ -1418,7 +1446,7 @@ MonoBehaviour:
       m_PostInfinity: 2
     magnifyingFactor: 1.5
     moveForwardValue: .100000001
-    popupDuration: .400000006
+    popupDuration: .699999988
     minimizeSpeedMultiplication: 2
   centerAtText: 0
   showCloseButton: 1
@@ -1452,11 +1480,21 @@ MonoBehaviour:
   maxWidth: .400000006
   showDisplayPrefab: 1
   showInfoText: 1
-  objectLookingGlassSettings:
-    useLookingGlassEffect: 1
-    lookingGlassCurve:
+  objectMagnifyingGlassSettings:
+    useMagnifyingGlassEffect: 1
+    magnifyingGlassCurve:
       serializedVersion: 2
-      m_Curve: []
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
     magnifyingFactor: 1.5
@@ -1472,6 +1510,7 @@ MonoBehaviour:
   localOffset: {x: 0, y: 0, z: .330000013}
   globalOffset: {x: 0, y: 0, z: 0}
   onlyConsiderCameraYRotation: 1
+  minimumHeight: {fileID: 0}
   alwaysFacePlayer: 0
 --- !u!114 &11456418
 MonoBehaviour:
@@ -1495,11 +1534,21 @@ MonoBehaviour:
   maxWidth: .200000003
   showDisplayPrefab: 0
   showInfoText: 1
-  objectLookingGlassSettings:
-    useLookingGlassEffect: 1
-    lookingGlassCurve:
+  objectMagnifyingGlassSettings:
+    useMagnifyingGlassEffect: 1
+    magnifyingGlassCurve:
       serializedVersion: 2
-      m_Curve: []
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
     magnifyingFactor: 1.5
@@ -1515,6 +1564,7 @@ MonoBehaviour:
   localOffset: {x: 0, y: 0, z: .270000011}
   globalOffset: {x: 0, y: 0, z: 0}
   onlyConsiderCameraYRotation: 1
+  minimumHeight: {fileID: 0}
   alwaysFacePlayer: 0
 --- !u!114 &11468874
 MonoBehaviour:
@@ -1538,9 +1588,9 @@ MonoBehaviour:
   maxWidth: .25
   showDisplayPrefab: 1
   showInfoText: 0
-  objectLookingGlassSettings:
-    useLookingGlassEffect: 1
-    lookingGlassCurve:
+  objectMagnifyingGlassSettings:
+    useMagnifyingGlassEffect: 1
+    magnifyingGlassCurve:
       serializedVersion: 2
       m_Curve:
       - time: 0
@@ -1556,9 +1606,9 @@ MonoBehaviour:
       m_PreInfinity: 2
       m_PostInfinity: 2
     magnifyingFactor: 1.5
-    moveForwardValue: .00100000005
-    popupDuration: .400000006
-    minimizeSpeedMultiplication: 1.29999995
+    moveForwardValue: .100000001
+    popupDuration: .699999988
+    minimizeSpeedMultiplication: 2
   centerAtText: 0
   showCloseButton: 0
   closeWhenLookingAway: 1
@@ -1568,6 +1618,7 @@ MonoBehaviour:
   localOffset: {x: 0, y: -.25, z: .349999994}
   globalOffset: {x: 0, y: 0, z: 0}
   onlyConsiderCameraYRotation: 1
+  minimumHeight: {fileID: 0}
   alwaysFacePlayer: 0
 --- !u!114 &11485580
 MonoBehaviour:
@@ -1591,9 +1642,9 @@ MonoBehaviour:
   maxWidth: .300000012
   showDisplayPrefab: 1
   showInfoText: 0
-  objectLookingGlassSettings:
-    useLookingGlassEffect: 1
-    lookingGlassCurve:
+  objectMagnifyingGlassSettings:
+    useMagnifyingGlassEffect: 1
+    magnifyingGlassCurve:
       serializedVersion: 2
       m_Curve:
       - time: 0
@@ -1608,9 +1659,9 @@ MonoBehaviour:
         tangentMode: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
-    magnifyingFactor: 1.29999995
-    moveForwardValue: .00100000005
-    popupDuration: .400000006
+    magnifyingFactor: 1.5
+    moveForwardValue: .100000001
+    popupDuration: .699999988
     minimizeSpeedMultiplication: 2
   centerAtText: 0
   showCloseButton: 1
@@ -1621,6 +1672,7 @@ MonoBehaviour:
   localOffset: {x: 0, y: 0, z: .400000006}
   globalOffset: {x: 0, y: 0, z: 0}
   onlyConsiderCameraYRotation: 0
+  minimumHeight: {fileID: 0}
   alwaysFacePlayer: 0
 --- !u!114 &11490742
 MonoBehaviour:
@@ -1644,11 +1696,21 @@ MonoBehaviour:
   maxWidth: .400000006
   showDisplayPrefab: 1
   showInfoText: 1
-  objectLookingGlassSettings:
-    useLookingGlassEffect: 1
-    lookingGlassCurve:
+  objectMagnifyingGlassSettings:
+    useMagnifyingGlassEffect: 1
+    magnifyingGlassCurve:
       serializedVersion: 2
-      m_Curve: []
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
     magnifyingFactor: 1.5
@@ -1664,6 +1726,7 @@ MonoBehaviour:
   localOffset: {x: 0, y: 0, z: .330000013}
   globalOffset: {x: 0, y: 0, z: 0}
   onlyConsiderCameraYRotation: 1
+  minimumHeight: {fileID: 0}
   alwaysFacePlayer: 0
 --- !u!1001 &100100000
 Prefab:

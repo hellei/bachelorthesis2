@@ -42,8 +42,27 @@ namespace VRUserInterface
 	            obj.transform.Translate(localOffset);
 				obj.transform.position += globalOffset;
 				obj.transform.LookAtAndRotate180Degrees(VRCameraEnable.instance.GetCameraCenter());
+				if (minimumHeight) EnsureMinimumY(obj);
 			}
 		}
+
+		void EnsureMinimumY(GameObject obj)
+		{
+			Vector3 min, max;
+			min = max = GameObjectExtensions.initializationVector;
+			obj.GetBounds(ref min, ref max);
+			//float bottomHeight = obj.transform.TransformPoint(
+			if (obj.transform.position.y + min.y < minimumHeight.transform.position.y)
+			{
+				obj.transform.position = new Vector3(obj.transform.position.x, minimumHeight.transform.position.y - min.y, obj.transform.position.z);
+			}
+		}
+
+		/// <summary>
+		/// The infobox might sometimes overlap with other objects. It is beyond the scope of this bachelor thesis to create
+		/// an algorithm who avoids any collisions but at least you should be able to define a bottom border.
+		/// </summary>
+		public GameObject minimumHeight;
 		
 		/// <summary>
 		/// If set to true, the display always keeps looking at the player. If not set, it turns towards the player on initialization

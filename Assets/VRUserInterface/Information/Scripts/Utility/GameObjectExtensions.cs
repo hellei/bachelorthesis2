@@ -67,11 +67,11 @@ namespace VRUserInterface
 		/// <summary>
 		/// Adds a looking glass effect component to an object and copies the values defined in the settings
 		/// </summary>
-		public static void AddLookingGlassEffect(this GameObject obj, LookingGlassSettings lgs)
+		public static void AddMagnifyingGlassEffect(this GameObject obj, MagnifyingGlassSettings lgs)
 		{
-			if (!lgs.useLookingGlassEffect) return;
+			if (!lgs.useMagnifyingGlassEffect) return;
 			LookingGlassEffect lge = obj.AddComponent<LookingGlassEffect>();
-			lge.sizeCurve = lgs.lookingGlassCurve;
+			lge.sizeCurve = lgs.magnifyingGlassCurve;
 			lge.magnifyingFactor = lgs.magnifyingFactor;
 			lge.moveForwardValue = lgs.moveForwardValue;
 			lge.popupDuration = lgs.popupDuration;

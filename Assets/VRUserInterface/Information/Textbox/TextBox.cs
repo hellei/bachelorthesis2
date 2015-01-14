@@ -47,9 +47,9 @@ namespace VRUserInterface
 			}
 
 			//Add the looking glass effect
-			if (lookingGlassSettings.useLookingGlassEffect)
+			if (magnifyingGlassSettings.useMagnifyingGlassEffect)
 			{
-				obj.AddLookingGlassEffect(lookingGlassSettings);
+				obj.AddMagnifyingGlassEffect(magnifyingGlassSettings);
 			}
 			//Always add a collider to show the cursor
 			Vector3 size = obj.GetBoundsSize();
@@ -60,7 +60,7 @@ namespace VRUserInterface
 
 
 
-		public LookingGlassSettings lookingGlassSettings;
+		public MagnifyingGlassSettings magnifyingGlassSettings;
 
 
 	    /// <summary>
@@ -148,16 +148,16 @@ namespace VRUserInterface
 	}
 
 	[System.Serializable]
-	public class LookingGlassSettings
+	public class MagnifyingGlassSettings
 	{
 		/// <summary>
 		/// The looking glass effect magnifies the object when you look at it
 		/// </summary>
-		public bool useLookingGlassEffect = true;
+		public bool useMagnifyingGlassEffect = true;
 		/// <summary>
 		/// Determines in which curve the size increase takes place
 		/// </summary>
-		public AnimationCurve lookingGlassCurve;
+		public AnimationCurve magnifyingGlassCurve;
 		
 		public float magnifyingFactor = 1.5f;
 		/// <summary>

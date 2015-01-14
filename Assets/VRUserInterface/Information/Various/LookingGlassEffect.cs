@@ -39,10 +39,9 @@ namespace VRUserInterface
 			if (sel.IsButton())
 			{
 				Button selButton = sel.GetButtonComponent();
-				if (selButton)
+				if (selButton && selButton.creator)
 				{
 					buttonParentSelection = selButton.creator.gameObject;
-					Debug.Log("Parent: "+buttonParentSelection);
 				}
 			}
 			if (sel == gameObject || buttonParentSelection == gameObject)
