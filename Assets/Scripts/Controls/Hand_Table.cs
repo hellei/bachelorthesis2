@@ -2,8 +2,6 @@
 using System.Collections;
 using System.Collections.Generic;
 public class Hand_Table : MonoBehaviour {
-
-    //public float handOffsetY;
 	
 	// Update is called once per frame
 	void Update () {      
@@ -11,7 +9,7 @@ public class Hand_Table : MonoBehaviour {
         Dictionary<int, TouchInfo> tTouches = Tablet.instance.GetTouches();
         if (tTouches != null && tTouches.Count > 0)
         {
-			SetHandEnabled(true);
+			//SetHandEnabled(true);
            
 
             Vector3 pos = Vector3.zero;
@@ -21,13 +19,13 @@ public class Hand_Table : MonoBehaviour {
             }
             pos /= tTouches.Count;
 
-            //Apply position with hand y offset
+            //Apply position with hand offset
             transform.position = new Vector3(pos.x, pos.y, pos.z);
         }
-        else
+        /*else
         {
 			SetHandEnabled(false);
-        }
+        }*/
 	}
 
 	void SetHandEnabled(bool value)

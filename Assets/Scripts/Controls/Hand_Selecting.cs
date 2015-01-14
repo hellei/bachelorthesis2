@@ -5,6 +5,7 @@ using VRUserInterface;
 public class Hand_Selecting : MonoBehaviour {
     
     // Tracking attributes
+    public Hand_Permanent hand;
     private GameObject index;
     private GameObject middle;
     private GameObject thumb;
@@ -70,14 +71,16 @@ public class Hand_Selecting : MonoBehaviour {
     /// Register selecting Hand when spawned
     /// </summary>
     /// <param name="hand">Hand to be registered as hand that is selecting single cards</param>
-    public void RegisterHand(GameObject index, GameObject middle, GameObject thumb, GameObject grabbedCard)
-    {         
+    public Hand_Permanent RegisterHand(GameObject index, GameObject middle, GameObject thumb, GameObject grabbedCard)
+    {
         this.index = index;
         this.middle = middle;
         this.thumb = thumb;
         grabbedCardContainer = grabbedCard;
         DisplayCardInHand();
         handRegistered = true;
+
+        return hand;
         //print("Registered and show selected card");
     }
 

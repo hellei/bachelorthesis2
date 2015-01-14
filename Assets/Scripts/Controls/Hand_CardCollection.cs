@@ -12,11 +12,13 @@ public class Hand_CardCollection : MonoBehaviour {
     public Card card3;
 
     // Tracking attributes
-    private GameObject CardBucket;
-    private GameObject EmptyHandCollider;
+    public GameObject CardBucket;
+    public GameObject EmptyHandCollider;
+    public Finger_Permanent[] fingers;
 
     // Main attributes
     public int maxCardsAllowed = -1;
+    public Hand_Permanent hand;
     private List<Card> cardsOnHand = new List<Card>();
     private bool handRegistered = false;
     private int numberOfCardsOnHand = 0;
@@ -43,22 +45,25 @@ public class Hand_CardCollection : MonoBehaviour {
     /// Register a Hand when spawned
     /// </summary>
     /// <param name="hand">Hand to be registered as hand that is holding the cards</param>
-    public void RegisterHand(GameObject cardBucket, GameObject emptyHandCollider) 
+    public Hand_Permanent RegisterHand() 
     {
-        this.CardBucket = cardBucket;
-        this.EmptyHandCollider = emptyHandCollider;
         DisplayCardsOnHand();
         handRegistered = true;
+
+        return hand;
         //print("Registered and show cards");
     }
 
     public void UnRegisterHand()
     {
-        CardBucket = null;
-        EmptyHandCollider = null;
         HideCardsOnHand();
         handRegistered = false;
         //print("Unregistered and hide cards");
+    }
+
+    public Finger_Permanent[] GetFingers()
+    {
+        return fingers;
     }
 
     public bool IsHandRegistered()

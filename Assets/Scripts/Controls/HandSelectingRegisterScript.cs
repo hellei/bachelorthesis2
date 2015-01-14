@@ -7,25 +7,21 @@ public class HandSelectingRegisterScript : MonoBehaviour {
     public GameObject middle;
     public GameObject thumb;
     public GameObject grabbedCardContainer;
-    public GameObject meshes;
+
+    public RiggedHand hand;
 
 	// Use this for initialization
 	void Start () {
 
-        Hand_Selecting.instance.RegisterHand(index, middle, thumb, grabbedCardContainer);
+        // Initialize update of permanent hand
+        Hand_Permanent permanentHand = Hand_Selecting.instance.RegisterHand(index, middle, thumb, grabbedCardContainer);
+        hand.InitPermanentHand(permanentHand);
 	}
 	
 	// Update is called once per frame
 	void Update () {
 
-        if (InteractionManager.instance.touchOnTablet)
-        {
-            meshes.SetActive(false);
-        }
-        else
-        {
-            meshes.SetActive(true);
-        }	
+        
 	}
 
     void OnDestroy()

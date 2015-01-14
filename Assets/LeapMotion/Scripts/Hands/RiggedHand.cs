@@ -14,8 +14,17 @@ public class RiggedHand : HandModel {
   public Transform palm;
   public Transform foreArm;
 
+  private Hand_Permanent permanentHand;
+
   public override void InitHand() {
     UpdateHand();
+  }
+
+  public void InitPermanentHand(Hand_Permanent hand)
+  {
+      permanentHand = hand;
+      
+      UpdateHand();
   }
 
   public override void UpdateHand() {
@@ -24,11 +33,36 @@ public class RiggedHand : HandModel {
       //palm.rotation = GetPalmRotation();
         if (hand_.IsLeft)
         {
+            if (permanentHand != null)
+            {
+                //Update permanent Hand
+                HandUpdateData handData = new HandUpdateData();
+                handData.isLeft = true;
+                handData.palmPosition = GetPalmPosition();
+                handData.palmRotation = GetPalmRotation();
+                handData.palmNormal = GetPalmNormal();
+                handData.armRotation = GetArmRotation();
+                permanentHand.UpdateHand(handData);
+            }
+
+            // Update Leap Hand
             palm.position = Vector3.Lerp(palm.position, GetPalmPosition(), Time.deltaTime * 20);
             palm.rotation = Quaternion.Slerp(palm.rotation, GetPalmRotation(), Time.deltaTime * 20);
         }
         else
         {
+            if (permanentHand != null)
+            {
+                //Update permanent Hand
+                HandUpdateData handData = new HandUpdateData();
+                handData.isLeft = false;
+                handData.palmPosition = GetPalmPosition();
+                handData.palmRotation = GetPalmRotation();
+                handData.palmNormal = GetPalmNormal();
+                handData.armRotation = GetArmRotation();
+                permanentHand.UpdateHand(handData);
+            }
+
             palm.position = Vector3.Lerp(palm.position, GetPalmPosition(), Time.deltaTime * 20);
 				Vector3 up = (new Vector3(1,1,0)).normalized;//Vector3.up;
             if (Vector3.Dot(GetPalmNormal(), up) < 0)
@@ -46,6 +80,7 @@ public class RiggedHand : HandModel {
     for (int i = 0; i < fingers.Length; ++i) {
       if (fingers[i] != null && hand_.IsLeft && fingers[i].fingerType == Finger.FingerType.TYPE_THUMB)
         fingers[i].UpdateFinger();
+
       if (fingers[i] != null && hand_.IsRight)
       {
           //fingers[i].UpdateFinger();

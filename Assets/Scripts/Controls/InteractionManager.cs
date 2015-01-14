@@ -41,10 +41,13 @@ public class InteractionManager : MonoBehaviour {
     void HandleHandTabletInteraction()
     {
         tabletTouches = Tablet.instance.GetTouches();
+
+        //Touched tablet
         if (tabletTouches.Count > 0)
         {
             touchOnTablet = true;
 
+            // Place card on tablet
             if (Hand_Selecting.instance.GetNumCardsInHand() > 0 && Time.time - interactionTime > interactionCD)
             {
                 interactionTime = Time.time;
@@ -154,7 +157,6 @@ public class InteractionManager : MonoBehaviour {
         //Checks if hands are tracked
         if (Hand_Selecting.instance.IsHandRegistered() && Hand_CardCollection.instance.IsHandRegistered())
         {
-            Debug.Log("handInteraction");
             //Interaction only with nearest card
             //int i = Hand_CardCollection.instance.FindIndexOfNearestCard(Hand_Selecting.instance.GetGrabPosition());
             //if (Hand_CardCollection.instance.GetDistanceToCard(i, Hand_Selecting.instance.GetGrabPosition()) < grabDistance)

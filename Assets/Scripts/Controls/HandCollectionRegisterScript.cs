@@ -1,18 +1,22 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class HandCollectionRegisterScript : MonoBehaviour {
+public class HandCollectionRegisterScript : MonoBehaviour {    
 
-    public GameObject CardBucket;
-    public GameObject EmptyHandCollider;
+    public RiggedHand hand;
+    public RiggedFinger[] fingers = new RiggedFinger[5];
 
 	// Use this for initialization
-	void Start () {
+	void Start () {       
 
-        if (CardBucket != null && EmptyHandCollider != null)
-        {
-            Hand_CardCollection.instance.RegisterHand(CardBucket, EmptyHandCollider);
-        }
+
+            Hand_Permanent permanentHand = Hand_CardCollection.instance.RegisterHand();
+            hand.InitPermanentHand(permanentHand);
+            for (int i = 0; i < fingers.Length; i++)
+            {
+                fingers[i].InitPermanentFinger(Hand_CardCollection.instance.GetFingers()[i]);
+            }
+        
 	}
 	
 	// Update is called once per frame
