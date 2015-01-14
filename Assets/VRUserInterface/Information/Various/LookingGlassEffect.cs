@@ -33,7 +33,19 @@ namespace VRUserInterface
 		// Update is called once per frame
 		void Update () {
 			GameObject sel = Selection.instance.WatchedObject;
-			if (sel == gameObject)
+			//If the currently watched object is a button, test if the creator was this object. If yes, it is deemed selected.
+
+			GameObject buttonParentSelection = null;
+			if (sel.IsButton())
+			{
+				Button selButton = sel.GetButtonComponent();
+				if (selButton)
+				{
+					buttonParentSelection = selButton.creator.gameObject;
+					Debug.Log("Parent: "+buttonParentSelection);
+				}
+			}
+			if (sel == gameObject || buttonParentSelection == gameObject)
 			{
 				//If the object was not selected in the last frame set up all position values
 				if (timeSelected == 0) SetValues();
@@ -45,7 +57,7 @@ namespace VRUserInterface
 				SetEffect(progress);
 			}
 			//If the other object is a button, do not scale down as the button is probably positioned on the enlarged object
-			else if (!sel || !sel.IsButton())
+			else if (!sel || !sel.IsButton() || (buttonParentSelection && buttonParentSelection != gameObject))
 			{
 				//It has to be tested if the time selected is zero, before a change is applied.
 				//The first frame the selection time switches back to zero, you still have to set the position of the label.

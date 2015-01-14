@@ -67,17 +67,14 @@ namespace VRUserInterface
 			card.ShowShortInfo (value);
 		}
 
-		/*public override void OnDisplayPrefabInstantiated(GameObject display)
+		public override void OnDisplayPrefabInstantiated(GameObject display)
 		{
 			base.OnDisplayPrefabInstantiated (display);
-			//Delete all buttons in the children of the object
-			foreach (Transform t in display.transform)
+			//The card objects are darkened a little bit in the scene. Reset them to their white color when selected
+			foreach (Material m in display.renderer.materials)
 			{
-				if (t.GetComponent<Button>())
-				{
-					Destroy (t.gameObject);
-				}
+				m.color = Color.white;
 			}
-		}*/
+		}
 	}
 }

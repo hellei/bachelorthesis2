@@ -48,7 +48,7 @@ namespace VRUserInterface
 
 		void Update()
 		{
-			if (Selection.instance.WatchedObject.tag != "ButtonComponent") isWatched = (Selection.instance.WatchedObject == gameObject);
+			if (!Selection.instance.WatchedObject || Selection.instance.WatchedObject.tag != "ButtonComponent") isWatched = (Selection.instance.WatchedObject == gameObject);
 			button.SetActive(isWatched && !UIController.Instance.menu);
 		}
 	}

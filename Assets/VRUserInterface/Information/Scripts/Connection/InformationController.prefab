@@ -138,7 +138,7 @@ GameObject:
   - 4: {fileID: 400016}
   - 114: {fileID: 11400018}
   m_Layer: 0
-  m_Name: SimpleFrontCardDisplay3
+  m_Name: SimpleFrontCardDisplay3WithText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -320,6 +320,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &168874
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 468874}
+  - 114: {fileID: 11468874}
+  m_Layer: 0
+  m_Name: SimpleFrontCardDisplay3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &185580
 GameObject:
   m_ObjectHideFlags: 1
@@ -416,7 +432,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400010}
-  m_RootOrder: 0
+  m_RootOrder: 1
 --- !u!4 &400010
 Transform:
   m_ObjectHideFlags: 1
@@ -427,8 +443,8 @@ Transform:
   m_LocalPosition: {x: 5.44656563, y: -15.9291124, z: 12.022953}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 400008}
   - {fileID: 400012}
+  - {fileID: 400008}
   - {fileID: 400006}
   - {fileID: 431256}
   - {fileID: 400020}
@@ -442,6 +458,7 @@ Transform:
   - {fileID: 441598}
   - {fileID: 485580}
   - {fileID: 430490}
+  - {fileID: 468874}
   - {fileID: 400016}
   m_Father: {fileID: 400002}
   m_RootOrder: 2
@@ -456,7 +473,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400010}
-  m_RootOrder: 1
+  m_RootOrder: 0
 --- !u!4 &400014
 Transform:
   m_ObjectHideFlags: 1
@@ -480,7 +497,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400010}
-  m_RootOrder: 15
+  m_RootOrder: 16
 --- !u!4 &400020
 Transform:
   m_ObjectHideFlags: 1
@@ -613,6 +630,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 400010}
   m_RootOrder: 10
+--- !u!4 &468874
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 168874}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -8.20688248, y: 8.14179897, z: 6.10141754}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 400010}
+  m_RootOrder: 15
 --- !u!4 &485580
 Transform:
   m_ObjectHideFlags: 1
@@ -707,13 +736,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed8c85454a132fc4fb14fa14c0185808, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  infoDisplay: {fileID: 11485580}
+  infoDisplay: {fileID: 11468874}
   selection: {fileID: 11400002}
   debugKeys: 1
   infoButton: {fileID: 11400000, guid: 6d82e974550a049ae9ea9a5c6cba8c48, type: 2}
   allInfoDisplays:
+  - {fileID: 11400012}
+  - {fileID: 11400008}
+  - {fileID: 11400006}
   - {fileID: 11485580}
-  - {fileID: 11430490}
+  - {fileID: 11468874}
   - {fileID: 11400018}
   showLastActiveObjectIfNothingSelected: 1
 --- !u!114 &11400006
@@ -729,7 +761,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   displayPosition: {x: .25, y: 0, z: -.0199999996}
   textGenerator: {fileID: 11400000}
-  closeButton: {fileID: 0}
+  closeButton: {fileID: 11400000, guid: 9d9e74b5096274652a0c0cbac437329c, type: 2}
   scrollUpButton: {fileID: 11400000, guid: 9788af509fdbc48fdbaa66c7b27eebd2, type: 2}
   scrollDownButton: {fileID: 11400000, guid: 98e763011136f473086fb9000d3a29da, type: 2}
   textItemMargin: .0199999996
@@ -764,7 +796,7 @@ MonoBehaviour:
   closeWhenLookingAway: 1
   lookAwayThreshold: 0
   connectionPrefab: {fileID: 0}
-  numberOfInfoBoxes: 2
+  numberOfInfoBoxes: 4
 --- !u!114 &11400008
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -778,7 +810,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   displayPosition: {x: 0, y: 1, z: 0}
   textGenerator: {fileID: 11400024}
-  closeButton: {fileID: 0}
+  closeButton: {fileID: 11400000, guid: 9d9e74b5096274652a0c0cbac437329c, type: 2}
   scrollUpButton: {fileID: 11400000, guid: 9788af509fdbc48fdbaa66c7b27eebd2, type: 2}
   scrollDownButton: {fileID: 11400000, guid: 98e763011136f473086fb9000d3a29da, type: 2}
   textItemMargin: .0199999996
@@ -813,9 +845,9 @@ MonoBehaviour:
   closeWhenLookingAway: 1
   lookAwayThreshold: 0
   connectionPrefab: {fileID: 0}
-  numberOfInfoBoxes: 2
+  numberOfInfoBoxes: 4
   globalDisplayOffset: {x: 0, y: .129999995, z: 0}
-  localDisplayOffset: {x: .400000006, y: .200000003, z: -.300000012}
+  localDisplayOffset: {x: .25, y: .200000003, z: -.300000012}
   lookAtOffset: {x: .100000001, y: .100000001, z: 0}
   alwaysFacePlayer: 1
 --- !u!114 &11400010
@@ -847,7 +879,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c159f4d0c7e37b4f880225fdc2b346e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  displayPosition: {x: .300000012, y: .300000012, z: .300000012}
+  displayPosition: {x: .449999988, y: .400000006, z: .600000024}
   textGenerator: {fileID: 11400024}
   closeButton: {fileID: 11400000, guid: 9d9e74b5096274652a0c0cbac437329c, type: 2}
   scrollUpButton: {fileID: 11400000, guid: 9788af509fdbc48fdbaa66c7b27eebd2, type: 2}
@@ -855,7 +887,7 @@ MonoBehaviour:
   textItemMargin: .0199999996
   horizontalMargin: .0399999991
   maxHeight: .699999988
-  maxWidth: 1
+  maxWidth: .899999976
   showDisplayPrefab: 1
   showInfoText: 1
   objectLookingGlassSettings:
@@ -884,7 +916,7 @@ MonoBehaviour:
   closeWhenLookingAway: 1
   lookAwayThreshold: 0
   connectionPrefab: {fileID: 11400000, guid: 501f313e504fa8548808af2cbe19f9c9, type: 2}
-  numberOfInfoBoxes: 3
+  numberOfInfoBoxes: 4
 --- !u!114 &11400014
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -951,10 +983,10 @@ MonoBehaviour:
   scrollDownButton: {fileID: 11400000, guid: 98e763011136f473086fb9000d3a29da, type: 2}
   textItemMargin: .00999999978
   horizontalMargin: .0399999991
-  maxHeight: .150000006
-  maxWidth: .200000003
-  showDisplayPrefab: 1
-  showInfoText: 0
+  maxHeight: .200000003
+  maxWidth: .25
+  showDisplayPrefab: 0
+  showInfoText: 1
   objectLookingGlassSettings:
     useLookingGlassEffect: 1
     lookingGlassCurve:
@@ -972,17 +1004,17 @@ MonoBehaviour:
         tangentMode: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
-    magnifyingFactor: 1.60000002
+    magnifyingFactor: 1.29999995
     moveForwardValue: .00100000005
     popupDuration: .400000006
-    minimizeSpeedMultiplication: 2
+    minimizeSpeedMultiplication: 1.60000002
   centerAtText: 0
-  showCloseButton: 1
+  showCloseButton: 0
   closeWhenLookingAway: 1
   lookAwayThreshold: 30
   connectionPrefab: {fileID: 0}
   numberOfInfoBoxes: 5
-  localOffset: {x: 0, y: -.25, z: .25}
+  localOffset: {x: 0, y: -.25, z: .349999994}
   globalOffset: {x: 0, y: 0, z: 0}
   onlyConsiderCameraYRotation: 1
   alwaysFacePlayer: 0
@@ -1116,7 +1148,7 @@ MonoBehaviour:
         tangentMode: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
-    magnifyingFactor: 1.5
+    magnifyingFactor: 1.20000005
     moveForwardValue: .100000001
     popupDuration: .400000006
     minimizeSpeedMultiplication: 2
@@ -1341,7 +1373,7 @@ MonoBehaviour:
   lookAwayThreshold: 30
   connectionPrefab: {fileID: 0}
   numberOfInfoBoxes: 5
-  localOffset: {x: 0, y: -.129999995, z: .349999994}
+  localOffset: {x: 0, y: -.129999995, z: .25}
   globalOffset: {x: 0, y: -.0799999982, z: 0}
   onlyConsiderCameraYRotation: 0
   alwaysFacePlayer: 0
@@ -1481,6 +1513,59 @@ MonoBehaviour:
   connectionPrefab: {fileID: 0}
   numberOfInfoBoxes: 5
   localOffset: {x: 0, y: 0, z: .270000011}
+  globalOffset: {x: 0, y: 0, z: 0}
+  onlyConsiderCameraYRotation: 1
+  alwaysFacePlayer: 0
+--- !u!114 &11468874
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 168874}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 627ebf435cb2e4a419321b96da4daf08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  displayPosition: {x: 0, y: 1, z: 0}
+  textGenerator: {fileID: 11400024}
+  closeButton: {fileID: 11400000, guid: 9d9e74b5096274652a0c0cbac437329c, type: 2}
+  scrollUpButton: {fileID: 11400000, guid: 9788af509fdbc48fdbaa66c7b27eebd2, type: 2}
+  scrollDownButton: {fileID: 11400000, guid: 98e763011136f473086fb9000d3a29da, type: 2}
+  textItemMargin: .00999999978
+  horizontalMargin: .0399999991
+  maxHeight: .200000003
+  maxWidth: .25
+  showDisplayPrefab: 1
+  showInfoText: 0
+  objectLookingGlassSettings:
+    useLookingGlassEffect: 1
+    lookingGlassCurve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    magnifyingFactor: 1.5
+    moveForwardValue: .00100000005
+    popupDuration: .400000006
+    minimizeSpeedMultiplication: 1.29999995
+  centerAtText: 0
+  showCloseButton: 0
+  closeWhenLookingAway: 1
+  lookAwayThreshold: 30
+  connectionPrefab: {fileID: 0}
+  numberOfInfoBoxes: 5
+  localOffset: {x: 0, y: -.25, z: .349999994}
   globalOffset: {x: 0, y: 0, z: 0}
   onlyConsiderCameraYRotation: 1
   alwaysFacePlayer: 0

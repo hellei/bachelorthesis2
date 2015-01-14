@@ -30,6 +30,26 @@ namespace VRUserInterface
 			return false;
 		}
 
+		public static Button GetButtonComponent(this GameObject obj)
+		{
+			Button button = obj.GetComponent<Button> ();
+			if (button)
+			{
+				return button;
+			}
+			else
+			{
+			    if (obj.tag == Tags.buttonComponent){
+					Transform parent = obj.transform.parent;
+					if (parent)
+					{
+						return parent.gameObject.GetButtonComponent();
+					}
+				}
+			}
+			return null;
+		}
+
 		
 		/// <summary>
 		/// Returns the center of the bounding box surrounding the object
@@ -101,8 +121,11 @@ namespace VRUserInterface
 			min = max = GameObjectExtensions.initializationVector;
 			obj.GetBounds(ref min, ref max);
 			float currentHeight = max.y - min.y;
-			if (currentHeight != height)
+
+			if (currentHeight == 0) Debug.LogWarning(obj.name + " has a height of 0.");
+			if (currentHeight != height && currentHeight != 0)
 			{
+
 				float scaleFactor = height / currentHeight;
 				obj.transform.localScale = obj.transform.localScale * scaleFactor;
 			}

@@ -83,7 +83,7 @@ public class EnvironmentPositioner : MenuCallback {
         tablet.transform.position = tabletPosition;
         tablet.transform.localScale = Config.instance.tabletSize;
         //The table position is the tablet position minus half the height of the tablet position (It is the table surface)
-		Vector3 tablePosition = riftPositionTracker.transform.TransformPoint(Config.instance.relativeTabletPosition);;
+		Vector3 tablePosition = riftPositionTracker.transform.TransformPoint(Config.instance.relativeTabletPosition + new Vector3(0, 0, -Config.instance.zOffsetToTableBorder));
         table.transform.position = tablePosition;
 
         //Place the floor

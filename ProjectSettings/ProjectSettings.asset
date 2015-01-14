@@ -18,7 +18,7 @@ PlayerSettings:
   defaultScreenHeight: 1080
   defaultScreenWidthWeb: 960
   defaultScreenHeightWeb: 600
-  m_RenderingPath: 2
+  m_RenderingPath: 1
   m_MobileRenderingPath: 1
   m_ActiveColorSpace: 0
   m_MTRendering: 1
@@ -55,7 +55,7 @@ PlayerSettings:
   xboxEnableFitness: 0
   visibleInBackground: 1
   macFullscreenMode: 2
-  d3d9FullscreenMode: 0
+  d3d9FullscreenMode: 1
   d3d11ForceExclusiveMode: 1
   xboxSpeechDB: 0
   xboxEnableHeadOrientation: 0
