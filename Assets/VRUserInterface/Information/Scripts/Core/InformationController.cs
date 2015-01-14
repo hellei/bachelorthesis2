@@ -69,11 +69,11 @@ namespace VRUserInterface
 	            //Enable / Disable Looking Glass Effect
 	            if (Input.GetKey(KeyCode.Q))
 	            {
-	                infoDisplay.GetComponent<TableDisplay>().textGenerator.GetComponent<TextBox>().lookingGlassSettings.useLookingGlassEffect = false;
+	                infoDisplay.GetComponent<TableDisplay>().textGenerator.GetComponent<TextBox>().magnifyingGlassSettings.useMagnifyingGlassEffect = false;
 	            }
 	            if (Input.GetKey(KeyCode.W))
 	            {
-	                infoDisplay.GetComponent<TableDisplay>().textGenerator.GetComponent<TextBox>().lookingGlassSettings.useLookingGlassEffect = true;
+					infoDisplay.GetComponent<TableDisplay>().textGenerator.GetComponent<TextBox>().magnifyingGlassSettings.useMagnifyingGlassEffect = true;
 	            }
 	            if (Input.GetKeyDown(KeyCode.E))
 	            {

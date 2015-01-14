@@ -78,7 +78,7 @@ NavMeshSettings:
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 100014, guid: 9238eadd35bcc5742bf1ad6650dbf7aa, type: 2}
-  m_PrefabInternal: {fileID: 1054689583}
+  m_PrefabInternal: {fileID: 819787050}
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 5291327}
@@ -94,7 +94,7 @@ GameObject:
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 400014, guid: 9238eadd35bcc5742bf1ad6650dbf7aa, type: 2}
-  m_PrefabInternal: {fileID: 1054689583}
+  m_PrefabInternal: {fileID: 819787050}
   m_GameObject: {fileID: 5291326}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -107,7 +107,7 @@ MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 11400014, guid: 9238eadd35bcc5742bf1ad6650dbf7aa,
     type: 2}
-  m_PrefabInternal: {fileID: 1054689583}
+  m_PrefabInternal: {fileID: 819787050}
   m_GameObject: {fileID: 5291326}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -130,26 +130,16 @@ MonoBehaviour:
   background: {fileID: 100000, guid: 8f47c1dc61d6ba24392140759670640b, type: 2}
   borderLeft: .0500000007
   borderTop: .0500000007
-  lookingGlassSettings:
-    useLookingGlassEffect: 0
-    lookingGlassCurve:
+  magnifyingGlassSettings:
+    useMagnifyingGlassEffect: 1
+    magnifyingGlassCurve:
       serializedVersion: 2
-      m_Curve:
-      - time: 0
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-      - time: 1
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
+      m_Curve: []
       m_PreInfinity: 2
       m_PostInfinity: 2
     magnifyingFactor: 1.5
     moveForwardValue: .100000001
-    popupDuration: .400000006
+    popupDuration: .699999988
     minimizeSpeedMultiplication: 2
 --- !u!1 &10249122
 GameObject:
@@ -459,7 +449,7 @@ Prefab:
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 100008, guid: 9238eadd35bcc5742bf1ad6650dbf7aa, type: 2}
-  m_PrefabInternal: {fileID: 1054689583}
+  m_PrefabInternal: {fileID: 819787050}
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 57791023}
@@ -475,7 +465,7 @@ GameObject:
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 400008, guid: 9238eadd35bcc5742bf1ad6650dbf7aa, type: 2}
-  m_PrefabInternal: {fileID: 1054689583}
+  m_PrefabInternal: {fileID: 819787050}
   m_GameObject: {fileID: 57791022}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -8.20688248, y: 8.14179897, z: 6.10141754}
@@ -488,7 +478,7 @@ MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 11400008, guid: 9238eadd35bcc5742bf1ad6650dbf7aa,
     type: 2}
-  m_PrefabInternal: {fileID: 1054689583}
+  m_PrefabInternal: {fileID: 819787050}
   m_GameObject: {fileID: 57791022}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -506,9 +496,9 @@ MonoBehaviour:
   maxWidth: .899999976
   showDisplayPrefab: 0
   showInfoText: 1
-  objectLookingGlassSettings:
-    useLookingGlassEffect: 1
-    lookingGlassCurve:
+  objectMagnifyingGlassSettings:
+    useMagnifyingGlassEffect: 1
+    magnifyingGlassCurve:
       serializedVersion: 2
       m_Curve:
       - time: 0
@@ -525,7 +515,7 @@ MonoBehaviour:
       m_PostInfinity: 2
     magnifyingFactor: 1.5
     moveForwardValue: .100000001
-    popupDuration: .400000006
+    popupDuration: .699999988
     minimizeSpeedMultiplication: 2
   centerAtText: 0
   showCloseButton: 1
@@ -1663,7 +1653,7 @@ Transform:
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 100000, guid: 9238eadd35bcc5742bf1ad6650dbf7aa, type: 2}
-  m_PrefabInternal: {fileID: 1054689583}
+  m_PrefabInternal: {fileID: 819787050}
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 165278334}
@@ -1679,7 +1669,7 @@ GameObject:
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 400000, guid: 9238eadd35bcc5742bf1ad6650dbf7aa, type: 2}
-  m_PrefabInternal: {fileID: 1054689583}
+  m_PrefabInternal: {fileID: 819787050}
   m_GameObject: {fileID: 165278333}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 2.76031685, y: 7.78731346, z: -18.1243706}
@@ -1692,7 +1682,7 @@ MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 11400000, guid: 9238eadd35bcc5742bf1ad6650dbf7aa,
     type: 2}
-  m_PrefabInternal: {fileID: 1054689583}
+  m_PrefabInternal: {fileID: 819787050}
   m_GameObject: {fileID: 165278333}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -1715,26 +1705,16 @@ MonoBehaviour:
   background: {fileID: 100000, guid: 8f47c1dc61d6ba24392140759670640b, type: 2}
   borderLeft: .0500000007
   borderTop: .0500000007
-  lookingGlassSettings:
-    useLookingGlassEffect: 1
-    lookingGlassCurve:
+  magnifyingGlassSettings:
+    useMagnifyingGlassEffect: 1
+    magnifyingGlassCurve:
       serializedVersion: 2
-      m_Curve:
-      - time: 0
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-      - time: 1
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
+      m_Curve: []
       m_PreInfinity: 2
       m_PostInfinity: 2
-    magnifyingFactor: 1.20000005
-    moveForwardValue: .00999999978
-    popupDuration: .400000006
+    magnifyingFactor: 1.5
+    moveForwardValue: .100000001
+    popupDuration: .699999988
     minimizeSpeedMultiplication: 2
 --- !u!1 &168955629
 GameObject:
@@ -2482,7 +2462,7 @@ Transform:
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 141598, guid: 9238eadd35bcc5742bf1ad6650dbf7aa, type: 2}
-  m_PrefabInternal: {fileID: 1054689583}
+  m_PrefabInternal: {fileID: 819787050}
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 228899630}
@@ -2498,7 +2478,7 @@ GameObject:
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 441598, guid: 9238eadd35bcc5742bf1ad6650dbf7aa, type: 2}
-  m_PrefabInternal: {fileID: 1054689583}
+  m_PrefabInternal: {fileID: 819787050}
   m_GameObject: {fileID: 228899629}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -8.20688248, y: 8.14179897, z: 6.10141754}
@@ -2511,7 +2491,7 @@ MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 11441598, guid: 9238eadd35bcc5742bf1ad6650dbf7aa,
     type: 2}
-  m_PrefabInternal: {fileID: 1054689583}
+  m_PrefabInternal: {fileID: 819787050}
   m_GameObject: {fileID: 228899629}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -2529,11 +2509,21 @@ MonoBehaviour:
   maxWidth: .400000006
   showDisplayPrefab: 1
   showInfoText: 1
-  objectLookingGlassSettings:
-    useLookingGlassEffect: 1
-    lookingGlassCurve:
+  objectMagnifyingGlassSettings:
+    useMagnifyingGlassEffect: 1
+    magnifyingGlassCurve:
       serializedVersion: 2
-      m_Curve: []
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
     magnifyingFactor: 1.5
@@ -2549,6 +2539,7 @@ MonoBehaviour:
   localOffset: {x: 0, y: 0, z: .330000013}
   globalOffset: {x: 0, y: 0, z: 0}
   onlyConsiderCameraYRotation: 1
+  minimumHeight: {fileID: 1238019149}
   alwaysFacePlayer: 0
 --- !u!1 &229788969
 GameObject:
@@ -2895,7 +2886,7 @@ Transform:
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 190742, guid: 9238eadd35bcc5742bf1ad6650dbf7aa, type: 2}
-  m_PrefabInternal: {fileID: 1054689583}
+  m_PrefabInternal: {fileID: 819787050}
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 251952717}
@@ -2911,7 +2902,7 @@ GameObject:
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 490742, guid: 9238eadd35bcc5742bf1ad6650dbf7aa, type: 2}
-  m_PrefabInternal: {fileID: 1054689583}
+  m_PrefabInternal: {fileID: 819787050}
   m_GameObject: {fileID: 251952716}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -8.20688248, y: 8.14179897, z: 6.10141754}
@@ -2924,7 +2915,7 @@ MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 11490742, guid: 9238eadd35bcc5742bf1ad6650dbf7aa,
     type: 2}
-  m_PrefabInternal: {fileID: 1054689583}
+  m_PrefabInternal: {fileID: 819787050}
   m_GameObject: {fileID: 251952716}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -2942,11 +2933,21 @@ MonoBehaviour:
   maxWidth: .400000006
   showDisplayPrefab: 1
   showInfoText: 1
-  objectLookingGlassSettings:
-    useLookingGlassEffect: 1
-    lookingGlassCurve:
+  objectMagnifyingGlassSettings:
+    useMagnifyingGlassEffect: 1
+    magnifyingGlassCurve:
       serializedVersion: 2
-      m_Curve: []
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
     magnifyingFactor: 1.5
@@ -2962,6 +2963,7 @@ MonoBehaviour:
   localOffset: {x: 0, y: 0, z: .330000013}
   globalOffset: {x: 0, y: 0, z: 0}
   onlyConsiderCameraYRotation: 1
+  minimumHeight: {fileID: 1238019149}
   alwaysFacePlayer: 0
 --- !u!1 &254331612
 GameObject:
@@ -3049,6 +3051,126 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1986580485}
   m_GameObject: {fileID: 257817609}
   m_Mesh: {fileID: 4300002, guid: f868335c36af36d40acb95b5937c4463, type: 3}
+--- !u!1 &265118515
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 129564, guid: 863672a5538f3cc4fbe1b58ff0571b73, type: 2}
+  m_PrefabInternal: {fileID: 665908023}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 265118519}
+  - 15: {fileID: 265118518}
+  - 12: {fileID: 265118517}
+  - 26: {fileID: 265118516}
+  m_Layer: 0
+  m_Name: Spores
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!26 &265118516
+ParticleRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 2629564, guid: 863672a5538f3cc4fbe1b58ff0571b73,
+    type: 2}
+  m_PrefabInternal: {fileID: 665908023}
+  m_GameObject: {fileID: 265118515}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 2100000, guid: c16b46ed5e441a1438c510220df14ad4, type: 2}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  serializedVersion: 2
+  m_CameraVelocityScale: 0
+  m_StretchParticles: 0
+  m_LengthScale: 2
+  m_VelocityScale: 0
+  m_MaxParticleSize: .25
+  UV Animation:
+    x Tile: 1
+    y Tile: 1
+    cycles: 1
+--- !u!12 &265118517
+ParticleAnimator:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 1229564, guid: 863672a5538f3cc4fbe1b58ff0571b73,
+    type: 2}
+  m_PrefabInternal: {fileID: 665908023}
+  m_GameObject: {fileID: 265118515}
+  Does Animate Color?: 1
+  colorAnimation[0]:
+    serializedVersion: 2
+    rgba: 175365887
+  colorAnimation[1]:
+    serializedVersion: 2
+    rgba: 3028609279
+  colorAnimation[2]:
+    serializedVersion: 2
+    rgba: 4290373375
+  colorAnimation[3]:
+    serializedVersion: 2
+    rgba: 3021844735
+  colorAnimation[4]:
+    serializedVersion: 2
+    rgba: 172346111
+  worldRotationAxis: {x: 0, y: 0, z: 0}
+  localRotationAxis: {x: 0, y: 0, z: 0}
+  sizeGrow: 0
+  rndForce: {x: 0, y: 0, z: 0}
+  force: {x: 0, y: 0, z: 0}
+  damping: 1
+  stopSimulation: 0
+  autodestruct: 0
+--- !u!15 &265118518
+EllipsoidParticleEmitter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 1529564, guid: 863672a5538f3cc4fbe1b58ff0571b73,
+    type: 2}
+  m_PrefabInternal: {fileID: 665908023}
+  m_GameObject: {fileID: 265118515}
+  serializedVersion: 2
+  m_Enabled: 1
+  m_Emit: 1
+  minSize: .0299999993
+  maxSize: .100000001
+  minEnergy: 3
+  maxEnergy: 10
+  minEmission: 30
+  maxEmission: 50
+  worldVelocity: {x: 0, y: 0, z: 0}
+  localVelocity: {x: 0, y: 0, z: 0}
+  rndVelocity: {x: 1, y: 1, z: 1}
+  emitterVelocityScale: .0500000007
+  tangentVelocity: {x: 0, y: 0, z: 0}
+  angularVelocity: 50
+  rndAngularVelocity: 30
+  rndRotation: 1
+  Simulate in Worldspace?: 1
+  m_OneShot: 0
+  m_Ellipsoid: {x: 10, y: 5, z: 10}
+  m_MinEmitterRange: 0
+--- !u!4 &265118519
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 429564, guid: 863672a5538f3cc4fbe1b58ff0571b73, type: 2}
+  m_PrefabInternal: {fileID: 665908023}
+  m_GameObject: {fileID: 265118515}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: .879999995}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 754551344}
+  m_RootOrder: 8
 --- !u!1 &273335754
 GameObject:
   m_ObjectHideFlags: 0
@@ -3554,7 +3676,7 @@ MonoBehaviour:
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 100030, guid: 9238eadd35bcc5742bf1ad6650dbf7aa, type: 2}
-  m_PrefabInternal: {fileID: 1054689583}
+  m_PrefabInternal: {fileID: 819787050}
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 328443669}
@@ -3570,7 +3692,7 @@ GameObject:
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 400030, guid: 9238eadd35bcc5742bf1ad6650dbf7aa, type: 2}
-  m_PrefabInternal: {fileID: 1054689583}
+  m_PrefabInternal: {fileID: 819787050}
   m_GameObject: {fileID: 328443668}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -8.20688248, y: 8.14179897, z: 6.10141754}
@@ -3583,7 +3705,7 @@ MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 11400030, guid: 9238eadd35bcc5742bf1ad6650dbf7aa,
     type: 2}
-  m_PrefabInternal: {fileID: 1054689583}
+  m_PrefabInternal: {fileID: 819787050}
   m_GameObject: {fileID: 328443668}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -3601,11 +3723,21 @@ MonoBehaviour:
   maxWidth: .400000006
   showDisplayPrefab: 0
   showInfoText: 1
-  objectLookingGlassSettings:
-    useLookingGlassEffect: 1
-    lookingGlassCurve:
+  objectMagnifyingGlassSettings:
+    useMagnifyingGlassEffect: 1
+    magnifyingGlassCurve:
       serializedVersion: 2
-      m_Curve: []
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
     magnifyingFactor: 1.5
@@ -3621,6 +3753,7 @@ MonoBehaviour:
   localOffset: {x: 0, y: 0, z: .200000003}
   globalOffset: {x: 0, y: -.100000001, z: 0}
   onlyConsiderCameraYRotation: 1
+  minimumHeight: {fileID: 1238019149}
   alwaysFacePlayer: 1
 --- !u!1 &329900536
 GameObject:
@@ -3771,7 +3904,7 @@ Transform:
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 100002, guid: 9238eadd35bcc5742bf1ad6650dbf7aa, type: 2}
-  m_PrefabInternal: {fileID: 1054689583}
+  m_PrefabInternal: {fileID: 819787050}
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 363733356}
@@ -3788,7 +3921,7 @@ GameObject:
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 400002, guid: 9238eadd35bcc5742bf1ad6650dbf7aa, type: 2}
-  m_PrefabInternal: {fileID: 1054689583}
+  m_PrefabInternal: {fileID: 819787050}
   m_GameObject: {fileID: 363733355}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: .21678561, z: 0}
@@ -3805,7 +3938,7 @@ MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 11400010, guid: 9238eadd35bcc5742bf1ad6650dbf7aa,
     type: 2}
-  m_PrefabInternal: {fileID: 1054689583}
+  m_PrefabInternal: {fileID: 819787050}
   m_GameObject: {fileID: 363733355}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -3824,7 +3957,7 @@ MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 11400004, guid: 9238eadd35bcc5742bf1ad6650dbf7aa,
     type: 2}
-  m_PrefabInternal: {fileID: 1054689583}
+  m_PrefabInternal: {fileID: 819787050}
   m_GameObject: {fileID: 363733355}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -4567,7 +4700,7 @@ MonoBehaviour:
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 100004, guid: 9238eadd35bcc5742bf1ad6650dbf7aa, type: 2}
-  m_PrefabInternal: {fileID: 1054689583}
+  m_PrefabInternal: {fileID: 819787050}
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 407073008}
@@ -4583,7 +4716,7 @@ GameObject:
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 400004, guid: 9238eadd35bcc5742bf1ad6650dbf7aa, type: 2}
-  m_PrefabInternal: {fileID: 1054689583}
+  m_PrefabInternal: {fileID: 819787050}
   m_GameObject: {fileID: 407073007}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: .166719258, y: .489153683, z: -.169975773}
@@ -4596,7 +4729,7 @@ MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 11400002, guid: 9238eadd35bcc5742bf1ad6650dbf7aa,
     type: 2}
-  m_PrefabInternal: {fileID: 1054689583}
+  m_PrefabInternal: {fileID: 819787050}
   m_GameObject: {fileID: 407073007}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -5533,7 +5666,7 @@ Transform:
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 131256, guid: 9238eadd35bcc5742bf1ad6650dbf7aa, type: 2}
-  m_PrefabInternal: {fileID: 1054689583}
+  m_PrefabInternal: {fileID: 819787050}
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 541135437}
@@ -5549,7 +5682,7 @@ GameObject:
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 431256, guid: 9238eadd35bcc5742bf1ad6650dbf7aa, type: 2}
-  m_PrefabInternal: {fileID: 1054689583}
+  m_PrefabInternal: {fileID: 819787050}
   m_GameObject: {fileID: 541135436}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -8.20688248, y: 8.14179897, z: 6.10141754}
@@ -5562,7 +5695,7 @@ MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 11431256, guid: 9238eadd35bcc5742bf1ad6650dbf7aa,
     type: 2}
-  m_PrefabInternal: {fileID: 1054689583}
+  m_PrefabInternal: {fileID: 819787050}
   m_GameObject: {fileID: 541135436}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -5580,9 +5713,9 @@ MonoBehaviour:
   maxWidth: 1.20000005
   showDisplayPrefab: 1
   showInfoText: 1
-  objectLookingGlassSettings:
-    useLookingGlassEffect: 1
-    lookingGlassCurve:
+  objectMagnifyingGlassSettings:
+    useMagnifyingGlassEffect: 1
+    magnifyingGlassCurve:
       serializedVersion: 2
       m_Curve:
       - time: 0
@@ -5599,7 +5732,7 @@ MonoBehaviour:
       m_PostInfinity: 2
     magnifyingFactor: 1.5
     moveForwardValue: .100000001
-    popupDuration: .400000006
+    popupDuration: .699999988
     minimizeSpeedMultiplication: 2
   centerAtText: 0
   showCloseButton: 1
@@ -6317,6 +6450,50 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 664546616}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &665908023
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 754551344}
+    m_Modifications:
+    - target: {fileID: 429564, guid: 863672a5538f3cc4fbe1b58ff0571b73, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 429564, guid: 863672a5538f3cc4fbe1b58ff0571b73, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 429564, guid: 863672a5538f3cc4fbe1b58ff0571b73, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: .879999995
+      objectReference: {fileID: 0}
+    - target: {fileID: 429564, guid: 863672a5538f3cc4fbe1b58ff0571b73, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 429564, guid: 863672a5538f3cc4fbe1b58ff0571b73, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 429564, guid: 863672a5538f3cc4fbe1b58ff0571b73, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 429564, guid: 863672a5538f3cc4fbe1b58ff0571b73, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 429564, guid: 863672a5538f3cc4fbe1b58ff0571b73, type: 2}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 863672a5538f3cc4fbe1b58ff0571b73, type: 2}
+  m_RootGameObject: {fileID: 265118515}
+  m_IsPrefabParent: 0
+  m_IsExploded: 1
 --- !u!1 &672220180
 GameObject:
   m_ObjectHideFlags: 0
@@ -6525,7 +6702,7 @@ MeshFilter:
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 100032, guid: 9238eadd35bcc5742bf1ad6650dbf7aa, type: 2}
-  m_PrefabInternal: {fileID: 1054689583}
+  m_PrefabInternal: {fileID: 819787050}
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 684076491}
@@ -6541,7 +6718,7 @@ GameObject:
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 400032, guid: 9238eadd35bcc5742bf1ad6650dbf7aa, type: 2}
-  m_PrefabInternal: {fileID: 1054689583}
+  m_PrefabInternal: {fileID: 819787050}
   m_GameObject: {fileID: 684076490}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -8.20688248, y: 8.14179897, z: 6.10141754}
@@ -6554,7 +6731,7 @@ MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 11400032, guid: 9238eadd35bcc5742bf1ad6650dbf7aa,
     type: 2}
-  m_PrefabInternal: {fileID: 1054689583}
+  m_PrefabInternal: {fileID: 819787050}
   m_GameObject: {fileID: 684076490}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -6572,11 +6749,21 @@ MonoBehaviour:
   maxWidth: .5
   showDisplayPrefab: 0
   showInfoText: 1
-  objectLookingGlassSettings:
-    useLookingGlassEffect: 1
-    lookingGlassCurve:
+  objectMagnifyingGlassSettings:
+    useMagnifyingGlassEffect: 1
+    magnifyingGlassCurve:
       serializedVersion: 2
-      m_Curve: []
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
     magnifyingFactor: 1.5
@@ -6592,6 +6779,7 @@ MonoBehaviour:
   localOffset: {x: 0, y: 0, z: .330000013}
   globalOffset: {x: 0, y: -.100000001, z: 0}
   onlyConsiderCameraYRotation: 1
+  minimumHeight: {fileID: 1238019149}
   alwaysFacePlayer: 0
 --- !u!1 &691230688
 GameObject:
@@ -6987,7 +7175,7 @@ MonoBehaviour:
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 100020, guid: 9238eadd35bcc5742bf1ad6650dbf7aa, type: 2}
-  m_PrefabInternal: {fileID: 1054689583}
+  m_PrefabInternal: {fileID: 819787050}
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 718813022}
@@ -7003,7 +7191,7 @@ GameObject:
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 400020, guid: 9238eadd35bcc5742bf1ad6650dbf7aa, type: 2}
-  m_PrefabInternal: {fileID: 1054689583}
+  m_PrefabInternal: {fileID: 819787050}
   m_GameObject: {fileID: 718813021}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -8.20688248, y: 8.14179897, z: 6.10141754}
@@ -7016,7 +7204,7 @@ MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 11400020, guid: 9238eadd35bcc5742bf1ad6650dbf7aa,
     type: 2}
-  m_PrefabInternal: {fileID: 1054689583}
+  m_PrefabInternal: {fileID: 819787050}
   m_GameObject: {fileID: 718813021}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -7034,11 +7222,21 @@ MonoBehaviour:
   maxWidth: .200000003
   showDisplayPrefab: 0
   showInfoText: 1
-  objectLookingGlassSettings:
-    useLookingGlassEffect: 1
-    lookingGlassCurve:
+  objectMagnifyingGlassSettings:
+    useMagnifyingGlassEffect: 1
+    magnifyingGlassCurve:
       serializedVersion: 2
-      m_Curve: []
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
     magnifyingFactor: 1.5
@@ -7054,6 +7252,7 @@ MonoBehaviour:
   localOffset: {x: 0, y: 0, z: .200000003}
   globalOffset: {x: 0, y: -.100000001, z: 0}
   onlyConsiderCameraYRotation: 1
+  minimumHeight: {fileID: 1238019149}
   alwaysFacePlayer: 0
 --- !u!1 &721438795
 GameObject:
@@ -7272,6 +7471,7 @@ Transform:
   - {fileID: 1462313959}
   - {fileID: 1124072907}
   - {fileID: 75028034}
+  - {fileID: 265118519}
   m_Father: {fileID: 485956612}
   m_RootOrder: 0
 --- !u!1 &776359456
@@ -7818,6 +8018,102 @@ Transform:
   - {fileID: 642919565}
   m_Father: {fileID: 492671313}
   m_RootOrder: 0
+--- !u!1001 &819787050
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 400002, guid: 9238eadd35bcc5742bf1ad6650dbf7aa, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 9238eadd35bcc5742bf1ad6650dbf7aa, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: .21678561
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 9238eadd35bcc5742bf1ad6650dbf7aa, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 9238eadd35bcc5742bf1ad6650dbf7aa, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 9238eadd35bcc5742bf1ad6650dbf7aa, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 9238eadd35bcc5742bf1ad6650dbf7aa, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 9238eadd35bcc5742bf1ad6650dbf7aa, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 9238eadd35bcc5742bf1ad6650dbf7aa, type: 2}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441598, guid: 9238eadd35bcc5742bf1ad6650dbf7aa, type: 2}
+      propertyPath: minimumHeight
+      value: 
+      objectReference: {fileID: 1238019149}
+    - target: {fileID: 11490742, guid: 9238eadd35bcc5742bf1ad6650dbf7aa, type: 2}
+      propertyPath: minimumHeight
+      value: 
+      objectReference: {fileID: 1238019149}
+    - target: {fileID: 11400030, guid: 9238eadd35bcc5742bf1ad6650dbf7aa, type: 2}
+      propertyPath: minimumHeight
+      value: 
+      objectReference: {fileID: 1238019149}
+    - target: {fileID: 11400032, guid: 9238eadd35bcc5742bf1ad6650dbf7aa, type: 2}
+      propertyPath: minimumHeight
+      value: 
+      objectReference: {fileID: 1238019149}
+    - target: {fileID: 11400020, guid: 9238eadd35bcc5742bf1ad6650dbf7aa, type: 2}
+      propertyPath: minimumHeight
+      value: 
+      objectReference: {fileID: 1238019149}
+    - target: {fileID: 11400022, guid: 9238eadd35bcc5742bf1ad6650dbf7aa, type: 2}
+      propertyPath: minimumHeight
+      value: 
+      objectReference: {fileID: 1238019149}
+    - target: {fileID: 11456418, guid: 9238eadd35bcc5742bf1ad6650dbf7aa, type: 2}
+      propertyPath: minimumHeight
+      value: 
+      objectReference: {fileID: 1238019149}
+    - target: {fileID: 11468874, guid: 9238eadd35bcc5742bf1ad6650dbf7aa, type: 2}
+      propertyPath: minimumHeight
+      value: 
+      objectReference: {fileID: 1238019149}
+    - target: {fileID: 11400018, guid: 9238eadd35bcc5742bf1ad6650dbf7aa, type: 2}
+      propertyPath: minimumHeight
+      value: 
+      objectReference: {fileID: 1238019149}
+    - target: {fileID: 11430490, guid: 9238eadd35bcc5742bf1ad6650dbf7aa, type: 2}
+      propertyPath: minimumHeight
+      value: 
+      objectReference: {fileID: 1238019149}
+    - target: {fileID: 11400028, guid: 9238eadd35bcc5742bf1ad6650dbf7aa, type: 2}
+      propertyPath: minimumHeight
+      value: 
+      objectReference: {fileID: 1238019149}
+    - target: {fileID: 11400026, guid: 9238eadd35bcc5742bf1ad6650dbf7aa, type: 2}
+      propertyPath: minimumHeight
+      value: 
+      objectReference: {fileID: 1238019149}
+    - target: {fileID: 11485580, guid: 9238eadd35bcc5742bf1ad6650dbf7aa, type: 2}
+      propertyPath: minimumHeight
+      value: 
+      objectReference: {fileID: 1238019149}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 9238eadd35bcc5742bf1ad6650dbf7aa, type: 2}
+  m_RootGameObject: {fileID: 363733355}
+  m_IsPrefabParent: 0
+  m_IsExploded: 1
 --- !u!1 &823059514
 GameObject:
   m_ObjectHideFlags: 0
@@ -8372,7 +8668,7 @@ Transform:
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 100022, guid: 9238eadd35bcc5742bf1ad6650dbf7aa, type: 2}
-  m_PrefabInternal: {fileID: 1054689583}
+  m_PrefabInternal: {fileID: 819787050}
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 905495072}
@@ -8388,7 +8684,7 @@ GameObject:
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 400022, guid: 9238eadd35bcc5742bf1ad6650dbf7aa, type: 2}
-  m_PrefabInternal: {fileID: 1054689583}
+  m_PrefabInternal: {fileID: 819787050}
   m_GameObject: {fileID: 905495071}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -8.20688248, y: 8.14179897, z: 6.10141754}
@@ -8401,7 +8697,7 @@ MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 11400022, guid: 9238eadd35bcc5742bf1ad6650dbf7aa,
     type: 2}
-  m_PrefabInternal: {fileID: 1054689583}
+  m_PrefabInternal: {fileID: 819787050}
   m_GameObject: {fileID: 905495071}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -8419,11 +8715,21 @@ MonoBehaviour:
   maxWidth: .400000006
   showDisplayPrefab: 0
   showInfoText: 1
-  objectLookingGlassSettings:
-    useLookingGlassEffect: 1
-    lookingGlassCurve:
+  objectMagnifyingGlassSettings:
+    useMagnifyingGlassEffect: 1
+    magnifyingGlassCurve:
       serializedVersion: 2
-      m_Curve: []
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
     magnifyingFactor: 1.5
@@ -8439,6 +8745,7 @@ MonoBehaviour:
   localOffset: {x: 0, y: 0, z: .200000003}
   globalOffset: {x: 0, y: -.150000006, z: 0}
   onlyConsiderCameraYRotation: 1
+  minimumHeight: {fileID: 1238019149}
   alwaysFacePlayer: 0
 --- !u!1 &915563461
 GameObject:
@@ -9142,7 +9449,7 @@ MeshFilter:
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 156418, guid: 9238eadd35bcc5742bf1ad6650dbf7aa, type: 2}
-  m_PrefabInternal: {fileID: 1054689583}
+  m_PrefabInternal: {fileID: 819787050}
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1045170820}
@@ -9158,7 +9465,7 @@ GameObject:
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 456418, guid: 9238eadd35bcc5742bf1ad6650dbf7aa, type: 2}
-  m_PrefabInternal: {fileID: 1054689583}
+  m_PrefabInternal: {fileID: 819787050}
   m_GameObject: {fileID: 1045170819}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -8.20688248, y: 8.14179897, z: 6.10141754}
@@ -9171,7 +9478,7 @@ MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 11456418, guid: 9238eadd35bcc5742bf1ad6650dbf7aa,
     type: 2}
-  m_PrefabInternal: {fileID: 1054689583}
+  m_PrefabInternal: {fileID: 819787050}
   m_GameObject: {fileID: 1045170819}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -9189,11 +9496,21 @@ MonoBehaviour:
   maxWidth: .200000003
   showDisplayPrefab: 0
   showInfoText: 1
-  objectLookingGlassSettings:
-    useLookingGlassEffect: 1
-    lookingGlassCurve:
+  objectMagnifyingGlassSettings:
+    useMagnifyingGlassEffect: 1
+    magnifyingGlassCurve:
       serializedVersion: 2
-      m_Curve: []
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
     magnifyingFactor: 1.5
@@ -9209,6 +9526,7 @@ MonoBehaviour:
   localOffset: {x: 0, y: 0, z: .270000011}
   globalOffset: {x: 0, y: 0, z: 0}
   onlyConsiderCameraYRotation: 1
+  minimumHeight: {fileID: 1238019149}
   alwaysFacePlayer: 0
 --- !u!1 &1046092115
 GameObject:
@@ -9301,50 +9619,6 @@ Transform:
   - {fileID: 381847126}
   m_Father: {fileID: 1987793010}
   m_RootOrder: 0
---- !u!1001 &1054689583
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 400002, guid: 9238eadd35bcc5742bf1ad6650dbf7aa, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400002, guid: 9238eadd35bcc5742bf1ad6650dbf7aa, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: .21678561
-      objectReference: {fileID: 0}
-    - target: {fileID: 400002, guid: 9238eadd35bcc5742bf1ad6650dbf7aa, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400002, guid: 9238eadd35bcc5742bf1ad6650dbf7aa, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400002, guid: 9238eadd35bcc5742bf1ad6650dbf7aa, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400002, guid: 9238eadd35bcc5742bf1ad6650dbf7aa, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400002, guid: 9238eadd35bcc5742bf1ad6650dbf7aa, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400002, guid: 9238eadd35bcc5742bf1ad6650dbf7aa, type: 2}
-      propertyPath: m_RootOrder
-      value: 5
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 9238eadd35bcc5742bf1ad6650dbf7aa, type: 2}
-  m_RootGameObject: {fileID: 363733355}
-  m_IsPrefabParent: 0
-  m_IsExploded: 1
 --- !u!1 &1056419317
 GameObject:
   m_ObjectHideFlags: 0
@@ -10430,7 +10704,7 @@ Transform:
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 168874, guid: 9238eadd35bcc5742bf1ad6650dbf7aa, type: 2}
-  m_PrefabInternal: {fileID: 1054689583}
+  m_PrefabInternal: {fileID: 819787050}
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1144856016}
@@ -10446,7 +10720,7 @@ GameObject:
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 468874, guid: 9238eadd35bcc5742bf1ad6650dbf7aa, type: 2}
-  m_PrefabInternal: {fileID: 1054689583}
+  m_PrefabInternal: {fileID: 819787050}
   m_GameObject: {fileID: 1144856015}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -8.20688248, y: 8.14179897, z: 6.10141754}
@@ -10459,7 +10733,7 @@ MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 11468874, guid: 9238eadd35bcc5742bf1ad6650dbf7aa,
     type: 2}
-  m_PrefabInternal: {fileID: 1054689583}
+  m_PrefabInternal: {fileID: 819787050}
   m_GameObject: {fileID: 1144856015}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -10477,9 +10751,9 @@ MonoBehaviour:
   maxWidth: .25
   showDisplayPrefab: 1
   showInfoText: 0
-  objectLookingGlassSettings:
-    useLookingGlassEffect: 1
-    lookingGlassCurve:
+  objectMagnifyingGlassSettings:
+    useMagnifyingGlassEffect: 1
+    magnifyingGlassCurve:
       serializedVersion: 2
       m_Curve:
       - time: 0
@@ -10495,9 +10769,9 @@ MonoBehaviour:
       m_PreInfinity: 2
       m_PostInfinity: 2
     magnifyingFactor: 1.5
-    moveForwardValue: .00100000005
-    popupDuration: .400000006
-    minimizeSpeedMultiplication: 1.29999995
+    moveForwardValue: .100000001
+    popupDuration: .699999988
+    minimizeSpeedMultiplication: 2
   centerAtText: 0
   showCloseButton: 0
   closeWhenLookingAway: 1
@@ -10507,6 +10781,7 @@ MonoBehaviour:
   localOffset: {x: 0, y: -.25, z: .349999994}
   globalOffset: {x: 0, y: 0, z: 0}
   onlyConsiderCameraYRotation: 1
+  minimumHeight: {fileID: 1238019149}
   alwaysFacePlayer: 0
 --- !u!1 &1147024046
 GameObject:
@@ -11592,7 +11867,7 @@ Transform:
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 100024, guid: 9238eadd35bcc5742bf1ad6650dbf7aa, type: 2}
-  m_PrefabInternal: {fileID: 1054689583}
+  m_PrefabInternal: {fileID: 819787050}
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1314427671}
@@ -11609,7 +11884,7 @@ MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 11400024, guid: 9238eadd35bcc5742bf1ad6650dbf7aa,
     type: 2}
-  m_PrefabInternal: {fileID: 1054689583}
+  m_PrefabInternal: {fileID: 819787050}
   m_GameObject: {fileID: 1314427669}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -11632,32 +11907,22 @@ MonoBehaviour:
   background: {fileID: 100000, guid: 8f47c1dc61d6ba24392140759670640b, type: 2}
   borderLeft: .0500000007
   borderTop: .0500000007
-  lookingGlassSettings:
-    useLookingGlassEffect: 1
-    lookingGlassCurve:
+  magnifyingGlassSettings:
+    useMagnifyingGlassEffect: 1
+    magnifyingGlassCurve:
       serializedVersion: 2
-      m_Curve:
-      - time: 0
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-      - time: 1
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
+      m_Curve: []
       m_PreInfinity: 2
       m_PostInfinity: 2
-    magnifyingFactor: 1.20000005
+    magnifyingFactor: 1.5
     moveForwardValue: .100000001
-    popupDuration: .400000006
+    popupDuration: .699999988
     minimizeSpeedMultiplication: 2
 --- !u!4 &1314427671
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 400024, guid: 9238eadd35bcc5742bf1ad6650dbf7aa, type: 2}
-  m_PrefabInternal: {fileID: 1054689583}
+  m_PrefabInternal: {fileID: 819787050}
   m_GameObject: {fileID: 1314427669}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -11855,7 +12120,7 @@ Transform:
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 100016, guid: 9238eadd35bcc5742bf1ad6650dbf7aa, type: 2}
-  m_PrefabInternal: {fileID: 1054689583}
+  m_PrefabInternal: {fileID: 819787050}
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1373107830}
@@ -11871,7 +12136,7 @@ GameObject:
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 400016, guid: 9238eadd35bcc5742bf1ad6650dbf7aa, type: 2}
-  m_PrefabInternal: {fileID: 1054689583}
+  m_PrefabInternal: {fileID: 819787050}
   m_GameObject: {fileID: 1373107829}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -8.20688248, y: 8.14179897, z: 6.10141754}
@@ -11884,7 +12149,7 @@ MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 11400018, guid: 9238eadd35bcc5742bf1ad6650dbf7aa,
     type: 2}
-  m_PrefabInternal: {fileID: 1054689583}
+  m_PrefabInternal: {fileID: 819787050}
   m_GameObject: {fileID: 1373107829}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -11902,9 +12167,9 @@ MonoBehaviour:
   maxWidth: .25
   showDisplayPrefab: 0
   showInfoText: 1
-  objectLookingGlassSettings:
-    useLookingGlassEffect: 1
-    lookingGlassCurve:
+  objectMagnifyingGlassSettings:
+    useMagnifyingGlassEffect: 1
+    magnifyingGlassCurve:
       serializedVersion: 2
       m_Curve:
       - time: 0
@@ -11919,10 +12184,10 @@ MonoBehaviour:
         tangentMode: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
-    magnifyingFactor: 1.29999995
-    moveForwardValue: .00100000005
-    popupDuration: .400000006
-    minimizeSpeedMultiplication: 1.60000002
+    magnifyingFactor: 1.5
+    moveForwardValue: .100000001
+    popupDuration: .699999988
+    minimizeSpeedMultiplication: 2
   centerAtText: 0
   showCloseButton: 0
   closeWhenLookingAway: 1
@@ -11932,6 +12197,7 @@ MonoBehaviour:
   localOffset: {x: 0, y: -.25, z: .349999994}
   globalOffset: {x: 0, y: 0, z: 0}
   onlyConsiderCameraYRotation: 1
+  minimumHeight: {fileID: 1238019149}
   alwaysFacePlayer: 0
 --- !u!1001 &1373438831
 Prefab:
@@ -12582,7 +12848,7 @@ MeshFilter:
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 100010, guid: 9238eadd35bcc5742bf1ad6650dbf7aa, type: 2}
-  m_PrefabInternal: {fileID: 1054689583}
+  m_PrefabInternal: {fileID: 819787050}
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1425909655}
@@ -12597,7 +12863,7 @@ GameObject:
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 400010, guid: 9238eadd35bcc5742bf1ad6650dbf7aa, type: 2}
-  m_PrefabInternal: {fileID: 1054689583}
+  m_PrefabInternal: {fileID: 819787050}
   m_GameObject: {fileID: 1425909654}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 5.44656563, y: -15.9291124, z: 12.022953}
@@ -13282,7 +13548,7 @@ Transform:
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 130490, guid: 9238eadd35bcc5742bf1ad6650dbf7aa, type: 2}
-  m_PrefabInternal: {fileID: 1054689583}
+  m_PrefabInternal: {fileID: 819787050}
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1491788590}
@@ -13298,7 +13564,7 @@ GameObject:
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 430490, guid: 9238eadd35bcc5742bf1ad6650dbf7aa, type: 2}
-  m_PrefabInternal: {fileID: 1054689583}
+  m_PrefabInternal: {fileID: 819787050}
   m_GameObject: {fileID: 1491788589}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -8.20688248, y: 8.14179897, z: 6.10141754}
@@ -13311,7 +13577,7 @@ MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 11430490, guid: 9238eadd35bcc5742bf1ad6650dbf7aa,
     type: 2}
-  m_PrefabInternal: {fileID: 1054689583}
+  m_PrefabInternal: {fileID: 819787050}
   m_GameObject: {fileID: 1491788589}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -13329,9 +13595,9 @@ MonoBehaviour:
   maxWidth: .200000003
   showDisplayPrefab: 1
   showInfoText: 0
-  objectLookingGlassSettings:
-    useLookingGlassEffect: 1
-    lookingGlassCurve:
+  objectMagnifyingGlassSettings:
+    useMagnifyingGlassEffect: 1
+    magnifyingGlassCurve:
       serializedVersion: 2
       m_Curve:
       - time: 0
@@ -13346,9 +13612,9 @@ MonoBehaviour:
         tangentMode: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
-    magnifyingFactor: 1.39999998
-    moveForwardValue: .00100000005
-    popupDuration: .400000006
+    magnifyingFactor: 1.5
+    moveForwardValue: .100000001
+    popupDuration: .699999988
     minimizeSpeedMultiplication: 2
   centerAtText: 0
   showCloseButton: 1
@@ -13359,6 +13625,7 @@ MonoBehaviour:
   localOffset: {x: 0, y: -.129999995, z: .25}
   globalOffset: {x: 0, y: -.0799999982, z: 0}
   onlyConsiderCameraYRotation: 0
+  minimumHeight: {fileID: 1238019149}
   alwaysFacePlayer: 0
 --- !u!1 &1495548756
 GameObject:
@@ -14604,7 +14871,7 @@ MonoBehaviour:
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 100006, guid: 9238eadd35bcc5742bf1ad6650dbf7aa, type: 2}
-  m_PrefabInternal: {fileID: 1054689583}
+  m_PrefabInternal: {fileID: 819787050}
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1607029339}
@@ -14620,7 +14887,7 @@ GameObject:
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 400006, guid: 9238eadd35bcc5742bf1ad6650dbf7aa, type: 2}
-  m_PrefabInternal: {fileID: 1054689583}
+  m_PrefabInternal: {fileID: 819787050}
   m_GameObject: {fileID: 1607029338}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -8.20688248, y: 8.14179897, z: 6.10141754}
@@ -14634,7 +14901,7 @@ MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 11400006, guid: 9238eadd35bcc5742bf1ad6650dbf7aa,
     type: 2}
-  m_PrefabInternal: {fileID: 1054689583}
+  m_PrefabInternal: {fileID: 819787050}
   m_GameObject: {fileID: 1607029338}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -14652,26 +14919,16 @@ MonoBehaviour:
   maxWidth: .5
   showDisplayPrefab: 0
   showInfoText: 1
-  objectLookingGlassSettings:
-    useLookingGlassEffect: 1
-    lookingGlassCurve:
+  objectMagnifyingGlassSettings:
+    useMagnifyingGlassEffect: 1
+    magnifyingGlassCurve:
       serializedVersion: 2
-      m_Curve:
-      - time: 0
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-      - time: 1
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
+      m_Curve: []
       m_PreInfinity: 2
       m_PostInfinity: 2
     magnifyingFactor: 1.5
     moveForwardValue: .100000001
-    popupDuration: .400000006
+    popupDuration: .699999988
     minimizeSpeedMultiplication: 2
   centerAtText: 0
   showCloseButton: 1
@@ -14765,7 +15022,7 @@ Transform:
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 100028, guid: 9238eadd35bcc5742bf1ad6650dbf7aa, type: 2}
-  m_PrefabInternal: {fileID: 1054689583}
+  m_PrefabInternal: {fileID: 819787050}
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1615859196}
@@ -14781,7 +15038,7 @@ GameObject:
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 400028, guid: 9238eadd35bcc5742bf1ad6650dbf7aa, type: 2}
-  m_PrefabInternal: {fileID: 1054689583}
+  m_PrefabInternal: {fileID: 819787050}
   m_GameObject: {fileID: 1615859195}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -8.20688248, y: 8.14179897, z: 6.10141754}
@@ -14794,7 +15051,7 @@ MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 11400028, guid: 9238eadd35bcc5742bf1ad6650dbf7aa,
     type: 2}
-  m_PrefabInternal: {fileID: 1054689583}
+  m_PrefabInternal: {fileID: 819787050}
   m_GameObject: {fileID: 1615859195}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -14812,11 +15069,21 @@ MonoBehaviour:
   maxWidth: .400000006
   showDisplayPrefab: 0
   showInfoText: 1
-  objectLookingGlassSettings:
-    useLookingGlassEffect: 1
-    lookingGlassCurve:
+  objectMagnifyingGlassSettings:
+    useMagnifyingGlassEffect: 1
+    magnifyingGlassCurve:
       serializedVersion: 2
-      m_Curve: []
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
     magnifyingFactor: 1.5
@@ -14832,6 +15099,7 @@ MonoBehaviour:
   localOffset: {x: 0, y: 0, z: .200000003}
   globalOffset: {x: 0, y: 0, z: 0}
   onlyConsiderCameraYRotation: 1
+  minimumHeight: {fileID: 1238019149}
   alwaysFacePlayer: 1
 --- !u!1 &1627495832
 GameObject:
@@ -16160,7 +16428,7 @@ MeshFilter:
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 100026, guid: 9238eadd35bcc5742bf1ad6650dbf7aa, type: 2}
-  m_PrefabInternal: {fileID: 1054689583}
+  m_PrefabInternal: {fileID: 819787050}
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1792862946}
@@ -16176,7 +16444,7 @@ GameObject:
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 400026, guid: 9238eadd35bcc5742bf1ad6650dbf7aa, type: 2}
-  m_PrefabInternal: {fileID: 1054689583}
+  m_PrefabInternal: {fileID: 819787050}
   m_GameObject: {fileID: 1792862945}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -8.20688248, y: 8.14179897, z: 6.10141754}
@@ -16189,7 +16457,7 @@ MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 11400026, guid: 9238eadd35bcc5742bf1ad6650dbf7aa,
     type: 2}
-  m_PrefabInternal: {fileID: 1054689583}
+  m_PrefabInternal: {fileID: 819787050}
   m_GameObject: {fileID: 1792862945}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -16207,11 +16475,21 @@ MonoBehaviour:
   maxWidth: .200000003
   showDisplayPrefab: 0
   showInfoText: 1
-  objectLookingGlassSettings:
-    useLookingGlassEffect: 1
-    lookingGlassCurve:
+  objectMagnifyingGlassSettings:
+    useMagnifyingGlassEffect: 1
+    magnifyingGlassCurve:
       serializedVersion: 2
-      m_Curve: []
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
     magnifyingFactor: 1.5
@@ -16227,6 +16505,7 @@ MonoBehaviour:
   localOffset: {x: 0, y: 0, z: .200000003}
   globalOffset: {x: 0, y: 0, z: 0}
   onlyConsiderCameraYRotation: 1
+  minimumHeight: {fileID: 1238019149}
   alwaysFacePlayer: 0
 --- !u!1 &1798073223
 GameObject:
@@ -17045,7 +17324,7 @@ MonoBehaviour:
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 185580, guid: 9238eadd35bcc5742bf1ad6650dbf7aa, type: 2}
-  m_PrefabInternal: {fileID: 1054689583}
+  m_PrefabInternal: {fileID: 819787050}
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1878827738}
@@ -17061,7 +17340,7 @@ GameObject:
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 485580, guid: 9238eadd35bcc5742bf1ad6650dbf7aa, type: 2}
-  m_PrefabInternal: {fileID: 1054689583}
+  m_PrefabInternal: {fileID: 819787050}
   m_GameObject: {fileID: 1878827737}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -8.20688248, y: 8.14179897, z: 6.10141754}
@@ -17074,7 +17353,7 @@ MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 11485580, guid: 9238eadd35bcc5742bf1ad6650dbf7aa,
     type: 2}
-  m_PrefabInternal: {fileID: 1054689583}
+  m_PrefabInternal: {fileID: 819787050}
   m_GameObject: {fileID: 1878827737}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -17092,9 +17371,9 @@ MonoBehaviour:
   maxWidth: .300000012
   showDisplayPrefab: 1
   showInfoText: 0
-  objectLookingGlassSettings:
-    useLookingGlassEffect: 1
-    lookingGlassCurve:
+  objectMagnifyingGlassSettings:
+    useMagnifyingGlassEffect: 1
+    magnifyingGlassCurve:
       serializedVersion: 2
       m_Curve:
       - time: 0
@@ -17109,9 +17388,9 @@ MonoBehaviour:
         tangentMode: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
-    magnifyingFactor: 1.29999995
-    moveForwardValue: .00100000005
-    popupDuration: .400000006
+    magnifyingFactor: 1.5
+    moveForwardValue: .100000001
+    popupDuration: .699999988
     minimizeSpeedMultiplication: 2
   centerAtText: 0
   showCloseButton: 1
@@ -17122,6 +17401,7 @@ MonoBehaviour:
   localOffset: {x: 0, y: 0, z: .400000006}
   globalOffset: {x: 0, y: 0, z: 0}
   onlyConsiderCameraYRotation: 0
+  minimumHeight: {fileID: 1238019149}
   alwaysFacePlayer: 0
 --- !u!1 &1880040116
 GameObject:
@@ -19042,7 +19322,7 @@ Camera:
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 100012, guid: 9238eadd35bcc5742bf1ad6650dbf7aa, type: 2}
-  m_PrefabInternal: {fileID: 1054689583}
+  m_PrefabInternal: {fileID: 819787050}
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 2054526744}
@@ -19059,7 +19339,7 @@ MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 11400012, guid: 9238eadd35bcc5742bf1ad6650dbf7aa,
     type: 2}
-  m_PrefabInternal: {fileID: 1054689583}
+  m_PrefabInternal: {fileID: 819787050}
   m_GameObject: {fileID: 2054526742}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -19077,9 +19357,9 @@ MonoBehaviour:
   maxWidth: .899999976
   showDisplayPrefab: 1
   showInfoText: 1
-  objectLookingGlassSettings:
-    useLookingGlassEffect: 1
-    lookingGlassCurve:
+  objectMagnifyingGlassSettings:
+    useMagnifyingGlassEffect: 1
+    magnifyingGlassCurve:
       serializedVersion: 2
       m_Curve:
       - time: 0
@@ -19096,7 +19376,7 @@ MonoBehaviour:
       m_PostInfinity: 2
     magnifyingFactor: 1.5
     moveForwardValue: .100000001
-    popupDuration: .400000006
+    popupDuration: .699999988
     minimizeSpeedMultiplication: 2
   centerAtText: 0
   showCloseButton: 1
@@ -19108,7 +19388,7 @@ MonoBehaviour:
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 400012, guid: 9238eadd35bcc5742bf1ad6650dbf7aa, type: 2}
-  m_PrefabInternal: {fileID: 1054689583}
+  m_PrefabInternal: {fileID: 819787050}
   m_GameObject: {fileID: 2054526742}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -8.20688248, y: 8.14179897, z: 6.10141754}
