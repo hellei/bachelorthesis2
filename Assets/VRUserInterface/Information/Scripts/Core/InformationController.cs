@@ -42,6 +42,9 @@ namespace VRUserInterface
 				Debug.LogError("You may only have one instance of information controller in your scene.");
 			}
 		}
+		/// <summary>
+		/// The info display currently used to show information
+		/// </summary>
 		public InformationDisplay infoDisplay;
 
 		/// <summary>
@@ -89,7 +92,7 @@ namespace VRUserInterface
 	                infoDisplay = allInfoDisplays[infoI % allInfoDisplays.Length];
 	                Debug.Log(infoDisplay.name);
 	            }
-				InformationObject.recreateButtons = false;
+
 				if (Input.GetKeyDown(KeyCode.T))
 				{
 					infoButton.buttonType = (ButtonType)Mathf.Max(0, (int)infoButton.buttonType - 1);
@@ -110,7 +113,11 @@ namespace VRUserInterface
 
 	    public InformationDisplay[] allInfoDisplays;
 
-		GameObject activeObject;
+		public GameObject activeObject
+		{
+			get;
+			private set;
+		}
 
 		//If the active object is not selected anymore, but no other information object is selected neither, should nothing be shown or should the last active object be shown?
 		public bool showLastActiveObjectIfNothingSelected = true;

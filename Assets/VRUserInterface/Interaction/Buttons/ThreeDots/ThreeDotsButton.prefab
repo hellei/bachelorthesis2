@@ -222,13 +222,14 @@ MonoBehaviour:
   text: Close
   creator: {fileID: 0}
   initialRotation: {x: 0, y: 0, z: 0}
+  menuCondition: {fileID: 0}
   conditionInfo: []
   textMesh: {fileID: 0}
   dots:
   - {fileID: 100010}
   - {fileID: 100012}
   - {fileID: 100014}
-  dotSelectionDuration: .300000012
+  dotSelectionDuration: 0
   resetAngle: 30
   iconQuad: {fileID: 11400002}
 --- !u!114 &11400002

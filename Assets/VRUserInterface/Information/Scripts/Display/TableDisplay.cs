@@ -19,14 +19,14 @@ namespace VRUserInterface
 	    public float maxHeight = 1.0f;
 	    public float maxWidth = 1.0f;
 
-	    /// <summary>
-	    /// The currently selected object.
-	    /// </summary>
+	    
+		/// <summary>
+		/// The currently selected object.
+		/// </summary>
 		protected GameObject activeObject {
 			get;
 			private set;
 		}
-
 	    
 	    /// <summary>
 	    /// The main function. Creates the info depending on the currently selected object.
@@ -41,6 +41,8 @@ namespace VRUserInterface
 		public override void DiscardActiveObject(){
 			Destroy (activeObject);
 		}
+
+
 
 	    /// <summary>
 	    /// Defines if the selected item should be shown in large
