@@ -10,5 +10,7 @@ namespace VRUserInterface
 	    /// <param name="obj"></param>
 		public abstract void SetActiveObject(InformationObject obj);
 		public abstract void DiscardActiveObject();
+
+
 	}
 }

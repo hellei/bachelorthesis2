@@ -71,8 +71,8 @@ public class MoveModel : MenuCallback {
 	/// <summary>
 	/// The leap hand.
 	/// </summary>
-	GameObject leftHand, rightHand;
-	GameObject leftElbow, rightElbow;
+	public GameObject leftHand, rightHand;
+	public GameObject leftElbow, rightElbow;
 
 	//Quaternion initialHeadRotation = Quaternion.identity;
 
@@ -91,8 +91,8 @@ public class MoveModel : MenuCallback {
 
 	void UpdateHands()
 	{
-		leftHand = GameObject.Find ("L_Wrist");
-		rightHand = GameObject.Find ("R_Wrist");
+		//leftHand = GameObject.Find ("L_Wrist");
+		//rightHand = GameObject.Find ("R_Wrist");
 		if (!leftHand)
 		{
 			leftShoulderModel.LoadPositionAndRotation(stLeft);
@@ -101,8 +101,8 @@ public class MoveModel : MenuCallback {
 		{
 			rightShoulderModel.LoadPositionAndRotation(stLeft);
 		}
-		leftElbow = GameObject.Find ("ForetwistLeft");
-		rightElbow = GameObject.Find ("ForetwistRight");
+		//leftElbow = GameObject.Find ("ForetwistLeft");
+		//rightElbow = GameObject.Find ("ForetwistRight");
 		UpdateHand (leftForetwistModel, leftShoulderModel, leftHandModel, leftHand, leftElbow);
 		UpdateHand (rightForetwistModel, rightShoulderModel, rightHandModel, rightHand, rightElbow);
 	}

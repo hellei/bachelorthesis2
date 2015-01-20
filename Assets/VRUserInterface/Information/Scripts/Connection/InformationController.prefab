@@ -26,6 +26,7 @@ GameObject:
   - 4: {fileID: 400002}
   - 114: {fileID: 11400004}
   - 114: {fileID: 11400010}
+  - 114: {fileID: 11411986}
   m_Layer: 0
   m_Name: InformationController
   m_TagString: Untagged
@@ -726,7 +727,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed8c85454a132fc4fb14fa14c0185808, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  infoDisplay: {fileID: 11468874}
+  infoDisplay: {fileID: 11485580}
   selection: {fileID: 11400002}
   debugKeys: 1
   infoButton: {fileID: 11400000, guid: 6d82e974550a049ae9ea9a5c6cba8c48, type: 2}
@@ -1351,6 +1352,17 @@ MonoBehaviour:
   onlyConsiderCameraYRotation: 1
   minimumHeight: {fileID: 0}
   alwaysFacePlayer: 0
+--- !u!114 &11411986
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55627c5083955094ead483dc5fba4aec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &11430490
 MonoBehaviour:
   m_ObjectHideFlags: 1

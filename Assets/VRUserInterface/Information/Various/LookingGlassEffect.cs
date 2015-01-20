@@ -36,7 +36,7 @@ namespace VRUserInterface
 			//If the currently watched object is a button, test if the creator was this object. If yes, it is deemed selected.
 
 			GameObject buttonParentSelection = null;
-			if (sel.IsButton())
+			if (sel && sel.IsButton())
 			{
 				Button selButton = sel.GetButtonComponent();
 				if (selButton && selButton.creator)
