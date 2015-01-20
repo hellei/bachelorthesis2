@@ -263,10 +263,15 @@ public class Hand_CardCollection : MonoBehaviour {
                 GameObject container = new GameObject("CardOffsetHelper");
                 container.transform.position = cardsOnHand[i].card.transform.position;
 
+				// Set container as child of handcardcontainer
+				container.transform.parent = HandCardContainer.transform;
+
+				container.transform.rotation = cardsOnHand[i].card.transform.rotation;
+				container.transform.Rotate(new Vector3(0,0,180));
                 // Initialize Card in container
                 cardsOnHand[i].card.transform.parent = container.transform;
                 cardsOnHand[i].card.transform.localPosition = new Vector3(0, cardHandOffset, i * 0.001f);
-                cardsOnHand[i].card.transform.localRotation = Quaternion.Euler(new Vector3(0,0,180));
+				cardsOnHand[i].card.transform.localRotation = Quaternion.Euler(new Vector3(0,0,180));
 
                 // Position container with card offset
                 Vector3 globalOffset = cardsOnHand[i].card.transform.position - container.transform.position;
@@ -274,9 +279,9 @@ public class Hand_CardCollection : MonoBehaviour {
 
 				cardsOnHand[i].card.GetComponent<LookingGlassEffect>().initialLocalPosition = cardsOnHand[i].card.transform.localPosition;
 
-                // Set container as child of handcardcontainer
-                container.transform.parent = HandCardContainer.transform;
+               
 
+				Debug.Break();
                 // Set new target rotation and position for interpolation
                 if (cardsOnHand[i].interpolate)
                 {
