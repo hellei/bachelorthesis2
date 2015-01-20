@@ -91,11 +91,11 @@ public class Evaluation : MonoBehaviour {
 				float selectionTime = (Time.time - timerStart);
 				Debug.Log("Selected card in " + selectionTime + " seconds");
 				state = State.Waiting;
-				cardsSelected++;
 				if (cardsSelected >= numberOfTests)
 				{
-					result.tests[i].selectionTimes[cardsSelected-1-numberOfTests] = selectionTime;
+					result.tests[i].selectionTimes[cardsSelected-numberOfTests] = selectionTime;
 				}
+				cardsSelected++;
 				if (cardsSelected >= numberOfCards)
 				{
 

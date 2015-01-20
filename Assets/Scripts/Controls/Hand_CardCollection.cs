@@ -59,7 +59,7 @@ public class Hand_CardCollection : MonoBehaviour {
 
     public void UnRegisterHand()
     {
-        HideCardsOnHand();
+        //HideCardsOnHand();
         handRegistered = false;
         //print("Unregistered and hide cards");
     }
@@ -92,14 +92,19 @@ public class Hand_CardCollection : MonoBehaviour {
         return (cardsOnHand[i].card.transform.position - position).sqrMagnitude;
     }
 
+
+	float interpolationSpeedP = 3.0f;
+	float interpolationSpeedR = 2.0f;
+
+	
     void UpdateCards()
     {
         for (int i = 0; i < cardsOnHand.Count; i++)
         {
             if (cardsOnHand[i].container != null)
             {
-                cardsOnHand[i].container.transform.localPosition = Vector3.Lerp(cardsOnHand[i].container.transform.localPosition, cardsOnHand[i].localPosition, Time.deltaTime);
-                cardsOnHand[i].container.transform.localRotation = Quaternion.Slerp(cardsOnHand[i].container.transform.localRotation, cardsOnHand[i].localRotation, Time.deltaTime);
+				cardsOnHand[i].container.transform.localPosition = Vector3.Lerp(cardsOnHand[i].container.transform.localPosition, cardsOnHand[i].localPosition, Time.deltaTime * interpolationSpeedP);
+				cardsOnHand[i].container.transform.localRotation = Quaternion.Slerp(cardsOnHand[i].container.transform.localRotation, cardsOnHand[i].localRotation, Time.deltaTime * interpolationSpeedR);
             }
         }
     }
@@ -111,7 +116,6 @@ public class Hand_CardCollection : MonoBehaviour {
 			Debug.LogWarning("Cannot add null card to hand!");
 			return;
 		}
-		Debug.Break ();
         //Add new
         int indexOfNearestCard = FindIndexOfNearestCard(card.transform.position);
         card.transform.parent = null;
