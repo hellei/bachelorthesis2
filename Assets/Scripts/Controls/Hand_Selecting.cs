@@ -38,9 +38,9 @@ public class Hand_Selecting : MonoBehaviour {
 
     private Vector3 UpdateGrabPosition()
     {        
-            return new Vector3((this.index.transform.position.x + this.middle.transform.position.x + this.thumb.transform.position.x) / 3.0f,
-                                                          (this.index.transform.position.y + this.middle.transform.position.y + this.thumb.transform.position.y) / 3.0f,
-                                                          (this.index.transform.position.z + this.middle.transform.position.z + this.thumb.transform.position.z) / 3.0f);        
+            return new Vector3((index.transform.position.x + middle.transform.position.x + thumb.transform.position.x) / 3.0f,
+                                                          (index.transform.position.y + middle.transform.position.y + thumb.transform.position.y) / 3.0f,
+                                                          (index.transform.position.z + middle.transform.position.z + thumb.transform.position.z) / 3.0f);        
     }
 
     public Finger_Permanent[] GetFingers()
