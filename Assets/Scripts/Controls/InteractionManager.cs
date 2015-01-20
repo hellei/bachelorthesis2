@@ -110,7 +110,7 @@ public class InteractionManager : MonoBehaviour {
                     pos += tinfo.currentPosition;
                 }
                 pos /= tabletTouches.Count;
-
+                
                 Card card = Hand_Selecting.instance.TakeCardFromHand();
                 Tablet.instance.AddCardToTable(card, pos);
                 Debug.Log("put card on tablet");

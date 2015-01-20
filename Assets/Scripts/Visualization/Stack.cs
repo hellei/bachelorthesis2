@@ -36,6 +36,7 @@ public class Stack : MonoBehaviour {
 	public void AddCard(Card card){
 		cards.Add(new StackCard(card,  this));
 		card.transform.parent = transform;
+        card.CardState = CardState.OnTable;
 		UpdateStack ();
 	}
 
@@ -43,6 +44,8 @@ public class Stack : MonoBehaviour {
 	void Awake () {
 
         bCollider = gameObject.AddComponent<BoxCollider>();
+        Rigidbody rigidbody = gameObject.AddComponent<Rigidbody>();
+        rigidbody.useGravity = false;
         bCollider.isTrigger = true;
 		AddAllChildrenToStack();
 		Shuffle ();
@@ -66,7 +69,7 @@ public class Stack : MonoBehaviour {
             StackCard sCard = cards[cards.Count - 1];
             cards.Remove(sCard);
             sCard.card.collider.enabled = true;
-
+            sCard.card.stack = null;
             UpdateStack();
 
             return sCard.card;
@@ -136,6 +139,8 @@ public class Stack : MonoBehaviour {
         if (other.tag == "Card")
         {
             Card card = other.GetComponent<Card>();
+
+            Debug.Log("Collision with stack");
             card.stack = this;
             InteractionManager.instance.HandleCardOnTabletInteraction(card, null, TabletGesture.PlaceOnStack);
         }

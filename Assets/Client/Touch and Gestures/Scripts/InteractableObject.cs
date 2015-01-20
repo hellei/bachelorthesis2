@@ -58,8 +58,10 @@ public class InteractableObject : Interactable
 
     void OnTriggerStay(Collider other)
     {
-        InteractionManager.instance.HandleInteractionBetweenHands(card);
-
-        Debug.Log("Collision");
+        if (card.CardState == CardState.OnHand)
+        {
+            Debug.Log("Collision");
+            InteractionManager.instance.HandleInteractionBetweenHands(card);
+        }        
     }
 }

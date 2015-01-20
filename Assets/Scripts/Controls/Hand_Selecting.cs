@@ -105,6 +105,8 @@ public class Hand_Selecting : MonoBehaviour {
     {
         cardsInHand++;
         card.transform.parent = this.transform;
+        card.CardState = CardState.OnHand;
+        card.stack = null;
         card.gameObject.layer = (int) InteractionLayer.Interactable;
         grabbedCard = card;
 
