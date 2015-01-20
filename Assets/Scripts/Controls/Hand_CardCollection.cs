@@ -92,14 +92,19 @@ public class Hand_CardCollection : MonoBehaviour {
         return (cardsOnHand[i].card.transform.position - position).sqrMagnitude;
     }
 
+
+	float interpolationSpeedP = 3.0f;
+	float interpolationSpeedR = 2.0f;
+
+	
     void UpdateCards()
     {
         for (int i = 0; i < cardsOnHand.Count; i++)
         {
             if (cardsOnHand[i].container != null)
             {
-                cardsOnHand[i].container.transform.localPosition = Vector3.Lerp(cardsOnHand[i].container.transform.localPosition, cardsOnHand[i].localPosition, Time.deltaTime);
-                cardsOnHand[i].container.transform.localRotation = Quaternion.Slerp(cardsOnHand[i].container.transform.localRotation, cardsOnHand[i].localRotation, Time.deltaTime);
+				cardsOnHand[i].container.transform.localPosition = Vector3.Lerp(cardsOnHand[i].container.transform.localPosition, cardsOnHand[i].localPosition, Time.deltaTime * interpolationSpeedP);
+				cardsOnHand[i].container.transform.localRotation = Quaternion.Slerp(cardsOnHand[i].container.transform.localRotation, cardsOnHand[i].localRotation, Time.deltaTime * interpolationSpeedR);
             }
         }
     }
@@ -111,7 +116,6 @@ public class Hand_CardCollection : MonoBehaviour {
 			Debug.LogWarning("Cannot add null card to hand!");
 			return;
 		}
-		
         //Add new
         int indexOfNearestCard = FindIndexOfNearestCard(card.transform.position);
         card.transform.parent = null;
@@ -265,9 +269,9 @@ public class Hand_CardCollection : MonoBehaviour {
 
 				// Set container as child of handcardcontainer
 				container.transform.parent = HandCardContainer.transform;
+
 				container.transform.rotation = cardsOnHand[i].card.transform.rotation;
 				container.transform.Rotate(new Vector3(0,0,180));
-
                 // Initialize Card in container
                 cardsOnHand[i].card.transform.parent = container.transform;
                 cardsOnHand[i].card.transform.localPosition = new Vector3(0, cardHandOffset, i * 0.001f);
@@ -279,7 +283,7 @@ public class Hand_CardCollection : MonoBehaviour {
 
 				cardsOnHand[i].card.GetComponent<LookingGlassEffect>().initialLocalPosition = cardsOnHand[i].card.transform.localPosition;
 
-              
+
                 // Set new target rotation and position for interpolation
                 if (cardsOnHand[i].interpolate)
                 {
