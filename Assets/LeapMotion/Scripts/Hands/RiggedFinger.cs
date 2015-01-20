@@ -18,14 +18,14 @@ public class RiggedFinger : FingerModel {
   private Finger_Permanent permanentFinger;
   
   public override void InitFinger() {
-    UpdateFinger();
+    //UpdateFinger();
   }
 
   public void InitPermanentFinger(Finger_Permanent finger)
   {
       permanentFinger = finger;
 
-      UpdateFinger();
+      //UpdateFinger();
   }
 
   void Start()
