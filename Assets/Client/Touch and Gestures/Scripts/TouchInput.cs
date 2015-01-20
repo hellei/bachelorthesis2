@@ -44,9 +44,7 @@ public class MyTouch
     public int fingerId { get; set; }
     public TouchPhase phase { get; set; }
     public Vector2 position { get; set; }
-    public int tapCount { get; set; }
-
-    
+    public int tapCount { get; set; }    
 
     public MyTouch() { }
     public MyTouch(Touch t)

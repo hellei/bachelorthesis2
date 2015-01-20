@@ -504,7 +504,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &127106
 GameObject:
   m_ObjectHideFlags: 1
@@ -523,7 +523,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &186688
 GameObject:
   m_ObjectHideFlags: 1
@@ -1193,6 +1193,11 @@ MonoBehaviour:
   - {fileID: 400038}
   - {fileID: 400036}
   - {fileID: 400034}
+  defaultBoneOrientation:
+  - {x: 0, y: 0, z: 0, w: 0}
+  - {x: 0, y: 0, z: 0, w: 0}
+  - {x: 0, y: 0, z: 0, w: 0}
+  - {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1210,6 +1215,11 @@ MonoBehaviour:
   - {fileID: 400018}
   - {fileID: 400016}
   - {fileID: 400014}
+  defaultBoneOrientation:
+  - {x: 0, y: 0, z: 0, w: 0}
+  - {x: 0, y: 0, z: 0, w: 0}
+  - {x: 0, y: 0, z: 0, w: 0}
+  - {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1227,6 +1237,11 @@ MonoBehaviour:
   - {fileID: 400008}
   - {fileID: 400006}
   - {fileID: 400004}
+  defaultBoneOrientation:
+  - {x: 0, y: 0, z: 0, w: 0}
+  - {x: 0, y: 0, z: 0, w: 0}
+  - {x: 0, y: 0, z: 0, w: 0}
+  - {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &11400006
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1244,6 +1259,11 @@ MonoBehaviour:
   - {fileID: 400028}
   - {fileID: 400026}
   - {fileID: 400024}
+  defaultBoneOrientation:
+  - {x: 0, y: 0, z: 0, w: 0}
+  - {x: 0, y: 0, z: 0, w: 0}
+  - {x: 0, y: 0, z: 0, w: 0}
+  - {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &11400008
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1261,6 +1281,11 @@ MonoBehaviour:
   - {fileID: 400046}
   - {fileID: 400044}
   - {fileID: 400042}
+  defaultBoneOrientation:
+  - {x: 0, y: 0, z: 0, w: 0}
+  - {x: 0, y: 0, z: 0, w: 0}
+  - {x: 0, y: 0, z: 0, w: 0}
+  - {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &11400010
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1295,8 +1320,13 @@ MonoBehaviour:
   middle: {fileID: 100038}
   thumb: {fileID: 100008}
   grabbedCardContainer: {fileID: 100064}
-  meshes: {fileID: 100058}
   hand: {fileID: 11400010}
+  fingers:
+  - {fileID: 11400000}
+  - {fileID: 11400008}
+  - {fileID: 11400006}
+  - {fileID: 11400002}
+  - {fileID: 11400004}
 --- !u!135 &13527108
 SphereCollider:
   m_ObjectHideFlags: 1

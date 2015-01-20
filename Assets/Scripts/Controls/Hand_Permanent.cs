@@ -12,6 +12,8 @@ public struct HandUpdateData
 
 public struct FingerUpdateData
 {
+    public bool leftHand;
+    public FingerType finger;
     public Quaternion[] boneRotation;
 }
 
@@ -68,16 +70,34 @@ public class Hand_Permanent : MonoBehaviour {
             if (data.isLeft)
             {
                 palm.position = Vector3.Lerp(palm.position, data.palmPosition, Time.deltaTime * 20);
+                
                 palm.rotation = Quaternion.Slerp(palm.rotation, data.palmRotation, Time.deltaTime * 20);
             }
             // Update right hand
             else
             {
                 palm.position = Vector3.Lerp(palm.position, data.palmPosition, Time.deltaTime * 20);
-                Vector3 up = (new Vector3(1, 1, 0)).normalized;//Vector3.up;
-                if (Vector3.Dot(data.palmNormal, up) < 0)
+
+                // Free Orientation
+                if (InteractionManager.instance.rightHandOrientationMode == HandOrientationMode.Free)
                 {
                     palm.rotation = Quaternion.Slerp(palm.rotation, data.palmRotation, Time.deltaTime * 20);
+                }
+
+                // Restricted Orientation
+                else if (InteractionManager.instance.rightHandOrientationMode == HandOrientationMode.RestrictedOrientation)
+                {
+                    Vector3 up = (new Vector3(1, 1, 0)).normalized;//Vector3.up;
+                    if (Vector3.Dot(data.palmNormal, up) < 0)
+                    {
+                        palm.rotation = Quaternion.Slerp(palm.rotation, data.palmRotation, Time.deltaTime * 20);
+                    }
+                }
+
+                // Fixed Orientation
+                else if (InteractionManager.instance.rightHandOrientationMode == HandOrientationMode.FixedOrientation)
+                {
+                    palm.localRotation = defaultOrientation;
                 }
             }
         }
