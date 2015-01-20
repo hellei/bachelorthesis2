@@ -59,7 +59,7 @@ public class Hand_CardCollection : MonoBehaviour {
 
     public void UnRegisterHand()
     {
-        HideCardsOnHand();
+        //HideCardsOnHand();
         handRegistered = false;
         //print("Unregistered and hide cards");
     }
