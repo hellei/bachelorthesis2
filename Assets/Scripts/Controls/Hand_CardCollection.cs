@@ -13,10 +13,6 @@ public class CardBucket
 }
 public class Hand_CardCollection : MonoBehaviour {
 
-    public Card card;
-    public Card card1;
-    public Card card2;
-    public Card card3;
 
     // Tracking attributes
     public GameObject HandCardContainer;
@@ -40,11 +36,6 @@ public class Hand_CardCollection : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-
-        AddCardToHand(card, false);
-        AddCardToHand(card1, false);
-        AddCardToHand(card2, false);
-        AddCardToHand(card3, false);
         //card.gameObject.SetActive(false); 
 	}
 
@@ -113,7 +104,7 @@ public class Hand_CardCollection : MonoBehaviour {
         }
     }
 
-    public void AddCardToHand(Card card, bool interpolate)
+    public void AddCardToHand(Card card, bool interpolate = false)
     {
 		if (!card)
 		{

@@ -1170,7 +1170,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68f3d22b920f7ee4887ff097dc7c36fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CardBucket: {fileID: 100064}
+  HandCardContainer: {fileID: 100064}
   EmptyHandCollider: {fileID: 116392}
   fingers:
   - {fileID: 11438472}
