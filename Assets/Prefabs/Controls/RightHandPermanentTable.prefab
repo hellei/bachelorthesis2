@@ -1133,7 +1133,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 143662}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.22099996, z: .532999992}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 443648}
@@ -1275,6 +1275,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hand: {fileID: 11443660}
+  index: {fileID: 143626}
+  middle: {fileID: 143616}
+  thumb: {fileID: 143586}
+  grabbedCardContainer: {fileID: 143650}
   fingers:
   - {fileID: 11495640}
   - {fileID: 11495648}

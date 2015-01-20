@@ -6,10 +6,10 @@ public class Hand_Selecting : MonoBehaviour {
     
     // Tracking attributes
     public Hand_Permanent hand;
-    private GameObject index;
-    private GameObject middle;
-    private GameObject thumb;
-    private GameObject grabbedCardContainer;
+    public GameObject index;
+    public GameObject middle;
+    public GameObject thumb;
+    public GameObject grabbedCardContainer;
     public Finger_Permanent[] fingers;
 
     // Main attributes
@@ -77,12 +77,8 @@ public class Hand_Selecting : MonoBehaviour {
     /// Register selecting Hand when spawned
     /// </summary>
     /// <param name="hand">Hand to be registered as hand that is selecting single cards</param>
-    public Hand_Permanent RegisterHand(GameObject index, GameObject middle, GameObject thumb, GameObject grabbedCard)
+    public Hand_Permanent RegisterHand()
     {
-        this.index = index;
-        this.middle = middle;
-        this.thumb = thumb;
-        grabbedCardContainer = grabbedCard;
         DisplayCardInHand();
         handRegistered = true;
 

@@ -6,7 +6,6 @@ public class HandSelectingRegisterScript : MonoBehaviour {
     public GameObject index;
     public GameObject middle;
     public GameObject thumb;
-    public GameObject grabbedCardContainer;
 
     public RiggedHand hand;
     public RiggedFinger[] fingers = new RiggedFinger[5];
@@ -15,7 +14,7 @@ public class HandSelectingRegisterScript : MonoBehaviour {
 	void Start () {
 
         // Initialize update of permanent hand
-        Hand_Permanent permanentHand = Hand_Selecting.instance.RegisterHand(index, middle, thumb, grabbedCardContainer);
+        Hand_Permanent permanentHand = Hand_Selecting.instance.RegisterHand();
         hand.InitPermanentHand(permanentHand);
         for (int i = 0; i < fingers.Length; i++)
         {
