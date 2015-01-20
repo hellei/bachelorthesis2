@@ -3,10 +3,6 @@ using System.Collections;
 
 public class HandSelectingRegisterScript : MonoBehaviour {
 
-    public GameObject index;
-    public GameObject middle;
-    public GameObject thumb;
-
     public RiggedHand hand;
     public RiggedFinger[] fingers = new RiggedFinger[5];
 
