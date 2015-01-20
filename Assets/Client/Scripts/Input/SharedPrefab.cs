@@ -107,7 +107,6 @@ public class SharedPrefab : MonoBehaviour {
         {
             stream.Serialize(ref tCount);
             touchesCount = tCount;
-
             touchlist.Clear();
 
             // Initialize touch properties

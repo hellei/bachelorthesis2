@@ -16,6 +16,8 @@ public class RiggedHand : HandModel {
 
   private Hand_Permanent permanentHand;
 
+  
+
   public override void InitHand() {
     UpdateHand();
   }
@@ -77,13 +79,31 @@ public class RiggedHand : HandModel {
       foreArm.rotation = GetArmRotation();
 	}
 
-    for (int i = 0; i < fingers.Length; ++i) {
-      if (fingers[i] != null && hand_.IsLeft && fingers[i].fingerType == Finger.FingerType.TYPE_THUMB)
-        fingers[i].UpdateFinger();
+    for (int i = 0; i < fingers.Length; ++i)
+    {
+        if (fingers[i] != null && hand_.IsLeft)
+        {
+            if (fingers[i].fingerType == Finger.FingerType.TYPE_THUMB || InteractionManager.instance.leftHandFingerUpdateMode == FingerUpdateMode.Enabled)
+            {
+                fingers[i].UpdateFinger();
+            }
+
+            if (fingers[i].fingerType != Finger.FingerType.TYPE_THUMB && InteractionManager.instance.leftHandFingerUpdateMode == FingerUpdateMode.Disabled)
+            {
+                fingers[i].setBonesToDefault();
+            }
+        }
 
       if (fingers[i] != null && hand_.IsRight)
       {
-          //fingers[i].UpdateFinger();
+          if (InteractionManager.instance.rightHandFingerUpdateMode == FingerUpdateMode.Enabled)
+          {
+              fingers[i].UpdateFinger();
+          }
+          else
+          {
+              fingers[i].setBonesToDefault();
+          }
       }
     }
   }

@@ -86,7 +86,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 443586}
-  - 114: {fileID: 11443650}
+  - 114: {fileID: 11495640}
   m_Layer: 0
   m_Name: R_ThumbA
   m_TagString: Untagged
@@ -162,7 +162,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 443606}
-  - 114: {fileID: 11443652}
+  - 114: {fileID: 11495642}
   m_Layer: 0
   m_Name: R_RingA
   m_TagString: Untagged
@@ -238,7 +238,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 443596}
-  - 114: {fileID: 11443654}
+  - 114: {fileID: 11495644}
   m_Layer: 0
   m_Name: R_PinkyA
   m_TagString: Untagged
@@ -314,7 +314,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 443616}
-  - 114: {fileID: 11443656}
+  - 114: {fileID: 11495646}
   m_Layer: 0
   m_Name: R_MiddleA
   m_TagString: Untagged
@@ -390,7 +390,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 443634}
-  - 114: {fileID: 11443658}
+  - 114: {fileID: 11495648}
   m_Layer: 0
   m_Name: R_IndexA
   m_TagString: Untagged
@@ -1275,92 +1275,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hand: {fileID: 11443660}
+  fingers:
+  - {fileID: 11495640}
+  - {fileID: 11495648}
+  - {fileID: 11495646}
+  - {fileID: 11495642}
+  - {fileID: 11495644}
   maxAllowedCardsInHand: 1
---- !u!114 &11443650
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 143594}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 82da28a4ce55440adb4ba89c7a662446, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fingerType: 0
-  bones:
-  - {fileID: 0}
-  - {fileID: 443624}
-  - {fileID: 443622}
-  - {fileID: 443620}
---- !u!114 &11443652
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 143604}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 82da28a4ce55440adb4ba89c7a662446, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fingerType: 3
-  bones:
-  - {fileID: 0}
-  - {fileID: 443604}
-  - {fileID: 443602}
-  - {fileID: 443600}
---- !u!114 &11443654
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 143614}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 82da28a4ce55440adb4ba89c7a662446, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fingerType: 4
-  bones:
-  - {fileID: 0}
-  - {fileID: 443594}
-  - {fileID: 443592}
-  - {fileID: 443590}
---- !u!114 &11443656
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 143624}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 82da28a4ce55440adb4ba89c7a662446, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fingerType: 2
-  bones:
-  - {fileID: 0}
-  - {fileID: 443614}
-  - {fileID: 443612}
-  - {fileID: 443610}
---- !u!114 &11443658
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 143634}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 82da28a4ce55440adb4ba89c7a662446, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fingerType: 1
-  bones:
-  - {fileID: 0}
-  - {fileID: 443632}
-  - {fileID: 443630}
-  - {fileID: 443628}
 --- !u!114 &11443660
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1387,6 +1308,91 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2b7a00381f895449ac474da4091ae8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &11495640
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 143594}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e01235aed2e7574086b51cd67debe4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fingertype: 0
+  bones:
+  - {fileID: 0}
+  - {fileID: 443624}
+  - {fileID: 443622}
+  - {fileID: 443620}
+--- !u!114 &11495642
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 143604}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e01235aed2e7574086b51cd67debe4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fingertype: 3
+  bones:
+  - {fileID: 0}
+  - {fileID: 443604}
+  - {fileID: 443602}
+  - {fileID: 443600}
+--- !u!114 &11495644
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 143614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e01235aed2e7574086b51cd67debe4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fingertype: 4
+  bones:
+  - {fileID: 0}
+  - {fileID: 443594}
+  - {fileID: 443592}
+  - {fileID: 443590}
+--- !u!114 &11495646
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 143624}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e01235aed2e7574086b51cd67debe4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fingertype: 2
+  bones:
+  - {fileID: 0}
+  - {fileID: 443614}
+  - {fileID: 443612}
+  - {fileID: 443610}
+--- !u!114 &11495648
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 143634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e01235aed2e7574086b51cd67debe4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fingertype: 1
+  bones:
+  - {fileID: 0}
+  - {fileID: 443632}
+  - {fileID: 443630}
+  - {fileID: 443628}
 --- !u!135 &13516838
 SphereCollider:
   m_ObjectHideFlags: 1

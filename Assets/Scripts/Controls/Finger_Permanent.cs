@@ -13,6 +13,7 @@ public class Finger_Permanent : MonoBehaviour {
     public FingerType fingertype = FingerType.Index;
 
     public Transform[] bones = new Transform[4];
+    
 
 
 	// Use this for initialization
@@ -22,6 +23,8 @@ public class Finger_Permanent : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
+        
 	
 	}
 
@@ -30,7 +33,16 @@ public class Finger_Permanent : MonoBehaviour {
         //UpdateFinger();
     }
 
-  
+    public void resetBoneRotation(FingerUpdateData data)
+    {
+        for (int i = 0; i < bones.Length; ++i)
+        {
+            if (bones[i] != null)
+            {
+                bones[i].localRotation = data.boneRotation[i];
+            }
+        }
+    }
 
     public void UpdateFinger(FingerUpdateData data)
     {
@@ -38,9 +50,6 @@ public class Finger_Permanent : MonoBehaviour {
         {
             if (bones[i] != null)
             {
-                //bones[i].rotation = GetBoneRotation(i);
-                //Nullreferendeex
-
                 bones[i].rotation = Quaternion.Slerp(bones[i].rotation, data.boneRotation[i], Time.deltaTime * 20);
             }
         }

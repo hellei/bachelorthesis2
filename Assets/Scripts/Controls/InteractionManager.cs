@@ -14,6 +14,16 @@ public enum InteractionLayer
     Emptyhand        = 12
 }
 
+public enum HandOrientationMode
+{
+    Free, RestrictedOrientation, FixedOrientation
+}
+
+public enum FingerUpdateMode
+{
+    Enabled, Disabled
+}
+
 public class InteractionManager : MonoBehaviour {
 
     // Interaction settings
@@ -23,6 +33,12 @@ public class InteractionManager : MonoBehaviour {
     public bool touchOnTablet = false;
     private Dictionary<int, TouchInfo> tabletTouches = new Dictionary<int, TouchInfo>();
 
+    // Update Modes
+    public HandOrientationMode rightHandOrientationMode = HandOrientationMode.RestrictedOrientation;
+    public FingerUpdateMode rightHandFingerUpdateMode = FingerUpdateMode.Disabled;
+    public FingerUpdateMode leftHandFingerUpdateMode = FingerUpdateMode.Disabled;
+
+    // Instance
     public static InteractionManager instance;
 
 	// Use this for initialization
@@ -35,6 +51,42 @@ public class InteractionManager : MonoBehaviour {
     void Update()
     {
         HandleHandTabletInteraction();
+        SetHandControlModes();
+    }
+
+    void SetHandControlModes()
+    {
+        // Left Hand
+        if (Input.GetKeyDown(KeyCode.Y))
+        {
+            leftHandFingerUpdateMode = FingerUpdateMode.Enabled;
+        }
+        if (Input.GetKeyDown(KeyCode.X))
+        {
+            leftHandFingerUpdateMode = FingerUpdateMode.Disabled;
+        }
+
+        // Right Hand
+        if (Input.GetKeyDown(KeyCode.C))
+        {
+            rightHandFingerUpdateMode = FingerUpdateMode.Enabled;
+        }
+        if (Input.GetKeyDown(KeyCode.V))
+        {
+            rightHandFingerUpdateMode = FingerUpdateMode.Disabled;
+        }
+        if (Input.GetKeyDown(KeyCode.B))
+        {
+            rightHandOrientationMode = HandOrientationMode.Free;
+        }
+        if (Input.GetKeyDown(KeyCode.N))
+        {
+            rightHandOrientationMode = HandOrientationMode.RestrictedOrientation;
+        }
+        if (Input.GetKeyDown(KeyCode.M))
+        {
+            rightHandOrientationMode = HandOrientationMode.FixedOrientation;
+        }
     }
 
 
@@ -100,12 +152,20 @@ public class InteractionManager : MonoBehaviour {
 
         if (gesture == TabletGesture.Move)
         {
+            // Calculate position
             Vector3 pos = Vector3.zero;
-            /*foreach (TouchInfo tinfo in touchlist)
-                pos += (Vector3)(tinfo.currentPosition - tinfo.objectOffsets[card.gameObject]);
-            pos /= touchlist.Count;*/
             pos = (Vector3)(touchlist[0].currentPosition - touchlist[0].objectOffsets[card.gameObject]);
-            card.transform.position = Tablet.instance.TabletToWorldSpace(pos);
+
+            // Update single card's position
+            if (card.stack == null)
+            {
+                card.transform.position = Tablet.instance.TabletToWorldSpace(pos);
+            }
+            // Update stack position
+            else
+            {
+                card.stack.transform.position = Tablet.instance.TabletToWorldSpace(pos);
+            }
         }
 
         if (gesture == TabletGesture.Tap && Time.time - interactionTime > interactionCD)

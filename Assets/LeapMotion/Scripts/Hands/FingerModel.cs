@@ -52,6 +52,8 @@ public abstract class FingerModel : MonoBehaviour {
 
   public abstract void UpdateFinger();
 
+  public virtual void setBonesToDefault() { }
+
   // Returns any additional movement the finger needs because of non-relative palm movement.
   public Vector3 GetOffset() {
     return offset_;

@@ -7,7 +7,7 @@ using System.Text;
 
 public class Unity_Server : MonoBehaviour {
 
-    // UDP broadcast
+    // UDP broadcast attributes
     UdpClient udpClient;
     IPEndPoint receiveIPGroup;
     public int remotePort = 19784;

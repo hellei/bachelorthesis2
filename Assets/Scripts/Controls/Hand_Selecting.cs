@@ -10,6 +10,7 @@ public class Hand_Selecting : MonoBehaviour {
     private GameObject middle;
     private GameObject thumb;
     private GameObject grabbedCardContainer;
+    public Finger_Permanent[] fingers;
 
     // Main attributes
     public int maxAllowedCardsInHand = 1;
@@ -40,6 +41,11 @@ public class Hand_Selecting : MonoBehaviour {
             return new Vector3((this.index.transform.position.x + this.middle.transform.position.x + this.thumb.transform.position.x) / 3.0f,
                                                           (this.index.transform.position.y + this.middle.transform.position.y + this.thumb.transform.position.y) / 3.0f,
                                                           (this.index.transform.position.z + this.middle.transform.position.z + this.thumb.transform.position.z) / 3.0f);        
+    }
+
+    public Finger_Permanent[] GetFingers()
+    {
+        return fingers;
     }
 
     public Vector3 GetGrabPosition()
