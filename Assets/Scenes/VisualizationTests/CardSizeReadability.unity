@@ -2448,6 +2448,9 @@ MonoBehaviour:
   interactionCD: 1
   grabDistance: .0500000007
   touchOnTablet: 0
+  rightHandOrientationMode: 1
+  rightHandFingerUpdateMode: 1
+  leftHandFingerUpdateMode: 1
 --- !u!1 &224741094
 GameObject:
   m_ObjectHideFlags: 0
@@ -12845,16 +12848,16 @@ Transform:
 --- !u!114 &1212923750
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11443658, guid: d564db96f88fb2b4baf09fe7a0338d5a,
+  m_PrefabParentObject: {fileID: 11495648, guid: d564db96f88fb2b4baf09fe7a0338d5a,
     type: 2}
   m_PrefabInternal: {fileID: 681627579}
   m_GameObject: {fileID: 1212923748}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 82da28a4ce55440adb4ba89c7a662446, type: 3}
+  m_Script: {fileID: 11500000, guid: 9e01235aed2e7574086b51cd67debe4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fingerType: 1
+  fingertype: 1
   bones:
   - {fileID: 0}
   - {fileID: 1859211766}
@@ -16339,6 +16342,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hand: {fileID: 1588409046}
+  fingers:
+  - {fileID: 2081979896}
+  - {fileID: 1212923750}
+  - {fileID: 1627798069}
+  - {fileID: 1634678711}
+  - {fileID: 2041393553}
   maxAllowedCardsInHand: 1
 --- !u!95 &1588409048
 Animator:
@@ -16965,16 +16974,16 @@ Transform:
 --- !u!114 &1627798069
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11443656, guid: d564db96f88fb2b4baf09fe7a0338d5a,
+  m_PrefabParentObject: {fileID: 11495646, guid: d564db96f88fb2b4baf09fe7a0338d5a,
     type: 2}
   m_PrefabInternal: {fileID: 681627579}
   m_GameObject: {fileID: 1627798067}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 82da28a4ce55440adb4ba89c7a662446, type: 3}
+  m_Script: {fileID: 11500000, guid: 9e01235aed2e7574086b51cd67debe4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fingerType: 2
+  fingertype: 2
   bones:
   - {fileID: 0}
   - {fileID: 504733759}
@@ -17116,16 +17125,16 @@ Transform:
 --- !u!114 &1634678711
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11443652, guid: d564db96f88fb2b4baf09fe7a0338d5a,
+  m_PrefabParentObject: {fileID: 11495642, guid: d564db96f88fb2b4baf09fe7a0338d5a,
     type: 2}
   m_PrefabInternal: {fileID: 681627579}
   m_GameObject: {fileID: 1634678709}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 82da28a4ce55440adb4ba89c7a662446, type: 3}
+  m_Script: {fileID: 11500000, guid: 9e01235aed2e7574086b51cd67debe4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fingerType: 3
+  fingertype: 3
   bones:
   - {fileID: 0}
   - {fileID: 711400790}
@@ -21950,16 +21959,16 @@ Transform:
 --- !u!114 &2041393553
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11443654, guid: d564db96f88fb2b4baf09fe7a0338d5a,
+  m_PrefabParentObject: {fileID: 11495644, guid: d564db96f88fb2b4baf09fe7a0338d5a,
     type: 2}
   m_PrefabInternal: {fileID: 681627579}
   m_GameObject: {fileID: 2041393551}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 82da28a4ce55440adb4ba89c7a662446, type: 3}
+  m_Script: {fileID: 11500000, guid: 9e01235aed2e7574086b51cd67debe4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fingerType: 4
+  fingertype: 4
   bones:
   - {fileID: 0}
   - {fileID: 1091416445}
@@ -22407,16 +22416,16 @@ Transform:
 --- !u!114 &2081979896
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11443650, guid: d564db96f88fb2b4baf09fe7a0338d5a,
+  m_PrefabParentObject: {fileID: 11495640, guid: d564db96f88fb2b4baf09fe7a0338d5a,
     type: 2}
   m_PrefabInternal: {fileID: 681627579}
   m_GameObject: {fileID: 2081979894}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 82da28a4ce55440adb4ba89c7a662446, type: 3}
+  m_Script: {fileID: 11500000, guid: 9e01235aed2e7574086b51cd67debe4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fingerType: 0
+  fingertype: 0
   bones:
   - {fileID: 0}
   - {fileID: 472803938}
