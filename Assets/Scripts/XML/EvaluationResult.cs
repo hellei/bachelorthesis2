@@ -14,8 +14,12 @@ public class EvaluationResult : XMLSaveAndLoad<EvaluationResult> {
 		public float averageTime;
 	}
 
-	public ButtonTest[] tests;
+	/// <summary>
+	/// Defines whether the selected cards were on the hand or not.
+	/// </summary>
+	public bool onHand;
 
+	public ButtonTest[] tests;
 
 	public void Calculate(int i)
 	{

@@ -105,9 +105,25 @@ namespace VRUserInterface
 					Debug.Log(infoButton.buttonType);
 					InformationObject.recreateButtons = true;
 				}
+
+				//Start evaluation for buttons on table
+				if (Input.GetKeyDown(KeyCode.U))
+				{
+					handsEvaluation.SetActive(false);
+					tableEvaluation.SetActive(true);
+				}
+
+				//Start evaluation for buttons on hand
+				if (Input.GetKeyDown(KeyCode.I))
+				{
+					handsEvaluation.SetActive(true);
+					tableEvaluation.SetActive(false);
+				}
 	        }
 			#endregion
 		}
+
+		public GameObject tableEvaluation, handsEvaluation;
 
 	    int infoI = 0;
 

@@ -23,6 +23,10 @@ public class Card : MonoBehaviour {
 		set {
 			cardState = value;
 			GetComponent<LookingGlassEffect>().enabled = (cardState == CardState.OnHand);
+			if (mio)
+			{
+				mio.button = (cardState == CardState.OnHand ? mio.buttonOnHand : mio.buttonOnTable);
+			}
 			io.RecreateButton();
 		}
 	}
@@ -41,6 +45,8 @@ public class Card : MonoBehaviour {
 
 	}
 
+	MagicInformationObject mio;
+
 	/// <summary>
 	/// Sets up the card. Can also be used to update the card information if you change it at runtime.
 	/// </summary>
@@ -53,6 +59,7 @@ public class Card : MonoBehaviour {
 		{
 			io.infoText = info.infoText;
 		}
+		mio = GetComponent<MagicInformationObject> ();
 		GenerateShortInfo ();
 		ShowShortInfo (false);
 	}

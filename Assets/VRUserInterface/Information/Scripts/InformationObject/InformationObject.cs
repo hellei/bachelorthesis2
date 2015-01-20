@@ -162,7 +162,8 @@ namespace VRUserInterface
 			//selectionButton.condition = Tablet.instance;
 		}
 
-	    void CreateSelectionButton()
+
+	    protected virtual void CreateSelectionButton()
 	    {
 	        GameObject obj = button.Instantiate();
 			obj.GetComponent<Button> ().creator = this;

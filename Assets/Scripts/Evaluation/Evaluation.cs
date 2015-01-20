@@ -9,6 +9,8 @@ public class Evaluation : MonoBehaviour {
 
 	EvaluationResult result = new EvaluationResult ();
 
+	public bool onHand = false;
+
 	public ButtonType[] buttonTests;
 
 	State state = State.Waiting;
@@ -18,6 +20,14 @@ public class Evaluation : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		result.tests = new EvaluationResult.ButtonTest[buttonTests.Length];
+		result.onHand = onHand;
+		if (onHand)
+		{
+			foreach (Transform obj in cardContainer.transform)
+			{
+				Hand_CardCollection.instance.AddCardToHand(obj.GetComponent<Card>());
+			}
+		}
 	}
 
 	Color colWaiting = Color.blue;

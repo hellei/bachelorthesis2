@@ -154,13 +154,23 @@ public class EnvironmentPositioner : MenuCallback {
 		stack.transform.parent = table.transform;
 		stack.transform.position = position;
 		Stack st = stack.AddComponent<Stack> ();
+		int i = 0;
 		foreach (string str in ConfigLoader.savedDeck.cards)
 		{
 			GameObject card = (GameObject)Instantiate(cardPrefab.gameObject);
 			Card cardScript = card.GetComponent<Card>();
 			cardScript.card = str;
 			cardScript.SetUp();
-			st.AddCard(cardScript);
+			//The first x cards are added to the player's hand
+			if (i < Config.instance.numberOfInitialHandCards)
+			{
+				Hand_CardCollection.instance.AddCardToHand(cardScript);
+			}
+			else
+			{
+				st.AddCard(cardScript);
+			}
+			i++;
 		}
 		st.Shuffle ();
 	}

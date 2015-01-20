@@ -6,10 +6,6 @@ using VRUserInterface;
 
 public class Hand_CardCollection : MonoBehaviour {
 
-    public Card card;
-    public Card card1;
-    public Card card2;
-    public Card card3;
 
     // Tracking attributes
     public GameObject CardBucket;
@@ -33,12 +29,6 @@ public class Hand_CardCollection : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-
-        AddCardToHand(card);
-        AddCardToHand(card1);
-        AddCardToHand(card2);
-        AddCardToHand(card3);
-        //card.gameObject.SetActive(false); 
 	}
 
     /// <summary>

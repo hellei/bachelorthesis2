@@ -19,6 +19,12 @@ namespace VRUserInterface
 			base.Update ();
 		}
 
+		/// <summary>
+		/// On the hand another button type might be more useful
+		/// </summary>
+		public ButtonGenerator buttonOnHand, buttonOnTable;
+
+
 	    /// <summary>
 	    /// An empty game object that defines the position of the info button if the card is on the hand
 	    /// </summary>
@@ -58,6 +64,14 @@ namespace VRUserInterface
 	            obj.transform.Rotate(new Vector3(180, 0, 0));
 	        }
 	    }
+
+		protected override void CreateSelectionButton()
+		{
+			button = (card.CardState == CardState.OnHand ? buttonOnHand : buttonOnTable);
+			if (button == null)
+								Debug.Log ("No button: " + name +", "+buttonOnHand);
+			base.CreateSelectionButton ();
+		}
 
 		/// <summary>
 		/// If you look at a card, you want a short information of the most important things.

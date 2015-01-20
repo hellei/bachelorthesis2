@@ -44,6 +44,8 @@ public class Config : XMLSaveAndLoad<Config> {
         }
     }
 
+	public int numberOfInitialHandCards = 4;
+
 	public string displayType = "";
 
 	/// <summary>
