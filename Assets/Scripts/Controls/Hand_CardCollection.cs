@@ -3,7 +3,14 @@ using System.Collections;
 using System.Collections.Generic;
 using VRUserInterface;
 
-
+public class CardBucket
+{
+    public GameObject container;
+    public Card card;
+    public Vector3 localPosition;
+    public Quaternion localRotation;
+    public bool interpolate = true;
+}
 public class Hand_CardCollection : MonoBehaviour {
 
     public Card card;
@@ -12,14 +19,14 @@ public class Hand_CardCollection : MonoBehaviour {
     public Card card3;
 
     // Tracking attributes
-    public GameObject CardBucket;
+    public GameObject HandCardContainer;
     public GameObject EmptyHandCollider;
     public Finger_Permanent[] fingers;
 
     // Main attributes
     public int maxCardsAllowed = -1;
     public Hand_Permanent hand;
-    private List<Card> cardsOnHand = new List<Card>();
+    private List<CardBucket> cardsOnHand = new List<CardBucket>();
     private bool handRegistered = false;
     private int numberOfCardsOnHand = 0;
     private int selectedCard;
@@ -34,12 +41,17 @@ public class Hand_CardCollection : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 
-        AddCardToHand(card);
-        AddCardToHand(card1);
-        AddCardToHand(card2);
-        AddCardToHand(card3);
+        AddCardToHand(card, false);
+        AddCardToHand(card1, false);
+        AddCardToHand(card2, false);
+        AddCardToHand(card3, false);
         //card.gameObject.SetActive(false); 
 	}
+
+    void Update()
+    {
+        UpdateCards();
+    }
 
     /// <summary>
     /// Register a Hand when spawned
@@ -47,7 +59,7 @@ public class Hand_CardCollection : MonoBehaviour {
     /// <param name="hand">Hand to be registered as hand that is holding the cards</param>
     public Hand_Permanent RegisterHand() 
     {
-        DisplayCardsOnHand();
+        ChangeCardPositionAndOrientation();
         handRegistered = true;
 
         return hand;
@@ -76,7 +88,7 @@ public class Hand_CardCollection : MonoBehaviour {
         int index = 0;
         for (int i = 0; i < cardsOnHand.Count; i++)
         {
-            if ((cardsOnHand[i].gameObject.transform.position - position).sqrMagnitude < (cardsOnHand[index].gameObject.transform.position - position).sqrMagnitude)
+            if ((cardsOnHand[i].card.transform.position - position).sqrMagnitude < (cardsOnHand[index].card.transform.position - position).sqrMagnitude)
             {
                 index = i;
             }
@@ -86,27 +98,45 @@ public class Hand_CardCollection : MonoBehaviour {
 
     public float GetDistanceToCard(int i, Vector3 position)
     {
-        return (cardsOnHand[i].transform.position - position).sqrMagnitude;
+        return (cardsOnHand[i].card.transform.position - position).sqrMagnitude;
     }
 
-    public void AddCardToHand(Card card)
+    void UpdateCards()
+    {
+        for (int i = 0; i < cardsOnHand.Count; i++)
+        {
+            if (cardsOnHand[i].container != null)
+            {
+                cardsOnHand[i].container.transform.localPosition = Vector3.Lerp(cardsOnHand[i].container.transform.localPosition, cardsOnHand[i].localPosition, Time.deltaTime);
+                cardsOnHand[i].container.transform.localRotation = Quaternion.Slerp(cardsOnHand[i].container.transform.localRotation, cardsOnHand[i].localRotation, Time.deltaTime);
+            }
+        }
+    }
+
+    public void AddCardToHand(Card card, bool interpolate)
     {
 		if (!card)
 		{
 			Debug.LogWarning("Cannot add null card to hand!");
 			return;
 		}
-		card.CardState = CardState.OnHand;
+		
         //Add new
         int indexOfNearestCard = FindIndexOfNearestCard(card.transform.position);
         card.transform.parent = null;
+        card.CardState = CardState.OnHand;
+
+        // Create card bucket
+        CardBucket cardBucket = new CardBucket();
+        cardBucket.card = card;
+        cardBucket.interpolate = interpolate;
 
         // Insert at nearest position
         if (cardsOnHand.Count > 0)
         {
             // Transform card's position in space of nearest card
-            Transform nearestCardSpace = cardsOnHand[indexOfNearestCard].transform;
-            Vector3 relativePosToNearestCard = nearestCardSpace.InverseTransformPoint(card.transform.position);
+            Transform nearestCardSpace = cardsOnHand[indexOfNearestCard].card.transform;
+            Vector3 relativePosToNearestCard = nearestCardSpace.InverseTransformPoint(card.transform.position);            
 
             // Right
             if (relativePosToNearestCard.x > 0)
@@ -114,23 +144,23 @@ public class Hand_CardCollection : MonoBehaviour {
                 //At end of list
                 if (indexOfNearestCard + 1 == cardsOnHand.Count)
                 {
-                    cardsOnHand.Add(card);
+                    cardsOnHand.Add(cardBucket);
                 }
                 else
                 {
-                    cardsOnHand.Insert(indexOfNearestCard++, card);
+                    cardsOnHand.Insert(indexOfNearestCard++, cardBucket);
                 }
             }
             // Left
             else
             {
-                cardsOnHand.Insert(indexOfNearestCard, card);
+                cardsOnHand.Insert(indexOfNearestCard, cardBucket);
             }
         }
         else
         // First card on hand
         {
-            cardsOnHand.Add(card);
+            cardsOnHand.Add(cardBucket);
         }
         
         //cardsOnHand.Add(card);
@@ -148,7 +178,7 @@ public class Hand_CardCollection : MonoBehaviour {
         if (handRegistered)
         {
             HideCardsOnHand();
-            DisplayCardsOnHand();
+            ChangeCardPositionAndOrientation();
         }
     }
 
@@ -187,8 +217,16 @@ public class Hand_CardCollection : MonoBehaviour {
 
         if (numberOfCardsOnHand > 0)
         {
-            // Remove card
-            int index = cardsOnHand.IndexOf(card);
+            // Find index of card
+            int index = 0;
+            for (int i = 0; i < cardsOnHand.Count; i++)
+            {
+                if (cardsOnHand[i].card == card)
+                {
+                    index = i;
+                }
+            }
+            
             Transform parent = card.transform.parent;
             cardsOnHand.RemoveAt(index);
             numberOfCardsOnHand--;
@@ -206,7 +244,7 @@ public class Hand_CardCollection : MonoBehaviour {
             if (handRegistered)
             {
                 HideCardsOnHand();
-                DisplayCardsOnHand();
+                ChangeCardPositionAndOrientation();
             }
 
             Destroy(parent.gameObject);
@@ -223,28 +261,48 @@ public class Hand_CardCollection : MonoBehaviour {
 	/// </summary>
 	public Vector3 cardContainerLocalPosition = new Vector3(-0.0147f,0,0.0069f);
 
-    private void DisplayCardsOnHand()
+    private void ChangeCardPositionAndOrientation()
     {
         if (cardsOnHand.Count > 0)
         {
             float angle = 90.0f / cardsOnHand.Count;
             for (int i = 0; i < cardsOnHand.Count; i++)
             {
+                // Spawn container at cards position
                 GameObject container = new GameObject("CardOffsetHelper");
+                container.transform.position = cardsOnHand[i].card.transform.position;
 
-                cardsOnHand[i].transform.parent = container.transform;
-                cardsOnHand[i].transform.localPosition = new Vector3(0, cardHandOffset, i * 0.001f);
-                cardsOnHand[i].transform.localRotation = Quaternion.Euler(new Vector3(0,0,180));
+                // Initialize Card in container
+                cardsOnHand[i].card.transform.parent = container.transform;
+                cardsOnHand[i].card.transform.localPosition = new Vector3(0, cardHandOffset, i * 0.001f);
+                cardsOnHand[i].card.transform.localRotation = Quaternion.Euler(new Vector3(0,0,180));
 
-				cardsOnHand[i].GetComponent<LookingGlassEffect>().initialLocalPosition = cardsOnHand[i].transform.localPosition;
+                // Position container with card offset
+                Vector3 globalOffset = cardsOnHand[i].card.transform.position - container.transform.position;
+                container.transform.position -= globalOffset;
 
-                container.transform.parent = CardBucket.transform;
-				container.transform.localRotation = Quaternion.identity;
-				container.transform.localPosition = cardContainerLocalPosition;
-                container.transform.localRotation = Quaternion.Euler(new Vector3(0, 0, 150 + i * angle));
+				cardsOnHand[i].card.GetComponent<LookingGlassEffect>().initialLocalPosition = cardsOnHand[i].card.transform.localPosition;
+
+                // Set container as child of handcardcontainer
+                container.transform.parent = HandCardContainer.transform;
+
+                // Set new target rotation and position for interpolation
+                if (cardsOnHand[i].interpolate)
+                {
+                    cardsOnHand[i].container = container;
+                    cardsOnHand[i].localPosition = cardContainerLocalPosition;
+                    cardsOnHand[i].localRotation = Quaternion.Euler(new Vector3(0, 0, 150 + i * angle));
+                }
+                // No interpolation
+                else
+                {
+                    container.transform.localPosition = cardContainerLocalPosition;
+                    container.transform.localRotation = Quaternion.Euler(new Vector3(0, 0, 150 + i * angle));
+                    cardsOnHand[i].interpolate = true;                    
+                }
 
 
-                cardsOnHand[i].gameObject.SetActive(true);                
+                cardsOnHand[i].card.gameObject.SetActive(true);                
             }
         }
     }
@@ -254,9 +312,9 @@ public class Hand_CardCollection : MonoBehaviour {
     {
         for (int i = 0; i < numberOfCardsOnHand; i++)
         {
-            Transform container = cardsOnHand[i].gameObject.transform.parent;            
-            cardsOnHand[i].transform.parent = this.transform;
-            cardsOnHand[i].gameObject.SetActive(false);
+            Transform container = cardsOnHand[i].card.gameObject.transform.parent;            
+            cardsOnHand[i].card.transform.parent = this.transform;
+            cardsOnHand[i].card.gameObject.SetActive(false);
 
             if (container != null && container.gameObject.name == "CardOffsetHelper")
             {

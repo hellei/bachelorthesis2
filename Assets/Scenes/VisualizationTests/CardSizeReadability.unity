@@ -9578,7 +9578,7 @@ MonoBehaviour:
   card1: {fileID: 763574126}
   card2: {fileID: 383240453}
   card3: {fileID: 974357364}
-  CardBucket: {fileID: 342299}
+  HandCardContainer: {fileID: 342299}
   EmptyHandCollider: {fileID: 296738743}
   fingers:
   - {fileID: 791492202}
@@ -22195,6 +22195,10 @@ Prefab:
       propertyPath: m_LocalPosition.z
       value: -.799000025
       objectReference: {fileID: 0}
+    - target: {fileID: 11404236, guid: 886751fb2457b274aa198c1f3a9b1e91, type: 2}
+      propertyPath: HandCardContainer
+      value: 
+      objectReference: {fileID: 342299}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 886751fb2457b274aa198c1f3a9b1e91, type: 2}
   m_RootGameObject: {fileID: 885687899}
