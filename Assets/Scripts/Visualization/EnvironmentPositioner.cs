@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using VRUserInterface;
+using System.IO;
 
 public class EnvironmentPositioner : MenuCallback {
 	#region implemented abstract members of MenuCallback
@@ -11,6 +12,9 @@ public class EnvironmentPositioner : MenuCallback {
 		{
 		case "ResetChair":
 			SetChairPosition();
+			break;
+		case "Calibrate":
+			StartCoroutine(DoCalibrate());
 			break;
 		case "Quit":
 			QuitApplication();
@@ -66,6 +70,31 @@ public class EnvironmentPositioner : MenuCallback {
 	}
 
     float zFightingOffset = 0.003f;
+
+	public GameObject calibrationObject;
+	public Vector3 calibrationOffset = new Vector3(0,-0.02f,0);
+
+	IEnumerator DoCalibrate()
+	{
+		yield return new WaitForSeconds (4.0f);
+		Calibrate ();
+	}
+
+	void Calibrate()
+	{
+		Vector3 cal = calibrationObject.transform.position + calibrationOffset;
+		//Place the table
+		Vector3 tabletPosition = cal + new Vector3(Config.instance.tabletSize.x / 2, zFightingOffset, Config.instance.tabletSize.z / 2);
+		//Set the offset
+		tablet.transform.position = tabletPosition;
+		tablet.transform.localScale = Config.instance.tabletSize;
+		//The table position is the tablet position minus half the height of the tablet position (It is the table surface)
+		Vector3 tablePosition = cal + new Vector3(0, 0, -Config.instance.zOffsetToTableBorder);
+		table.transform.position = tablePosition;
+		Vector3 relativeTabletOffset = cal - riftPositionTracker.transform.position;
+		string content = relativeTabletOffset.x + "," + relativeTabletOffset.y + "," + relativeTabletOffset.z;
+		File.WriteAllText("calibration.txt",content);
+	}
 
     void PositionEnvironment()
     {
