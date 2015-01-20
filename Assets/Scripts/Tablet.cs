@@ -64,7 +64,7 @@ public class Tablet : MonoBehaviour, IButtonCondition {
         Card tcard = card;
         tcard.transform.parent = null;
 		card.CardState = CardState.OnHand;
-
+		card.stack = null;
         Debug.Log("Removed card from tablet" + card.transform.parent);
         return tcard;
     }

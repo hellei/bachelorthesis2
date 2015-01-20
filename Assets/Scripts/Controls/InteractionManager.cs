@@ -159,7 +159,8 @@ public class InteractionManager : MonoBehaviour {
             // Update single card's position
             if (card.stack == null)
             {
-                card.transform.position = Tablet.instance.TabletToWorldSpace(pos);
+				Vector3 cardWorldPos = Tablet.instance.TabletToWorldSpace(pos);
+                card.transform.position = new Vector3(cardWorldPos.x, card.transform.position.y, cardWorldPos.z);
             }
             // Update stack position
             else

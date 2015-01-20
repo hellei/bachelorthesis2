@@ -80,6 +80,19 @@ public class Card : MonoBehaviour {
 	public float iconScale = 0.05f;
 
 
+	void Update()
+	{
+		if (cardState == CardState.OnTable && !stack)
+		{
+			Vector3 environmentPosition = EnvironmentPositioner.instance.table.transform.position;
+			float height = environmentPosition.y;
+			float xFactor = environmentPosition.z - transform.position.z + 0.25f;//xFactor, probably between 0 and 0.5
+			xFactor *= 0.003f;
+			float zOffset = gameObject.GetBoundsSize().y * 0.5f + xFactor;
+			transform.position = new Vector3(transform.position.x, height + zOffset, transform.position.z);
+		}
+	}
+
 	/// <summary>
 	/// Generates a short info about the card (e.g. cost, name)
 	/// </summary>
