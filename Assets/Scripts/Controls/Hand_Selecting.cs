@@ -88,11 +88,7 @@ public class Hand_Selecting : MonoBehaviour {
 
     public void UnRegisterHand()
     {
-        index = null;
-        middle = null;
-        thumb = null;
-        grabbedCardContainer = null;
-        HideCardInHand();
+        //HideCardInHand();
         handRegistered = false;
         //print("Unregistered and hide selected card");
     }

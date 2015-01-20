@@ -83,6 +83,7 @@ namespace VRUserInterface
 
 		public override void OnDisplayPrefabInstantiated(GameObject display)
 		{
+			Destroy (display.GetComponent<Card> ());
 			base.OnDisplayPrefabInstantiated (display);
 			//The card objects are darkened a little bit in the scene. Reset them to their white color when selected
 			foreach (Material m in display.renderer.materials)

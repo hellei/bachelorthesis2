@@ -111,7 +111,7 @@ public class Hand_CardCollection : MonoBehaviour {
 			Debug.LogWarning("Cannot add null card to hand!");
 			return;
 		}
-		
+		Debug.Break ();
         //Add new
         int indexOfNearestCard = FindIndexOfNearestCard(card.transform.position);
         card.transform.parent = null;
@@ -279,9 +279,7 @@ public class Hand_CardCollection : MonoBehaviour {
 
 				cardsOnHand[i].card.GetComponent<LookingGlassEffect>().initialLocalPosition = cardsOnHand[i].card.transform.localPosition;
 
-               
 
-				Debug.Break();
                 // Set new target rotation and position for interpolation
                 if (cardsOnHand[i].interpolate)
                 {
