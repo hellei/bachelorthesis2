@@ -165,7 +165,7 @@ namespace VRUserInterface
 				ba.GetBounds(ref min, ref max);
 				float buttonHeight = -min.y;
 
-				SetButtonParentAndPosition(ba, container, new Vector3(containerWidth, containerHeight + buttonHeight), CloseButtonPressed);
+				SetButtonParentAndPosition(ba, container, new Vector3(containerWidth, containerHeight + buttonHeight,-0.03f), CloseButtonPressed);
 	        }
 
 			//Add scroll button

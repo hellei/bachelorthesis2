@@ -111,6 +111,7 @@ namespace VRUserInterface
 				{
 					handsEvaluation.SetActive(false);
 					tableEvaluation.SetActive(true);
+					displayEvaluation.SetActive(false);
 				}
 
 				//Start evaluation for buttons on hand
@@ -118,12 +119,21 @@ namespace VRUserInterface
 				{
 					handsEvaluation.SetActive(true);
 					tableEvaluation.SetActive(false);
+					displayEvaluation.SetActive(false);
+				}
+
+				//Start evaluation for displays
+				if (Input.GetKeyDown(KeyCode.O))
+				{
+					handsEvaluation.SetActive(false);
+					tableEvaluation.SetActive(false);
+					displayEvaluation.SetActive(true);
 				}
 	        }
 			#endregion
 		}
 
-		public GameObject tableEvaluation, handsEvaluation;
+		public GameObject tableEvaluation, handsEvaluation, displayEvaluation;
 
 	    int infoI = 0;
 

@@ -12,6 +12,7 @@ public class Evaluation : MonoBehaviour {
 	public bool onHand = false;
 
 	public ButtonType[] buttonTests;
+	
 
 	State state = State.Waiting;
 
@@ -19,6 +20,8 @@ public class Evaluation : MonoBehaviour {
 	GameObject copy;
 	// Use this for initialization
 	void Start () {
+		//TODO: Shuffle button tests
+
 		result.tests = new EvaluationResult.ButtonTest[buttonTests.Length];
 		result.onHand = onHand;
 		if (onHand)
@@ -125,5 +128,6 @@ public class Evaluation : MonoBehaviour {
 	}
 
 	GameObject lastSelectedCard;
+
 
 }

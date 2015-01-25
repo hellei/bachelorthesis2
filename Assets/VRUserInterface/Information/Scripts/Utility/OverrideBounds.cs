@@ -22,6 +22,7 @@ namespace VRUserInterface
 		{
 			//On Start an invisible cube is created that has the correct bounds
 			GameObject obj = GameObject.CreatePrimitive (PrimitiveType.Cube);
+			obj.GetComponent<Collider> ().enabled = false;
 			Destroy (obj.GetComponent<Collider> ());
 			obj.renderer.enabled = false;
 

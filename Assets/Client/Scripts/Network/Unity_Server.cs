@@ -72,7 +72,6 @@ public class Unity_Server : MonoBehaviour {
 
     void SendData()
     {
-        Debug.Log("Send");
         string customMessage = myName + "%" + myIP + "%" + localPort + "%" + myGameName;
         if (customMessage != "")
         {

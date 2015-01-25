@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<EvaluationResult xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <onHand>false</onHand>
+  <displayTests>
+    <DisplayTest>
+      <dt>TableDisplay</dt>
+      <selectionTimes>
+        <float>5.04180145</float>
+      </selectionTimes>
+      <averageTime>5.04180145</averageTime>
+    </DisplayTest>
+    <DisplayTest>
+      <dt>PlayerCenteredDisplay</dt>
+      <selectionTimes>
+        <float>2.19053745</float>
+      </selectionTimes>
+      <averageTime>2.19053745</averageTime>
+    </DisplayTest>
+    <DisplayTest>
+      <dt>PlayerCenteredDisplayFixedAngle</dt>
+      <selectionTimes>
+        <float>2.63213348</float>
+      </selectionTimes>
+      <averageTime>2.63213348</averageTime>
+    </DisplayTest>
+    <DisplayTest>
+      <dt>PCDText</dt>
+      <selectionTimes>
+        <float>3.41404915</float>
+      </selectionTimes>
+      <averageTime>3.41404915</averageTime>
+    </DisplayTest>
+  </displayTests>
+</EvaluationResult>

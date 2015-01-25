@@ -108,9 +108,11 @@ public class Stack : MonoBehaviour {
 		}
         if(cards.Count > 0 ){// && bCollider != null){
             //Vector3 size = cards[0].card.gameObject.GetBoundsSize().x;
-            Debug.Log("Collidersize: " + cards[0].card.gameObject.GetBoundsSize().x);
-            bCollider.size = new Vector3(0.06f, 0.01f * cards.Count, 0.09f);
-            Debug.Log("Changes size: " + bCollider.size);
+            //Debug.Log("Collidersize: " + cards[0].card.gameObject.GetBoundsSize().x);
+			Vector3 size = cards[0].card.gameObject.GetBoundsSize();
+			size.y *= cards.Count * 0.25f;
+			bCollider.size = size;//new Vector3(0.06f, 0.01f * cards.Count, 0.09f);
+            //Debug.Log("Changes size: " + bCollider.size);
         }
         
         DisableColliders();
