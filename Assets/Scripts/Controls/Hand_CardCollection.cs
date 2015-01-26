@@ -41,6 +41,7 @@ public class Hand_CardCollection : MonoBehaviour {
     void Update()
     {
         UpdateCards();
+        FanOutCards();
     }
 
     /// <summary>
@@ -246,6 +247,35 @@ public class Hand_CardCollection : MonoBehaviour {
         }
         else return null;
     }
+
+    private void FanOutCards()
+    {
+        if (cardsOnHand.Count > 0)
+        {
+            float angle = 90.0f;
+            
+            int index = FindIndexOfNearestCard(Hand_Selecting.instance.GetGrabPosition());
+            float startAngle = angle * index / cardsOnHand.Count;
+
+            float restAngle = startAngle;
+            for (int i = index - 1; i >= 0; i--)
+            {
+                // Set new target rotation and position for interpolation
+                //cardsOnHand[i].localPosition = cardContainerLocalPosition;
+                restAngle /= 2.0f;
+                cardsOnHand[i].localRotation = Quaternion.Euler(new Vector3(0, 0, 150 + restAngle));                
+            }
+
+            restAngle = angle * (cardsOnHand.Count - index) / cardsOnHand.Count;
+
+            for (int i = index + 1; i < cardsOnHand.Count; i++)
+            {
+                restAngle /= 2;
+                cardsOnHand[i].localRotation = Quaternion.Euler(new Vector3(0, 0, 150 + angle - restAngle));  
+            }
+        }
+    }
+
 	/// <summary>
 	/// The y offset of the palm at which the cards are shown on the an	/// </summary>
 	public float cardHandOffset = 0.05f;
@@ -271,6 +301,7 @@ public class Hand_CardCollection : MonoBehaviour {
 
 				container.transform.rotation = cardsOnHand[i].card.transform.rotation;
 				container.transform.Rotate(new Vector3(0,0,180));
+
                 // Initialize Card in container
                 cardsOnHand[i].card.transform.parent = container.transform;
                 cardsOnHand[i].card.transform.localPosition = new Vector3(0, cardHandOffset, i * 0.001f);
@@ -282,11 +313,11 @@ public class Hand_CardCollection : MonoBehaviour {
 
 				cardsOnHand[i].card.GetComponent<LookingGlassEffect>().initialLocalPosition = cardsOnHand[i].card.transform.localPosition;
 
+                cardsOnHand[i].container = container;
 
                 // Set new target rotation and position for interpolation
                 if (cardsOnHand[i].interpolate)
-                {
-                    cardsOnHand[i].container = container;
+                {                    
                     cardsOnHand[i].localPosition = cardContainerLocalPosition;
                     cardsOnHand[i].localRotation = Quaternion.Euler(new Vector3(0, 0, 150 + i * angle));
                 }
