@@ -36,7 +36,6 @@ public class Hand_CardCollection : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        //card.gameObject.SetActive(false); 
 	}
 
     void Update()

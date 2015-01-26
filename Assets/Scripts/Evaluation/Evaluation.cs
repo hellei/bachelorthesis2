@@ -27,9 +27,10 @@ public class Evaluation : MonoBehaviour {
 		if (onHand)
 		{
 			containerObjects = cardContainer.GetComponentsInChildren<Transform>();
-			Hand_CardCollection.instance.AddCardToHand(containerObjects[0].GetComponent<Card>());
 			Hand_CardCollection.instance.AddCardToHand(containerObjects[1].GetComponent<Card>());
-			toBeSelected = containerObjects[1].GetComponent<Card>();
+			Hand_CardCollection.instance.AddCardToHand(containerObjects[2].GetComponent<Card>());
+			toBeSelected = containerObjects[2].GetComponent<Card>();
+			Debug.Log(containerObjects[1]+"  "+containerObjects[1].GetComponent<Card>());
 		}
 	}
 
