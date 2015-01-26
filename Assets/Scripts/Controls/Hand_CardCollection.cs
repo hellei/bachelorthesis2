@@ -135,10 +135,11 @@ public class Hand_CardCollection : MonoBehaviour {
         cardBucket.interpolate = interpolate;
 
         // Insert at nearest position
-        if (cardsOnHand.Count > 0)
+        if (cardIndex < 0)
         {
-            if (cardIndex < 0)
+            if (cardsOnHand.Count > 0)
             {
+
                 // Transform card's position in space of nearest card
                 Transform nearestCardSpace = cardsOnHand[indexOfNearestCard].card.transform;
                 Vector3 relativePosToNearestCard = nearestCardSpace.InverseTransformPoint(card.transform.position);
