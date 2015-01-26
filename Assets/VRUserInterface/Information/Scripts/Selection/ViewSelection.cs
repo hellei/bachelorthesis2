@@ -21,7 +21,6 @@ namespace VRUserInterface
 			RaycastHit hit;
 	        if (Physics.Raycast(VRCameraEnable.instance.GetCameraCenter(), VRCameraEnable.instance.GetCameraCenterObject().transform.forward, out hit))
 			{
-				Debug.Log("Raycast hit: "+hit.collider.gameObject.name);
 				return hit.collider.gameObject;
 			}
 			return null;

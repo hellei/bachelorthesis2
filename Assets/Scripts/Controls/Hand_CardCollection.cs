@@ -163,11 +163,11 @@ public class Hand_CardCollection : MonoBehaviour {
                     cardsOnHand.Insert(indexOfNearestCard, cardBucket);
                 }
             }
-            //else
-            // First card on hand
-            //{
-            //    cardsOnHand.Add(cardBucket);
-            //}
+            else
+            //First card on hand
+            {
+                cardsOnHand.Add(cardBucket);
+            }
         }
 
         // Insert at custom index
@@ -175,7 +175,7 @@ public class Hand_CardCollection : MonoBehaviour {
         {
             cardsOnHand.Insert(cardIndex, cardBucket);
         }
-        if (cardIndex >= cardsOnHand.Count)
+        else if (cardIndex >= cardsOnHand.Count)
         {
             cardsOnHand.Add(cardBucket);
         }

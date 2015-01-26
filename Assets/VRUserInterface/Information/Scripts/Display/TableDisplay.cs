@@ -164,7 +164,6 @@ namespace VRUserInterface
 				min = max = GameObjectExtensions.initializationVector;
 				ba.GetBounds(ref min, ref max);
 				float buttonHeight = -min.y;
-
 				SetButtonParentAndPosition(ba, container, new Vector3(containerWidth, containerHeight + buttonHeight,-0.03f), CloseButtonPressed);
 	        }
 
