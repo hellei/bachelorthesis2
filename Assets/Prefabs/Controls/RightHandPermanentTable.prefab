@@ -1275,9 +1275,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hand: {fileID: 11443660}
-  index: {fileID: 143626}
-  middle: {fileID: 143616}
-  thumb: {fileID: 143586}
+  index: {fileID: 143628}
+  middle: {fileID: 143618}
+  thumb: {fileID: 143588}
   grabbedCardContainer: {fileID: 143650}
   fingers:
   - {fileID: 11495640}
