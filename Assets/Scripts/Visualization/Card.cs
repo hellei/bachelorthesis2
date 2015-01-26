@@ -37,7 +37,10 @@ public class Card : MonoBehaviour {
 
 	public string card;
 
-	InformationObject io;
+	public InformationObject io {
+		get;
+		private set;
+	}
 
 	void Awake()
 	{

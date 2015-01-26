@@ -31,13 +31,34 @@ public class Evaluation : MonoBehaviour {
 				containerObjects.Add(t);
 			}
 			Hand_CardCollection.instance.AddCardToHand(containerObjects[0].GetComponent<Card>());
-			Hand_CardCollection.instance.AddCardToHand(containerObjects[1].GetComponent<Card>());
-			toBeSelected = containerObjects[1].GetComponent<Card>();
+			handCardIdx=1;
+			toBeSelected = containerObjects[order[handCardIdx]].GetComponent<Card>();
 			//Debug.Log(containerObjects[1]+"  "+containerObjects[1].GetComponent<Card>());
 		}
 	}
 
-	Card toBeSelected;
+
+	/// <summary>
+	/// The order of the cards to select on hand.
+	/// </summary>
+	public int[] order;
+
+	int handCardIdx = 0;
+
+	private Card _toBeSelected;
+
+	Card toBeSelected
+	{
+		set {
+			if (toBeSelected) toBeSelected.io.Highlight(false);
+			_toBeSelected = value;
+			toBeSelected.io.Highlight(true);
+		}
+		get
+		{
+			return _toBeSelected;
+		}
+	}
 
 	List<Transform> containerObjects = new List<Transform>();
 
@@ -67,9 +88,24 @@ public class Evaluation : MonoBehaviour {
 				//Prevent the player from selecting the same card twice
 				if (lastSelectedCard)
 				{
-					Destroy (lastSelectedCard);
+					/*if (onHand)
+					{
+						Hand_CardCollection.instance.TakeCardFromHand(lastSelectedCard.GetComponent<Card>());
+						lastSelectedCard.transform.position = new Vector3(0,-1000,0);
+					}*/
+					if (!onHand)
+					{
+						Destroy (lastSelectedCard);
+					}
 				}
 				state = State.Ready;
+				//Add new card to hand
+				if (containerObjects[handCardIdx])
+				{
+					Hand_CardCollection.instance.AddCardToHand(containerObjects[handCardIdx].GetComponent<Card>());
+					toBeSelected = containerObjects[order[handCardIdx]].GetComponent<Card>();
+				}
+				handCardIdx++;
 			}
 			break;
 		case State.Ready:
@@ -133,15 +169,6 @@ public class Evaluation : MonoBehaviour {
 			renderer.material.color = colFinished;
 			break;
 		}
-		if (onHand)
-		{
-			HighlightCard();
-		}
-	}
-
-	void HighlightCard()
-	{
-		toBeSelected.GetComponent<InformationObject> ().Highlight (true);
 	}
 
 	GameObject lastSelectedCard;

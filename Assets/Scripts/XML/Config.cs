@@ -52,4 +52,11 @@ public class Config : XMLSaveAndLoad<Config> {
 	/// If this flag is set, the game runs at low graphics settings.
 	/// </summary>
 	public bool lowGraphics = false;
+
+	/// <summary>
+	/// You can create a deck folder to create a start deck.
+	/// Set this flag to false, if you dont want it to be loaded on startup.
+	/// </summary>
+	public bool loadDeck = true;
 }
+
