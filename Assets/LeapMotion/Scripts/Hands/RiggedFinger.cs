@@ -13,7 +13,7 @@ public class RiggedFinger : FingerModel {
   public static readonly string[] FINGER_NAMES = {"Thumb", "Index", "Middle", "Ring", "Pinky"};
 
   public Transform[] bones = new Transform[NUM_BONES];
-  public Quaternion[] defaultBoneOrientation = new Quaternion[4];
+  
 
   private Finger_Permanent permanentFinger;
   
@@ -24,19 +24,13 @@ public class RiggedFinger : FingerModel {
   public void InitPermanentFinger(Finger_Permanent finger)
   {
       permanentFinger = finger;
-
+      
       //UpdateFinger();
   }
 
   void Start()
   {
-      for (int i = 0; i < bones.Length; ++i)
-      {
-          if (bones[i] != null)
-          {
-              defaultBoneOrientation[i] = bones[i].transform.localRotation;
-          }
-      }
+      
   }
   public override void setBonesToDefault()
     {
@@ -47,10 +41,11 @@ public class RiggedFinger : FingerModel {
         {
             if (bones[i] != null)
             {
-                data.boneRotation[i] = defaultBoneOrientation[i];
+                //data.boneRotation[i] = defaultBoneOrientation[i];
+                //bones[i].rotation = defaultBoneOrientation[i];
                 if (permanentFinger != null)
-                {
-                    permanentFinger.resetBoneRotation(data);
+                {                   
+                    permanentFinger.resetBoneRotation();
                 }
             }
         }

@@ -90,7 +90,7 @@ public class RiggedHand : HandModel {
 
             if (fingers[i].fingerType != Finger.FingerType.TYPE_THUMB && InteractionManager.instance.leftHandFingerUpdateMode == FingerUpdateMode.Disabled)
             {
-                //fingers[i].setBonesToDefault();
+                fingers[i].setBonesToDefault();
             }
         }
 
@@ -103,7 +103,7 @@ public class RiggedHand : HandModel {
           
           if(InteractionManager.instance.rightHandFingerUpdateMode == FingerUpdateMode.Disabled)
           {
-              //fingers[i].setBonesToDefault();
+              fingers[i].setBonesToDefault();
           }
       }
     }

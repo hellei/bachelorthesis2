@@ -235,7 +235,7 @@ public class Hand_CardCollection : MonoBehaviour {
 
 
             //Reset cards
-            if (handRegistered)
+            //if (handRegistered)
             {
                 HideCardsOnHand();
                 ChangeCardPositionAndOrientation();

@@ -13,11 +13,21 @@ public class Finger_Permanent : MonoBehaviour {
     public FingerType fingertype = FingerType.Index;
 
     public Transform[] bones = new Transform[4];
+    public Quaternion[] defaultBoneOrientation = new Quaternion[4];
     
 
 
 	// Use this for initialization
 	void Start () {
+
+        for (int i = 0; i < bones.Length; ++i)
+        {
+            if (bones[i] != null)
+            {
+                defaultBoneOrientation[i] = bones[i].localRotation;
+                print(bones[i].transform.localRotation);
+            }
+        }
 	
 	}
 	
@@ -33,13 +43,13 @@ public class Finger_Permanent : MonoBehaviour {
         //UpdateFinger();
     }
 
-    public void resetBoneRotation(FingerUpdateData data)
+    public void resetBoneRotation()
     {
         for (int i = 0; i < bones.Length; ++i)
         {
             if (bones[i] != null)
             {
-                bones[i].localRotation = data.boneRotation[i];
+                bones[i].localRotation = defaultBoneOrientation[i];
             }
         }
     }

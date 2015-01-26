@@ -13375,6 +13375,11 @@ MonoBehaviour:
   - {fileID: 1189033810}
   - {fileID: 394387591}
   - {fileID: 1127574635}
+  defaultBoneOrientation:
+  - {x: 0, y: 0, z: 0, w: 0}
+  - {x: 0, y: 0, z: 0, w: 0}
+  - {x: 0, y: 0, z: 0, w: 0}
+  - {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &792138091
 GameObject:
   m_ObjectHideFlags: 0
@@ -20613,6 +20618,11 @@ MonoBehaviour:
   - {fileID: 1859211766}
   - {fileID: 1194683245}
   - {fileID: 270192108}
+  defaultBoneOrientation:
+  - {x: 0, y: 0, z: 0, w: 0}
+  - {x: 0, y: 0, z: 0, w: 0}
+  - {x: 0, y: 0, z: 0, w: 0}
+  - {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &1213736932
 GameObject:
   m_ObjectHideFlags: 0
@@ -21967,6 +21977,11 @@ MonoBehaviour:
   - {fileID: 372279949}
   - {fileID: 2043741607}
   - {fileID: 956188590}
+  defaultBoneOrientation:
+  - {x: 0, y: 0, z: 0, w: 0}
+  - {x: 0, y: 0, z: 0, w: 0}
+  - {x: 0, y: 0, z: 0, w: 0}
+  - {x: 0, y: 0, z: 0, w: 0}
 --- !u!1001 &1361526648
 Prefab:
   m_ObjectHideFlags: 0
@@ -24174,6 +24189,11 @@ MonoBehaviour:
   - {fileID: 563968788}
   - {fileID: 2101989174}
   - {fileID: 652580881}
+  defaultBoneOrientation:
+  - {x: 0, y: 0, z: 0, w: 0}
+  - {x: 0, y: 0, z: 0, w: 0}
+  - {x: 0, y: 0, z: 0, w: 0}
+  - {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &1495270269
 GameObject:
   m_ObjectHideFlags: 0
@@ -25746,6 +25766,11 @@ MonoBehaviour:
   - {fileID: 1560807334}
   - {fileID: 1429493260}
   - {fileID: 157890028}
+  defaultBoneOrientation:
+  - {x: 0, y: 0, z: 0, w: 0}
+  - {x: 0, y: 0, z: 0, w: 0}
+  - {x: 0, y: 0, z: 0, w: 0}
+  - {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &1585401213
 GameObject:
   m_ObjectHideFlags: 0
@@ -26548,6 +26573,11 @@ MonoBehaviour:
   - {fileID: 504733759}
   - {fileID: 1745185905}
   - {fileID: 974842804}
+  defaultBoneOrientation:
+  - {x: 0, y: 0, z: 0, w: 0}
+  - {x: 0, y: 0, z: 0, w: 0}
+  - {x: 0, y: 0, z: 0, w: 0}
+  - {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &1630566655
 GameObject:
   m_ObjectHideFlags: 0
@@ -26699,6 +26729,11 @@ MonoBehaviour:
   - {fileID: 711400790}
   - {fileID: 439739302}
   - {fileID: 1086274703}
+  defaultBoneOrientation:
+  - {x: 0, y: 0, z: 0, w: 0}
+  - {x: 0, y: 0, z: 0, w: 0}
+  - {x: 0, y: 0, z: 0, w: 0}
+  - {x: 0, y: 0, z: 0, w: 0}
 --- !u!1001 &1638204810
 Prefab:
   m_ObjectHideFlags: 0
@@ -29532,6 +29567,11 @@ MonoBehaviour:
   - {fileID: 535996711}
   - {fileID: 1156176476}
   - {fileID: 340278249}
+  defaultBoneOrientation:
+  - {x: 0, y: 0, z: 0, w: 0}
+  - {x: 0, y: 0, z: 0, w: 0}
+  - {x: 0, y: 0, z: 0, w: 0}
+  - {x: 0, y: 0, z: 0, w: 0}
 --- !u!1001 &1811988851
 Prefab:
   m_ObjectHideFlags: 0
@@ -33652,6 +33692,11 @@ MonoBehaviour:
   - {fileID: 1091416445}
   - {fileID: 501985632}
   - {fileID: 715244665}
+  defaultBoneOrientation:
+  - {x: 0, y: 0, z: 0, w: 0}
+  - {x: 0, y: 0, z: 0, w: 0}
+  - {x: 0, y: 0, z: 0, w: 0}
+  - {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &2041969334
 GameObject:
   m_ObjectHideFlags: 0
@@ -34337,6 +34382,11 @@ MonoBehaviour:
   - {fileID: 472803938}
   - {fileID: 587567580}
   - {fileID: 1506775424}
+  defaultBoneOrientation:
+  - {x: 0, y: 0, z: 0, w: 0}
+  - {x: 0, y: 0, z: 0, w: 0}
+  - {x: 0, y: 0, z: 0, w: 0}
+  - {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &2083189069
 GameObject:
   m_ObjectHideFlags: 0
