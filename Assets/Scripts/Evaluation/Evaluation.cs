@@ -26,17 +26,20 @@ public class Evaluation : MonoBehaviour {
 		result.onHand = onHand;
 		if (onHand)
 		{
-			containerObjects = cardContainer.GetComponentsInChildren<Transform>();
+			foreach (Transform t in cardContainer.transform)
+			{
+				containerObjects.Add(t);
+			}
+			Hand_CardCollection.instance.AddCardToHand(containerObjects[0].GetComponent<Card>());
 			Hand_CardCollection.instance.AddCardToHand(containerObjects[1].GetComponent<Card>());
-			Hand_CardCollection.instance.AddCardToHand(containerObjects[2].GetComponent<Card>());
-			toBeSelected = containerObjects[2].GetComponent<Card>();
-			Debug.Log(containerObjects[1]+"  "+containerObjects[1].GetComponent<Card>());
+			toBeSelected = containerObjects[1].GetComponent<Card>();
+			//Debug.Log(containerObjects[1]+"  "+containerObjects[1].GetComponent<Card>());
 		}
 	}
 
 	Card toBeSelected;
 
-	Transform[] containerObjects;
+	List<Transform> containerObjects = new List<Transform>();
 
 	Color colWaiting = Color.blue;
 	Color colReady = Color.green;
