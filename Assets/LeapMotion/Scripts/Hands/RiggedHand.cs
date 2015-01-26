@@ -29,83 +29,90 @@ public class RiggedHand : HandModel {
       UpdateHand();
   }
 
-  public override void UpdateHand() {
-    if (palm != null) {
-      //palm.position = GetPalmPosition();
-      //palm.rotation = GetPalmRotation();
-        if (hand_.IsLeft)
-        {
-            if (permanentHand != null)
-            {
-                //Update permanent Hand
-                HandUpdateData handData = new HandUpdateData();
-                handData.isLeft = true;
-                handData.palmPosition = GetPalmPosition();
-                handData.palmRotation = GetPalmRotation();
-                handData.palmNormal = GetPalmNormal();
-                handData.armRotation = GetArmRotation();
-                permanentHand.UpdateHand(handData);
-            }
-
-            // Update Leap Hand
-            palm.position = Vector3.Lerp(palm.position, GetPalmPosition(), Time.deltaTime * 20);
-            palm.rotation = Quaternion.Slerp(palm.rotation, GetPalmRotation(), Time.deltaTime * 20);
-        }
-        else
-        {
-            if (permanentHand != null)
-            {
-                //Update permanent Hand
-                HandUpdateData handData = new HandUpdateData();
-                handData.isLeft = false;
-                handData.palmPosition = GetPalmPosition();
-                handData.palmRotation = GetPalmRotation();
-                handData.palmNormal = GetPalmNormal();
-                handData.armRotation = GetArmRotation();
-                permanentHand.UpdateHand(handData);
-            }
-
-            palm.position = Vector3.Lerp(palm.position, GetPalmPosition(), Time.deltaTime * 20);
-				Vector3 up = (new Vector3(1,1,0)).normalized;//Vector3.up;
-            if (Vector3.Dot(GetPalmNormal(), up) < 0)
-            {
-                palm.rotation = Quaternion.Slerp(palm.rotation, GetPalmRotation(), Time.deltaTime * 20);
-            }
-        }
-    }
-
-    if (foreArm != null)
-	{
-      foreArm.rotation = GetArmRotation();
-	}
-
-    for (int i = 0; i < fingers.Length; ++i)
-    {
-        if (fingers[i] != null && hand_.IsLeft)
-        {
-            if (fingers[i].fingerType == Finger.FingerType.TYPE_THUMB || InteractionManager.instance.leftHandFingerUpdateMode == FingerUpdateMode.Enabled)
-            {
-                fingers[i].UpdateFinger();
-            }
-
-            if (fingers[i].fingerType != Finger.FingerType.TYPE_THUMB && InteractionManager.instance.leftHandFingerUpdateMode == FingerUpdateMode.Disabled)
-            {
-                fingers[i].setBonesToDefault();
-            }
-        }
-
-      if (fingers[i] != null && hand_.IsRight)
+  public override void UpdateHand()
+  {
+      if (InteractionManager.instance.GetTrackingMode() == false)
       {
-          if (InteractionManager.instance.rightHandFingerUpdateMode == FingerUpdateMode.Enabled)
+          return;
+      }
+
+      if (palm != null)
+      {
+          //palm.position = GetPalmPosition();
+          //palm.rotation = GetPalmRotation();
+          if (hand_.IsLeft)
           {
-              fingers[i].UpdateFinger();
+              if (permanentHand != null)
+              {
+                  //Update permanent Hand
+                  HandUpdateData handData = new HandUpdateData();
+                  handData.isLeft = true;
+                  handData.palmPosition = GetPalmPosition();
+                  handData.palmRotation = GetPalmRotation();
+                  handData.palmNormal = GetPalmNormal();
+                  handData.armRotation = GetArmRotation();
+                  permanentHand.UpdateHand(handData);
+              }
+
+              // Update Leap Hand
+              palm.position = Vector3.Lerp(palm.position, GetPalmPosition(), Time.deltaTime * 20);
+              palm.rotation = Quaternion.Slerp(palm.rotation, GetPalmRotation(), Time.deltaTime * 20);
           }
-          
-          if(InteractionManager.instance.rightHandFingerUpdateMode == FingerUpdateMode.Disabled)
+          else
           {
-              fingers[i].setBonesToDefault();
+              if (permanentHand != null)
+              {
+                  //Update permanent Hand
+                  HandUpdateData handData = new HandUpdateData();
+                  handData.isLeft = false;
+                  handData.palmPosition = GetPalmPosition();
+                  handData.palmRotation = GetPalmRotation();
+                  handData.palmNormal = GetPalmNormal();
+                  handData.armRotation = GetArmRotation();
+                  permanentHand.UpdateHand(handData);
+              }
+
+              palm.position = Vector3.Lerp(palm.position, GetPalmPosition(), Time.deltaTime * 20);
+              Vector3 up = (new Vector3(1, 1, 0)).normalized;//Vector3.up;
+              if (Vector3.Dot(GetPalmNormal(), up) < 0)
+              {
+                  palm.rotation = Quaternion.Slerp(palm.rotation, GetPalmRotation(), Time.deltaTime * 20);
+              }
           }
       }
+
+      if (foreArm != null)
+      {
+          foreArm.rotation = GetArmRotation();
+      }
+
+      for (int i = 0; i < fingers.Length; ++i)
+      {
+          if (fingers[i] != null && hand_.IsLeft)
+          {
+              if (fingers[i].fingerType == Finger.FingerType.TYPE_THUMB || InteractionManager.instance.leftHandFingerUpdateMode == FingerUpdateMode.Enabled)
+              {
+                  fingers[i].UpdateFinger();
+              }
+
+              if (fingers[i].fingerType != Finger.FingerType.TYPE_THUMB && InteractionManager.instance.leftHandFingerUpdateMode == FingerUpdateMode.Disabled)
+              {
+                  fingers[i].setBonesToDefault();
+              }
+          }
+
+          if (fingers[i] != null && hand_.IsRight)
+          {
+              if (InteractionManager.instance.rightHandFingerUpdateMode == FingerUpdateMode.Enabled)
+              {
+                  fingers[i].UpdateFinger();
+              }
+
+              if (InteractionManager.instance.rightHandFingerUpdateMode == FingerUpdateMode.Disabled)
+              {
+                  fingers[i].setBonesToDefault();
+              }
+          }
     }
   }
 }
