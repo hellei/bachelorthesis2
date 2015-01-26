@@ -36,6 +36,8 @@ public class Hand_CardCollection : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+
+        ChangeCardPositionAndOrientation();
 	}
 
     void Update()
@@ -170,11 +172,8 @@ public class Hand_CardCollection : MonoBehaviour {
         }
 
         //Reset cards
-        if (handRegistered)
-        {
-            HideCardsOnHand();
-            ChangeCardPositionAndOrientation();
-        }
+        HideCardsOnHand();
+        ChangeCardPositionAndOrientation();
     }
 
     /*public Card TakeCardFromHand(int index)
