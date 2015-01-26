@@ -139,6 +139,138 @@ MonoBehaviour:
     sprite: {fileID: 21300000, guid: 5d831586e251a45cab6185fd1fc1c79d, type: 3}
     cost: []
     infoText: []
+  - name: Boros Signet
+    sprite: {fileID: 21300000, guid: 7675add99725dcf4c9c13162768e02f6, type: 3}
+    cost: []
+    infoText: []
+  - name: Dimir Signet
+    sprite: {fileID: 21300000, guid: c11032a88e239214c879c64618bcafdc, type: 3}
+    cost: []
+    infoText: []
+  - name: Golgari Signet
+    sprite: {fileID: 21300000, guid: e2ba91b6b352bc448a25ee4b9694a03a, type: 3}
+    cost: []
+    infoText: []
+  - name: Selesnya Signet
+    sprite: {fileID: 21300000, guid: a35eb961f43a48d41bb7f68fcedfbdbe, type: 3}
+    cost: []
+    infoText: []
+  - name: Pacifism
+    sprite: {fileID: 21300000, guid: 67609d7c26c665342abacdafd997d9d1, type: 3}
+    cost: []
+    infoText: []
+  - name: Rhox Faithmender
+    sprite: {fileID: 21300000, guid: 832314b241799c547a69aae28567b95c, type: 3}
+    cost: []
+    infoText: []
+  - name: Safe Passage
+    sprite: {fileID: 21300000, guid: 1909b58ca0d0c2645b07d0896ceb1965, type: 3}
+    cost: []
+    infoText: []
+  - name: Serra Avenger
+    sprite: {fileID: 21300000, guid: 569e76b19def22745bdd2f9e8e2c8f9d, type: 3}
+    cost: []
+    infoText: []
+  - name: Ground Seal
+    sprite: {fileID: 21300000, guid: a37e5f07f3d0e8b42a7cce0660e85569, type: 3}
+    cost: []
+    infoText: []
+  - name: Mwonvuli Beast Tracker
+    sprite: {fileID: 21300000, guid: d83d71e711f208d458ba4242f686826d, type: 3}
+    cost: []
+    infoText: []
+  - name: Timberpack Wolf
+    sprite: {fileID: 21300000, guid: bb14981a332c73a4fb85bd1e9cccbed5, type: 3}
+    cost: []
+    infoText: []
+  - name: Yeva, Nature's Herald
+    sprite: {fileID: 21300000, guid: 176c70a40984fc2409ea8310799171bc, type: 3}
+    cost: []
+    infoText: []
+  - name: Archaeomancer
+    sprite: {fileID: 21300000, guid: 7ba7a3f8f1c557f41af5e69636ec31d8, type: 3}
+    cost: []
+    infoText: []
+  - name: Arctic Aven
+    sprite: {fileID: 21300000, guid: 7b06883e2e1745a4e82366466d6588ee, type: 3}
+    cost: []
+    infoText: []
+  - name: Battle of Wits
+    sprite: {fileID: 21300000, guid: f922b7cb0c9cdea4c8363489cadf3f72, type: 3}
+    cost: []
+    infoText: []
+  - name: Courtly Provocateur
+    sprite: {fileID: 21300000, guid: 870b037e5d550a5439a3781d2dc52561, type: 3}
+    cost: []
+    infoText: []
+  - name: Arms Dealer
+    sprite: {fileID: 21300000, guid: 332bb6802e0b7e94386c93015a9a505d, type: 3}
+    cost: []
+    infoText: []
+  - name: Furnace Whelp
+    sprite: {fileID: 21300000, guid: 15f686d814cf05a429bf31fbb8825f2e, type: 3}
+    cost: []
+    infoText: []
+  - name: Hamletback Goliath
+    sprite: {fileID: 21300000, guid: 02ab5e8db607a1f4e942a37c19487cb4, type: 3}
+    cost: []
+    infoText: []
+  - name: Krenko, Mob Boss
+    sprite: {fileID: 21300000, guid: dcd28c5c51b2a4f46bcf0720c9091300, type: 3}
+    cost: []
+    infoText: []
+  - name: Castle of the Princess
+    sprite: {fileID: 21300000, guid: 3d835700aa14be0409f5b8f7b3a8634f, type: 3}
+    cost: []
+    infoText:
+    - text: Castle of the Princess
+      textStyle: 0
+    - text: Place
+      textStyle: 1
+    - text: All your monsters receive +0/+2//All your monster receive +0/+1//Return
+        all monsters that died during this round to play
+      textStyle: 2
+  - name: Forest
+    sprite: {fileID: 21300000, guid: 3c6fa3d3872a5a44a99059990dd6aad7, type: 3}
+    cost: []
+    infoText:
+    - text: Forest
+      textStyle: 0
+    - text: Environment
+      textStyle: 1
+    - text: 'Tap: Produces 1 Green Energy'
+      textStyle: 2
+  - name: Meadow
+    sprite: {fileID: 21300000, guid: 90787e8e0bc425d48a725fe1e4f36704, type: 3}
+    cost: []
+    infoText:
+    - text: Meadow
+      textStyle: 0
+    - text: Environment
+      textStyle: 1
+    - text: 'Tap: Produces 1 Earth Energy'
+      textStyle: 2
+  - name: Sea of Illusions
+    sprite: {fileID: 21300000, guid: 0bf6cce2312672840b49d3ed3259d32f, type: 3}
+    cost: []
+    infoText:
+    - text: Sea of Illusions
+      textStyle: 0
+    - text: Place
+      textStyle: 1
+    - text: When Sea of Illusions is revealed, all//players search their card piles
+        for up to 5//monster cards and put them in an extra//pile. At the beginning
+        of each round, each//player may draw a card from the extra pile//instead of
+        the card pile.
+      textStyle: 2
+  - name: Shrine of the Prime God
+    sprite: {fileID: 21300000, guid: 58d1d71849da12d47a671e7c401c976d, type: 3}
+    cost: []
+    infoText: []
+  - name: Sparkling Flames
+    sprite: {fileID: 21300000, guid: 42abd09d994cc4941b4bf9442cbfef98, type: 3}
+    cost: []
+    infoText: []
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

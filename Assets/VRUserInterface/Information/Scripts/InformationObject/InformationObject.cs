@@ -20,7 +20,23 @@ namespace VRUserInterface
 	        public TextStyle textStyle;
 	    }
 
+		Shader standardShader;
 
+		/// <summary>
+		/// You can highlight an object if you want to shift the focus towards it.
+		/// </summary>
+		/// <param name="value">If set to <c>true</c> value.</param>
+		public void Highlight(bool value)
+		{
+			if (value)
+			{
+				renderer.material.shader = Shader.Find ("Specular");
+			}
+			else
+			{
+				renderer.material.shader = standardShader;
+			}
+		}
 
 	    /// <summary>
 	    /// Only one object can be watched at a time
@@ -69,6 +85,10 @@ namespace VRUserInterface
 	        {
 	            displayPrefab = gameObject;
 	        }
+			if (renderer)
+			{
+				standardShader = renderer.material.shader;
+			}
 	    }
 
 		bool buttonActive = false;

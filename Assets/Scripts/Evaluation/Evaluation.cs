@@ -11,7 +11,7 @@ public class Evaluation : MonoBehaviour {
 
 	public bool onHand = false;
 
-	public ButtonType[] buttonTests;
+	public List<ButtonType> buttonTests;
 	
 
 	State state = State.Waiting;
@@ -20,18 +20,22 @@ public class Evaluation : MonoBehaviour {
 	GameObject copy;
 	// Use this for initialization
 	void Start () {
-		//TODO: Shuffle button tests
+		buttonTests.Shuffle ();
 
-		result.tests = new EvaluationResult.ButtonTest[buttonTests.Length];
+		result.tests = new EvaluationResult.ButtonTest[buttonTests.Count];
 		result.onHand = onHand;
 		if (onHand)
 		{
-			foreach (Transform obj in cardContainer.transform)
-			{
-				Hand_CardCollection.instance.AddCardToHand(obj.GetComponent<Card>());
-			}
+			containerObjects = cardContainer.GetComponentsInChildren<Transform>();
+			Hand_CardCollection.instance.AddCardToHand(containerObjects[0].GetComponent<Card>());
+			Hand_CardCollection.instance.AddCardToHand(containerObjects[1].GetComponent<Card>());
+			toBeSelected = containerObjects[1].GetComponent<Card>();
 		}
 	}
+
+	Card toBeSelected;
+
+	Transform[] containerObjects;
 
 	Color colWaiting = Color.blue;
 	Color colReady = Color.green;
@@ -107,7 +111,7 @@ public class Evaluation : MonoBehaviour {
 					copy.SetActive(true);
 					cardContainer = copy;
 					copy = null;
-					if (i < buttonTests.Length-1)
+					if (i < buttonTests.Count-1)
 					{
 						cardsSelected = 0;
 						i++;
@@ -125,6 +129,15 @@ public class Evaluation : MonoBehaviour {
 			renderer.material.color = colFinished;
 			break;
 		}
+		if (onHand)
+		{
+			HighlightCard();
+		}
+	}
+
+	void HighlightCard()
+	{
+		toBeSelected.GetComponent<InformationObject> ().Highlight (true);
 	}
 
 	GameObject lastSelectedCard;

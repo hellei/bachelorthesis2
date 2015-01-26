@@ -9,17 +9,24 @@ public class DisplayEvaluation : MonoBehaviour {
 	float lastSetActiveDisplay = 0;
 	
 	DisplayType dt = DisplayType.TableDisplay;
-	
-	public InformationDisplay[] displays;
-	public DisplayType[] displayTypes;
+
+	[System.Serializable]
+	public class DisplayInfo
+	{
+		public InformationDisplay script;
+		public DisplayType type;
+	}
+
+	public List<DisplayInfo> displays;
 
 
 	EvaluationResult result = new EvaluationResult ();
 
 	void Start()
 	{
+		displays.Shuffle();
 		PrepareCards ();
-		result.displayTests = new EvaluationResult.DisplayTest[displays.Length];
+		result.displayTests = new EvaluationResult.DisplayTest[displays.Count];
 		SetDisplayType (0);
 	}
 
@@ -45,18 +52,18 @@ public class DisplayEvaluation : MonoBehaviour {
 		}
 		foreach (TextObject c in cards)
 		{
-			if (c.objects.Count != displays.Length)
+			if (c.objects.Count != displays.Count)
 			{
 				Debug.LogError("The number of displays tested needs to be equal to the number of different text objects of one type (text length)");
 			}
 		}
-		shuffledCards = new GameObject[displays.Length, numberOfCards];
+		shuffledCards = new GameObject[displays.Count, numberOfCards];
 		for (int i = 0; i < numberOfCards; i++)
 		{
-			for (int i2 = 0; i2 < displays.Length; i2++)
+			cards[i].objects.Shuffle();
+			for (int i2 = 0; i2 < displays.Count; i2++)
 			{
 				shuffledCards[i2,i] = cards[i].objects[i2];
-				//TODO: Implement shuffle
 			}
 		}
 	}
@@ -95,7 +102,7 @@ public class DisplayEvaluation : MonoBehaviour {
 			{
 				edt = new EvaluationResult.DisplayTest();
 				edt.selectionTimes = new float[numberOfCards - numberOfTests];
-				edt.dt = displayTypes[idx_displays];
+				edt.dt = displays[idx_displays].type;
 				result.displayTests[idx_displays] = edt;
 			}
 			if (idx_cards>=numberOfTests)
@@ -113,7 +120,7 @@ public class DisplayEvaluation : MonoBehaviour {
 				idx_cards = 0;
 				edt.CalculateAverage();
 				Debug.Log("Finished this display type evaluation");
-				if (idx_displays < displays.Length)
+				if (idx_displays < displays.Count)
 				{
 					//Change the display type
 					SetDisplayType(idx_displays);
@@ -145,9 +152,9 @@ public class DisplayEvaluation : MonoBehaviour {
 
 	void SetDisplayType(int i)
 	{
-		InformationController.instance.infoDisplay = displays [i];
+		InformationController.instance.infoDisplay = displays [i].script;
 		//Update card visibility
-		for (int x = 0; x < displays.Length; x++)
+		for (int x = 0; x < displays.Count; x++)
 		{
 			for (int y = 0; y < numberOfCards; y++)
 			{
