@@ -31,7 +31,7 @@ public class RiggedHand : HandModel {
 
   public override void UpdateHand()
   {
-      if (InteractionManager.instance.GetTrackingMode() == false)
+      if (InteractionManager.instance.GetTrackingMode() == false || InteractionManager.instance.touchOnTablet)
       {
           return;
       }
