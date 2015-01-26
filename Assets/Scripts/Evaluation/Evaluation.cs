@@ -26,10 +26,6 @@ public class Evaluation : MonoBehaviour {
 		result.onHand = onHand;
 		if (onHand)
 		{
-			foreach (Transform t in cardContainer.transform)
-			{
-				containerObjects.Add(t);
-			}
 			SetUpHandCardCollection();
 			//Debug.Log(containerObjects[1]+"  "+containerObjects[1].GetComponent<Card>());
 		}
@@ -38,7 +34,12 @@ public class Evaluation : MonoBehaviour {
 
 	void SetUpHandCardCollection()
 	{
-		Hand_CardCollection.instance.AddCardToHand(containerObjects[0].GetComponent<Card>());
+		containerObjects = new List<Transform> ();
+		foreach (Transform t in cardContainer.transform)
+		{
+			containerObjects.Add(t);
+		}
+		Hand_CardCollection.instance.AddCardToHand(containerObjects[0].GetComponent<Card>(), 0);
 		handCardIdx=1;
 		toBeSelected = containerObjects[order[handCardIdx]].GetComponent<Card>();
 	}
@@ -108,7 +109,7 @@ public class Evaluation : MonoBehaviour {
 				//Add new card to hand
 				if (containerObjects[handCardIdx])
 				{
-					Hand_CardCollection.instance.AddCardToHand(containerObjects[handCardIdx].GetComponent<Card>());
+					Hand_CardCollection.instance.AddCardToHand(containerObjects[handCardIdx].GetComponent<Card>(),0);
 					toBeSelected = containerObjects[order[handCardIdx]].GetComponent<Card>();
 				}
 				handCardIdx++;
@@ -166,6 +167,7 @@ public class Evaluation : MonoBehaviour {
 							foreach (Transform t in containerObjects)
 							{
 								Hand_CardCollection.instance.TakeCardFromHand(t.GetComponent<Card>());
+								t.transform.position = new Vector3(0,-1000,0);
 							}
 							SetUpHandCardCollection();
 						}

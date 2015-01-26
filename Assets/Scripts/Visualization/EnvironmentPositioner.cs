@@ -183,8 +183,10 @@ public class EnvironmentPositioner : MenuCallback {
 
     public GameObject tablet;
 	
-
-	void SetChairPosition()
+	/// <summary>
+	/// Resets the chair.
+	/// </summary>
+	public void SetChairPosition()
 	{
 		if (!playerModel)
 		{

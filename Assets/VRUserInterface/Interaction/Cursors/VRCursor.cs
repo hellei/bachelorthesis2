@@ -16,7 +16,7 @@ namespace VRUserInterface
 			}
 		}
 
-	    public float cursorDistance = 2f;
+	    public float cursorDistance = 3.4f;
 
 		public static VRCursor instance;
 		

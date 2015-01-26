@@ -364,14 +364,17 @@ MonoBehaviour:
     textStyle: 0
     textColor: {r: 0, g: 0, b: 0, a: 1}
     backgroundColor: {r: 1, g: 1, b: 1, a: 1}
+    minNumberOfChars: 10
   - prefab: {fileID: 100000, guid: 1c4de57f6fe7a244e8cba95134d8a3ed, type: 2}
     textStyle: 1
     textColor: {r: 1, g: 1, b: 1, a: 1}
     backgroundColor: {r: 0, g: 0, b: 0, a: 1}
+    minNumberOfChars: 10
   - prefab: {fileID: 100000, guid: cc4b68d4370196e4b8140acd62362055, type: 2}
     textStyle: 2
     textColor: {r: 1, g: 1, b: 1, a: 1}
     backgroundColor: {r: 0, g: 0, b: 0, a: 1}
+    minNumberOfChars: 10
   background: {fileID: 100000, guid: 8f47c1dc61d6ba24392140759670640b, type: 2}
   borderLeft: .0500000007
   borderTop: .0500000007
@@ -408,7 +411,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed8c85454a132fc4fb14fa14c0185808, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  infoDisplay: {fileID: 11485580}
+  infoDisplay: {fileID: 11400018}
   selection: {fileID: 11400002}
   debugKeys: 1
   infoButton: {fileID: 11400000, guid: 6d82e974550a049ae9ea9a5c6cba8c48, type: 2}
@@ -598,14 +601,17 @@ MonoBehaviour:
     textStyle: 0
     textColor: {r: 0, g: 0, b: 0, a: 1}
     backgroundColor: {r: 1, g: 1, b: 1, a: 1}
+    minNumberOfChars: 10
   - prefab: {fileID: 100004, guid: f4337196b9cce4e1694d55161bce892f, type: 2}
     textStyle: 1
     textColor: {r: 1, g: 1, b: 1, a: 1}
     backgroundColor: {r: 0, g: 0, b: 0, a: 1}
+    minNumberOfChars: 10
   - prefab: {fileID: 100004, guid: e7092cf1301e64015a3e3d6eba2e2172, type: 2}
     textStyle: 2
     textColor: {r: 1, g: 1, b: 1, a: 1}
     backgroundColor: {r: 0, g: 0, b: 0, a: 1}
+    minNumberOfChars: 10
   background: {fileID: 100000, guid: 8f47c1dc61d6ba24392140759670640b, type: 2}
   borderLeft: .0500000007
   borderTop: .0500000007
@@ -638,8 +644,8 @@ MonoBehaviour:
   scrollDownButton: {fileID: 11400000, guid: 98e763011136f473086fb9000d3a29da, type: 2}
   textItemMargin: .00999999978
   horizontalMargin: .0399999991
-  maxHeight: .200000003
-  maxWidth: .25
+  maxHeight: .25
+  maxWidth: .300000012
   showDisplayPrefab: 0
   showInfoText: 1
   objectMagnifyingGlassSettings:
@@ -690,14 +696,17 @@ MonoBehaviour:
     textStyle: 0
     textColor: {r: 0, g: 0, b: 0, a: 1}
     backgroundColor: {r: 1, g: 1, b: 1, a: 1}
+    minNumberOfChars: 6
   - prefab: {fileID: 100000, guid: 1c4de57f6fe7a244e8cba95134d8a3ed, type: 2}
     textStyle: 1
     textColor: {r: 1, g: 1, b: 1, a: 1}
     backgroundColor: {r: 0, g: 0, b: 0, a: 1}
+    minNumberOfChars: 30
   - prefab: {fileID: 100000, guid: cc4b68d4370196e4b8140acd62362055, type: 2}
     textStyle: 2
-    textColor: {r: 1, g: 1, b: 1, a: 1}
+    textColor: {r: 0, g: 1, b: 0, a: 1}
     backgroundColor: {r: 0, g: 0, b: 0, a: 1}
+    minNumberOfChars: 40
   background: {fileID: 100000, guid: 8f47c1dc61d6ba24392140759670640b, type: 2}
   borderLeft: .0500000007
   borderTop: .0500000007
@@ -705,11 +714,21 @@ MonoBehaviour:
     useMagnifyingGlassEffect: 1
     magnifyingGlassCurve:
       serializedVersion: 2
-      m_Curve: []
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
     magnifyingFactor: 1.5
-    moveForwardValue: .100000001
+    moveForwardValue: .0199999996
     popupDuration: .699999988
     minimizeSpeedMultiplication: 2
 --- !u!114 &11411986
@@ -826,7 +845,7 @@ MonoBehaviour:
   lookAwayThreshold: 30
   connectionPrefab: {fileID: 0}
   numberOfInfoBoxes: 5
-  localOffset: {x: 0, y: 0, z: .400000006}
+  localOffset: {x: 0, y: 0, z: .550000012}
   globalOffset: {x: 0, y: 0, z: 0}
   onlyConsiderCameraYRotation: 0
   minimumHeight: {fileID: 0}

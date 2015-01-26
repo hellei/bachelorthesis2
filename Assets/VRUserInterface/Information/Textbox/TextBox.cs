@@ -12,6 +12,10 @@ namespace VRUserInterface
 	        public TextStyle textStyle;
 	        public Color textColor = Color.white;
 	        public Color backgroundColor = Color.black;
+			/// <summary>
+			/// If an item has less characters than defined here, the missing chars are filled up with empty spaces.
+			/// </summary>
+			public int minNumberOfChars = 10;
 	    }
 
 		public TextAsset[] textAssets;
@@ -117,7 +121,21 @@ namespace VRUserInterface
 		        }
 		        else
 		        {
-		            tm.text = infoBox.text;
+					//If there are too few characters, add empty spaces
+					int size = infoBox.text.Length;
+					int minNumberOfChar = GetTextAssetInstance(infoBox.textStyle).minNumberOfChars;
+					int missing = minNumberOfChar-infoBox.text.Length;
+					string attachment = "";
+					if (missing > 0)
+					{
+						Debug.Log(missing + " characters missing. Filling up with empty spaces.");
+						for (int i = 0; i < missing; i++)
+						{
+							attachment+=" ";
+						}
+						attachment+="/;";
+					}
+					tm.text = infoBox.text+attachment;
 		        }
 				if (ta.renderer)
 				{
@@ -141,6 +159,7 @@ namespace VRUserInterface
 	        //Scale Background according to the dimensions of the text
 	        float width = tm.renderer.bounds.max.x;
 	        float height = tm.renderer.bounds.max.y;
+			tm.text = tm.text.Replace ("/;", "");
 	        ba.transform.localScale = new Vector2((width + borderLeft) * 2, (height + borderTop) * 2);
 	        ba.SetColorRecursively(color);
 	        return ba;
