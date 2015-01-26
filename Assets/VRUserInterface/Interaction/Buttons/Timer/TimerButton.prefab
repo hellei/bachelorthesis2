@@ -82,7 +82,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: .0199999996}
+  m_Size: {x: 1.04999995, y: 1.04999995, z: .0199999996}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &11400000
 MonoBehaviour:
@@ -96,7 +96,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: 
+  creator: {fileID: 0}
   initialRotation: {x: 0, y: 180, z: 0}
+  menuCondition: {fileID: 0}
   conditionInfo: []
   selectTimer: 1
   useSound: 0

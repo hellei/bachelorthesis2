@@ -34,7 +34,6 @@ namespace VRUserInterface
 			}
 			else
 			{
-				Debug.Log("unhighlight!" + standardShader);
 				renderer.material.shader = Shader.Find (standardShader);
 			}
 		}

@@ -30,11 +30,17 @@ public class Evaluation : MonoBehaviour {
 			{
 				containerObjects.Add(t);
 			}
-			Hand_CardCollection.instance.AddCardToHand(containerObjects[0].GetComponent<Card>());
-			handCardIdx=1;
-			toBeSelected = containerObjects[order[handCardIdx]].GetComponent<Card>();
+			SetUpHandCardCollection();
 			//Debug.Log(containerObjects[1]+"  "+containerObjects[1].GetComponent<Card>());
 		}
+		InteractionManager.instance.Tracking (false);
+	}
+
+	void SetUpHandCardCollection()
+	{
+		Hand_CardCollection.instance.AddCardToHand(containerObjects[0].GetComponent<Card>());
+		handCardIdx=1;
+		toBeSelected = containerObjects[order[handCardIdx]].GetComponent<Card>();
 	}
 
 
@@ -119,6 +125,7 @@ public class Evaluation : MonoBehaviour {
 					result.tests[i].bt = buttonTests[i];
 					buttonPrefab.buttonType = buttonTests[i];
 					InformationObject.recreateButtons = true;
+					Debug.Log("Next button type: "+buttonPrefab.buttonType);
 				}
 				state = State.TimerRunning;
 				timerStart = Time.time;
@@ -133,7 +140,7 @@ public class Evaluation : MonoBehaviour {
 		case State.TimerRunning:
 			renderer.material.color = colTimerRunning;
 			//Stop timer when the information display has been opened
-			if (InformationController.instance.activeObject)
+			if (InformationController.instance.activeObject || Input.GetKeyDown(KeyCode.P))
 			{
 				float selectionTime = (Time.time - timerStart);
 				Debug.Log("Selected card in " + selectionTime + " seconds");
@@ -153,6 +160,15 @@ public class Evaluation : MonoBehaviour {
 					copy = null;
 					if (i < buttonTests.Count-1)
 					{
+						if (onHand)
+						{
+							//Reset all cards
+							foreach (Transform t in containerObjects)
+							{
+								Hand_CardCollection.instance.TakeCardFromHand(t.GetComponent<Card>());
+							}
+							SetUpHandCardCollection();
+						}
 						cardsSelected = 0;
 						i++;
 					}
@@ -160,6 +176,7 @@ public class Evaluation : MonoBehaviour {
 					{
 						result.Save("result_"+Random.Range(0,10000)+".xml");
 						state = State.Finished;
+						InteractionManager.instance.Tracking (true);
 					}
 				}
 				lastSelectedCard = InformationController.instance.activeObject;
