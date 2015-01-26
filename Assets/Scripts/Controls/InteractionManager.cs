@@ -252,7 +252,7 @@ public class InteractionManager : MonoBehaviour {
                         interactionTime = Time.time;
 
                         Card selectedCard = Hand_Selecting.instance.TakeCardFromHand();
-                        Hand_CardCollection.instance.AddCardToHand(selectedCard, true);
+                        Hand_CardCollection.instance.AddCardToHand(selectedCard, -1, true);
                     }
                 }
             }

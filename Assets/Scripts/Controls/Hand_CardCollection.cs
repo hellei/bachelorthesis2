@@ -111,7 +111,13 @@ public class Hand_CardCollection : MonoBehaviour {
         }
     }
 
-    public void AddCardToHand(Card card, bool interpolate = false)
+    /// <summary>
+    /// Adds the card to the left hand
+    /// </summary>
+    /// <param name="card">the card to add</param>
+    /// <param name="cardIndex">the index of the position in hand (starting with 0), -1 for nearest position of right hand</param>
+    /// <param name="interpolate">whether a card should be inserted instantly or with interpolation</param>
+    public void AddCardToHand(Card card, int cardIndex = -1, bool interpolate = false)
     {
 		if (!card)
 		{
@@ -131,31 +137,44 @@ public class Hand_CardCollection : MonoBehaviour {
         // Insert at nearest position
         if (cardsOnHand.Count > 0)
         {
-            // Transform card's position in space of nearest card
-            Transform nearestCardSpace = cardsOnHand[indexOfNearestCard].card.transform;
-            Vector3 relativePosToNearestCard = nearestCardSpace.InverseTransformPoint(card.transform.position);            
-
-            // Right
-            if (relativePosToNearestCard.x > 0)
+            if (cardIndex < 0)
             {
-                //At end of list
-                if (indexOfNearestCard + 1 == cardsOnHand.Count)
+                // Transform card's position in space of nearest card
+                Transform nearestCardSpace = cardsOnHand[indexOfNearestCard].card.transform;
+                Vector3 relativePosToNearestCard = nearestCardSpace.InverseTransformPoint(card.transform.position);
+
+                // Right
+                if (relativePosToNearestCard.x > 0)
                 {
-                    cardsOnHand.Add(cardBucket);
+                    //At end of list
+                    if (indexOfNearestCard + 1 == cardsOnHand.Count)
+                    {
+                        cardsOnHand.Add(cardBucket);
+                    }
+                    else
+                    {
+                        cardsOnHand.Insert(indexOfNearestCard++, cardBucket);
+                    }
                 }
+                // Left
                 else
                 {
-                    cardsOnHand.Insert(indexOfNearestCard++, cardBucket);
+                    cardsOnHand.Insert(indexOfNearestCard, cardBucket);
                 }
             }
-            // Left
             else
+            // First card on hand
             {
-                cardsOnHand.Insert(indexOfNearestCard, cardBucket);
+                cardsOnHand.Add(cardBucket);
             }
         }
-        else
-        // First card on hand
+
+        // Insert at custom index
+        if (cardIndex >= 0 && cardIndex < cardsOnHand.Count)
+        {
+            cardsOnHand.Insert(cardIndex, cardBucket);
+        }
+        if (cardIndex >= cardsOnHand.Count)
         {
             cardsOnHand.Add(cardBucket);
         }
