@@ -23,6 +23,7 @@ public class Hand_CardCollection : MonoBehaviour {
 
     // Main attributes
     public int maxCardsAllowed = -1;
+    public Vector3 inactiveHandPos = new Vector3(0, -1000, 0);
     public float fanOutDistance = 0.05f;
     private List<CardBucket> cardsOnHand = new List<CardBucket>();
     
@@ -73,6 +74,7 @@ public class Hand_CardCollection : MonoBehaviour {
     {
         //HideCardsOnHand();
         handRegistered = false;
+        SetHandPosition(inactiveHandPos);
         //print("Unregistered and hide cards");
     }
 
@@ -84,6 +86,11 @@ public class Hand_CardCollection : MonoBehaviour {
     public bool IsHandRegistered()
     {
         return handRegistered;
+    }
+
+    public void SetHandPosition(Vector3 pos)
+    {
+        hand.transform.position = pos;
     }
 
     public int FindIndexOfNearestCard(Vector3 position)

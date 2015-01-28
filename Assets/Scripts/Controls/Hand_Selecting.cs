@@ -14,10 +14,12 @@ public class Hand_Selecting : MonoBehaviour {
 
     // Main attributes
     public int maxAllowedCardsInHand = 1;
+    public Vector3 inactiveHandPos = new Vector3(0, -1000,0);
     private Vector3  grabPosition;
     private Card grabbedCard;
     private int cardsInHand;
     private bool handRegistered;
+
 
     public static Hand_Selecting instance;
 
@@ -46,6 +48,11 @@ public class Hand_Selecting : MonoBehaviour {
     public Finger_Permanent[] GetFingers()
     {
         return fingers;
+    }
+
+    public void SetHandPosition(Vector3 pos)
+    {
+        hand.transform.position = pos;
     }
 
     public Vector3 GetGrabPosition()
@@ -90,6 +97,7 @@ public class Hand_Selecting : MonoBehaviour {
     {
         //HideCardInHand();
         handRegistered = false;
+        SetHandPosition(inactiveHandPos);
         //print("Unregistered and hide selected card");
     }
 
