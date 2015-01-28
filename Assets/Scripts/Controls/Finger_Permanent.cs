@@ -25,7 +25,6 @@ public class Finger_Permanent : MonoBehaviour {
             if (bones[i] != null)
             {
                 defaultBoneOrientation[i] = bones[i].localRotation;
-                print(bones[i].transform.localRotation);
             }
         }
 	

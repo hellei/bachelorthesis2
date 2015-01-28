@@ -33,17 +33,28 @@ public class MoveModel : MenuCallback {
 		foreach (Transform t in transform)
 		{
 			t.gameObject.SetActive(_isVisible);
+			EnvironmentPositioner.instance.SetChairPosition();
 		}
 	}
 	#endregion
 
     public GameObject upperBody;
 
+	public bool isActiveOnStart = false;
+
 	// Use this for initialization
 	void Start () {
         CreatePlayerPlanes();
 		SetInitialHeadRotation ();
 		SetInitialRotations ();
+		if (!isActiveOnStart)
+		{
+			_isVisible = false;
+			foreach (Transform t in transform)
+			{
+				t.gameObject.SetActive(_isVisible);
+			}
+		}
 	}
 	
 	// Update is called once per frame

@@ -20,7 +20,7 @@ namespace VRUserInterface
 	        public TextStyle textStyle;
 	    }
 
-		Shader standardShader;
+		string standardShader;
 
 		/// <summary>
 		/// You can highlight an object if you want to shift the focus towards it.
@@ -30,11 +30,11 @@ namespace VRUserInterface
 		{
 			if (value)
 			{
-				renderer.material.shader = Shader.Find ("Specular");
+				renderer.material.shader = Shader.Find ("Unlit/Diffuse-Shining");
 			}
 			else
 			{
-				renderer.material.shader = standardShader;
+				renderer.material.shader = Shader.Find (standardShader);
 			}
 		}
 
@@ -85,11 +85,15 @@ namespace VRUserInterface
 	        {
 	            displayPrefab = gameObject;
 	        }
+	    }
+
+		protected virtual void Awake()
+		{
 			if (renderer)
 			{
-				standardShader = renderer.material.shader;
+				standardShader = renderer.material.shader.name;
 			}
-	    }
+		}
 
 		bool buttonActive = false;
 

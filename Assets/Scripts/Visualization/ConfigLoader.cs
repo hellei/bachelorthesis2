@@ -33,6 +33,7 @@ public class ConfigLoader : MonoBehaviour {
 
 	void LoadSavedDeck()
 	{
+		if (!Config.instance.loadDeck) return;
 		/*SavedDeck sd = new SavedDeck ();
 		sd.cards = new List<string> ();
 		sd.cards.Add ("Cards!");

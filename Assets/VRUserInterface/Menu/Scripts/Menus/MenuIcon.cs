@@ -11,7 +11,7 @@ namespace VRUserInterface
 	    //Constants
 	    public const float standardTransparency = 0.4f;
 		public const float filledTransparency = 0.58f;
-		public const float moveForwardLength = 0.03f;
+		public const float moveForwardLength = 0.01f;
 		public const float selectedFactor = 0.0f;
 
 

@@ -142,83 +142,278 @@ MonoBehaviour:
   - name: Boros Signet
     sprite: {fileID: 21300000, guid: 7675add99725dcf4c9c13162768e02f6, type: 3}
     cost: []
-    infoText: []
+    infoText:
+    - text: Boros Signet
+      textStyle: 0
+    - text: Artifact
+      textStyle: 1
+    - text: '1, Tap: Add RED, White to your//mana pool.'
+      textStyle: 2
+    - text: '"Have you ever held a Boros signet?//There''s a weight to it that belies
+        its//size--a weight of strength and of pride."//--Agrus Kos'
+      textStyle: 2
   - name: Dimir Signet
     sprite: {fileID: 21300000, guid: c11032a88e239214c879c64618bcafdc, type: 3}
     cost: []
-    infoText: []
+    infoText:
+    - text: Dimir Signet
+      textStyle: 0
+    - text: Artifact
+      textStyle: 1
+    - text: '1, TAP: Add BLUE, BLACK to your//mana pool.'
+      textStyle: 2
+    - text: An emblem of a secret guild, the//Dimir insignia is seen only by its own//members--and
+        the doomed.
+      textStyle: 2
   - name: Golgari Signet
     sprite: {fileID: 21300000, guid: e2ba91b6b352bc448a25ee4b9694a03a, type: 3}
     cost: []
-    infoText: []
+    infoText:
+    - text: Golgari Signet
+      textStyle: 0
+    - text: Artifact
+      textStyle: 1
+    - text: '1, TAP: Add BLACK, GREEN to your//mana pool.'
+      textStyle: 2
+    - text: Depending on your point of view, the//seal represents a proud guardian
+        of the//natural cycle or one who has sold her//soul to darkness for eternal
+        life.
+      textStyle: 2
   - name: Selesnya Signet
     sprite: {fileID: 21300000, guid: a35eb961f43a48d41bb7f68fcedfbdbe, type: 3}
     cost: []
-    infoText: []
+    infoText:
+    - text: Selesnya Signet
+      textStyle: 0
+    - text: Artifact
+      textStyle: 1
+    - text: '1, TAP: Add GREEN, WHITE to your mana pool.'
+      textStyle: 2
+    - text: The symbol of the Conclave is one of//unity, with tree supporting sun
+        and sun//feeding tree.
+      textStyle: 2
   - name: Pacifism
     sprite: {fileID: 21300000, guid: 67609d7c26c665342abacdafd997d9d1, type: 3}
     cost: []
-    infoText: []
+    infoText:
+    - text: Pacifism
+      textStyle: 0
+    - text: Enchantment - Aura
+      textStyle: 0
+    - text: Enchant creature//Enchanted creature can't attack or block.
+      textStyle: 2
+    - text: For the first time in his life, Grakk felt a//little warm and fuzzy inside.
+      textStyle: 2
   - name: Rhox Faithmender
     sprite: {fileID: 21300000, guid: 832314b241799c547a69aae28567b95c, type: 3}
     cost: []
-    infoText: []
+    infoText:
+    - text: Rhox Faithmender
+      textStyle: 0
+    - text: Creature - Rhino Monk
+      textStyle: 1
+    - text: Lifelink (Damage dealt by this creature//also causes you to gain that
+        much life.)//If you would gain life, you gain twice//that much life instead.
+      textStyle: 2
+    - text: Rhoxes who live long enough to retire//from war lend support with their
+        extensive//knowledge of cambat injuries.
+      textStyle: 2
   - name: Safe Passage
     sprite: {fileID: 21300000, guid: 1909b58ca0d0c2645b07d0896ceb1965, type: 3}
     cost: []
-    infoText: []
+    infoText:
+    - text: Safe Passage
+      textStyle: 0
+    - text: Instant
+      textStyle: 1
+    - text: Prevent all damage that would//be dealt to you and creatures you//control
+        this turn.
+      textStyle: 2
+    - text: As she shepherds the faithful, the angel's//radiance is a shiled of salvation.
+      textStyle: 2
   - name: Serra Avenger
     sprite: {fileID: 21300000, guid: 569e76b19def22745bdd2f9e8e2c8f9d, type: 3}
     cost: []
-    infoText: []
+    infoText:
+    - text: Serra Avenger
+      textStyle: 0
+    - text: Creature - Angel
+      textStyle: 1
+    - text: You can't cast Serra Avenger during//your first, second, or third turns
+        of//the game.
+      textStyle: 2
+    - text: Flying
+      textStyle: 2
+    - text: Vigilance (Attacking doesn't cause//this creature to tap.)
+      textStyle: 2
   - name: Ground Seal
     sprite: {fileID: 21300000, guid: a37e5f07f3d0e8b42a7cce0660e85569, type: 3}
     cost: []
-    infoText: []
+    infoText:
+    - text: Ground Seal
+      textStyle: 0
+    - text: Enchantment
+      textStyle: 1
+    - text: When Ground Seal enters the//battlefield, draw a card.//Cards in graveyards
+        can't be the//targets of spells or abilities.
+      textStyle: 2
+    - text: '"Let all we have buried be buried forever."//--Seton, centaur druid'
+      textStyle: 2
   - name: Mwonvuli Beast Tracker
     sprite: {fileID: 21300000, guid: d83d71e711f208d458ba4242f686826d, type: 3}
     cost: []
-    infoText: []
+    infoText:
+    - text: Mwonvuli Beast Tracker
+      textStyle: 0
+    - text: Creature - Human Scout
+      textStyle: 1
+    - text: When Mwonvuli Beast Tracker enters//the battlefield, search your library//for
+        a creature card with deathtouch,//hexproof, reach, or trample and reveal//it.
+        Shuffle your library and put that//card on top of it.
+      textStyle: 2
+    - text: '"The more dangerous, the better."'
+      textStyle: 2
   - name: Timberpack Wolf
     sprite: {fileID: 21300000, guid: bb14981a332c73a4fb85bd1e9cccbed5, type: 3}
     cost: []
-    infoText: []
+    infoText:
+    - text: Timberpack Wolf
+      textStyle: 0
+    - text: Creature - Wolf
+      textStyle: 1
+    - text: Timberpack Wolf gets +1/+1 for each//other creature you control named//Timberpack
+        Wolf.
+      textStyle: 2
+    - text: '"The need for the pack is bred in their//bones. Their true strength will
+        not show//itself for any other purpose."//--Garruk Wildspeaker'
+      textStyle: 2
   - name: Yeva, Nature's Herald
     sprite: {fileID: 21300000, guid: 176c70a40984fc2409ea8310799171bc, type: 3}
     cost: []
-    infoText: []
+    infoText:
+    - text: Yeva, Nature's Herald
+      textStyle: 0
+    - text: Legendary Creature - Elf Shaman
+      textStyle: 1
+    - text: Flash (You may cast this spell any//time you could cast an instant.)
+      textStyle: 2
+    - text: You may cast green creature cards//as though they had flash.
+      textStyle: 2
+    - text: '"I can call an army to my side in the//blink of an eye. Best not blink."'
+      textStyle: 2
   - name: Archaeomancer
     sprite: {fileID: 21300000, guid: 7ba7a3f8f1c557f41af5e69636ec31d8, type: 3}
     cost: []
-    infoText: []
+    infoText:
+    - text: Archaeomancer
+      textStyle: 0
+    - text: Creature - Human Wizard
+      textStyle: 1
+    - text: When Archaeomancer enters the//battlefield, return target instant or//sorcery
+        card from your graveyard to//your hand.
+      textStyle: 2
+    - text: '"Words of power never disappear. They//sleep, awaiting those with the
+        will to//rouse them."'
+      textStyle: 2
   - name: Arctic Aven
     sprite: {fileID: 21300000, guid: 7b06883e2e1745a4e82366466d6588ee, type: 3}
     cost: []
-    infoText: []
+    infoText:
+    - text: Arctic Aven
+      textStyle: 0
+    - text: Creature - Bird Wizard
+      textStyle: 1
+    - text: Flying
+      textStyle: 2
+    - text: Arctic Aven gets +1/+1 as long as you control a Plains.
+      textStyle: 2
+    - text: 'WHITE: Arctic Aven gains lifelink until end//of turn. (Damage dealt by
+        this creature//also causes you to gain that much life.)'
+      textStyle: 2
   - name: Battle of Wits
     sprite: {fileID: 21300000, guid: f922b7cb0c9cdea4c8363489cadf3f72, type: 3}
     cost: []
-    infoText: []
+    infoText:
+    - text: Battle of Wits
+      textStyle: 0
+    - text: Enchantment
+      textStyle: 1
+    - text: At the beginning of your upkeep, if//you have 200 or more cards in your//library,
+        you win the game.
+      textStyle: 0
+    - text: There is no loftier ambition than the//pursuit of knowledge.
+      textStyle: 2
   - name: Courtly Provocateur
     sprite: {fileID: 21300000, guid: 870b037e5d550a5439a3781d2dc52561, type: 3}
     cost: []
-    infoText: []
+    infoText:
+    - text: Courtly Provocateur
+      textStyle: 0
+    - text: Creature - Human Wizard
+      textStyle: 1
+    - text: 'TAP: Target creature attacks this turn if abl.e'
+      textStyle: 2
+    - text: 'TAP: Target creature blocks this turn if able.'
+      textStyle: 2
+    - text: '"My one regret is that I have mastered an art//that leaves its audience
+        unable to applaud."'
+      textStyle: 2
   - name: Arms Dealer
     sprite: {fileID: 21300000, guid: 332bb6802e0b7e94386c93015a9a505d, type: 3}
     cost: []
-    infoText: []
+    infoText:
+    - text: Arms Dealer
+      textStyle: 0
+    - text: Creature - Goblin Rogue
+      textStyle: 1
+    - text: '1, RED, Sacrifice a Goblin: Arms Dealer deals 4 damage to target creature.'
+      textStyle: 2
+    - text: '"Guaranteed to leave your enemies//sufficiently stabbed, bitten, cleaved,
+        or//exploded."//--Grezkrick''s Emporium motto'
+      textStyle: 2
   - name: Furnace Whelp
     sprite: {fileID: 21300000, guid: 15f686d814cf05a429bf31fbb8825f2e, type: 3}
     cost: []
-    infoText: []
+    infoText:
+    - text: Furnace Whelp
+      textStyle: 0
+    - text: Creature - Dragon
+      textStyle: 1
+    - text: Flying
+      textStyle: 2
+    - text: 'RED: Furnace Whelp gets +1/+0 until//end of turn.'
+      textStyle: 2
+    - text: Baby dragons can't figure out humans--//if they didn't want to be killed,
+        why were//they made of meat and treasure?
+      textStyle: 2
   - name: Hamletback Goliath
     sprite: {fileID: 21300000, guid: 02ab5e8db607a1f4e942a37c19487cb4, type: 3}
     cost: []
-    infoText: []
+    infoText:
+    - text: Hamletback Goliath
+      textStyle: 0
+    - text: Creature - Giant Warrior
+      textStyle: 1
+    - text: Whenever another creature enters//the battlefield, you may put X +1/+1//counters
+        on Hamletback Goliath,//where X is that creature's power.
+      textStyle: 2
+    - text: '"If you live on a giant''s back, there''s only//one individual you''ll
+        ever need to fear."//--Gaddock Teeg'
+      textStyle: 2
   - name: Krenko, Mob Boss
     sprite: {fileID: 21300000, guid: dcd28c5c51b2a4f46bcf0720c9091300, type: 3}
     cost: []
-    infoText: []
+    infoText:
+    - text: Krenko, Mob Boss
+      textStyle: 0
+    - text: Legendary Creature - Goblin Warrior
+      textStyle: 1
+    - text: 'TAP: Put X 1/1 red Goblin creature//tokens onto the battlefield, where
+        X is//the number of Goblins you control.'
+      textStyle: 2
+    - text: '"He displays a perverse charisma//fueled by avarice. Highly dangerous.//Recommend
+        civil sanctions."//--Agmand Sarv, Azorius hussar'
+      textStyle: 2
   - name: Castle of the Princess
     sprite: {fileID: 21300000, guid: 3d835700aa14be0409f5b8f7b3a8634f, type: 3}
     cost: []

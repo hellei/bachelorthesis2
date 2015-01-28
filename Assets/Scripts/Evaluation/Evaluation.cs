@@ -26,18 +26,46 @@ public class Evaluation : MonoBehaviour {
 		result.onHand = onHand;
 		if (onHand)
 		{
-			foreach (Transform t in cardContainer.transform)
-			{
-				containerObjects.Add(t);
-			}
-			Hand_CardCollection.instance.AddCardToHand(containerObjects[0].GetComponent<Card>());
-			Hand_CardCollection.instance.AddCardToHand(containerObjects[1].GetComponent<Card>());
-			toBeSelected = containerObjects[1].GetComponent<Card>();
+			SetUpHandCardCollection();
 			//Debug.Log(containerObjects[1]+"  "+containerObjects[1].GetComponent<Card>());
 		}
+		InteractionManager.instance.Tracking (false);
 	}
 
-	Card toBeSelected;
+	void SetUpHandCardCollection()
+	{
+		containerObjects = new List<Transform> ();
+		foreach (Transform t in cardContainer.transform)
+		{
+			containerObjects.Add(t);
+		}
+		Hand_CardCollection.instance.AddCardToHand(containerObjects[0].GetComponent<Card>(), 0);
+		handCardIdx=1;
+		toBeSelected = containerObjects[order[handCardIdx]].GetComponent<Card>();
+	}
+
+
+	/// <summary>
+	/// The order of the cards to select on hand.
+	/// </summary>
+	public int[] order;
+
+	int handCardIdx = 0;
+
+	private Card _toBeSelected;
+
+	Card toBeSelected
+	{
+		set {
+			if (toBeSelected) toBeSelected.io.Highlight(false);
+			_toBeSelected = value;
+			toBeSelected.io.Highlight(true);
+		}
+		get
+		{
+			return _toBeSelected;
+		}
+	}
 
 	List<Transform> containerObjects = new List<Transform>();
 
@@ -67,9 +95,24 @@ public class Evaluation : MonoBehaviour {
 				//Prevent the player from selecting the same card twice
 				if (lastSelectedCard)
 				{
-					Destroy (lastSelectedCard);
+					/*if (onHand)
+					{
+						Hand_CardCollection.instance.TakeCardFromHand(lastSelectedCard.GetComponent<Card>());
+						lastSelectedCard.transform.position = new Vector3(0,-1000,0);
+					}*/
+					if (!onHand)
+					{
+						Destroy (lastSelectedCard);
+					}
 				}
 				state = State.Ready;
+				//Add new card to hand
+				if (containerObjects[handCardIdx])
+				{
+					Hand_CardCollection.instance.AddCardToHand(containerObjects[handCardIdx].GetComponent<Card>(),0);
+					toBeSelected = containerObjects[order[handCardIdx]].GetComponent<Card>();
+				}
+				handCardIdx++;
 			}
 			break;
 		case State.Ready:
@@ -83,6 +126,7 @@ public class Evaluation : MonoBehaviour {
 					result.tests[i].bt = buttonTests[i];
 					buttonPrefab.buttonType = buttonTests[i];
 					InformationObject.recreateButtons = true;
+					Debug.Log("Next button type: "+buttonPrefab.buttonType);
 				}
 				state = State.TimerRunning;
 				timerStart = Time.time;
@@ -97,7 +141,7 @@ public class Evaluation : MonoBehaviour {
 		case State.TimerRunning:
 			renderer.material.color = colTimerRunning;
 			//Stop timer when the information display has been opened
-			if (InformationController.instance.activeObject)
+			if (InformationController.instance.activeObject || Input.GetKeyDown(KeyCode.P))
 			{
 				float selectionTime = (Time.time - timerStart);
 				Debug.Log("Selected card in " + selectionTime + " seconds");
@@ -117,6 +161,16 @@ public class Evaluation : MonoBehaviour {
 					copy = null;
 					if (i < buttonTests.Count-1)
 					{
+						if (onHand)
+						{
+							//Reset all cards
+							foreach (Transform t in containerObjects)
+							{
+								Hand_CardCollection.instance.TakeCardFromHand(t.GetComponent<Card>());
+								t.transform.position = new Vector3(0,-1000,0);
+							}
+							SetUpHandCardCollection();
+						}
 						cardsSelected = 0;
 						i++;
 					}
@@ -124,6 +178,7 @@ public class Evaluation : MonoBehaviour {
 					{
 						result.Save("result_"+Random.Range(0,10000)+".xml");
 						state = State.Finished;
+						InteractionManager.instance.Tracking (true);
 					}
 				}
 				lastSelectedCard = InformationController.instance.activeObject;
@@ -133,15 +188,6 @@ public class Evaluation : MonoBehaviour {
 			renderer.material.color = colFinished;
 			break;
 		}
-		if (onHand)
-		{
-			HighlightCard();
-		}
-	}
-
-	void HighlightCard()
-	{
-		toBeSelected.GetComponent<InformationObject> ().Highlight (true);
 	}
 
 	GameObject lastSelectedCard;
