@@ -19,8 +19,6 @@ public struct FingerUpdateData
 
 public class Hand_Permanent : MonoBehaviour {
 
-    public GameObject meshes;
-
     public Transform palm;
     public Transform foreArm;
 
@@ -46,15 +44,9 @@ public class Hand_Permanent : MonoBehaviour {
 
         if (InteractionManager.instance.touchOnTablet)
         {
-            //meshes.SetActive(false);
             palm.localPosition = defaultPosition;
             palm.localRotation = defaultOrientation;
-        }
-        else
-        {
-            //meshes.SetActive(true);
         }	
-	
 	}
 
     /// <summary>

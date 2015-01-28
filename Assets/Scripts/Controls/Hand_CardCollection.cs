@@ -18,17 +18,28 @@ public class Hand_CardCollection : MonoBehaviour {
     public GameObject HandCardContainer;
     public GameObject EmptyHandCollider;
     public Finger_Permanent[] fingers;
+    public Hand_Permanent hand;
+    private bool handRegistered = false;
 
     // Main attributes
     public int maxCardsAllowed = -1;
-    public Hand_Permanent hand;
+    public Vector3 inactiveHandPos = new Vector3(0, -1000, 0);
+    public float fanOutDistance = 0.05f;
     private List<CardBucket> cardsOnHand = new List<CardBucket>();
-    private bool handRegistered = false;
+    
     private int numberOfCardsOnHand = 0;
     private int selectedCard;
 
     public static Hand_CardCollection instance;
 
+    /// <summary>
+	/// The y offset of the palm at which the cards are shown on the an	/// </summary>
+	public float cardHandOffset = 0.05f;
+
+	/// <summary>
+	/// The local position of the card container.
+	/// </summary>
+	public Vector3 cardContainerLocalPosition = new Vector3(-0.0147f,0,0.0069f);
     void Awake()
     {
         instance = this;        
@@ -63,6 +74,7 @@ public class Hand_CardCollection : MonoBehaviour {
     {
         //HideCardsOnHand();
         handRegistered = false;
+        SetHandPosition(inactiveHandPos);
         //print("Unregistered and hide cards");
     }
 
@@ -74,6 +86,11 @@ public class Hand_CardCollection : MonoBehaviour {
     public bool IsHandRegistered()
     {
         return handRegistered;
+    }
+
+    public void SetHandPosition(Vector3 pos)
+    {
+        hand.transform.position = pos;
     }
 
     public int FindIndexOfNearestCard(Vector3 position)
@@ -107,6 +124,7 @@ public class Hand_CardCollection : MonoBehaviour {
             {
 				cardsOnHand[i].container.transform.localPosition = Vector3.Lerp(cardsOnHand[i].container.transform.localPosition, cardsOnHand[i].localPosition, Time.deltaTime * interpolationSpeedP);
 				cardsOnHand[i].container.transform.localRotation = Quaternion.Slerp(cardsOnHand[i].container.transform.localRotation, cardsOnHand[i].localRotation, Time.deltaTime * interpolationSpeedR);
+                cardsOnHand[i].card.transform.localPosition = new Vector3(0, cardHandOffset, i * 0.001f);
             }
         }
     }
@@ -274,35 +292,31 @@ public class Hand_CardCollection : MonoBehaviour {
             float angle = 90.0f;
             
             int index = FindIndexOfNearestCard(Hand_Selecting.instance.GetGrabPosition());
-            float startAngle = angle * index / cardsOnHand.Count;
-
-            float restAngle = startAngle;
-            for (int i = index - 1; i >= 0; i--)
+            if (GetDistanceToCard(index, Hand_Selecting.instance.GetGrabPosition()) <= fanOutDistance)
             {
-                // Set new target rotation and position for interpolation
-                //cardsOnHand[i].localPosition = cardContainerLocalPosition;
-                restAngle /= 2.0f;
-                cardsOnHand[i].localRotation = Quaternion.Euler(new Vector3(0, 0, 150 + restAngle));                
-            }
+                float startAngle = angle * index / cardsOnHand.Count;
 
-            restAngle = angle * (cardsOnHand.Count - index) / cardsOnHand.Count;
+                float restAngle = startAngle;
+                for (int i = index - 1; i >= 0; i--)
+                {
+                    // Set new target rotation and position for interpolation
+                    //cardsOnHand[i].localPosition = cardContainerLocalPosition;
+                    restAngle /= 2.0f;
+                    cardsOnHand[i].localRotation = Quaternion.Euler(new Vector3(0, 0, 150 + restAngle));
+                }
 
-            for (int i = index + 1; i < cardsOnHand.Count; i++)
-            {
-                restAngle /= 2;
-                cardsOnHand[i].localRotation = Quaternion.Euler(new Vector3(0, 0, 150 + angle - restAngle));  
+                restAngle = angle * (cardsOnHand.Count - index) / cardsOnHand.Count;
+
+                for (int i = index + 1; i < cardsOnHand.Count; i++)
+                {
+                    restAngle /= 2;
+                    cardsOnHand[i].localRotation = Quaternion.Euler(new Vector3(0, 0, 150 + angle - restAngle));
+                }
             }
         }
     }
 
-	/// <summary>
-	/// The y offset of the palm at which the cards are shown on the an	/// </summary>
-	public float cardHandOffset = 0.05f;
-
-	/// <summary>
-	/// The local position of the card container.
-	/// </summary>
-	public Vector3 cardContainerLocalPosition = new Vector3(-0.0147f,0,0.0069f);
+	
 
     private void ChangeCardPositionAndOrientation()
     {
@@ -315,9 +329,8 @@ public class Hand_CardCollection : MonoBehaviour {
                 GameObject container = new GameObject("CardOffsetHelper");
                 container.transform.position = cardsOnHand[i].card.transform.position;
 
-				// Set container as child of handcardcontainer
+				// Initialize container as child of handcardcontainer
 				container.transform.parent = HandCardContainer.transform;
-
 				container.transform.rotation = cardsOnHand[i].card.transform.rotation;
 				container.transform.Rotate(new Vector3(0,0,180));
 
@@ -332,6 +345,7 @@ public class Hand_CardCollection : MonoBehaviour {
 
 				cardsOnHand[i].card.GetComponent<LookingGlassEffect>().initialLocalPosition = cardsOnHand[i].card.transform.localPosition;
 
+                // Initialize container in Bucket
                 cardsOnHand[i].container = container;
 
                 // Set new target rotation and position for interpolation
@@ -348,7 +362,7 @@ public class Hand_CardCollection : MonoBehaviour {
                     cardsOnHand[i].interpolate = true;                    
                 }
 
-
+                // Activate card
                 cardsOnHand[i].card.gameObject.SetActive(true);                
             }
         }

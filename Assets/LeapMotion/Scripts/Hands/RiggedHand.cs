@@ -14,9 +14,7 @@ public class RiggedHand : HandModel {
   public Transform palm;
   public Transform foreArm;
 
-  private Hand_Permanent permanentHand;
-
-  
+  private Hand_Permanent permanentHand;  
 
   public override void InitHand() {
     UpdateHand();
