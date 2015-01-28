@@ -1,9 +1,29 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 using VRUserInterface;
 
 public class CardTypes : MonoBehaviour {
 
+	[System.Serializable]
+	public class ShortInfo
+	{
+		public string name;
+		public List<string> info = new List<string> ();
+
+		public ShortInfo(string name, List<string> info)
+		{
+			this.name = name;
+			this.info = info;
+		}
+
+		public ShortInfo() {}
+	}
+
+	public class XML : XMLSaveAndLoad<XML>
+	{
+		public List<ShortInfo> cards = new List<ShortInfo>();
+	}
 	public static CardTypes instance;
 
 	void Awake()
@@ -13,7 +33,30 @@ public class CardTypes : MonoBehaviour {
 			Debug.LogError("There must not be more than one instance in card types");
 		}
 		instance = this;
+		if (printAvailableCards) WriteXML ();
 	}
+
+	void WriteXML()
+	{
+		Debug.Log("Saving available cards");
+		XML xml = new XML ();
+		foreach (CardInfo c in cards)
+		{
+			string cname = c.name;
+			List<string> info = new List<string>();
+			foreach (InformationObject.InfoBox ib in c.infoText)
+			{
+				info.Add(ib.text.Replace("//",""));
+			}
+			xml.cards.Add(new ShortInfo(cname, info));
+		}
+		xml.Save ("Decks/available_cards.xml");
+	}
+
+	/// <summary>
+	/// If set to true, an xml file with all available cards is printed.
+	/// </summary>
+	public bool printAvailableCards = false;
 
 	/// <summary>
 	/// Returns the card with the given string name.

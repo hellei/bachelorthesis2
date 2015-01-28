@@ -169,10 +169,21 @@ namespace VRUserInterface
 				//otherwise update the active object
 				else if (value != activeObject && value.GetComponent<InformationObject>()){
 					activeObject = value;
+					if (newInformationObjectSelectedCallback != null)
+					{
+						newInformationObjectSelectedCallback();
+					}
 					infoDisplay.SetActiveObject(activeObject.GetComponent<InformationObject>());
 				}
 			}
 		}
+
+		public delegate void Callback();
+
+		/// <summary>
+		/// This event is always triggered when a new information object has been selected.
+		/// </summary>
+		public event Callback newInformationObjectSelectedCallback;
 
 	    bool customViewClose = false;
 

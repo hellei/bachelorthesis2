@@ -159,6 +159,7 @@ public class DisplayEvaluation : MonoBehaviour {
 			for (int y = 0; y < numberOfCards; y++)
 			{
 				shuffledCards[x, y].SetActive(x == i);
+				if (x==i) Debug.Log(shuffledCards[x,y]);
 			}
 		}
 

@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<XML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <cards>
+    <ShortInfo>
+      <name>Baleful Eidolon</name>
+      <info>
+        <string>Baleful Eidolon</string>
+        <string>Enchantment Creature  Sprint</string>
+        <string>Bestow (If you cast this card for itsbestow cost, it's an Aura spell with enchant creature. It becomes a creature again if it's not attached to a creature.)</string>
+        <string>Deathtouch (Any amount of damage thisdeals to a creature is enough to destroy it.)</string>
+        <string>Enchanted creature gets +1/+1 and has deathtouch.</string>
+      </info>
+    </ShortInfo>
+    <ShortInfo>
+      <name>Arena Athlete</name>
+      <info>
+        <string>Arena Athlete</string>
+        <string>Creature - Human</string>
+        <string>Whenever you cast a spell  that targets Arena Athlete, target  creature an opponent controls can't  block this turn.</string>
+      </info>
+    </ShortInfo>
+    <ShortInfo>
+      <name>Akroan Hoplite</name>
+      <info />
+    </ShortInfo>
+    <ShortInfo>
+      <name>Blood Troll Harpy</name>
+      <info />
+    </ShortInfo>
+    <ShortInfo>
+      <name>Boon Of Erebos</name>
+      <info />
+    </ShortInfo>
+    <ShortInfo>
+      <name>Borderland Minotaur</name>
+      <info />
+    </ShortInfo>
+    <ShortInfo>
+      <name>Fanatic of Mogus</name>
+      <info />
+    </ShortInfo>
+    <ShortInfo>
+      <name>Island 1</name>
+      <info />
+    </ShortInfo>
+    <ShortInfo>
+      <name>Island 2</name>
+      <info />
+    </ShortInfo>
+    <ShortInfo>
+      <name>Mountain 1</name>
+      <info />
+    </ShortInfo>
+    <ShortInfo>
+      <name>Mountain 2</name>
+      <info />
+    </ShortInfo>
+    <ShortInfo>
+      <name>Plains 1</name>
+      <info />
+    </ShortInfo>
+    <ShortInfo>
+      <name>Plains 2</name>
+      <info />
+    </ShortInfo>
+    <ShortInfo>
+      <name>Plains 3</name>
+      <info />
+    </ShortInfo>
+    <ShortInfo>
+      <name>Polis Crusher</name>
+      <info>
+        <string>Polis Crusher</string>
+        <string>Creature - Cyclops</string>
+        <string>Trample, protection from enchantments.</string>
+        <string>Whenever Polis Crusher deals combat  damage to a player, if Polis Crusher is monstruous, destroy target enchantmentthat player controls.</string>
+      </info>
+    </ShortInfo>
+    <ShortInfo>
+      <name>Scholar of Athreos</name>
+      <info />
+    </ShortInfo>
+    <ShortInfo>
+      <name>Swamp 1</name>
+      <info />
+    </ShortInfo>
+    <ShortInfo>
+      <name>Boros Signet</name>
+      <info>
+        <string>Boros Signet</string>
+        <string>Artifact</string>
+        <string>1, Tap: Add RED, White to yourmana pool.</string>
+        <string>"Have you ever held a Boros signet?There's a weight to it that belies itssize--a weight of strength and of pride."--Agrus Kos</string>
+      </info>
+    </ShortInfo>
+    <ShortInfo>
+      <name>Dimir Signet</name>
+      <info>
+        <string>Dimir Signet</string>
+        <string>Artifact</string>
+        <string>1, TAP: Add BLUE, BLACK to yourmana pool.</string>
+        <string>An emblem of a secret guild, theDimir insignia is seen only by its ownmembers--and the doomed.</string>
+      </info>
+    </ShortInfo>
+    <ShortInfo>
+      <name>Golgari Signet</name>
+      <info>
+        <string>Golgari Signet</string>
+        <string>Artifact</string>
+        <string>1, TAP: Add BLACK, GREEN to yourmana pool.</string>
+        <string>Depending on your point of view, theseal represents a proud guardian of thenatural cycle or one who has sold hersoul to darkness for eternal life.</string>
+      </info>
+    </ShortInfo>
+    <ShortInfo>
+      <name>Selesnya Signet</name>
+      <info>
+        <string>Selesnya Signet</string>
+        <string>Artifact</string>
+        <string>1, TAP: Add GREEN, WHITE to your mana pool.</string>
+        <string>The symbol of the Conclave is one ofunity, with tree supporting sun and sunfeeding tree.</string>
+      </info>
+    </ShortInfo>
+    <ShortInfo>
+      <name>Pacifism</name>
+      <info>
+        <string>Pacifism</string>
+        <string>Enchantment - Aura</string>
+        <string>Enchant creatureEnchanted creature can't attack or block.</string>
+        <string>For the first time in his life, Grakk felt alittle warm and fuzzy inside.</string>
+      </info>
+    </ShortInfo>
+    <ShortInfo>
+      <name>Rhox Faithmender</name>
+      <info>
+        <string>Rhox Faithmender</string>
+        <string>Creature - Rhino Monk</string>
+        <string>Lifelink (Damage dealt by this creaturealso causes you to gain that much life.)If you would gain life, you gain twicethat much life instead.</string>
+        <string>Rhoxes who live long enough to retirefrom war lend support with their extensiveknowledge of cambat injuries.</string>
+      </info>
+    </ShortInfo>
+    <ShortInfo>
+      <name>Safe Passage</name>
+      <info>
+        <string>Safe Passage</string>
+        <string>Instant</string>
+        <string>Prevent all damage that wouldbe dealt to you and creatures youcontrol this turn.</string>
+        <string>As she shepherds the faithful, the angel'sradiance is a shiled of salvation.</string>
+      </info>
+    </ShortInfo>
+    <ShortInfo>
+      <name>Serra Avenger</name>
+      <info>
+        <string>Serra Avenger</string>
+        <string>Creature - Angel</string>
+        <string>You can't cast Serra Avenger duringyour first, second, or third turns ofthe game.</string>
+        <string>Flying</string>
+        <string>Vigilance (Attacking doesn't causethis creature to tap.)</string>
+      </info>
+    </ShortInfo>
+    <ShortInfo>
+      <name>Ground Seal</name>
+      <info>
+        <string>Ground Seal</string>
+        <string>Enchantment</string>
+        <string>When Ground Seal enters thebattlefield, draw a card.Cards in graveyards can't be thetargets of spells or abilities.</string>
+        <string>"Let all we have buried be buried forever."--Seton, centaur druid</string>
+      </info>
+    </ShortInfo>
+    <ShortInfo>
+      <name>Mwonvuli Beast Tracker</name>
+      <info>
+        <string>Mwonvuli Beast Tracker</string>
+        <string>Creature - Human Scout</string>
+        <string>When Mwonvuli Beast Tracker entersthe battlefield, search your libraryfor a creature card with deathtouch,hexproof, reach, or trample and revealit. Shuffle your library and put thatcard on top of it.</string>
+        <string>"The more dangerous, the better."</string>
+      </info>
+    </ShortInfo>
+    <ShortInfo>
+      <name>Timberpack Wolf</name>
+      <info>
+        <string>Timberpack Wolf</string>
+        <string>Creature - Wolf</string>
+        <string>Timberpack Wolf gets +1/+1 for eachother creature you control namedTimberpack Wolf.</string>
+        <string>"The need for the pack is bred in theirbones. Their true strength will not showitself for any other purpose."--Garruk Wildspeaker</string>
+      </info>
+    </ShortInfo>
+    <ShortInfo>
+      <name>Yeva, Nature's Herald</name>
+      <info>
+        <string>Yeva, Nature's Herald</string>
+        <string>Legendary Creature - Elf Shaman</string>
+        <string>Flash (You may cast this spell anytime you could cast an instant.)</string>
+        <string>You may cast green creature cardsas though they had flash.</string>
+        <string>"I can call an army to my side in theblink of an eye. Best not blink."</string>
+      </info>
+    </ShortInfo>
+    <ShortInfo>
+      <name>Archaeomancer</name>
+      <info>
+        <string>Archaeomancer</string>
+        <string>Creature - Human Wizard</string>
+        <string>When Archaeomancer enters thebattlefield, return target instant orsorcery card from your graveyard toyour hand.</string>
+        <string>"Words of power never disappear. Theysleep, awaiting those with the will torouse them."</string>
+      </info>
+    </ShortInfo>
+    <ShortInfo>
+      <name>Arctic Aven</name>
+      <info>
+        <string>Arctic Aven</string>
+        <string>Creature - Bird Wizard</string>
+        <string>Flying</string>
+        <string>Arctic Aven gets +1/+1 as long as you control a Plains.</string>
+        <string>WHITE: Arctic Aven gains lifelink until endof turn. (Damage dealt by this creaturealso causes you to gain that much life.)</string>
+      </info>
+    </ShortInfo>
+    <ShortInfo>
+      <name>Battle of Wits</name>
+      <info>
+        <string>Battle of Wits</string>
+        <string>Enchantment</string>
+        <string>At the beginning of your upkeep, ifyou have 200 or more cards in yourlibrary, you win the game.</string>
+        <string>There is no loftier ambition than thepursuit of knowledge.</string>
+      </info>
+    </ShortInfo>
+    <ShortInfo>
+      <name>Courtly Provocateur</name>
+      <info>
+        <string>Courtly Provocateur</string>
+        <string>Creature - Human Wizard</string>
+        <string>TAP: Target creature attacks this turn if abl.e</string>
+        <string>TAP: Target creature blocks this turn if able.</string>
+        <string>"My one regret is that I have mastered an artthat leaves its audience unable to applaud."</string>
+      </info>
+    </ShortInfo>
+    <ShortInfo>
+      <name>Arms Dealer</name>
+      <info>
+        <string>Arms Dealer</string>
+        <string>Creature - Goblin Rogue</string>
+        <string>1, RED, Sacrifice a Goblin: Arms Dealer deals 4 damage to target creature.</string>
+        <string>"Guaranteed to leave your enemiessufficiently stabbed, bitten, cleaved, orexploded."--Grezkrick's Emporium motto</string>
+      </info>
+    </ShortInfo>
+    <ShortInfo>
+      <name>Furnace Whelp</name>
+      <info>
+        <string>Furnace Whelp</string>
+        <string>Creature - Dragon</string>
+        <string>Flying</string>
+        <string>RED: Furnace Whelp gets +1/+0 untilend of turn.</string>
+        <string>Baby dragons can't figure out humans--if they didn't want to be killed, why werethey made of meat and treasure?</string>
+      </info>
+    </ShortInfo>
+    <ShortInfo>
+      <name>Hamletback Goliath</name>
+      <info>
+        <string>Hamletback Goliath</string>
+        <string>Creature - Giant Warrior</string>
+        <string>Whenever another creature entersthe battlefield, you may put X +1/+1counters on Hamletback Goliath,where X is that creature's power.</string>
+        <string>"If you live on a giant's back, there's onlyone individual you'll ever need to fear."--Gaddock Teeg</string>
+      </info>
+    </ShortInfo>
+    <ShortInfo>
+      <name>Krenko, Mob Boss</name>
+      <info>
+        <string>Krenko, Mob Boss</string>
+        <string>Legendary Creature - Goblin Warrior</string>
+        <string>TAP: Put X 1/1 red Goblin creaturetokens onto the battlefield, where X isthe number of Goblins you control.</string>
+        <string>"He displays a perverse charismafueled by avarice. Highly dangerous.Recommend civil sanctions."--Agmand Sarv, Azorius hussar</string>
+      </info>
+    </ShortInfo>
+    <ShortInfo>
+      <name>Castle of the Princess</name>
+      <info>
+        <string>Castle of the Princess</string>
+        <string>Place</string>
+        <string>All your monsters receive +0/+2All your monster receive +0/+1Return all monsters that died during this round to play</string>
+      </info>
+    </ShortInfo>
+    <ShortInfo>
+      <name>Forest</name>
+      <info>
+        <string>Forest</string>
+        <string>Environment</string>
+        <string>Tap: Produces 1 Green Energy</string>
+      </info>
+    </ShortInfo>
+    <ShortInfo>
+      <name>Meadow</name>
+      <info>
+        <string>Meadow</string>
+        <string>Environment</string>
+        <string>Tap: Produces 1 Earth Energy</string>
+      </info>
+    </ShortInfo>
+    <ShortInfo>
+      <name>Sea of Illusions</name>
+      <info>
+        <string>Sea of Illusions</string>
+        <string>Place</string>
+        <string>When Sea of Illusions is revealed, allplayers search their card piles for up to 5monster cards and put them in an extrapile. At the beginning of each round, eachplayer may draw a card from the extra pileinstead of the card pile.</string>
+      </info>
+    </ShortInfo>
+    <ShortInfo>
+      <name>Shrine of the Prime God</name>
+      <info />
+    </ShortInfo>
+    <ShortInfo>
+      <name>Sparkling Flames</name>
+      <info />
+    </ShortInfo>
+  </cards>
+</XML>

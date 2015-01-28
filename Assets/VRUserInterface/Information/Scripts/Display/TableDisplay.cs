@@ -102,6 +102,11 @@ namespace VRUserInterface
 	            infoObject.SetMaxHeight(maxHeight);
 	            infoObject.SetMaxWidth(maxWidth);
 				infoObject.AddMagnifyingGlassEffect(objectMagnifyingGlassSettings);
+				if (closeWhenGazeDirectionLeavesDisplayPrefab)
+				{
+					StopLookingAtObjectCallback slaoc = infoObject.AddComponent<StopLookingAtObjectCallback>();
+					slaoc.callback = CloseButtonPressed;
+				}
 
 				//Hook to the information object to allow last-minute changes
 				infoObjectScript.OnDisplayPrefabInstantiated(infoObject);
@@ -223,6 +228,12 @@ namespace VRUserInterface
 			}
 			return container;
 		}
+
+		/// <summary>
+		/// This is a scricter version of the closewhenlookingaway flag that closes the infobox as soon as you do not look
+		/// at the display prefab anymore
+		/// </summary>
+		public bool closeWhenGazeDirectionLeavesDisplayPrefab = false;
 
 		/// <summary>
 		/// If this flag is set, a back button is shown. Otherwise, you still have the possibility to close the display when you look away.

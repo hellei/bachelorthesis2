@@ -14,6 +14,16 @@ public class EvaluationResult : XMLSaveAndLoad<EvaluationResult> {
 		public ButtonType bt;
 		public float[] selectionTimes;
 		public float averageTime;
+
+		/// <summary>
+		/// Every time you select the wrong card, this counter increases by 1.
+		/// </summary>
+		public int falseSelects;
+		
+		/// <summary>
+		/// Everytime the player looks at a button and then looks away again.
+		/// </summary>
+		public int abortedSelects;
 	}
 
 	/// <summary>

@@ -74,15 +74,33 @@ namespace VRUserInterface
 		void SetEffect(float progress)
 		{
 			float factor = sizeCurve.Evaluate (progress);
-			transform.localScale = initialLocalScale * Mathf.Lerp(1.0f, magnifyingFactor, factor);
+			float sizeIncrease = Mathf.Lerp (1.0f, magnifyingFactor, factor);
+			if (ob)
+			{
+				ob.min = initialObMin * sizeIncrease;
+				ob.max = initialObMax * sizeIncrease;
+			}
+
+			transform.localScale = initialLocalScale * sizeIncrease;
 			float moveForwardFactor = Mathf.Lerp (0, moveForwardValue, factor);
 			float moveUpwardFactor = Mathf.Lerp (0, moveUpwardValue, factor);
 			transform.localPosition = initialLocalPosition + new Vector3 (0, moveUpwardFactor, -moveForwardFactor);
 		}
 
+		void Start()
+		{
+			ob = GetComponent<OverrideBounds>();
+		}
+
+
+
 		Vector3 initialLocalScale;
 		[HideInInspector]
 		public Vector3 initialLocalPosition;
+
+		OverrideBounds ob;
+
+		Vector3 initialObMin, initialObMax;
 
 		/// <summary>
 		/// Sets up all values needed for the effect.
@@ -91,6 +109,10 @@ namespace VRUserInterface
 		{
 			initialLocalScale = transform.localScale;
 			initialLocalPosition = transform.localPosition;
+			if (ob){
+				initialObMin = ob.min;
+				initialObMax = ob.max;
+			}
 		}
 	}
 }

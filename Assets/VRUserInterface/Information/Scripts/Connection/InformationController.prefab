@@ -113,22 +113,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &100014
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 400014}
-  - 114: {fileID: 11400014}
-  m_Layer: 0
-  m_Name: TextGeneratorWithoutLookingGlassEffect
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!1 &100016
 GameObject:
   m_ObjectHideFlags: 1
@@ -235,7 +219,6 @@ Transform:
   - {fileID: 400024}
   - {fileID: 400004}
   - {fileID: 400010}
-  - {fileID: 400014}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!4 &400004
@@ -305,18 +288,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 400010}
   m_RootOrder: 0
---- !u!4 &400014
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100014}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 400002}
-  m_RootOrder: 4
 --- !u!4 &400016
 Transform:
   m_ObjectHideFlags: 1
@@ -440,7 +411,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed8c85454a132fc4fb14fa14c0185808, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  infoDisplay: {fileID: 11400018}
+  infoDisplay: {fileID: 11485580}
   selection: {fileID: 11400002}
   debugKeys: 1
   infoButton: {fileID: 11400000, guid: 6d82e974550a049ae9ea9a5c6cba8c48, type: 2}
@@ -489,6 +460,7 @@ MonoBehaviour:
     popupDuration: .699999988
     minimizeSpeedMultiplication: 2
   centerAtText: 0
+  closeWhenGazeDirectionLeavesDisplayPrefab: 0
   showCloseButton: 1
   closeWhenLookingAway: 1
   lookAwayThreshold: 0
@@ -538,6 +510,7 @@ MonoBehaviour:
     popupDuration: .699999988
     minimizeSpeedMultiplication: 2
   centerAtText: 0
+  closeWhenGazeDirectionLeavesDisplayPrefab: 0
   showCloseButton: 1
   closeWhenLookingAway: 1
   lookAwayThreshold: 0
@@ -609,52 +582,12 @@ MonoBehaviour:
     popupDuration: .699999988
     minimizeSpeedMultiplication: 2
   centerAtText: 0
+  closeWhenGazeDirectionLeavesDisplayPrefab: 0
   showCloseButton: 1
   closeWhenLookingAway: 1
   lookAwayThreshold: 0
   connectionPrefab: {fileID: 11400000, guid: 501f313e504fa8548808af2cbe19f9c9, type: 2}
   numberOfInfoBoxes: 4
---- !u!114 &11400014
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100014}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ad9c6e9622f5894096a7789aeda19c7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  textAssets:
-  - prefab: {fileID: 100004, guid: 5653693c98c8d489f814c02fb6be1256, type: 2}
-    textStyle: 0
-    textColor: {r: 0, g: 0, b: 0, a: 1}
-    backgroundColor: {r: 1, g: 1, b: 1, a: 1}
-    minNumberOfChars: 10
-  - prefab: {fileID: 100004, guid: f4337196b9cce4e1694d55161bce892f, type: 2}
-    textStyle: 1
-    textColor: {r: 1, g: 1, b: 1, a: 1}
-    backgroundColor: {r: 0, g: 0, b: 0, a: 1}
-    minNumberOfChars: 10
-  - prefab: {fileID: 100004, guid: e7092cf1301e64015a3e3d6eba2e2172, type: 2}
-    textStyle: 2
-    textColor: {r: 1, g: 1, b: 1, a: 1}
-    backgroundColor: {r: 0, g: 0, b: 0, a: 1}
-    minNumberOfChars: 10
-  background: {fileID: 100000, guid: 8f47c1dc61d6ba24392140759670640b, type: 2}
-  borderLeft: .0500000007
-  borderTop: .0500000007
-  magnifyingGlassSettings:
-    useMagnifyingGlassEffect: 1
-    magnifyingGlassCurve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-    magnifyingFactor: 1.5
-    moveForwardValue: .100000001
-    popupDuration: .699999988
-    minimizeSpeedMultiplication: 2
 --- !u!114 &11400018
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -699,6 +632,7 @@ MonoBehaviour:
     popupDuration: .699999988
     minimizeSpeedMultiplication: 2
   centerAtText: 0
+  closeWhenGazeDirectionLeavesDisplayPrefab: 0
   showCloseButton: 1
   closeWhenLookingAway: 1
   lookAwayThreshold: 30
@@ -815,6 +749,7 @@ MonoBehaviour:
     popupDuration: .699999988
     minimizeSpeedMultiplication: 2
   centerAtText: 0
+  closeWhenGazeDirectionLeavesDisplayPrefab: 1
   showCloseButton: 0
   closeWhenLookingAway: 1
   lookAwayThreshold: 30
@@ -920,12 +855,13 @@ MonoBehaviour:
     popupDuration: .699999988
     minimizeSpeedMultiplication: 2
   centerAtText: 0
+  closeWhenGazeDirectionLeavesDisplayPrefab: 1
   showCloseButton: 0
   closeWhenLookingAway: 1
   lookAwayThreshold: 30
   connectionPrefab: {fileID: 0}
   numberOfInfoBoxes: 5
-  localOffset: {x: 0, y: 0, z: .75}
+  localOffset: {x: 0, y: 0, z: .449999988}
   globalOffset: {x: 0, y: 0, z: 0}
   onlyConsiderCameraYRotation: 0
   minimumHeight: {fileID: 0}

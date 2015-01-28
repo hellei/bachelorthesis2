@@ -128,7 +128,6 @@ namespace VRUserInterface
 					string attachment = "";
 					if (missing > 0)
 					{
-						Debug.Log(missing + " characters missing. Filling up with empty spaces.");
 						for (int i = 0; i < missing; i++)
 						{
 							attachment+=" ";

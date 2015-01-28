@@ -29,7 +29,26 @@ public class Evaluation : MonoBehaviour {
 			SetUpHandCardCollection();
 			//Debug.Log(containerObjects[1]+"  "+containerObjects[1].GetComponent<Card>());
 		}
-		InteractionManager.instance.Tracking (false);
+		else
+		{
+			InteractionManager.instance.Tracking (false);
+		}
+		InformationController.instance.newInformationObjectSelectedCallback += NewIOSelected;
+	}
+
+	void OnDisable()
+	{
+		InteractionManager.instance.Tracking (true);
+	}
+
+	int numberOfSelects = 0;
+
+	public void NewIOSelected()
+	{
+		if (state == State.TimerRunning)
+		{
+			numberOfSelects++;
+		}
 	}
 
 	void SetUpHandCardCollection()
@@ -86,6 +105,7 @@ public class Evaluation : MonoBehaviour {
 	float timerStart = 0;
 	// Update is called once per frame
 	void Update () {
+		TestAborts ();
 		switch (state)
 		{
 		case State.Waiting:
@@ -107,7 +127,7 @@ public class Evaluation : MonoBehaviour {
 				}
 				state = State.Ready;
 				//Add new card to hand
-				if (containerObjects[handCardIdx])
+				if (onHand && containerObjects[handCardIdx])
 				{
 					Hand_CardCollection.instance.AddCardToHand(containerObjects[handCardIdx].GetComponent<Card>(),0);
 					toBeSelected = containerObjects[order[handCardIdx]].GetComponent<Card>();
@@ -141,7 +161,16 @@ public class Evaluation : MonoBehaviour {
 		case State.TimerRunning:
 			renderer.material.color = colTimerRunning;
 			//Stop timer when the information display has been opened
-			if (InformationController.instance.activeObject || Input.GetKeyDown(KeyCode.P))
+			bool condition = false;
+			if (onHand)
+			{
+				condition = (InformationController.instance.activeObject == toBeSelected.gameObject);
+			}
+			else
+			{
+				condition = InformationController.instance.activeObject;
+			}
+			if (condition || Input.GetKeyDown(KeyCode.P))
 			{
 				float selectionTime = (Time.time - timerStart);
 				Debug.Log("Selected card in " + selectionTime + " seconds");
@@ -155,7 +184,12 @@ public class Evaluation : MonoBehaviour {
 				{
 
 					result.Calculate(i);
+					result.tests[i].falseSelects = (numberOfSelects - numberOfCards);
 					cardContainer.SetActive(false);
+					result.tests[i].abortedSelects = numberOfAborts - numberOfSelects;
+
+					numberOfAborts = 0;
+					numberOfSelects = 0;
 					copy.SetActive(true);
 					cardContainer = copy;
 					copy = null;
@@ -190,7 +224,32 @@ public class Evaluation : MonoBehaviour {
 		}
 	}
 
+	int numberOfAborts = 0;
+
 	GameObject lastSelectedCard;
 
+	bool buttonSelected = false;
 
+	/// <summary>
+	/// Tests if a button selection has been aborted
+	/// </summary>
+	void TestAborts()
+	{
+		if (state == State.TimerRunning)
+		{
+			if (Selection.instance.WatchedObject.tag == Tags.buttonComponent)
+			{
+				buttonSelected = true;
+			}
+			else if (buttonSelected)
+			{
+				numberOfAborts++;
+				buttonSelected = false;
+			}
+		}
+		else
+		{
+			buttonSelected = false;
+		}
+	}
 }

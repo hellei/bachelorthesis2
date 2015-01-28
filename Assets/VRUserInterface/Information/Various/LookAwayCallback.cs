@@ -41,4 +41,35 @@ namespace VRUserInterface
 			if (Mathf.Abs(angle)>lookAwayThreshold) callback();
 		}
 	}
+
+	/// <summary>
+	/// This function triggers a callback once you looked at the object and stop looking at it.
+	/// </summary>
+	public class StopLookingAtObjectCallback : MonoBehaviour
+	{
+		public delegate void Callback();
+		
+		public Callback callback;
+
+		bool lookedAtOnce = false;
+
+		public float minTimeAlive = 0.8f;
+
+		float creationTime = 0;
+
+		void Update()
+		{
+			if (creationTime == 0.0f) creationTime = Time.time;
+			if (Selection.instance.WatchedObject == gameObject && (Time.time - creationTime) > minTimeAlive)
+			{
+				lookedAtOnce = true;
+			}
+			else if (lookedAtOnce && Selection.instance.WatchedObject.tag != Tags.buttonComponent)
+			{
+				callback();
+				Debug.Log("leaving object! callback!");
+				lookedAtOnce = false;
+			}
+		}
+	}
 }
