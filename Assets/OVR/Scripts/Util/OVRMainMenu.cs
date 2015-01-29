@@ -421,8 +421,8 @@ public class OVRMainMenu : MonoBehaviour
 		if(Input.GetKeyDown(KeyCode.F11))
 			Screen.fullScreen = !Screen.fullScreen;
 
-        if (Input.GetKeyDown(KeyCode.M))
-			OVRManager.display.mirrorMode = !OVRManager.display.mirrorMode;
+        /*if (Input.GetKeyDown(KeyCode.M))
+			OVRManager.display.mirrorMode = !OVRManager.display.mirrorMode;*/
         
 		// Escape Application
 		if (Input.GetKeyDown(QuitKey))

@@ -60,7 +60,6 @@ public class InteractableObject : Interactable
     {
         if (card.CardState == CardState.OnHand)
         {
-            Debug.Log("Collision");
             InteractionManager.instance.HandleInteractionBetweenHands(card);
         }        
     }

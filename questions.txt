@@ -1,10 +1,15 @@
 How often have you used VR HMDs?
-How often have you used interface in VR?
+(daily, weekly, once, never)
+Have you used interfaces in VR?
+(Mouse, keyboard, Leap Motion, gaze-tracking)
 How often have you played card games?
+Did you see Oculus with correct eyesight. Define which.
+//Are you short-sighted or far-sighted( or presbyotic (Altersweitsichtigkeit))?
 
+Interviews:
 
-Which button type did you like most?
-Which display type did you like most?
-Do you feel more comfortable if your avatar is shown?
+Which button type did you like most and least?
+Which display type did you like most and least?
 Could you imagine playing card games in Virtual Reality?
-Do you think the interface could be used in other VR application where info needs to be shown, e.g. a virtual museum?
+What kind of other application could this interface be used for?//Do you think the interface could be used in other VR application where information needs to be shown, e.g. a virtual museum?
+Was reading the text easy?

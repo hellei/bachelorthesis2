@@ -64,7 +64,7 @@ namespace VRUserInterface
 			{
 				lookedAtOnce = true;
 			}
-			else if (lookedAtOnce && Selection.instance.WatchedObject.tag != Tags.buttonComponent)
+			else if (lookedAtOnce && (!Selection.instance.WatchedObject || Selection.instance.WatchedObject.tag != Tags.buttonComponent))
 			{
 				callback();
 				Debug.Log("leaving object! callback!");

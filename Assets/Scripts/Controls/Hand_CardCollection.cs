@@ -25,7 +25,11 @@ public class Hand_CardCollection : MonoBehaviour {
     public int maxCardsAllowed = -1;
     public Vector3 inactiveHandPos = new Vector3(0, -1000, 0);
     public float fanOutDistance = 0.05f;
-    private List<CardBucket> cardsOnHand = new List<CardBucket>();
+    public List<CardBucket> cardsOnHand {
+		get;
+		private set;
+	}
+
     
     private int numberOfCardsOnHand = 0;
     private int selectedCard;
@@ -42,7 +46,8 @@ public class Hand_CardCollection : MonoBehaviour {
 	public Vector3 cardContainerLocalPosition = new Vector3(-0.0147f,0,0.0069f);
     void Awake()
     {
-        instance = this;        
+        instance = this;
+		cardsOnHand = new List<CardBucket>();
     }
 
 	// Use this for initialization
@@ -90,7 +95,7 @@ public class Hand_CardCollection : MonoBehaviour {
 
     public void SetHandPosition(Vector3 pos)
     {
-        hand.transform.position = pos;
+        hand.palm.transform.position = pos;
     }
 
     public int FindIndexOfNearestCard(Vector3 position)
@@ -304,6 +309,8 @@ public class Hand_CardCollection : MonoBehaviour {
                     restAngle /= 2.0f;
                     cardsOnHand[i].localRotation = Quaternion.Euler(new Vector3(0, 0, 150 + restAngle));
                 }
+			
+				cardsOnHand[index].localRotation = Quaternion.Euler (0,0,150 + startAngle);
 
                 restAngle = angle * (cardsOnHand.Count - index) / cardsOnHand.Count;
 
@@ -313,6 +320,14 @@ public class Hand_CardCollection : MonoBehaviour {
                     cardsOnHand[i].localRotation = Quaternion.Euler(new Vector3(0, 0, 150 + angle - restAngle));
                 }
             }
+			else
+			{
+				angle = 90.0f / cardsOnHand.Count;
+				for (int i = 0; i < cardsOnHand.Count; i++)
+				{
+					cardsOnHand[i].localRotation = Quaternion.Euler(new Vector3(0, 0, 150 + i * angle));
+				}
+			}
         }
     }
 
