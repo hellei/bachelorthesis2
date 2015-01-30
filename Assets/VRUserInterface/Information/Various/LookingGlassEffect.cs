@@ -29,12 +29,20 @@ namespace VRUserInterface
 
 		public Vector3 scalePivot = Vector3.zero;
 
+		/// <summary>
+		/// Sometimes you may want to overwrite the selection in special cases. If you set this variable,
+		/// the defined game object is used instead of testing the selection watched object
+		/// </summary>
+		public static GameObject overrideSelection = null;
 
 		// Update is called once per frame
 		void Update () {
 			GameObject sel = Selection.instance.WatchedObject;
+			if (overrideSelection)
+			{
+				sel = overrideSelection;
+			}
 			//If the currently watched object is a button, test if the creator was this object. If yes, it is deemed selected.
-
 			GameObject buttonParentSelection = null;
 			if (sel && sel.IsButton())
 			{
@@ -44,6 +52,8 @@ namespace VRUserInterface
 					buttonParentSelection = selButton.creator.gameObject;
 				}
 			}
+
+			//Test if object is selected
 			if (sel == gameObject || buttonParentSelection == gameObject)
 			{
 				//If the object was not selected in the last frame set up all position values
@@ -55,6 +65,7 @@ namespace VRUserInterface
 				if (popupDuration != 0) progress = timeSelected / popupDuration;
 				SetEffect(progress);
 			}
+			//Object is not selected directly
 			//If the other object is a button, do not scale down as the button is probably positioned on the enlarged object
 			else if (!sel || !sel.IsButton() || (buttonParentSelection && buttonParentSelection != gameObject))
 			{

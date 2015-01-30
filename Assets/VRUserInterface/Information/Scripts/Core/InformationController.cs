@@ -112,6 +112,7 @@ namespace VRUserInterface
 					handsEvaluation.SetActive(false);
 					tableEvaluation.SetActive(true);
 					displayEvaluation.SetActive(false);
+					playground.SetActive(false);
 				}
 
 				//Start evaluation for buttons on hand
@@ -120,6 +121,7 @@ namespace VRUserInterface
 					handsEvaluation.SetActive(true);
 					tableEvaluation.SetActive(false);
 					displayEvaluation.SetActive(false);
+					playground.SetActive(false);
 				}
 
 				//Start evaluation for displays
@@ -128,12 +130,22 @@ namespace VRUserInterface
 					handsEvaluation.SetActive(false);
 					tableEvaluation.SetActive(false);
 					displayEvaluation.SetActive(true);
+					playground.SetActive(false);
+				}
+
+				//Start evaluation for displays
+				if (Input.GetKeyDown(KeyCode.P))
+				{
+					handsEvaluation.SetActive(false);
+					tableEvaluation.SetActive(false);
+					displayEvaluation.SetActive(false);
+					playground.SetActive(true);
 				}
 	        }
 			#endregion
 		}
 
-		public GameObject tableEvaluation, handsEvaluation, displayEvaluation;
+		public GameObject tableEvaluation, handsEvaluation, displayEvaluation, playground;
 
 	    int infoI = 0;
 

@@ -32,7 +32,8 @@ public class InteractionManager : MonoBehaviour {
     private float interactionTime;
     public bool touchOnTablet = false;
     private Dictionary<int, TouchInfo> tabletTouches = new Dictionary<int, TouchInfo>();
-    private bool trackingEnabled = true;
+    private bool trackingEnabledLeft = true;
+	private bool trackingEnabledRight = true;
 
     // Update Modes
     public HandOrientationMode rightHandOrientationMode = HandOrientationMode.RestrictedOrientation;
@@ -57,13 +58,32 @@ public class InteractionManager : MonoBehaviour {
 
     public void Tracking(bool on)
     {
-        trackingEnabled = on;
+		trackingEnabledLeft = on;
+		trackingEnabledRight = on;
     }
 
-    public bool GetTrackingMode()
-    {
-        return trackingEnabled;
-    }
+	public void TrackingLeft(bool on)
+	{
+		trackingEnabledLeft = on;
+	}
+
+	public void TrackingRight(bool on)
+	{
+		trackingEnabledRight = on;
+	}
+
+
+	public bool GetTrackingMode(int idx)
+	{
+		if (idx == 0)
+		{
+			return trackingEnabledLeft;
+		}
+		else 
+		{
+			return trackingEnabledRight;
+		}
+	}
 
     void SetHandControlModes()
     {

@@ -24,9 +24,16 @@ public class Evaluation : MonoBehaviour {
 
 		result.tests = new EvaluationResult.ButtonTest[buttonTests.Count];
 		result.onHand = onHand;
+
+		if (!copy)
+		{
+			InstantiateCardContainerCopy();
+		}
+
 		if (onHand)
 		{
 			SetUpHandCardCollection();
+			InteractionManager.instance.TrackingRight(false);
 			//Debug.Log(containerObjects[1]+"  "+containerObjects[1].GetComponent<Card>());
 		}
 		else
@@ -34,6 +41,13 @@ public class Evaluation : MonoBehaviour {
 			InteractionManager.instance.Tracking (false);
 		}
 		InformationController.instance.newInformationObjectSelectedCallback += NewIOSelected;
+	}
+
+	void InstantiateCardContainerCopy()
+	{
+		copy = (GameObject)Instantiate (cardContainer);
+		copy.transform.SetParent(cardContainer.transform.parent, false);
+		copy.SetActive (false);
 	}
 
 	void OnDisable()
@@ -150,12 +164,6 @@ public class Evaluation : MonoBehaviour {
 				}
 				state = State.TimerRunning;
 				timerStart = Time.time;
-				if (!copy)
-				{
-					copy = (GameObject)Instantiate (cardContainer);
-					copy.transform.SetParent(cardContainer.transform.parent, false);
-					copy.SetActive (false);
-				}
 			}
 			break;
 		case State.TimerRunning:
@@ -170,7 +178,7 @@ public class Evaluation : MonoBehaviour {
 			{
 				condition = InformationController.instance.activeObject;
 			}
-			if (condition || Input.GetKeyDown(KeyCode.P))
+			if (condition || (Input.GetKeyDown(KeyCode.LeftShift) && Input.GetKeyDown(KeyCode.P)))
 			{
 				float selectionTime = (Time.time - timerStart);
 				Debug.Log("Selected card in " + selectionTime + " seconds");
@@ -180,6 +188,7 @@ public class Evaluation : MonoBehaviour {
 					result.tests[i].selectionTimes[cardsSelected-numberOfTests] = selectionTime;
 				}
 				cardsSelected++;
+				//Finish this round
 				if (cardsSelected >= numberOfCards)
 				{
 
@@ -192,7 +201,7 @@ public class Evaluation : MonoBehaviour {
 					numberOfSelects = 0;
 					copy.SetActive(true);
 					cardContainer = copy;
-					copy = null;
+					InstantiateCardContainerCopy();
 					if (i < buttonTests.Count-1)
 					{
 						if (onHand)
@@ -202,6 +211,8 @@ public class Evaluation : MonoBehaviour {
 							{
 								Hand_CardCollection.instance.TakeCardFromHand(t.GetComponent<Card>());
 								t.transform.position = new Vector3(0,-1000,0);
+								LookingGlassEffect lge = t.GetComponent<LookingGlassEffect>();
+								if (lge) lge.enabled = false;
 							}
 							SetUpHandCardCollection();
 						}
@@ -237,7 +248,7 @@ public class Evaluation : MonoBehaviour {
 	{
 		if (state == State.TimerRunning)
 		{
-			if (Selection.instance.WatchedObject.tag == Tags.buttonComponent)
+			if (Selection.instance.WatchedObject && Selection.instance.WatchedObject.tag == Tags.buttonComponent)
 			{
 				buttonSelected = true;
 			}

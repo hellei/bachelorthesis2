@@ -158,18 +158,22 @@ namespace VRUserInterface
 			float containerHeight = max.y;
 			float containerWidth = max.x;
 
-
+			/*GameObject cube = GameObject.CreatePrimitive (PrimitiveType.Cube);
+			cube.transform.position = container.transform.position;
+			cube.transform.localScale = new Vector3 (containerWidth, containerHeight, 0.02f)*2;
+			cube.transform.parent = container.transform;*/
+			//return container;
 	        //Add close button
 	        if (closeButton && showCloseButton)
 	        {
 				GameObject ba = closeButton.Instantiate();
-	            ba.transform.localScale *= buttonScale;
+				ba.transform.localScale *= buttonScale;
 
 				//Get button height
 				min = max = GameObjectExtensions.initializationVector;
 				ba.GetBounds(ref min, ref max);
 				float buttonHeight = -min.y;
-				SetButtonParentAndPosition(ba, container, new Vector3(containerWidth, containerHeight + buttonHeight,-0.03f), CloseButtonPressed);
+				SetButtonParentAndPosition(ba, container, new Vector3(containerWidth, containerHeight * 2 - buttonHeight,-0.02f), CloseButtonPressed);
 	        }
 
 			//Add scroll button
@@ -195,8 +199,8 @@ namespace VRUserInterface
 
 				scrollDown.transform.localScale *= buttonScale;
 
-				SetButtonParentAndPosition(scrollUp, container, new Vector3(containerWidth - buttonWidth * 2 - 0.05f, containerHeight + buttonHeight), ScrollUp);		
-				SetButtonParentAndPosition(scrollDown, container, new Vector3(containerWidth - buttonWidth * 2 - 0.05f, -containerHeight - buttonHeight), ScrollDown);
+				SetButtonParentAndPosition(scrollUp, container, new Vector3(containerWidth - buttonWidth * 2 - 0.05f, containerHeight*2 - buttonHeight,-0.02f), ScrollUp);		
+				SetButtonParentAndPosition(scrollDown, container, new Vector3(containerWidth - buttonWidth * 2 - 0.05f, -containerHeight*2 + buttonHeight,-0.02f), ScrollDown);
 			}
 
 			//Add a back button on the display prefab if wanted

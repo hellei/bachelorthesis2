@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &143586
 GameObject:
   m_ObjectHideFlags: 1
@@ -1286,6 +1286,7 @@ MonoBehaviour:
   - {fileID: 11495642}
   - {fileID: 11495644}
   maxAllowedCardsInHand: 1
+  inactiveHandPos: {x: 0, y: -1000, z: 0}
 --- !u!114 &11443660
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1297,7 +1298,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf8e0778efd842a42ac3b552060dd3c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  meshes: {fileID: 143644}
   palm: {fileID: 443638}
   foreArm: {fileID: 443660}
   fingers: []
@@ -1329,6 +1329,11 @@ MonoBehaviour:
   - {fileID: 443624}
   - {fileID: 443622}
   - {fileID: 443620}
+  defaultBoneOrientation:
+  - {x: 0, y: 0, z: 0, w: 0}
+  - {x: 0, y: 0, z: 0, w: 0}
+  - {x: 0, y: 0, z: 0, w: 0}
+  - {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &11495642
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1346,6 +1351,11 @@ MonoBehaviour:
   - {fileID: 443604}
   - {fileID: 443602}
   - {fileID: 443600}
+  defaultBoneOrientation:
+  - {x: 0, y: 0, z: 0, w: 0}
+  - {x: 0, y: 0, z: 0, w: 0}
+  - {x: 0, y: 0, z: 0, w: 0}
+  - {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &11495644
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1363,6 +1373,11 @@ MonoBehaviour:
   - {fileID: 443594}
   - {fileID: 443592}
   - {fileID: 443590}
+  defaultBoneOrientation:
+  - {x: 0, y: 0, z: 0, w: 0}
+  - {x: 0, y: 0, z: 0, w: 0}
+  - {x: 0, y: 0, z: 0, w: 0}
+  - {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &11495646
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1380,6 +1395,11 @@ MonoBehaviour:
   - {fileID: 443614}
   - {fileID: 443612}
   - {fileID: 443610}
+  defaultBoneOrientation:
+  - {x: 0, y: 0, z: 0, w: 0}
+  - {x: 0, y: 0, z: 0, w: 0}
+  - {x: 0, y: 0, z: 0, w: 0}
+  - {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &11495648
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1397,6 +1417,11 @@ MonoBehaviour:
   - {fileID: 443632}
   - {fileID: 443630}
   - {fileID: 443628}
+  defaultBoneOrientation:
+  - {x: 0, y: 0, z: 0, w: 0}
+  - {x: 0, y: 0, z: 0, w: 0}
+  - {x: 0, y: 0, z: 0, w: 0}
+  - {x: 0, y: 0, z: 0, w: 0}
 --- !u!135 &13516838
 SphereCollider:
   m_ObjectHideFlags: 1

@@ -52,7 +52,7 @@ public class Hand_Selecting : MonoBehaviour {
 
     public void SetHandPosition(Vector3 pos)
     {
-        hand.transform.position = pos;
+        hand.palm.transform.position = pos;
     }
 
     public Vector3 GetGrabPosition()
