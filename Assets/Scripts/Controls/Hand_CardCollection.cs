@@ -306,10 +306,11 @@ public class Hand_CardCollection : MonoBehaviour {
                 }
 
                 restAngle = angle * (cardsOnHand.Count - index) / cardsOnHand.Count;
+                
 
                 for (int i = index + 1; i < cardsOnHand.Count; i++)
                 {
-                    restAngle /= 2;
+                    restAngle /= 2.0f;
                     cardsOnHand[i].localRotation = Quaternion.Euler(new Vector3(0, 0, 150 + angle - restAngle));
                 }
             }
