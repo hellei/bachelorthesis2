@@ -313,7 +313,7 @@ public class Hand_CardCollection : MonoBehaviour {
 				cardsOnHand[index].localRotation = Quaternion.Euler (0,0,150 + startAngle);
 
                 restAngle = angle * (cardsOnHand.Count - index) / cardsOnHand.Count;
-                
+                LookingGlassEffect.overrideSelection = cardsOnHand[index].card.gameObject;
 
                 for (int i = index + 1; i < cardsOnHand.Count; i++)
                 {
@@ -323,6 +323,8 @@ public class Hand_CardCollection : MonoBehaviour {
             }
 			else
 			{
+                LookingGlassEffect.overrideSelection = null;
+
 				angle = 90.0f / cardsOnHand.Count;
 				for (int i = 0; i < cardsOnHand.Count; i++)
 				{
