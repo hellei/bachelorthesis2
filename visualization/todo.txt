@@ -1,0 +1,4 @@
+Close button nicht richtig positioniert?
+Magic Karten?
+Crash fix
+Speichern nach jedem Block

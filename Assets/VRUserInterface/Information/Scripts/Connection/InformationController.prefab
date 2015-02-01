@@ -411,7 +411,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed8c85454a132fc4fb14fa14c0185808, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  infoDisplay: {fileID: 11400018}
+  infoDisplay: {fileID: 11485580}
   selection: {fileID: 11400002}
   debugKeys: 1
   infoButton: {fileID: 11400000, guid: 6d82e974550a049ae9ea9a5c6cba8c48, type: 2}

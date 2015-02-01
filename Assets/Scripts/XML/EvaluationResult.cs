@@ -14,6 +14,7 @@ public class EvaluationResult : XMLSaveAndLoad<EvaluationResult> {
 		public ButtonType bt;
 		public float[] selectionTimes;
 		public float averageTime;
+		public float averageTimeOwnCards, averageTimeOpponentCards;
 
 		/// <summary>
 		/// Every time you select the wrong card, this counter increases by 1.
@@ -24,6 +25,7 @@ public class EvaluationResult : XMLSaveAndLoad<EvaluationResult> {
 		/// Everytime the player looks at a button and then looks away again.
 		/// </summary>
 		public int abortedSelects;
+
 	}
 
 	/// <summary>
@@ -55,11 +57,28 @@ public class EvaluationResult : XMLSaveAndLoad<EvaluationResult> {
 	public void Calculate(int i)
 	{
 		tests[i].averageTime = 0;
+		tests[i].averageTimeOwnCards = 0;
+		tests[i].averageTimeOpponentCards = 0;
+		int numberOfOwnCards = 0;
+		int numberOfOpponentCards = 0;
+		int idx = 0;
 		foreach (float val in tests[i].selectionTimes)
 		{
 			tests[i].averageTime += val;
+			if (idx % 2 == 0){
+				tests[i].averageTimeOwnCards += val;
+				numberOfOwnCards++;
+			}
+			else
+			{
+				tests[i].averageTimeOpponentCards += val;
+				numberOfOpponentCards++;
+			}
+			idx++;
 		}
 		tests[i].averageTime /= (float)tests[i].selectionTimes.Length;
+		tests[i].averageTimeOwnCards /= (float)numberOfOwnCards;
+		tests[i].averageTimeOpponentCards /= (float)numberOfOpponentCards;
 		Debug.Log ("Average time is " + tests[i].averageTime);
 	}
 }

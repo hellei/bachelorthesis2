@@ -173,6 +173,9 @@ namespace VRUserInterface
 						//Do nothing
 					}
 					else {
+						//Trigger the callback
+						if (informationObjectClosed != null) informationObjectClosed();
+						//
 						infoDisplay.DiscardActiveObject();
 						activeObject = null;
                         customViewClose = false;
@@ -196,6 +199,8 @@ namespace VRUserInterface
 		/// This event is always triggered when a new information object has been selected.
 		/// </summary>
 		public event Callback newInformationObjectSelectedCallback;
+
+		public event Callback informationObjectClosed;
 
 	    bool customViewClose = false;
 

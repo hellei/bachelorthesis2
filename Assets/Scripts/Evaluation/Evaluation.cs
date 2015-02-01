@@ -32,7 +32,6 @@ public class Evaluation : MonoBehaviour {
 
 		if (onHand)
 		{
-			SetUpHandCardCollection();
 			InteractionManager.instance.TrackingRight(false);
 			//Debug.Log(containerObjects[1]+"  "+containerObjects[1].GetComponent<Card>());
 		}
@@ -40,7 +39,9 @@ public class Evaluation : MonoBehaviour {
 		{
 			InteractionManager.instance.Tracking (false);
 		}
+		SetUpCardCollection();
 		InformationController.instance.newInformationObjectSelectedCallback += NewIOSelected;
+		InformationController.instance.informationObjectClosed += IOClosed;
 	}
 
 	void InstantiateCardContainerCopy()
@@ -65,16 +66,28 @@ public class Evaluation : MonoBehaviour {
 		}
 	}
 
-	void SetUpHandCardCollection()
+	public void IOClosed()
+	{
+		if (correctDisplayOpened)
+		{
+			correctDisplayOpened = false;
+			SetNextSelectableCard();
+		}
+	}
+
+	bool correctDisplayOpened = false;
+
+	void SetUpCardCollection()
 	{
 		containerObjects = new List<Transform> ();
 		foreach (Transform t in cardContainer.transform)
 		{
 			containerObjects.Add(t);
 		}
-		Hand_CardCollection.instance.AddCardToHand(containerObjects[0].GetComponent<Card>(), 0);
-		handCardIdx=1;
-		toBeSelected = containerObjects[order[handCardIdx]].GetComponent<Card>();
+		handCardIdx = 0;
+		SetNextSelectableCard ();
+		//The hand selection process starts with two cards
+		if (onHand) SetNextSelectableCard();
 	}
 
 
@@ -116,6 +129,20 @@ public class Evaluation : MonoBehaviour {
 
 	public ButtonGenerator buttonPrefab;
 
+	void SetNextSelectableCard()
+	{
+		if (containerObjects[handCardIdx])
+		{
+			//Add new card to hand
+			if (onHand)
+			{
+				Hand_CardCollection.instance.AddCardToHand(containerObjects[handCardIdx].GetComponent<Card>(),0);
+			}
+			toBeSelected = containerObjects[order[handCardIdx]].GetComponent<Card>();
+		}
+		handCardIdx++;
+	}
+
 	float timerStart = 0;
 	// Update is called once per frame
 	void Update () {
@@ -134,19 +161,12 @@ public class Evaluation : MonoBehaviour {
 						Hand_CardCollection.instance.TakeCardFromHand(lastSelectedCard.GetComponent<Card>());
 						lastSelectedCard.transform.position = new Vector3(0,-1000,0);
 					}*/
-					if (!onHand)
+					/*if (!onHand)
 					{
 						Destroy (lastSelectedCard);
-					}
+					}*/
 				}
 				state = State.Ready;
-				//Add new card to hand
-				if (onHand && containerObjects[handCardIdx])
-				{
-					Hand_CardCollection.instance.AddCardToHand(containerObjects[handCardIdx].GetComponent<Card>(),0);
-					toBeSelected = containerObjects[order[handCardIdx]].GetComponent<Card>();
-				}
-				handCardIdx++;
 			}
 			break;
 		case State.Ready:
@@ -170,16 +190,11 @@ public class Evaluation : MonoBehaviour {
 			renderer.material.color = colTimerRunning;
 			//Stop timer when the information display has been opened
 			bool condition = false;
-			if (onHand)
-			{
-				condition = (InformationController.instance.activeObject == toBeSelected.gameObject);
-			}
-			else
-			{
-				condition = InformationController.instance.activeObject;
-			}
+			condition = (InformationController.instance.activeObject == toBeSelected.gameObject);
+
 			if (condition || (Input.GetKeyDown(KeyCode.LeftShift) && Input.GetKeyDown(KeyCode.P)))
 			{
+				correctDisplayOpened = true;
 				float selectionTime = (Time.time - timerStart);
 				Debug.Log("Selected card in " + selectionTime + " seconds");
 				state = State.Waiting;
@@ -202,6 +217,7 @@ public class Evaluation : MonoBehaviour {
 					copy.SetActive(true);
 					cardContainer = copy;
 					InstantiateCardContainerCopy();
+					correctDisplayOpened = false;
 					if (i < buttonTests.Count-1)
 					{
 						if (onHand)
@@ -214,14 +230,16 @@ public class Evaluation : MonoBehaviour {
 								LookingGlassEffect lge = t.GetComponent<LookingGlassEffect>();
 								if (lge) lge.enabled = false;
 							}
-							SetUpHandCardCollection();
 						}
+						SetUpCardCollection();
 						cardsSelected = 0;
+
 						i++;
 					}
 					else
 					{
 						result.Save("result_"+Random.Range(0,10000)+".xml");
+						Debug.Log("Saved result!");
 						state = State.Finished;
 						InteractionManager.instance.Tracking (true);
 					}
