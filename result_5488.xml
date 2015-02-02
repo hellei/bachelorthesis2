@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<EvaluationResult xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <onHand>false</onHand>
+  <tests>
+    <ButtonTest>
+      <bt>DragCircle</bt>
+      <selectionTimes>
+        <float>6.76320362</float>
+        <float>11.02173</float>
+        <float>8.726994</float>
+        <float>3.43364716</float>
+        <float>1.93400574</float>
+        <float>2.895874</float>
+        <float>1.72353363</float>
+        <float>6.76217651</float>
+        <float>2.425026</float>
+        <float>3.90361023</float>
+      </selectionTimes>
+      <averageTime>4.95898</averageTime>
+      <averageTimeOwnCards>4.31455231</averageTimeOwnCards>
+      <averageTimeOpponentCards>5.603408</averageTimeOpponentCards>
+      <falseSelects>0</falseSelects>
+      <abortedSelects>3</abortedSelects>
+    </ButtonTest>
+    <ButtonTest xsi:nil="true" />
+    <ButtonTest xsi:nil="true" />
+    <ButtonTest xsi:nil="true" />
+  </tests>
+</EvaluationResult>

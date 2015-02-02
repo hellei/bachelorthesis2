@@ -192,7 +192,12 @@ public class Evaluation : MonoBehaviour {
 			bool condition = false;
 			condition = (InformationController.instance.activeObject == toBeSelected.gameObject);
 
-			if (condition || (Input.GetKeyDown(KeyCode.LeftShift) && Input.GetKeyDown(KeyCode.P)))
+			if (Input.GetKeyDown(KeyCode.LeftShift))
+			{
+				cardsSelected= numberOfCards-1;
+			}
+
+			if (condition)
 			{
 				correctDisplayOpened = true;
 				float selectionTime = (Time.time - timerStart);
@@ -218,6 +223,8 @@ public class Evaluation : MonoBehaviour {
 					cardContainer = copy;
 					InstantiateCardContainerCopy();
 					correctDisplayOpened = false;
+					result.Save("result_"+Random.Range(0,10000)+".xml");
+					Debug.Log("Saved result!");
 					if (i < buttonTests.Count-1)
 					{
 						if (onHand)
@@ -238,8 +245,6 @@ public class Evaluation : MonoBehaviour {
 					}
 					else
 					{
-						result.Save("result_"+Random.Range(0,10000)+".xml");
-						Debug.Log("Saved result!");
 						state = State.Finished;
 						InteractionManager.instance.Tracking (true);
 					}
