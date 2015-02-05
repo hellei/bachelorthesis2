@@ -19,12 +19,12 @@ public class EvaluationResult : XMLSaveAndLoad<EvaluationResult> {
 		/// <summary>
 		/// Every time you select the wrong card, this counter increases by 1.
 		/// </summary>
-		public int falseSelects;
+		public float falseSelects;
 		
 		/// <summary>
 		/// Everytime the player looks at a button and then looks away again.
 		/// </summary>
-		public int abortedSelects;
+		public float abortedSelects;
 
 	}
 

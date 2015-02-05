@@ -1,0 +1,5 @@
+﻿Button Type;Avg selection time;
+Timer;4,26549244;
+Three Dots;4,6755
+Arrows;4,76988173
+Drag Circle;4,63023663

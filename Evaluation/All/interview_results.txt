@@ -1,0 +1,23 @@
+Table:
+Arrows:+++-(most logical, smooth)(empty field => you do not know what to do at first)
+Drag Circle: ++---(easily understandable, reminds of swipe screen on iphone))(focus on circle easily lost)
+Three Dots:++---(does not make sense; easy to miss, too slow; too much accuracy needed)
+Timer: -+(simple to use, easy to abort)
+Hand:
+Arrows:
+Drag Circle: -----+(Dragging too difficult)
+Three Dots:+--
+Timer: ++++++-(easiest because static; hand and eye movement difficult=>static solution better)(too small)
+
+Could you imagine playing card game?
++++++--- (fascinating technology;(interesting / special); cards alone boring (card games in reality boring))(hand tracking too bad; generally not interested in card games)
+
+
+Ideas:
+Second life; disabled people; voice input; animations for disabled people; control only via head movement; higher resolution
+Read books; next page
+Virtual Museum
+Schafkopf App;
+Present object-specific properties. Language learning; Tutorials
+desktop applications; writing with hand in VR
+tutorial; manuals

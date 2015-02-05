@@ -1,0 +1,5 @@
+Button Type;False Selects;Aborted Selects;
+Timer;0;7,5
+Three Dots;0;10,25
+Arrows;0,125;7,5
+Drag Circle;0,125;7,375
