@@ -1,0 +1,26 @@
+Age: 51,53,24,22,24,23,23,20
+Gender:
+f +
+m +++++++
+
+Occupation: student+, other+++++++
+
+How often you used VR HMDs?
+never+++++
+once
+a few times +++
+monthly
+
+Have you used interfaces in VR?
+mouse-based+
+keyboard-based+
+Leap Motion based
+gaze-tracking +++
+How often have you played card games?
+never++
+once
+a few times++
+monthly++
+weekly++
+
+Visual aid? No.

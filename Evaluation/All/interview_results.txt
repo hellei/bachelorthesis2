@@ -12,6 +12,11 @@ Timer: ++++++-(easiest because static; hand and eye movement difficult=>static s
 Could you imagine playing card game?
 +++++--- (fascinating technology;(interesting / special); cards alone boring (card games in reality boring))(hand tracking too bad; generally not interested in card games)
 
+Displays:
+Table Display:--+(closing bad; green text best readable + far away)
+PCD:----++(card has good size; well positioned (fixed angle requires you to move your head; problems reading: blurred, too close)
+PCD fixed angle:++(optisch gut, realitätsnah, wie buch öffnen; karte würdest du auch so anschaun)
+PCD text:+++--(good to read; green text very clear;well-structured)(missing reference to card; only text)
 
 Ideas:
 Second life; disabled people; voice input; animations for disabled people; control only via head movement; higher resolution

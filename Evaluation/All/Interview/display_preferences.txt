@@ -1,0 +1,5 @@
+Display Type;Best;Worst;
+Table Display;1;2;
+PCD;2;4;
+PCD Fixed Angle;2;0
+PCD Text;3;2;

@@ -45,6 +45,17 @@ public class XMLConverter : MonoBehaviour {
 				id++;
 			}
 		}
+
+		foreach (EvaluationResult.DisplayTest t in er.displayTests)
+		{
+			int id = 1;
+			foreach (float val in t.selectionTimes)
+			{
+				lines.Add (t.dt+";"+id+";"+val+";");
+				id++;
+			}
+		}
+
 		if (directory == ""){
 			File.WriteAllLines ("new.txt", lines.ToArray());
 		}
@@ -78,37 +89,83 @@ public class XMLConverter : MonoBehaviour {
 		mediumResult.tests [3].bt = ButtonType.DragCircle;
 		mediumResult.tests [3].selectionTimes = new float[10];
 
+		mediumResult.displayTests = new EvaluationResult.DisplayTest[4];
+		mediumResult.displayTests [0] = new EvaluationResult.DisplayTest ();
+		mediumResult.displayTests [0].dt = DisplayType.TableDisplay;
+		mediumResult.displayTests [0].selectionTimes = new float[5];
+		mediumResult.displayTests [1] = new EvaluationResult.DisplayTest ();
+		mediumResult.displayTests [1].dt = DisplayType.PlayerCenteredDisplay;
+		mediumResult.displayTests [1].selectionTimes = new float[5];
+		mediumResult.displayTests [2] = new EvaluationResult.DisplayTest ();
+		mediumResult.displayTests [2].dt = DisplayType.PlayerCenteredDisplayFixedAngle;
+		mediumResult.displayTests [2].selectionTimes = new float[5];
+		mediumResult.displayTests [3] = new EvaluationResult.DisplayTest ();
+		mediumResult.displayTests [3].dt = DisplayType.PCDText;
+		mediumResult.displayTests [3].selectionTimes = new float[5];
+
 		float max = 0;
 		foreach (EvaluationResult er in results)
 		{
-			foreach (EvaluationResult.ButtonTest test in er.tests)
-			{
-
-				int id = 0;
-				switch (test.bt)
+			if (er.tests != null){
+				foreach (EvaluationResult.ButtonTest test in er.tests)
 				{
-					case ButtonType.Timer:
+
+					int id = 0;
+					switch (test.bt)
+					{
+						case ButtonType.Timer:
+							id = 0;
+							break;
+						case ButtonType.ThreeDots:
+							id = 1;
+							break;
+						case ButtonType.Arrows:
+							id = 2;
+							break;
+						case ButtonType.DragCircle:
+							id = 3;
+							break;
+					}
+					int cardIdx = 0;
+					foreach (float val in test.selectionTimes)
+					{
+						if (val > max) max = val;
+						mediumResult.tests[id].selectionTimes[cardIdx] += Mathf.Min (val, threshold);
+						cardIdx++;
+					}
+					mediumResult.tests[id].abortedSelects += test.abortedSelects;
+					mediumResult.tests[id].falseSelects += test.falseSelects;
+				}
+			}
+
+
+			if (er.displayTests != null){
+				foreach (EvaluationResult.DisplayTest test in er.displayTests)
+				{
+					
+					int id = 0;
+					switch (test.dt)
+					{
+					case DisplayType.TableDisplay:
 						id = 0;
 						break;
-					case ButtonType.ThreeDots:
+					case DisplayType.PlayerCenteredDisplay:
 						id = 1;
 						break;
-					case ButtonType.Arrows:
+					case DisplayType.PlayerCenteredDisplayFixedAngle:
 						id = 2;
 						break;
-					case ButtonType.DragCircle:
+					case DisplayType.PCDText:
 						id = 3;
 						break;
+					}
+					int cardIdx = 0;
+					foreach (float val in test.selectionTimes)
+					{
+						mediumResult.displayTests[id].selectionTimes[cardIdx] += val;
+						cardIdx++;
+					}
 				}
-				int cardIdx = 0;
-				foreach (float val in test.selectionTimes)
-				{
-					if (val > max) max = val;
-					mediumResult.tests[id].selectionTimes[cardIdx] += Mathf.Min (val, threshold);
-					cardIdx++;
-				}
-				mediumResult.tests[id].abortedSelects += test.abortedSelects;
-				mediumResult.tests[id].falseSelects += test.falseSelects;
 			}
 		}
 		Debug.Log (max);
@@ -120,6 +177,12 @@ public class XMLConverter : MonoBehaviour {
 			}
 			mediumResult.tests[i].abortedSelects /= results.Count;
 			mediumResult.tests[i].falseSelects /= results.Count;
+
+			for (int i2 = 0; i2 < 5; i2++)
+			{
+				mediumResult.displayTests[i].selectionTimes[i2]/=results.Count;
+			}
+			mediumResult.displayTests[i].CalculateAverage();
 			mediumResult.Calculate(i);
 		}
 		mediumResult.Save(path+"result.xml");
