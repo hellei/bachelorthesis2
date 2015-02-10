@@ -21,51 +21,96 @@
     </ShortInfo>
     <ShortInfo>
       <name>Akroan Hoplite</name>
-      <info />
+      <info>
+        <string>Akroan Hoplite</string>
+        <string>Creature -- Human Soldier</string>
+        <string>Whenever Akroan Hoplite attacks,it gets +X/+0 until end of turn,where X is the number of attackingcreatures you control.</string>
+        <string>"Fair fight? How could it be a fairfight? We're Akroans. They're not."</string>
+      </info>
     </ShortInfo>
     <ShortInfo>
       <name>Blood Troll Harpy</name>
-      <info />
+      <info>
+        <string>Blood-Toll Harpy</string>
+        <string>Creature -- Harpy</string>
+        <string>Flying</string>
+        <string>When Blood-Toll Harpy enters thebattlefield, each player loses 1 life.</string>
+        <string>When harpies demand a toll to crossthrough their territory, consider yourselflucky if they permit payment in coin.</string>
+      </info>
     </ShortInfo>
     <ShortInfo>
       <name>Boon Of Erebos</name>
-      <info />
+      <info>
+        <string>Boon of Erebos</string>
+        <string>Instant</string>
+        <string>Target creature gets +2/+0 until endof turn. Regenerate it. You lose 2 life.</string>
+        <string>"Death is not a certainty. Erebosdetermines when a mortal's time is up."--Iadorna, death priest of Erebos</string>
+      </info>
     </ShortInfo>
     <ShortInfo>
       <name>Borderland Minotaur</name>
-      <info />
+      <info>
+        <string>Borderland Minotaur</string>
+        <string>Creature -- Minotaur Warrior</string>
+        <string>"You have led us to triumph over the forcesof Mogis!" said Brygus the Brave, clappingthe Champion on the back.The Champion wiped the sweat and bloodfrom her brow."I count eight graves", she said. "Too manyto call this a victory."--The Theriad</string>
+      </info>
     </ShortInfo>
     <ShortInfo>
       <name>Fanatic of Mogus</name>
-      <info />
+      <info>
+        <string>Fanatic of Mogis</string>
+        <string>Creature -- Minotaur Shaman</string>
+        <string>When Fanatic of Mogis enters thebattlefield, it deals damage to eachopponent equal to your devotionto red.</string>
+      </info>
     </ShortInfo>
     <ShortInfo>
       <name>Island 1</name>
-      <info />
+      <info>
+        <string>Island</string>
+        <string>Basic Land -- Island</string>
+      </info>
     </ShortInfo>
     <ShortInfo>
       <name>Island 2</name>
-      <info />
+      <info>
+        <string>Island</string>
+        <string>Basic Land -- Island</string>
+      </info>
     </ShortInfo>
     <ShortInfo>
       <name>Mountain 1</name>
-      <info />
+      <info>
+        <string>Mountain</string>
+        <string>Basic Land -- Mountain</string>
+      </info>
     </ShortInfo>
     <ShortInfo>
       <name>Mountain 2</name>
-      <info />
+      <info>
+        <string>Mountain</string>
+        <string>Basic Land -- Mountain</string>
+      </info>
     </ShortInfo>
     <ShortInfo>
       <name>Plains 1</name>
-      <info />
+      <info>
+        <string>Plains</string>
+        <string>Basic Land -- Plains</string>
+      </info>
     </ShortInfo>
     <ShortInfo>
       <name>Plains 2</name>
-      <info />
+      <info>
+        <string>Plains</string>
+        <string>Basic Land -- Plains</string>
+      </info>
     </ShortInfo>
     <ShortInfo>
       <name>Plains 3</name>
-      <info />
+      <info>
+        <string>Plains</string>
+        <string>Basic Land -- Plains</string>
+      </info>
     </ShortInfo>
     <ShortInfo>
       <name>Polis Crusher</name>
@@ -78,11 +123,19 @@
     </ShortInfo>
     <ShortInfo>
       <name>Scholar of Athreos</name>
-      <info />
+      <info>
+        <string>Scholar of Athreos</string>
+        <string>Creature -- Human Cleric</string>
+        <string>2 BLACK: Each Opponent loses 1 life.You gain life equal to the life lostthis way.</string>
+        <string>She asks pointed questions of the deadwho wait for Athreos, learning of lifefrom those who are about to leave it.</string>
+      </info>
     </ShortInfo>
     <ShortInfo>
       <name>Swamp 1</name>
-      <info />
+      <info>
+        <string>Swamp</string>
+        <string>Basic Land -- Swamp</string>
+      </info>
     </ShortInfo>
     <ShortInfo>
       <name>Boros Signet</name>

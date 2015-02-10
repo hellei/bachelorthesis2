@@ -22,7 +22,14 @@ public class Card : MonoBehaviour {
 		}
 		set {
 			cardState = value;
-			GetComponent<LookingGlassEffect>().enabled = (cardState == CardState.OnHand);
+			LookingGlassEffect le = GetComponent<LookingGlassEffect>();
+			if (le){
+				//Reset it before disabling
+				if (le.enabled && cardState != CardState.OnHand){
+					le.SetEffect(0);
+				}
+				le.enabled = (cardState == CardState.OnHand);
+			}
 			if (mio)
 			{
 				mio.button = (cardState == CardState.OnHand ? mio.buttonOnHand : mio.buttonOnTable);

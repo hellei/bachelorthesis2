@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<EvaluationResult xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <onHand>false</onHand>
+  <tests>
+    <ButtonTest>
+      <bt>Timer</bt>
+      <selectionTimes>
+        <float>1.45230818</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>5.37863827</float>
+      </selectionTimes>
+      <averageTime>0.6830946</averageTime>
+      <averageTimeOwnCards>0.29046163</averageTimeOwnCards>
+      <averageTimeOpponentCards>1.0757277</averageTimeOpponentCards>
+      <falseSelects>-8</falseSelects>
+      <abortedSelects>0</abortedSelects>
+    </ButtonTest>
+    <ButtonTest xsi:nil="true" />
+    <ButtonTest xsi:nil="true" />
+    <ButtonTest xsi:nil="true" />
+  </tests>
+</EvaluationResult>

@@ -73,7 +73,7 @@ namespace VRUserInterface
 		/// </summary>
 		public bool centerAtText = false;
 
-
+		public GameObject referencePositionObject;
 	    /// <summary>
 	    /// Retrieves the information from the information object and creates the info display based on the given values
 	    /// </summary>
@@ -85,7 +85,7 @@ namespace VRUserInterface
 
 			//Create an empty container for the information
 			GameObject container = new GameObject("InformationView");
-	        container.transform.parent = EnvironmentPositioner.instance.table.transform;
+	        container.transform.parent = referencePositionObject.transform;
 			container.transform.localPosition = displayPosition;
 
 			Vector3 min;
@@ -162,6 +162,7 @@ namespace VRUserInterface
 			cube.transform.position = container.transform.position;
 			cube.transform.localScale = new Vector3 (containerWidth, containerHeight, 0.02f)*2;
 			cube.transform.parent = container.transform;*/
+
 			//return container;
 	        //Add close button
 	        if (closeButton && showCloseButton)
@@ -172,8 +173,8 @@ namespace VRUserInterface
 				//Get button height
 				min = max = GameObjectExtensions.initializationVector;
 				ba.GetBounds(ref min, ref max);
-				float buttonHeight = -min.y;
-				SetButtonParentAndPosition(ba, container, new Vector3(containerWidth, containerHeight * 2 - buttonHeight,-0.02f), CloseButtonPressed);
+				float buttonHeight = -min.y*2;
+				SetButtonParentAndPosition(ba, container, new Vector3(containerWidth, containerHeight + buttonHeight,-0.02f), CloseButtonPressed, true);
 	        }
 
 			//Add scroll button
@@ -189,7 +190,7 @@ namespace VRUserInterface
 				//Get button width and height
 				min = max = GameObjectExtensions.initializationVector;
 				scrollUp.GetBounds(ref min, ref max);
-				float buttonHeight = -min.y;
+				float buttonHeight = -min.y*2;
 				float buttonWidth = -min.x;
 
 				GameObject scrollDown = scrollDownButton.Instantiate();
@@ -199,8 +200,8 @@ namespace VRUserInterface
 
 				scrollDown.transform.localScale *= buttonScale;
 
-				SetButtonParentAndPosition(scrollUp, container, new Vector3(containerWidth - buttonWidth * 2 - 0.05f, containerHeight*2 - buttonHeight,-0.02f), ScrollUp);		
-				SetButtonParentAndPosition(scrollDown, container, new Vector3(containerWidth - buttonWidth * 2 - 0.05f, -containerHeight*2 + buttonHeight,-0.02f), ScrollDown);
+				SetButtonParentAndPosition(scrollUp, container, new Vector3(containerWidth - buttonWidth - 0.05f, containerHeight + buttonHeight,-0.02f), ScrollUp, true);		
+				SetButtonParentAndPosition(scrollDown, container, new Vector3(containerWidth - buttonWidth - 0.05f, -containerHeight + buttonHeight,-0.02f), ScrollDown, true);
 			}
 
 			//Add a back button on the display prefab if wanted
@@ -297,13 +298,21 @@ namespace VRUserInterface
 		/// <summary>
 		/// Sets a button to a specific local position and attaches it to a parent object
 		/// </summary>
-		void SetButtonParentAndPosition(GameObject obj, GameObject parent, Vector3 pos, Button.PressEvent callback)
+		void SetButtonParentAndPosition(GameObject obj, GameObject parent, Vector3 pos, Button.PressEvent callback, bool translate = false)
 		{
 			obj.transform.parent = parent.transform;
 			
 			//Position button
 			obj.transform.localRotation = Quaternion.identity;
-			obj.transform.localPosition = pos;
+			if (translate)
+			{
+				obj.transform.localPosition = Vector3.zero;
+				obj.transform.Translate(pos, Space.Self);
+			}
+			else
+			{
+				obj.transform.localPosition = pos;
+			}
 			
 			Button b = obj.GetComponent<Button>();
 			if(b)

@@ -82,7 +82,7 @@ namespace VRUserInterface
 
 		public AnimationCurve sizeCurve;
 
-		void SetEffect(float progress)
+		public void SetEffect(float progress)
 		{
 			float factor = sizeCurve.Evaluate (progress);
 			float sizeIncrease = Mathf.Lerp (1.0f, magnifyingFactor, factor);

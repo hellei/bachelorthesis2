@@ -1,0 +1,5 @@
+﻿Display Type;Avg reading time;
+Table Display;29,9818821
+PCD;29,688715
+PCD Fixed Angle;28,8512783
+PCD Text;29,0927525

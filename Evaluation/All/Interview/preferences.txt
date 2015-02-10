@@ -1,0 +1,5 @@
+Button Type;Best (Selection on Table);Worst (Selection on Table);Best (Selection in Hand);Worst (Selection in Hand)
+Arrows;3;1;0;0;
+Drag Circle;2;3;1;5;
+Three Dots;2;3;1;2;
+Timer;1;1;6;1;

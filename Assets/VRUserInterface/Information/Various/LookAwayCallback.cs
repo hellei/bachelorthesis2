@@ -53,7 +53,7 @@ namespace VRUserInterface
 
 		bool lookedAtOnce = false;
 
-		public float minTimeAlive = 0.8f;
+		public float minTimeAlive = 0.2f;
 
 		float creationTime = 0;
 
@@ -67,7 +67,6 @@ namespace VRUserInterface
 			else if (lookedAtOnce && (!Selection.instance.WatchedObject || Selection.instance.WatchedObject.tag != Tags.buttonComponent))
 			{
 				callback();
-				Debug.Log("leaving object! callback!");
 				lookedAtOnce = false;
 			}
 		}

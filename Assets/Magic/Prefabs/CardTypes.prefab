@@ -39,6 +39,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ff8ebafd72b4e799600fa03ab33032, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  printAvailableCards: 1
   cards:
   - name: Baleful Eidolon
     sprite: {fileID: 21300000, guid: ed06a8e6d8d730f4fb10576c29a74603, type: 3}
@@ -73,51 +74,126 @@ MonoBehaviour:
   - name: Akroan Hoplite
     sprite: {fileID: 21300000, guid: dcf0801a4ed750c49aae4298e406cfe4, type: 3}
     cost: []
-    infoText: []
+    infoText:
+    - text: Akroan Hoplite
+      textStyle: 0
+    - text: Creature -- Human Soldier
+      textStyle: 1
+    - text: Whenever Akroan Hoplite attacks,//it gets +X/+0 until end of turn,//where
+        X is the number of attacking//creatures you control.
+      textStyle: 2
+    - text: '"Fair fight? How could it be a fair//fight? We''re Akroans. They''re
+        not."'
+      textStyle: 2
   - name: Blood Troll Harpy
     sprite: {fileID: 21300000, guid: d0d0df66bf42a9a4a9cf8f71bad99779, type: 3}
     cost: []
-    infoText: []
+    infoText:
+    - text: Blood-Toll Harpy
+      textStyle: 0
+    - text: Creature -- Harpy
+      textStyle: 1
+    - text: Flying
+      textStyle: 2
+    - text: When Blood-Toll Harpy enters the//battlefield, each player loses 1 life.
+      textStyle: 2
+    - text: When harpies demand a toll to cross//through their territory, consider
+        yourself//lucky if they permit payment in coin.
+      textStyle: 2
   - name: Boon Of Erebos
     sprite: {fileID: 21300000, guid: 552b10b7a069b2a48b6a1a3c75de0942, type: 3}
     cost: []
-    infoText: []
+    infoText:
+    - text: Boon of Erebos
+      textStyle: 0
+    - text: Instant
+      textStyle: 1
+    - text: Target creature gets +2/+0 until end//of turn. Regenerate it. You lose
+        2 life.
+      textStyle: 2
+    - text: '"Death is not a certainty. Erebos//determines when a mortal''s time is
+        up."//--Iadorna, death priest of Erebos'
+      textStyle: 2
   - name: Borderland Minotaur
     sprite: {fileID: 21300000, guid: c61b6a6dc5f9595449857b006d831cca, type: 3}
     cost: []
-    infoText: []
+    infoText:
+    - text: Borderland Minotaur
+      textStyle: 0
+    - text: Creature -- Minotaur Warrior
+      textStyle: 1
+    - text: '"You have led us to triumph over the forces//of Mogis!" said Brygus the
+        Brave, clapping//the Champion on the back.//The Champion wiped the sweat and
+        blood//from her brow.//"I count eight graves", she said. "Too many//to call
+        this a victory."//--The Theriad'
+      textStyle: 2
   - name: Fanatic of Mogus
     sprite: {fileID: 21300000, guid: fc808a058dc1641ef841d8a88f54a6de, type: 3}
     cost: []
-    infoText: []
+    infoText:
+    - text: Fanatic of Mogis
+      textStyle: 0
+    - text: Creature -- Minotaur Shaman
+      textStyle: 1
+    - text: When Fanatic of Mogis enters the//battlefield, it deals damage to each//opponent
+        equal to your devotion//to red.
+      textStyle: 2
   - name: Island 1
     sprite: {fileID: 21300000, guid: 8ed63e0a12be544009f7356290a4cd94, type: 3}
     cost: []
-    infoText: []
+    infoText:
+    - text: Island
+      textStyle: 0
+    - text: Basic Land -- Island
+      textStyle: 1
   - name: Island 2
     sprite: {fileID: 21300000, guid: 26135cae1319e41c8876c8e102c169e7, type: 3}
     cost: []
-    infoText: []
+    infoText:
+    - text: Island
+      textStyle: 0
+    - text: Basic Land -- Island
+      textStyle: 1
   - name: Mountain 1
     sprite: {fileID: 21300000, guid: 4250e6d3beb75450096adb93561e1b03, type: 3}
     cost: []
-    infoText: []
+    infoText:
+    - text: Mountain
+      textStyle: 0
+    - text: Basic Land -- Mountain
+      textStyle: 1
   - name: Mountain 2
     sprite: {fileID: 21300000, guid: 201fe3ea9181949cda37cf0dd5029f30, type: 3}
     cost: []
-    infoText: []
+    infoText:
+    - text: Mountain
+      textStyle: 0
+    - text: Basic Land -- Mountain
+      textStyle: 1
   - name: Plains 1
     sprite: {fileID: 21300000, guid: e3a9ae320ec544e07bbcd9a608297bab, type: 3}
     cost: []
-    infoText: []
+    infoText:
+    - text: Plains
+      textStyle: 0
+    - text: Basic Land -- Plains
+      textStyle: 1
   - name: Plains 2
     sprite: {fileID: 21300000, guid: 21f5565c047ce4eef846bca6186f756f, type: 3}
     cost: []
-    infoText: []
+    infoText:
+    - text: Plains
+      textStyle: 0
+    - text: Basic Land -- Plains
+      textStyle: 1
   - name: Plains 3
     sprite: {fileID: 21300000, guid: 5ccf5bab061b144ae849c6286394733c, type: 3}
     cost: []
-    infoText: []
+    infoText:
+    - text: Plains
+      textStyle: 0
+    - text: Basic Land -- Plains
+      textStyle: 1
   - name: Polis Crusher
     sprite: {fileID: 21300000, guid: 44291f3f732fb42e089ddc67fe028d44, type: 3}
     cost: []
@@ -134,11 +210,25 @@ MonoBehaviour:
   - name: Scholar of Athreos
     sprite: {fileID: 21300000, guid: 17175a2728f334f9ea7d8fdcf10bd84a, type: 3}
     cost: []
-    infoText: []
+    infoText:
+    - text: Scholar of Athreos
+      textStyle: 0
+    - text: Creature -- Human Cleric
+      textStyle: 1
+    - text: '2 BLACK: Each Opponent loses 1 life.//You gain life equal to the life
+        lost//this way.'
+      textStyle: 2
+    - text: She asks pointed questions of the dead//who wait for Athreos, learning
+        of life//from those who are about to leave it.
+      textStyle: 2
   - name: Swamp 1
     sprite: {fileID: 21300000, guid: 5d831586e251a45cab6185fd1fc1c79d, type: 3}
     cost: []
-    infoText: []
+    infoText:
+    - text: Swamp
+      textStyle: 0
+    - text: Basic Land -- Swamp
+      textStyle: 1
   - name: Boros Signet
     sprite: {fileID: 21300000, guid: 7675add99725dcf4c9c13162768e02f6, type: 3}
     cost: []

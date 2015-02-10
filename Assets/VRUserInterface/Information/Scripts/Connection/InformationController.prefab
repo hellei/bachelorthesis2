@@ -411,7 +411,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed8c85454a132fc4fb14fa14c0185808, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  infoDisplay: {fileID: 11400018}
+  infoDisplay: {fileID: 11485580}
   selection: {fileID: 11400002}
   debugKeys: 1
   infoButton: {fileID: 11400000, guid: 6d82e974550a049ae9ea9a5c6cba8c48, type: 2}
@@ -461,12 +461,13 @@ MonoBehaviour:
     popupDuration: .699999988
     minimizeSpeedMultiplication: 2
   centerAtText: 0
+  referencePositionObject: {fileID: 0}
   closeWhenGazeDirectionLeavesDisplayPrefab: 0
   showCloseButton: 1
   closeWhenLookingAway: 1
   lookAwayThreshold: 0
   connectionPrefab: {fileID: 0}
-  numberOfInfoBoxes: 4
+  numberOfInfoBoxes: 5
 --- !u!114 &11400008
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -511,12 +512,13 @@ MonoBehaviour:
     popupDuration: .699999988
     minimizeSpeedMultiplication: 2
   centerAtText: 0
+  referencePositionObject: {fileID: 0}
   closeWhenGazeDirectionLeavesDisplayPrefab: 0
   showCloseButton: 1
   closeWhenLookingAway: 1
   lookAwayThreshold: 0
   connectionPrefab: {fileID: 0}
-  numberOfInfoBoxes: 4
+  numberOfInfoBoxes: 5
   globalDisplayOffset: {x: 0, y: .129999995, z: 0}
   localDisplayOffset: {x: .25, y: .200000003, z: -.300000012}
   lookAtOffset: {x: .100000001, y: .100000001, z: 0}
@@ -583,6 +585,7 @@ MonoBehaviour:
     popupDuration: .699999988
     minimizeSpeedMultiplication: 2
   centerAtText: 0
+  referencePositionObject: {fileID: 0}
   closeWhenGazeDirectionLeavesDisplayPrefab: 0
   showCloseButton: 1
   closeWhenLookingAway: 1
@@ -633,6 +636,7 @@ MonoBehaviour:
     popupDuration: .699999988
     minimizeSpeedMultiplication: 2
   centerAtText: 0
+  referencePositionObject: {fileID: 0}
   closeWhenGazeDirectionLeavesDisplayPrefab: 0
   showCloseButton: 1
   closeWhenLookingAway: 1
@@ -750,6 +754,7 @@ MonoBehaviour:
     popupDuration: .699999988
     minimizeSpeedMultiplication: 2
   centerAtText: 0
+  referencePositionObject: {fileID: 0}
   closeWhenGazeDirectionLeavesDisplayPrefab: 1
   showCloseButton: 0
   closeWhenLookingAway: 1
@@ -856,6 +861,7 @@ MonoBehaviour:
     popupDuration: .699999988
     minimizeSpeedMultiplication: 2
   centerAtText: 0
+  referencePositionObject: {fileID: 0}
   closeWhenGazeDirectionLeavesDisplayPrefab: 1
   showCloseButton: 0
   closeWhenLookingAway: 1
