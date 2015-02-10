@@ -147,7 +147,7 @@ namespace VRUserInterface
 
 		public GameObject tableEvaluation, handsEvaluation, displayEvaluation, playground;
 
-	    int infoI = 0;
+	    int infoI = 3;
 
 	    public InformationDisplay[] allInfoDisplays;
 

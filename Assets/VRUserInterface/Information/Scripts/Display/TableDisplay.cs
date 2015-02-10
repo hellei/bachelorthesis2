@@ -73,7 +73,7 @@ namespace VRUserInterface
 		/// </summary>
 		public bool centerAtText = false;
 
-
+		public GameObject referencePositionObject;
 	    /// <summary>
 	    /// Retrieves the information from the information object and creates the info display based on the given values
 	    /// </summary>
@@ -85,7 +85,7 @@ namespace VRUserInterface
 
 			//Create an empty container for the information
 			GameObject container = new GameObject("InformationView");
-	        container.transform.parent = EnvironmentPositioner.instance.table.transform;
+	        container.transform.parent = referencePositionObject.transform;
 			container.transform.localPosition = displayPosition;
 
 			Vector3 min;
