@@ -297,7 +297,7 @@ public class Hand_CardCollection : MonoBehaviour {
             float angle = 90.0f;
             
             int index = FindIndexOfNearestCard(Hand_Selecting.instance.GetGrabPosition());
-            if (GetDistanceToCard(index, Hand_Selecting.instance.GetGrabPosition()) <= fanOutDistance)
+            if (GetDistanceToCard(index, Hand_Selecting.instance.GetGrabPosition()) <= fanOutDistance && Hand_Selecting.instance.IsHandRegistered())
             {
                 float startAngle = angle * index / cardsOnHand.Count;
 

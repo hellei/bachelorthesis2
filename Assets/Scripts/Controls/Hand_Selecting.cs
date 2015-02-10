@@ -95,7 +95,7 @@ public class Hand_Selecting : MonoBehaviour {
 
     public void UnRegisterHand()
     {
-        //HideCardInHand();
+        HideCardInHand();
         handRegistered = false;
         SetHandPosition(inactiveHandPos);
         //print("Unregistered and hide selected card");
@@ -161,8 +161,15 @@ public class Hand_Selecting : MonoBehaviour {
     {
         if (grabbedCard != null)
         {
-            grabbedCard.transform.parent = this.transform;
-            grabbedCard.gameObject.SetActive(false);
+            if (grabbedCard.transform.parent.gameObject.name == "CardOffsetHelper")
+            {
+                GameObject container = grabbedCard.transform.parent.gameObject;
+                grabbedCard.transform.parent = grabbedCardContainer.transform;
+                //grabbedCard.gameObject.SetActive(false);
+                Destroy(container);
+            }
+            
+            
             Debug.Log("Hide right hand card" + " " + grabbedCard.transform.parent);
         }
     }

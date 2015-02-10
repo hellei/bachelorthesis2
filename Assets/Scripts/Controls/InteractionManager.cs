@@ -36,7 +36,7 @@ public class InteractionManager : MonoBehaviour {
 	private bool trackingEnabledRight = true;
 
     // Update Modes
-    public HandOrientationMode rightHandOrientationMode = HandOrientationMode.RestrictedOrientation;
+    public HandOrientationMode rightHandOrientationMode = HandOrientationMode.FixedOrientation;
     public FingerUpdateMode rightHandFingerUpdateMode = FingerUpdateMode.Disabled;
     public FingerUpdateMode leftHandFingerUpdateMode = FingerUpdateMode.Disabled;
 
@@ -155,7 +155,6 @@ public class InteractionManager : MonoBehaviour {
 
     public void HandleCardOnTabletInteraction(Card card, List<TouchInfo> touchlist, TabletGesture gesture)
     {
-
         // Handle Pickup
         if (gesture == TabletGesture.Pickup)
         {

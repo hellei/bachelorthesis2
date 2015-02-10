@@ -61,33 +61,39 @@ public class Hand_Permanent : MonoBehaviour {
             // Update left hand
             if (data.isLeft)
             {
-                palm.position = Vector3.Lerp(palm.position, data.palmPosition, Time.deltaTime * 20);
+                //palm.position = Vector3.Lerp(palm.position, data.palmPosition, Time.deltaTime * 20);
+                palm.position = data.palmPosition;
                 
-                palm.rotation = Quaternion.Slerp(palm.rotation, data.palmRotation, Time.deltaTime * 20);
+                //palm.rotation = Quaternion.Slerp(palm.rotation, data.palmRotation, Time.deltaTime * 20);
+                palm.rotation = data.palmRotation;
             }
             // Update right hand
             else
             {
-                palm.position = Vector3.Lerp(palm.position, data.palmPosition, Time.deltaTime * 20);
+                HandOrientationMode mode = InteractionManager.instance.rightHandOrientationMode;
+                //palm.position = Vector3.Lerp(palm.position, data.palmPosition, Time.deltaTime * 20);
+                palm.position = data.palmPosition;
 
                 // Free Orientation
-                if (InteractionManager.instance.rightHandOrientationMode == HandOrientationMode.Free)
+                if (mode == HandOrientationMode.Free)
                 {
-                    palm.rotation = Quaternion.Slerp(palm.rotation, data.palmRotation, Time.deltaTime * 20);
+                    //palm.rotation = Quaternion.Slerp(palm.rotation, data.palmRotation, Time.deltaTime * 20);
+                    palm.rotation = data.palmRotation;
                 }
 
-                // Restricted Orientation
-                else if (InteractionManager.instance.rightHandOrientationMode == HandOrientationMode.RestrictedOrientation)
+                // Restricted Orientation                
+                else if (mode == HandOrientationMode.RestrictedOrientation)
                 {
-                    Vector3 up = (new Vector3(1, 1, 0)).normalized;//Vector3.up;
-                    if (Vector3.Dot(data.palmNormal, up) < 0)
+                    Vector3 prohibitedDirection = (new Vector3(1, 1, 0)).normalized;//Vector3.up;
+                    if (Vector3.Dot(data.palmNormal, prohibitedDirection) < 0)
                     {
-                        palm.rotation = Quaternion.Slerp(palm.rotation, data.palmRotation, Time.deltaTime * 20);
+                        //palm.rotation = Quaternion.Slerp(palm.rotation, data.palmRotation, Time.deltaTime * 20);
+                        palm.rotation = data.palmRotation;
                     }
                 }
 
                 // Fixed Orientation
-                else if (InteractionManager.instance.rightHandOrientationMode == HandOrientationMode.FixedOrientation)
+                else if (mode == HandOrientationMode.FixedOrientation)
                 {
                     palm.localRotation = defaultOrientation;
                 }
