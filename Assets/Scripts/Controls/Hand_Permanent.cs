@@ -42,11 +42,11 @@ public class Hand_Permanent : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        if (InteractionManager.instance.touchOnTablet)
+        /*if (InteractionManager.instance.touchOnTablet)
         {
             palm.localPosition = defaultPosition;
             palm.localRotation = defaultOrientation;
-        }	
+        }*/	
 	}
 
     /// <summary>
@@ -56,7 +56,7 @@ public class Hand_Permanent : MonoBehaviour {
     public void UpdateHand(HandUpdateData data)
     {
         
-        if (palm != null && !InteractionManager.instance.touchOnTablet)
+        if (palm != null)
         {
             // Update left hand
             if (data.isLeft)

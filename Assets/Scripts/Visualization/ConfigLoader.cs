@@ -46,6 +46,7 @@ public class ConfigLoader : MonoBehaviour {
 			Debug.Log("Found deck directory. Loading all saved decks.");
 			foreach(FileInfo file in dir.GetFiles())
 			{
+				if (file.Name.Contains ("available_cards")) continue;
 				Debug.Log("Deck: "+file.Name);
 				//Load first deck
 				savedDeck = SavedDeck.Load(path+file.Name);

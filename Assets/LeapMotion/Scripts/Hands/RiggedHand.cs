@@ -30,14 +30,15 @@ public class RiggedHand : HandModel {
   public override void UpdateHand()
   {
 	
-      if (InteractionManager.instance.touchOnTablet
-	  || (InteractionManager.instance.GetTrackingMode(0) == false && hand_.IsLeft)
-	  || (InteractionManager.instance.GetTrackingMode(1) == false && hand_.IsRight))
+	if ((InteractionManager.instance.touchOnTablet && hand_.IsRight)
+		 || (InteractionManager.instance.GetTrackingMode(0) == false && hand_.IsLeft)
+	     || (InteractionManager.instance.GetTrackingMode(1) == false && hand_.IsRight))
       {
 			if (hand_.IsLeft) Debug.Log("Left Hand tracking disabled");
 			if (hand_.IsRight) Debug.Log("Right Hand tracking disabled");
-          return;
+          	return;
       }
+
 		
 
       if (palm != null)

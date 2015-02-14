@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="Windows-1252"?>
-<XML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<AvailableCards xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <cards>
     <ShortInfo>
       <name>Baleful Eidolon</name>
@@ -362,5 +362,15 @@
       <name>Sparkling Flames</name>
       <info />
     </ShortInfo>
+    <ShortInfo>
+      <name>Transformation Owl</name>
+      <info>
+        <string>Transformation Owl</string>
+        <string>Monster - Bird</string>
+        <string>Can fly.</string>
+        <string>1: Transformation Owl gets +1/-1.</string>
+        <string>3: Transformation Owl becomes acopy of another monster. In addition itkeeps these features.</string>
+      </info>
+    </ShortInfo>
   </cards>
-</XML>
+</AvailableCards>

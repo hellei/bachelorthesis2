@@ -556,6 +556,21 @@ MonoBehaviour:
     sprite: {fileID: 21300000, guid: 42abd09d994cc4941b4bf9442cbfef98, type: 3}
     cost: []
     infoText: []
+  - name: Transformation Owl
+    sprite: {fileID: 21300000, guid: a65c524bcfed5fb46aeb875cd14ed274, type: 3}
+    cost: []
+    infoText:
+    - text: Transformation Owl
+      textStyle: 0
+    - text: Monster - Bird
+      textStyle: 1
+    - text: Can fly.
+      textStyle: 2
+    - text: '1: Transformation Owl gets +1/-1.'
+      textStyle: 2
+    - text: '3: Transformation Owl becomes a//copy of another monster. In addition
+        it//keeps these features.'
+      textStyle: 2
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

@@ -68,6 +68,7 @@ public class XMLConverter : MonoBehaviour {
 
 	void ConvertListOfFiles()
 	{
+		string[] groups = new string[4];
 		List<EvaluationResult> results = new List<EvaluationResult> ();
 		foreach (string file in Directory.GetFiles(path))
 		{
@@ -131,6 +132,7 @@ public class XMLConverter : MonoBehaviour {
 					{
 						if (val > max) max = val;
 						mediumResult.tests[id].selectionTimes[cardIdx] += Mathf.Min (val, threshold);
+						groups[id]+=Mathf.Min (val, threshold)+System.Environment.NewLine;
 						cardIdx++;
 					}
 					mediumResult.tests[id].abortedSelects += test.abortedSelects;
@@ -185,6 +187,10 @@ public class XMLConverter : MonoBehaviour {
 			mediumResult.displayTests[i].CalculateAverage();
 			mediumResult.Calculate(i);
 		}
+		File.WriteAllText (path + "group1.txt", groups [0]);
+		File.WriteAllText (path + "group2.txt", groups [1]);
+		File.WriteAllText (path + "group3.txt", groups [2]);
+		File.WriteAllText (path + "group4.txt", groups [3]);
 		mediumResult.Save(path+"result.xml");
 		ConvertSingleFile (path + "result.xml", path);
 	}
