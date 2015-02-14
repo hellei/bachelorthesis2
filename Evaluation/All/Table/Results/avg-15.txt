@@ -1,0 +1,5 @@
+﻿Button Type;Avg selection time;Avg selection time own cards;Avg selection time opponent cards
+Timer;2,858088;2,58068132;3,13549471
+Three Dots;3,0048244;2,59839177;3,41125679
+Arrows;2,30147982;2,01725054;2,58570886
+Drag Circle;2,648141;2,171709;3,12457323

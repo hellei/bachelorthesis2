@@ -2,7 +2,9 @@
 using System.Collections;
 using System.Collections.Generic;
 public class Hand_Table : MonoBehaviour {
-	
+
+	public GameObject palm;
+
 	// Update is called once per frame
 	void Update () {      
         //Calculate position
@@ -20,7 +22,7 @@ public class Hand_Table : MonoBehaviour {
             pos /= tTouches.Count;
 
             //Apply position with hand offset
-            transform.position = new Vector3(pos.x, pos.y, pos.z);
+            palm.transform.position = new Vector3(pos.x + 0.07f, pos.y+0.07f, pos.z);
         }
         /*else
         {
@@ -28,8 +30,8 @@ public class Hand_Table : MonoBehaviour {
         }*/
 	}
 
-	void SetHandEnabled(bool value)
+	/*void SetHandEnabled(bool value)
 	{
 		if (!value) transform.position = new Vector3(0,-100,0);
-	}
+	}*/
 }

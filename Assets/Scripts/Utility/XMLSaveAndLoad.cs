@@ -5,7 +5,7 @@ using System.Xml.Serialization;
 using System.IO;
 
 
-public class XMLSaveAndLoad<T >
+public class XMLSaveAndLoad<T>
 {
     public void Save(string path)
     {

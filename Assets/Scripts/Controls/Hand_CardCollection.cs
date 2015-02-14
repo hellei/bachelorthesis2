@@ -25,6 +25,7 @@ public class Hand_CardCollection : MonoBehaviour {
     public int maxCardsAllowed = -1;
     public Vector3 inactiveHandPos = new Vector3(0, -1000, 0);
     public float fanOutDistance = 0.05f;
+	public float fanOutYOffset = 0.02f;
     public List<CardBucket> cardsOnHand {
 		get;
 		private set;
@@ -113,6 +114,7 @@ public class Hand_CardCollection : MonoBehaviour {
 
     public float GetDistanceToCard(int i, Vector3 position)
     {
+		if (cardsOnHand[i].card.transform.position.y > position.y + fanOutYOffset) return 1000;
         return (cardsOnHand[i].card.transform.position - position).sqrMagnitude;
     }
 
@@ -165,8 +167,12 @@ public class Hand_CardCollection : MonoBehaviour {
 
                 // Transform card's position in space of nearest card
                 Transform nearestCardSpace = cardsOnHand[indexOfNearestCard].card.transform;
-                Vector3 relativePosToNearestCard = nearestCardSpace.InverseTransformPoint(card.transform.position);
 
+				//Quaternion oldRot = card.transform.rotation;
+				//card.transform.rotation = Quaternion.identity;
+				//card.transform.localRotation = Quaternion.Euler(new Vector3(card.transform.rotation.x,0, card.transform.rotation.z));
+                Vector3 relativePosToNearestCard = nearestCardSpace.InverseTransformPoint(card.transform.position);
+				//card.transform.rotation = oldRot;
                 // Right
                 if (relativePosToNearestCard.x > 0)
                 {

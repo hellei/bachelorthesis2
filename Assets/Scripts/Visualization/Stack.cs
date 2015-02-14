@@ -136,7 +136,7 @@ public class Stack : MonoBehaviour {
 		DisableColliders ();
 	}
 
-    void OnTriggerEnter(Collider other)
+    /*void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Card")
         {
@@ -146,5 +146,5 @@ public class Stack : MonoBehaviour {
             card.stack = this;
             InteractionManager.instance.HandleCardOnTabletInteraction(card, null, TabletGesture.PlaceOnStack);
         }
-    }
+    }*/
 }

@@ -20,7 +20,8 @@ public class CardTypes : MonoBehaviour {
 		public ShortInfo() {}
 	}
 
-	public class XML : XMLSaveAndLoad<XML>
+
+	public class AvailableCards : XMLSaveAndLoad<AvailableCards>
 	{
 		public List<ShortInfo> cards = new List<ShortInfo>();
 	}
@@ -39,7 +40,7 @@ public class CardTypes : MonoBehaviour {
 	void WriteXML()
 	{
 		Debug.Log("Saving available cards");
-		XML xml = new XML ();
+		AvailableCards xml = new AvailableCards ();
 		foreach (CardInfo c in cards)
 		{
 			string cname = c.name;
