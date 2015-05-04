@@ -121,10 +121,9 @@ public class InteractionManager : MonoBehaviour {
     }
 
 
-    void HandleHandTabletInteraction()
+    public void HandleHandTabletInteraction()
     {
         tabletTouches = Tablet.instance.GetTouches();
-
         //Touched tablet
         if (tabletTouches.Count > 0)
         {
