@@ -62,6 +62,7 @@ public class Tablet : MonoBehaviour, IButtonCondition {
         //card = cardsOnTable[i];
         //cardsOnTable.RemoveAt(i);  
         Card tcard = card;
+        
         tcard.transform.parent = null;
 		
 		card.stack = null;

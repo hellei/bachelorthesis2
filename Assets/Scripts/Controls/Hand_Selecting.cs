@@ -109,7 +109,6 @@ public class Hand_Selecting : MonoBehaviour {
         card.stack = null;
         card.gameObject.layer = (int) InteractionLayer.Interactable;
         grabbedCard = card;
-
         Debug.Log("Added card to right hand: " + card + " " + card.transform.parent);
 
         HideCardInHand();
