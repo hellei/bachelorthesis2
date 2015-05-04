@@ -53,7 +53,6 @@ public class Hand_CardCollection : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-
         ChangeCardPositionAndOrientation();
 	}
 
@@ -214,7 +213,7 @@ public class Hand_CardCollection : MonoBehaviour {
         numberOfCardsOnHand++;
 
         // Disable hand collider if card on hand
-        if( numberOfCardsOnHand > 0 && handRegistered)
+        if( numberOfCardsOnHand > 0)
         {
             EmptyHandCollider.layer = (int)InteractionLayer.Interactable;
             EmptyHandCollider.collider.enabled = false;
@@ -269,6 +268,13 @@ public class Hand_CardCollection : MonoBehaviour {
                     index = i;
                 }
             }
+
+			// Enable hand collider if no card on hand
+			if (numberOfCardsOnHand <= 0)
+			{
+				EmptyHandCollider.layer = (int)InteractionLayer.HandCollision;
+				EmptyHandCollider.collider.enabled = true;
+			}
             
             Transform parent = card.transform.parent;
             cardsOnHand.RemoveAt(index);

@@ -12,7 +12,6 @@ public class Hand_Table : MonoBehaviour {
         if (tTouches != null && tTouches.Count > 0)
         {
 			//SetHandEnabled(true);
-           
 
             Vector3 pos = Vector3.zero;
             foreach (TouchInfo ttouch in tTouches.Values)
@@ -24,6 +23,7 @@ public class Hand_Table : MonoBehaviour {
             //Apply position with hand offset
             palm.transform.position = new Vector3(pos.x + 0.07f, pos.y+0.07f, pos.z);
         }
+
         /*else
         {
 			SetHandEnabled(false);

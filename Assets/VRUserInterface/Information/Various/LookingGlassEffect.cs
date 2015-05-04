@@ -29,6 +29,12 @@ namespace VRUserInterface
 
 		public Vector3 scalePivot = Vector3.zero;
 
+		void Start()
+		{
+			ob = GetComponent<OverrideBounds>();
+			SetValues();
+		}
+
 		/// <summary>
 		/// Sometimes you may want to overwrite the selection in special cases. If you set this variable,
 		/// the defined game object is used instead of testing the selection watched object
@@ -80,6 +86,7 @@ namespace VRUserInterface
 			}
 		}
 
+
 		public AnimationCurve sizeCurve;
 
 		public void SetEffect(float progress)
@@ -91,17 +98,15 @@ namespace VRUserInterface
 				ob.min = initialObMin * sizeIncrease;
 				ob.max = initialObMax * sizeIncrease;
 			}
-
 			transform.localScale = initialLocalScale * sizeIncrease;
 			float moveForwardFactor = Mathf.Lerp (0, moveForwardValue, factor);
 			float moveUpwardFactor = Mathf.Lerp (0, moveUpwardValue, factor);
 			transform.localPosition = initialLocalPosition + new Vector3 (0, moveUpwardFactor, -moveForwardFactor);
 		}
 
-		void Start()
-		{
-			ob = GetComponent<OverrideBounds>();
-		}
+
+
+
 
 
 
@@ -112,6 +117,8 @@ namespace VRUserInterface
 		OverrideBounds ob;
 
 		Vector3 initialObMin, initialObMax;
+
+		Transform initialParent;
 
 		/// <summary>
 		/// Sets up all values needed for the effect.

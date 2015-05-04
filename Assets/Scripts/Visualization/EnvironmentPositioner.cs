@@ -82,6 +82,8 @@ public class EnvironmentPositioner : MenuCallback {
 
 	void Calibrate()
 	{
+		if (calibrationObject.transform.position.y < -4f)
+						return;
 		Vector3 cal = calibrationObject.transform.position + calibrationOffset;
 		//Place the table
 		Vector3 tabletPosition = cal + new Vector3(Config.instance.tabletSize.x / 2, zFightingOffset, Config.instance.tabletSize.z / 2);

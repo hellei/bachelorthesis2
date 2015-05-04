@@ -56,12 +56,19 @@ public class MoveModel : MenuCallback {
 			}
 		}
 	}
+
+	public GameObject permanentLeftHandMesh, permanentRightHandMesh;
 	
 	// Update is called once per frame
 	void Update () {
         OrientBodyToCamera();
 		RotateHead ();
 		UpdateHands ();
+		//Hide leap hands if the body is visible
+		permanentLeftHandMesh.SetActive (!_isVisible);
+		permanentRightHandMesh.SetActive (!_isVisible);
+		//Hand_CardCollection.instance.inactiveHandPos = transform.position + new Vector3(-0.3f,0.73f,0);
+		//Hand_Selecting.instance.inactiveHandPos = transform.position + new Vector3(0.7f,0.73f,0);
 	}
 
 	/// <summary>
@@ -104,18 +111,22 @@ public class MoveModel : MenuCallback {
 	{
 		//leftHand = GameObject.Find ("L_Wrist");
 		//rightHand = GameObject.Find ("R_Wrist");
-		if (!leftHand)
+		if (!Hand_CardCollection.instance.IsHandRegistered())
 		{
 			leftShoulderModel.LoadPositionAndRotation(stLeft);
 		}
-		if (!rightHand)
+		else {
+			UpdateHand (leftForetwistModel, leftShoulderModel, leftHandModel, leftHand, leftElbow);
+		}
+		if (!Hand_Selecting.instance.IsHandRegistered())
 		{
-			rightShoulderModel.LoadPositionAndRotation(stLeft);
+			rightShoulderModel.LoadPositionAndRotation(stRight);
+		}
+		else {
+			UpdateHand (rightForetwistModel, rightShoulderModel, rightHandModel, rightHand, rightElbow);
 		}
 		//leftElbow = GameObject.Find ("ForetwistLeft");
 		//rightElbow = GameObject.Find ("ForetwistRight");
-		UpdateHand (leftForetwistModel, leftShoulderModel, leftHandModel, leftHand, leftElbow);
-		UpdateHand (rightForetwistModel, rightShoulderModel, rightHandModel, rightHand, rightElbow);
 	}
 
 
